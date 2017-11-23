@@ -13,9 +13,9 @@ exports.fn_TestJS_OnFirebaseCDN_Dynamic = functions.https.onRequest((req, res) =
   const iCacheControlMaxAge = 120;
   const iCacheControlSMaxAge = 240;
   res.set( {
-    "Content-Type":  "application/javascript",
     "Cache-Control": `public, max-age=${iCacheControlMaxAge}, s-maxage=${iCacheControlSMaxAge}`
   } );
+  res.type("application/javascript");  // Set "Content-Type".
   res.status(200).send(`var g_TestJS_OnFirebaseCDN_Dynamic = "${nowDateString}";
 `);
 });
