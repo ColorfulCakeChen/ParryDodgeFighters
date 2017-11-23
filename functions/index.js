@@ -10,7 +10,8 @@ const functions = require('firebase-functions');
 exports.fn_TestJS_OnFirebaseCDN_Dynamic = functions.https.onRequest((req, res) => {
   const nowDate = new Date();
   const nowDateString = nowDate.toString();
-  res.set("Cache-Control", "public, max-age=60"); //, s-maxage=60');
+  const iCacheControlMaxAge = 120;
+  res.set("Cache-Control", `public, max-age={$iCacheControlMaxAge}`"); //, s-maxage=60');
   res.status(200).send(`var g_TestJS_OnFirebaseCDN_Dynamic = "${nowDateString}";
 `);
 });
