@@ -12,7 +12,10 @@ exports.fn_TestJS_OnFirebaseCDN_Dynamic = functions.https.onRequest((req, res) =
   const nowDateString = nowDate.toString();
   const iCacheControlMaxAge = 120;
   const iCacheControlSMaxAge = 240;
-  res.set("Cache-Control", `public, max-age=${iCacheControlMaxAge}, s-maxage=${iCacheControlSMaxAge}`);
+  res.set( {
+    "Content-Type":  "application/javascript",
+    "Cache-Control": `public, max-age=${iCacheControlMaxAge}, s-maxage=${iCacheControlSMaxAge}`
+  } );
   res.status(200).send(`var g_TestJS_OnFirebaseCDN_Dynamic = "${nowDateString}";
 `);
 });
