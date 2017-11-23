@@ -14,7 +14,8 @@
       "**/node_modules/**"
     ],
     "rewrites": [
-      "source": "/TestJS_OnFirebaseCDN_Dynamic.js", "function": "fn_TestJS_OnFirebaseCDN_Dynamic"
+      "source": "/TestJS_OnFirebaseCDN_Dynamic.js",
+      "function": "fn_TestJS_OnFirebaseCDN_Dynamic"
     ]
   },
   "storage": {
