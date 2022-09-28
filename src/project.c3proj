@@ -5,10 +5,21 @@
 	"runtime": "c3",
 	"useWorker": "worker",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "DrawingCanvas",
+			"name": "Drawing canvas",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		}
+	],
 	"uniqueId": "wmfr7wu05w3",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"DrawingCanvas"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -33,7 +44,7 @@
 		"script": {
 			"items": [
 				{
-					"name": "main.js",
+					"name": "Custom_Main.js",
 					"type": "application/javascript",
 					"sid": 708577588939421,
 					"script-info": {
