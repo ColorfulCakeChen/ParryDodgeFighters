@@ -32,6 +32,448 @@
 						],
 						"angle": 0
 					}
+				},
+				{
+					"type": "SpriteFont",
+					"properties": {
+						"text": "Text99",
+						"enable-bbcode": true,
+						"character-width": 16,
+						"character-height": 16,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 3,
+					"instanceVariables": {
+						"Variable1aac": 3
+					},
+					"behaviors": {},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "testTemplate",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"text",
+												true
+											],
+											[
+												"enable-bbcode",
+												true
+											],
+											[
+												"character-width",
+												true
+											],
+											[
+												"character-height",
+												true
+											],
+											[
+												"character-set",
+												true
+											],
+											[
+												"spacing-data",
+												true
+											],
+											[
+												"scale",
+												true
+											],
+											[
+												"character-spacing",
+												true
+											],
+											[
+												"line-height",
+												true
+											],
+											[
+												"horizontal-alignment",
+												true
+											],
+											[
+												"vertical-alignment",
+												true
+											],
+											[
+												"wrapping",
+												true
+											],
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"origin",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "Variable1aac",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"world": {
+						"x": -33.953417637828665,
+						"y": 82.39217443025515,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.7843137254901961,
+							0,
+							1,
+							1
+						],
+						"angle": 1.9198621771937625,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont",
+					"properties": {
+						"text": "Text1",
+						"enable-bbcode": true,
+						"character-width": 16,
+						"character-height": 16,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 4,
+					"instanceVariables": {
+						"Variable1aac": 3
+					},
+					"behaviors": {},
+					"template": {
+						"mode": "template",
+						"templateName": "testTemplate",
+						"sourceTemplateName": "",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"text",
+												true
+											],
+											[
+												"enable-bbcode",
+												true
+											],
+											[
+												"character-width",
+												true
+											],
+											[
+												"character-height",
+												true
+											],
+											[
+												"character-set",
+												true
+											],
+											[
+												"spacing-data",
+												true
+											],
+											[
+												"scale",
+												true
+											],
+											[
+												"character-spacing",
+												true
+											],
+											[
+												"line-height",
+												true
+											],
+											[
+												"horizontal-alignment",
+												true
+											],
+											[
+												"vertical-alignment",
+												true
+											],
+											[
+												"wrapping",
+												true
+											],
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"origin",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "Variable1aac",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"world": {
+						"x": 11.406007318364459,
+						"y": 4.164771250964023,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0,
+							0.7843137254901961,
+							1,
+							0.5
+						],
+						"angle": 0.17453292519943295,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 125016299568179,

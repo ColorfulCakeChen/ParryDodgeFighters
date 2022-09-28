@@ -13,12 +13,21 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wmfr7wu05w3",
 	"objectTypes": {
 		"items": [
-			"DrawingCanvas"
+			"DrawingCanvas",
+			"SpriteFont"
 		],
 		"subfolders": []
 	},
