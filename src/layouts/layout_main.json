@@ -448,7 +448,7 @@
 					"world": {
 						"x": 0,
 						"y": 0,
-						"width": 129,
+						"width": 128,
 						"height": 72,
 						"originX": 0,
 						"originY": 0,
@@ -881,7 +881,7 @@
 				0.3686274509803922,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
