@@ -49,36 +49,11 @@
 					"uid": 5,
 					"instanceVariables": {},
 					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 6,
-						"uid": 5,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"previewSceneGraph": false
-						}
-					},
 					"world": {
-						"x": 7,
-						"y": 7,
-						"width": 96,
-						"height": 8,
+						"x": 1,
+						"y": 1,
+						"width": 60,
+						"height": 5,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -544,29 +519,47 @@
 						"fill": "stretch",
 						"initially-visible": true,
 						"origin": "top-left",
-						"seams": "overlap"
+						"seams": "exact"
 					},
 					"uid": 6,
 					"instanceVariables": {},
 					"behaviors": {},
+					"world": {
+						"x": 2,
+						"y": 2,
+						"width": 58,
+						"height": 3,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnergyBarBackground",
+					"properties": {
+						"left-margin": 1,
+						"right-margin": 1,
+						"top-margin": 1,
+						"bottom-margin": 1,
+						"edges": "stretch",
+						"fill": "transparent",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "exact"
+					},
+					"uid": 7,
+					"instanceVariables": {},
+					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": null,
-						"uid": 6,
-						"children": [
-							{
-								"uid": 5,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
+						"uid": 7,
 						"flags": {
 							"x": true,
 							"y": true,
@@ -590,10 +583,10 @@
 						}
 					},
 					"world": {
-						"x": 8,
-						"y": 8,
-						"width": 94,
-						"height": 6,
+						"x": 67,
+						"y": 1,
+						"width": 60,
+						"height": 5,
 						"originX": 0,
 						"originY": 0,
 						"color": [

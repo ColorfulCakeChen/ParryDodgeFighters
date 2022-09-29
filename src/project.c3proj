@@ -42,15 +42,7 @@
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [
-		{
-			"members": [
-				"EnergyBar",
-				"EnergyBarBackground"
-			],
-			"selectMode": "normal"
-		}
-	],
+	"containers": [],
 	"families": {
 		"items": [],
 		"subfolders": []

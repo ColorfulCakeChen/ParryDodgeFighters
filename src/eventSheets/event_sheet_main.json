@@ -1,5 +1,30 @@
 {
 	"name": "Event_Sheet_Main",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 471249150563254,
+					"parameters": {
+						"interval-seconds": "2.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "EnergyBar",
+					"sid": 647240586770713,
+					"parameters": {
+						"width": "30"
+					}
+				}
+			],
+			"sid": 111786934995515
+		}
+	],
 	"sid": 215625391285548
 }
