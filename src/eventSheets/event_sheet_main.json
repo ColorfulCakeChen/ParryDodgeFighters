@@ -5,6 +5,45 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 566307689640938
+				}
+			],
+			"actions": [
+				{
+					"id": "clear-canvas",
+					"objectClass": "DrawingCanvas",
+					"sid": 640141416532161,
+					"parameters": {
+						"color": "rgba255(0, 0, 0, 255)"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 929044604473526,
+					"parameters": {
+						"object": "EnergyBar",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 642128621094484,
+					"parameters": {
+						"object": "EnergyBarBackground",
+						"effects": "without-effects"
+					}
+				}
+			],
+			"sid": 304644917695471
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
 					"sid": 471249150563254,
