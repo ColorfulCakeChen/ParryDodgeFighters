@@ -21,18 +21,36 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wmfr7wu05w3",
 	"objectTypes": {
 		"items": [
 			"DrawingCanvas",
-			"SpriteFont"
+			"SpriteFont",
+			"EnergyBarBackground",
+			"EnergyBar"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"EnergyBar",
+				"EnergyBarBackground"
+			],
+			"selectMode": "normal"
+		}
+	],
 	"families": {
 		"items": [],
 		"subfolders": []
@@ -177,9 +195,9 @@
 			0
 		],
 		"splashColor": [
-			1,
-			1,
-			1,
+			0.19607843137254902,
+			0.19607843137254902,
+			0.39215686274509803,
 			0
 		],
 		"useThemeColor": false,
@@ -208,5 +226,5 @@
 	},
 	"viewportWidth": 128,
 	"viewportHeight": 72,
-	"firstLayout": null
+	"firstLayout": "Layout_Main"
 }
