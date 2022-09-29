@@ -29,6 +29,14 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wmfr7wu05w3",
@@ -36,7 +44,8 @@
 		"items": [
 			"DrawingCanvas",
 			"EnergyBar",
-			"EnergyBarBackground"
+			"EnergyBarBackground",
+			"Fighter"
 		],
 		"subfolders": []
 	},

@@ -5,6 +5,27 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 781989965292633
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "EnergyBar",
+					"sid": 397278153815631,
+					"parameters": {
+						"color": "Fighter(EnergyBar.IID).ColorValue"
+					}
+				}
+			],
+			"sid": 834938499052826
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 566307689640938
@@ -52,7 +73,16 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "EnergyBar",
+					"sid": 548861113157279,
+					"parameters": {
+						"text": "Fighter(EnergyBar.IID).nEnergy"
+					}
+				}
+			],
 			"sid": 111786934995515
 		}
 	],
