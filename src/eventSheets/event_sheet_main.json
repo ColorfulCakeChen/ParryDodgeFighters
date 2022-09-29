@@ -13,16 +13,7 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "set-width",
-					"objectClass": "EnergyBar",
-					"sid": 647240586770713,
-					"parameters": {
-						"width": "30"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 111786934995515
 		}
 	],

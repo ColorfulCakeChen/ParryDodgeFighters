@@ -1,20 +1,20 @@
 {
 	"name": "EnergyBar",
-	"plugin-id": "NinePatch",
-	"sid": 778807701223486,
+	"plugin-id": "Spritefont2",
+	"sid": 230902177558417,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 3,
-		"height": 3,
+		"width": 128,
+		"height": 256,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 1828016,
+		"imageSpriteId": 8923225,
 		"useCollisionPoly": true
 	}
 }

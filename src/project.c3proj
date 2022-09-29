@@ -35,9 +35,8 @@
 	"objectTypes": {
 		"items": [
 			"DrawingCanvas",
-			"SpriteFont",
-			"EnergyBarBackground",
-			"EnergyBar"
+			"EnergyBar",
+			"EnergyBarBackground"
 		],
 		"subfolders": []
 	},
