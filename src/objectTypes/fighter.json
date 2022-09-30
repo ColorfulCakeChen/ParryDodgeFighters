@@ -9,6 +9,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 396316382445408
+		},
+		{
+			"name": "nEnergyMax",
+			"type": "number",
+			"desc": "Energy value when full.",
+			"sid": 277341109312336
 		}
 	],
 	"behaviorTypes": [],

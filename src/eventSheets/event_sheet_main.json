@@ -77,9 +77,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "EnergyBar",
-					"sid": 548861113157279,
+					"sid": 830730512044856,
 					"parameters": {
-						"text": "Fighter(EnergyBar.IID).nEnergy"
+						"text": "mid( replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", \"^\" ) & replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", \" \" ), Fighter(EnergyBar.IID).nEnergyMax - Fighter(EnergyBar.IID).nEnergy, Fighter(EnergyBar.IID).nEnergyMax )"
 					}
 				}
 			],

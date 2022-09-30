@@ -68,6 +68,409 @@
 			"subLayers": [],
 			"instances": [
 				{
+					"type": "EnergyBarBackground",
+					"properties": {
+						"left-margin": 1,
+						"right-margin": 1,
+						"top-margin": 1,
+						"bottom-margin": 1,
+						"edges": "stretch",
+						"fill": "transparent",
+						"initially-visible": false,
+						"origin": "top-left",
+						"seams": "exact"
+					},
+					"uid": 5,
+					"instanceVariables": {},
+					"behaviors": {},
+					"template": {
+						"mode": "template",
+						"templateName": "EnergyBarBackgroundTemplate",
+						"sourceTemplateName": "",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"left-margin",
+												true
+											],
+											[
+												"right-margin",
+												true
+											],
+											[
+												"top-margin",
+												true
+											],
+											[
+												"bottom-margin",
+												true
+											],
+											[
+												"edges",
+												true
+											],
+											[
+												"fill",
+												true
+											],
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"origin",
+												true
+											],
+											[
+												"seams",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"world": {
+						"x": 1,
+						"y": 1,
+						"width": 62,
+						"height": 4,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnergyBarBackground",
+					"properties": {
+						"left-margin": 1,
+						"right-margin": 1,
+						"top-margin": 1,
+						"bottom-margin": 1,
+						"edges": "stretch",
+						"fill": "transparent",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "exact"
+					},
+					"uid": 7,
+					"instanceVariables": {},
+					"behaviors": {},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "EnergyBarBackgroundTemplate",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"left-margin",
+												true
+											],
+											[
+												"right-margin",
+												true
+											],
+											[
+												"top-margin",
+												true
+											],
+											[
+												"bottom-margin",
+												true
+											],
+											[
+												"edges",
+												true
+											],
+											[
+												"fill",
+												true
+											],
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"origin",
+												true
+											],
+											[
+												"seams",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												false
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 7,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 65,
+						"y": 1,
+						"width": 62,
+						"height": 4,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.282434894053338,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "EnergyBar",
 					"properties": {
 						"text": "   ^^^^^",
@@ -288,7 +691,7 @@
 						"enable-bbcode": false,
 						"character-width": 16,
 						"character-height": 16,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>^",
 						"spacing-data": "",
 						"scale": 0.125,
 						"character-spacing": 0,
@@ -496,195 +899,6 @@
 					}
 				},
 				{
-					"type": "EnergyBarBackground",
-					"properties": {
-						"left-margin": 1,
-						"right-margin": 1,
-						"top-margin": 1,
-						"bottom-margin": 1,
-						"edges": "stretch",
-						"fill": "transparent",
-						"initially-visible": false,
-						"origin": "top-left",
-						"seams": "exact"
-					},
-					"uid": 5,
-					"instanceVariables": {},
-					"behaviors": {},
-					"template": {
-						"mode": "template",
-						"templateName": "EnergyBarBackgroundTemplate",
-						"sourceTemplateName": "",
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"left-margin",
-												true
-											],
-											[
-												"right-margin",
-												true
-											],
-											[
-												"top-margin",
-												true
-											],
-											[
-												"bottom-margin",
-												true
-											],
-											[
-												"edges",
-												true
-											],
-											[
-												"fill",
-												true
-											],
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"origin",
-												true
-											],
-											[
-												"seams",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": []
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						]
-					},
-					"world": {
-						"x": 1,
-						"y": 1,
-						"width": 62,
-						"height": 4,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Fighter",
 					"properties": {
 						"initially-visible": true,
@@ -695,13 +909,14 @@
 					},
 					"uid": 6,
 					"instanceVariables": {
-						"nEnergy": 30
+						"nEnergy": 2,
+						"nEnergyMax": 30
 					},
 					"behaviors": {},
 					"template": {
-						"mode": "template",
-						"templateName": "FighterTemplate",
-						"sourceTemplateName": "",
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "FighterTemplate",
 						"components": [
 							{
 								"id": "plugin",
@@ -737,6 +952,10 @@
 										"state": [
 											{
 												"iv": "nEnergy",
+												"state": true
+											},
+											{
+												"iv": "nEnergyMax",
 												"state": true
 											}
 										]
@@ -787,7 +1006,7 @@
 											],
 											[
 												"c",
-												true
+												false
 											],
 											[
 												"sx",
@@ -867,13 +1086,14 @@
 					},
 					"uid": 8,
 					"instanceVariables": {
-						"nEnergy": 30
+						"nEnergy": 2,
+						"nEnergyMax": 30
 					},
 					"behaviors": {},
 					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "FighterTemplate",
+						"mode": "template",
+						"templateName": "FighterTemplate",
+						"sourceTemplateName": "",
 						"components": [
 							{
 								"id": "plugin",
@@ -909,6 +1129,10 @@
 										"state": [
 											{
 												"iv": "nEnergy",
+												"state": true
+											},
+											{
+												"iv": "nEnergyMax",
 												"state": true
 											}
 										]
@@ -1022,220 +1246,6 @@
 							0.5882352941176471,
 							0.3137254901960784,
 							0.0392156862745098,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "EnergyBarBackground",
-					"properties": {
-						"left-margin": 1,
-						"right-margin": 1,
-						"top-margin": 1,
-						"bottom-margin": 1,
-						"edges": "stretch",
-						"fill": "transparent",
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "exact"
-					},
-					"uid": 7,
-					"instanceVariables": {},
-					"behaviors": {},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "EnergyBarBackgroundTemplate",
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"left-margin",
-												true
-											],
-											[
-												"right-margin",
-												true
-											],
-											[
-												"top-margin",
-												true
-											],
-											[
-												"bottom-margin",
-												true
-											],
-											[
-												"edges",
-												true
-											],
-											[
-												"fill",
-												true
-											],
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"origin",
-												true
-											],
-											[
-												"seams",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": []
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						]
-					},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 7,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"world": {
-						"x": 65,
-						"y": 1,
-						"width": 62,
-						"height": 4,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
 							1
 						],
 						"angle": 0,
