@@ -10,22 +10,52 @@
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
-			"conditions": [],
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 464519337209284,
+					"parameters": {
+						"object": "Fighter",
+						"expression": "Fighter.UID",
+						"comparison": 0,
+						"value": "EnergyBar.FighterUID"
+					}
+				}
+			],
 			"actions": [
 				{
-					"id": "set-default-color",
-					"objectClass": "EnergyBar",
-					"sid": 837147810275380,
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 288919743499739,
+					"disabled": true,
 					"parameters": {
-						"color": "Fighter( EnergyBar.IID ).ColorValue"
+						"text": "SpriteFont.Text & \",\" & Fighter.UID"
 					}
 				},
 				{
 					"id": "set-text",
-					"objectClass": "EnergyBar",
-					"sid": 874411542428136,
+					"objectClass": "SpriteFont",
+					"sid": 148570082252405,
+					"disabled": true,
 					"parameters": {
-						"text": "mid( replace( zeropad( 0, Fighter( EnergyBar.IID ).EnergyMax ), \"0\", ( EnergyBar.IID = 0 ? \"^\" : \" \" ) ) & replace(  zeropad( 0, Fighter( EnergyBar.IID ).EnergyMax ), \"0\", ( EnergyBar.IID = 0 ? \" \" : \"^\" ) ), ( EnergyBar.IID = 0 ? Fighter( EnergyBar.IID ).EnergyMax - Fighter( EnergyBar.IID ).EnergyCur : Fighter( EnergyBar.IID ).EnergyCur ), Fighter( EnergyBar.IID ).EnergyMax )"
+						"text": "SpriteFont.Text & \",\" & ( Fighter.EnergyCur * EnergyBar.EnergyToWidthRatio )"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "EnergyBar",
+					"sid": 781641613181165,
+					"parameters": {
+						"color": "Fighter.ColorValue"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "EnergyBar",
+					"sid": 840731695333272,
+					"parameters": {
+						"width": "Fighter.EnergyCur * EnergyBar.EnergyToWidthRatio"
 					}
 				}
 			],
@@ -82,7 +112,16 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
-							"sid": 293777428221209,
+							"sid": 856300446589980,
+							"parameters": {
+								"object": "EnergyBarBackground",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 285504036222598,
 							"parameters": {
 								"object": "EnergyBar",
 								"effects": "without-effects"
@@ -91,9 +130,9 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
-							"sid": 856300446589980,
+							"sid": 576192614515019,
 							"parameters": {
-								"object": "EnergyBarBackground",
+								"object": "SpriteFont",
 								"effects": "without-effects"
 							}
 						}

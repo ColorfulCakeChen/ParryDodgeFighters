@@ -1,20 +1,33 @@
 {
 	"name": "EnergyBar",
-	"plugin-id": "Spritefont2",
-	"sid": 230902177558417,
+	"plugin-id": "TiledBg",
+	"sid": 295022275879342,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "FighterUID",
+			"type": "number",
+			"desc": "The UID of Fighter to be displayed.",
+			"sid": 161405240693006
+		},
+		{
+			"name": "EnergyToWidthRatio",
+			"type": "number",
+			"desc": "The ratio for converting Fighter's energy to bar width.",
+			"sid": 455862443296846
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 128,
-		"height": 256,
+		"width": 1,
+		"height": 1,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 8923225,
+		"imageSpriteId": 85897,
 		"useCollisionPoly": true
 	}
 }

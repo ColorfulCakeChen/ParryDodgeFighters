@@ -7,33 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "DrawingCanvas",
-					"properties": {
-						"resolution-mode": "auto",
-						"initially-visible": true,
-						"origin": "top-left",
-						"antialiasing": "off"
-					},
-					"uid": 2,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 128,
-						"height": 72,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0
-					}
-				},
-				{
 					"type": "Fighter",
 					"properties": {
 						"initially-visible": false,
@@ -250,8 +223,8 @@
 						]
 					},
 					"world": {
-						"x": 48,
-						"y": 24,
+						"x": 40,
+						"y": 8,
 						"width": 25,
 						"height": 25,
 						"originX": 0.5,
@@ -338,7 +311,7 @@
 										"state": [
 											{
 												"iv": "EnergyCur",
-												"state": true
+												"state": false
 											},
 											{
 												"iv": "EnergyMax",
@@ -484,7 +457,7 @@
 					},
 					"world": {
 						"x": 80,
-						"y": 24,
+						"y": 8,
 						"width": 25,
 						"height": 25,
 						"originX": 0.5,
@@ -497,6 +470,33 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "DrawingCanvas",
+					"properties": {
+						"resolution-mode": "auto",
+						"initially-visible": true,
+						"origin": "top-left",
+						"antialiasing": "off"
+					},
+					"uid": 2,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 128,
+						"height": 72,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0
 					}
 				}
 			],
@@ -540,7 +540,7 @@
 						"right-margin": 1,
 						"top-margin": 1,
 						"bottom-margin": 1,
-						"edges": "stretch",
+						"edges": "tile",
 						"fill": "transparent",
 						"initially-visible": false,
 						"origin": "top-left",
@@ -937,15 +937,15 @@
 					}
 				},
 				{
-					"type": "EnergyBar",
+					"type": "SpriteFont",
 					"properties": {
-						"text": "   ^^^^^",
+						"text": "Debug",
 						"enable-bbcode": false,
 						"character-width": 16,
 						"character-height": 16,
 						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>^",
 						"spacing-data": "",
-						"scale": 0.125,
+						"scale": 0.25,
 						"character-spacing": 0,
 						"line-height": 0,
 						"horizontal-alignment": "left",
@@ -957,10 +957,46 @@
 					"uid": 3,
 					"instanceVariables": {},
 					"behaviors": {},
+					"world": {
+						"x": 16,
+						"y": 32,
+						"width": 60,
+						"height": 8,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnergyBar",
+					"properties": {
+						"initially-visible": false,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 10,
+					"instanceVariables": {
+						"FighterUID": 8,
+						"EnergyToWidthRatio": 2
+					},
+					"behaviors": {},
 					"template": {
 						"mode": "template",
 						"templateName": "EnergyBarTemplate",
-						"sourceTemplateName": "EnergyBarTemplate",
+						"sourceTemplateName": "",
 						"components": [
 							{
 								"id": "plugin",
@@ -969,59 +1005,39 @@
 										"key": "plugin",
 										"state": [
 											[
-												"text",
-												false
-											],
-											[
-												"enable-bbcode",
-												true
-											],
-											[
-												"character-width",
-												true
-											],
-											[
-												"character-height",
-												true
-											],
-											[
-												"character-set",
-												true
-											],
-											[
-												"spacing-data",
-												true
-											],
-											[
-												"scale",
-												true
-											],
-											[
-												"character-spacing",
-												true
-											],
-											[
-												"line-height",
-												true
-											],
-											[
-												"horizontal-alignment",
-												true
-											],
-											[
-												"vertical-alignment",
-												true
-											],
-											[
-												"wrapping",
-												true
-											],
-											[
 												"initially-visible",
-												false
+												true
 											],
 											[
 												"origin",
+												true
+											],
+											[
+												"wrap-horizontal",
+												true
+											],
+											[
+												"wrap-vertical",
+												true
+											],
+											[
+												"image-offset-x",
+												true
+											],
+											[
+												"image-offset-y",
+												true
+											],
+											[
+												"image-scale-x",
+												true
+											],
+											[
+												"image-scale-y",
+												true
+											],
+											[
+												"image-angle",
 												true
 											]
 										]
@@ -1033,7 +1049,16 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "FighterUID",
+												"state": true
+											},
+											{
+												"iv": "EnergyToWidthRatio",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -1081,7 +1106,7 @@
 											],
 											[
 												"c",
-												false
+												true
 											],
 											[
 												"sx",
@@ -1141,9 +1166,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							0.5882352941176471,
-							0.19607843137254902,
-							0.7843137254901961,
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,
@@ -1153,23 +1178,21 @@
 				{
 					"type": "EnergyBar",
 					"properties": {
-						"text": "123456789012345678901234567890",
-						"enable-bbcode": false,
-						"character-width": 16,
-						"character-height": 16,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>^",
-						"spacing-data": "",
-						"scale": 0.125,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "character",
 						"initially-visible": false,
-						"origin": "top-left"
+						"origin": "top-right",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
 					},
 					"uid": 4,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"FighterUID": 6,
+						"EnergyToWidthRatio": 2
+					},
 					"behaviors": {},
 					"template": {
 						"mode": "replica",
@@ -1183,59 +1206,39 @@
 										"key": "plugin",
 										"state": [
 											[
-												"text",
-												true
-											],
-											[
-												"enable-bbcode",
-												true
-											],
-											[
-												"character-width",
-												true
-											],
-											[
-												"character-height",
-												true
-											],
-											[
-												"character-set",
-												true
-											],
-											[
-												"spacing-data",
-												true
-											],
-											[
-												"scale",
-												true
-											],
-											[
-												"character-spacing",
-												true
-											],
-											[
-												"line-height",
-												true
-											],
-											[
-												"horizontal-alignment",
-												true
-											],
-											[
-												"vertical-alignment",
-												true
-											],
-											[
-												"wrapping",
-												true
-											],
-											[
 												"initially-visible",
 												true
 											],
 											[
 												"origin",
+												false
+											],
+											[
+												"wrap-horizontal",
+												true
+											],
+											[
+												"wrap-vertical",
+												true
+											],
+											[
+												"image-offset-x",
+												true
+											],
+											[
+												"image-offset-y",
+												true
+											],
+											[
+												"image-scale-x",
+												true
+											],
+											[
+												"image-scale-y",
+												true
+											],
+											[
+												"image-angle",
 												true
 											]
 										]
@@ -1247,7 +1250,16 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "FighterUID",
+												"state": false
+											},
+											{
+												"iv": "EnergyToWidthRatio",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -1348,16 +1360,16 @@
 						]
 					},
 					"world": {
-						"x": 66,
+						"x": 126,
 						"y": 2,
 						"width": 60,
 						"height": 2,
-						"originX": 0,
+						"originX": 1,
 						"originY": 0,
 						"color": [
-							0,
-							0.5882352941176471,
-							0.7843137254901961,
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,
