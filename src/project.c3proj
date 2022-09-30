@@ -53,6 +53,14 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wmfr7wu05w3",
@@ -79,7 +87,8 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Event_Sheet_Main"
+			"Event_Sheet_Main",
+			"Event_Sheet_Functions"
 		],
 		"subfolders": []
 	},

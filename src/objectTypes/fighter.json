@@ -15,6 +15,12 @@
 			"type": "number",
 			"desc": "Energy value when full.",
 			"sid": 277341109312336
+		},
+		{
+			"name": "nEnergyRestoreSecondsPerPoint",
+			"type": "number",
+			"desc": "How many seconds to increase one point energy.",
+			"sid": 433564257314143
 		}
 	],
 	"behaviorTypes": [
@@ -27,6 +33,11 @@
 			"behaviorId": "Flash",
 			"name": "Flash",
 			"sid": 848619390809918
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 834408189845961
 		}
 	],
 	"effectTypes": [],

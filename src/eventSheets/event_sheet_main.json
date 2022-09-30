@@ -12,11 +12,18 @@
 			],
 			"actions": [
 				{
-					"id": "set-default-color",
-					"objectClass": "EnergyBar",
-					"sid": 397278153815631,
+					"callFunction": "EnergyBarRefresh",
+					"sid": 206385664877509
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Fighter",
+					"sid": 438858777808147,
+					"behaviorType": "Timer",
 					"parameters": {
-						"color": "Fighter(EnergyBar.IID).ColorValue"
+						"duration": "Fighter.nEnergyRestoreSecondsPerPoint",
+						"type": "regular",
+						"tag": "\"EnergyRestore\""
 					}
 				},
 				{
@@ -108,16 +115,7 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "EnergyBar",
-					"sid": 482542230517600,
-					"parameters": {
-						"text": "mid( replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", ( EnergyBar.IID = 0 ? \"^\" : \" \" ) ) & replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", ( EnergyBar.IID = 0 ? \" \" : \"^\" ) ), Fighter(EnergyBar.IID).nEnergyMax - Fighter(EnergyBar.IID).nEnergy, Fighter(EnergyBar.IID).nEnergyMax )"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 111786934995515
 		},
 		{
@@ -141,6 +139,36 @@
 				}
 			],
 			"sid": 143835772368219
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Fighter",
+					"sid": 972864975304214,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"EnergyRestore\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 951313168458287,
+					"parameters": {
+						"instance-variable": "nEnergy",
+						"value": "min( Self.nEnergy + 1, Self.nEnergyMax )"
+					}
+				},
+				{
+					"callFunction": "EnergyBarRefresh",
+					"sid": 660571852114822
+				}
+			],
+			"sid": 725034865763988
 		}
 	],
 	"sid": 215625391285548

@@ -44,8 +44,9 @@
 					},
 					"uid": 8,
 					"instanceVariables": {
-						"nEnergy": 2,
-						"nEnergyMax": 30
+						"nEnergy": 0,
+						"nEnergyMax": 30,
+						"nEnergyRestoreSecondsPerPoint": 2
 					},
 					"behaviors": {
 						"Fade": {
@@ -59,6 +60,9 @@
 							}
 						},
 						"Flash": {
+							"properties": {}
+						},
+						"Timer": {
 							"properties": {}
 						}
 					},
@@ -106,6 +110,10 @@
 											{
 												"iv": "nEnergyMax",
 												"state": true
+											},
+											{
+												"iv": "nEnergyRestoreSecondsPerPoint",
+												"state": true
 											}
 										]
 									}
@@ -141,6 +149,10 @@
 									},
 									{
 										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Timer",
 										"state": []
 									}
 								]
@@ -265,8 +277,9 @@
 					},
 					"uid": 6,
 					"instanceVariables": {
-						"nEnergy": 2,
-						"nEnergyMax": 30
+						"nEnergy": 0,
+						"nEnergyMax": 30,
+						"nEnergyRestoreSecondsPerPoint": 2
 					},
 					"behaviors": {
 						"Fade": {
@@ -280,6 +293,9 @@
 							}
 						},
 						"Flash": {
+							"properties": {}
+						},
+						"Timer": {
 							"properties": {}
 						}
 					},
@@ -327,6 +343,10 @@
 											{
 												"iv": "nEnergyMax",
 												"state": true
+											},
+											{
+												"iv": "nEnergyRestoreSecondsPerPoint",
+												"state": true
 											}
 										]
 									}
@@ -362,6 +382,10 @@
 									},
 									{
 										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Timer",
 										"state": []
 									}
 								]
