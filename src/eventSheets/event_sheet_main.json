@@ -21,7 +21,7 @@
 					"sid": 438858777808147,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "Fighter.nEnergyRestoreSecondsPerPoint",
+						"duration": "Fighter.EnergyRestoreSecondsPerPoint",
 						"type": "regular",
 						"tag": "\"EnergyRestore\""
 					}
@@ -159,8 +159,8 @@
 					"objectClass": "Fighter",
 					"sid": 951313168458287,
 					"parameters": {
-						"instance-variable": "nEnergy",
-						"value": "min( Self.nEnergy + 1, Self.nEnergyMax )"
+						"instance-variable": "EnergyCur",
+						"value": "min( Self.EnergyCur + 1, Self.EnergyMax )"
 					}
 				},
 				{

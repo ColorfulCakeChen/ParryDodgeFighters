@@ -5,19 +5,19 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "nEnergy",
+			"name": "EnergyCur",
 			"type": "number",
-			"desc": "",
+			"desc": "Current energy value.",
 			"sid": 396316382445408
 		},
 		{
-			"name": "nEnergyMax",
+			"name": "EnergyMax",
 			"type": "number",
-			"desc": "Energy value when full.",
+			"desc": "Maximum energy value.",
 			"sid": 277341109312336
 		},
 		{
-			"name": "nEnergyRestoreSecondsPerPoint",
+			"name": "EnergyRestoreSecondsPerPoint",
 			"type": "number",
 			"desc": "How many seconds to increase one point energy.",
 			"sid": 433564257314143

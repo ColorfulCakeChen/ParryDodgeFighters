@@ -44,9 +44,9 @@
 					},
 					"uid": 8,
 					"instanceVariables": {
-						"nEnergy": 0,
-						"nEnergyMax": 30,
-						"nEnergyRestoreSecondsPerPoint": 2
+						"EnergyCur": 0,
+						"EnergyMax": 30,
+						"EnergyRestoreSecondsPerPoint": 2
 					},
 					"behaviors": {
 						"Fade": {
@@ -104,15 +104,15 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "nEnergy",
+												"iv": "EnergyCur",
 												"state": true
 											},
 											{
-												"iv": "nEnergyMax",
+												"iv": "EnergyMax",
 												"state": true
 											},
 											{
-												"iv": "nEnergyRestoreSecondsPerPoint",
+												"iv": "EnergyRestoreSecondsPerPoint",
 												"state": true
 											}
 										]
@@ -277,9 +277,9 @@
 					},
 					"uid": 6,
 					"instanceVariables": {
-						"nEnergy": 0,
-						"nEnergyMax": 30,
-						"nEnergyRestoreSecondsPerPoint": 2
+						"EnergyCur": 0,
+						"EnergyMax": 30,
+						"EnergyRestoreSecondsPerPoint": 2
 					},
 					"behaviors": {
 						"Fade": {
@@ -337,15 +337,15 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "nEnergy",
+												"iv": "EnergyCur",
 												"state": true
 											},
 											{
-												"iv": "nEnergyMax",
+												"iv": "EnergyMax",
 												"state": true
 											},
 											{
-												"iv": "nEnergyRestoreSecondsPerPoint",
+												"iv": "EnergyRestoreSecondsPerPoint",
 												"state": true
 											}
 										]
