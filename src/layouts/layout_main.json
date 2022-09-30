@@ -934,8 +934,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"template": {
-						"mode": "replica",
-						"templateName": "",
+						"mode": "template",
+						"templateName": "EnergyBarTemplate",
 						"sourceTemplateName": "EnergyBarTemplate",
 						"components": [
 							{
@@ -1110,7 +1110,7 @@
 						]
 					},
 					"world": {
-						"x": 66,
+						"x": 2,
 						"y": 2,
 						"width": 60,
 						"height": 2,
@@ -1118,7 +1118,7 @@
 						"originY": 0,
 						"color": [
 							0.5882352941176471,
-							0,
+							0.19607843137254902,
 							0.7843137254901961,
 							1
 						],
@@ -1148,9 +1148,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"template": {
-						"mode": "template",
-						"templateName": "EnergyBarTemplate",
-						"sourceTemplateName": "",
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "EnergyBarTemplate",
 						"components": [
 							{
 								"id": "plugin",
@@ -1324,7 +1324,7 @@
 						]
 					},
 					"world": {
-						"x": 2,
+						"x": 66,
 						"y": 2,
 						"width": 60,
 						"height": 2,

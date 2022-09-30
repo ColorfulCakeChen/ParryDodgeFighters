@@ -112,9 +112,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "EnergyBar",
-					"sid": 830730512044856,
+					"sid": 482542230517600,
 					"parameters": {
-						"text": "mid( replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", \"^\" ) & replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", \" \" ), Fighter(EnergyBar.IID).nEnergyMax - Fighter(EnergyBar.IID).nEnergy, Fighter(EnergyBar.IID).nEnergyMax )"
+						"text": "mid( replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", ( EnergyBar.IID = 0 ? \"^\" : \" \" ) ) & replace( zeropad(0,Fighter(EnergyBar.IID).nEnergyMax), \"0\", ( EnergyBar.IID = 0 ? \" \" : \"^\" ) ), Fighter(EnergyBar.IID).nEnergyMax - Fighter(EnergyBar.IID).nEnergy, Fighter(EnergyBar.IID).nEnergyMax )"
 					}
 				}
 			],
