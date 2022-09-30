@@ -17,7 +17,18 @@
 			"sid": 277341109312336
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 560810150319010
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 848619390809918
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

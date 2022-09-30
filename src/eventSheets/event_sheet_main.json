@@ -18,6 +18,17 @@
 					"parameters": {
 						"color": "Fighter(EnergyBar.IID).ColorValue"
 					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Fighter",
+					"sid": 869311745356431,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "1",
+						"off-time": "1",
+						"duration": "10"
+					}
 				}
 			],
 			"sid": 834938499052826
@@ -59,7 +70,31 @@
 					}
 				}
 			],
-			"sid": 304644917695471
+			"sid": 304644917695471,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "Fighter",
+							"sid": 643069570680755
+						}
+					],
+					"actions": [
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 161938492712328,
+							"parameters": {
+								"object": "Fighter",
+								"effects": "without-effects"
+							}
+						}
+					],
+					"sid": 566971766621090
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -84,6 +119,21 @@
 				}
 			],
 			"sid": 111786934995515
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 237370169707746,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 143835772368219
 		}
 	],
 	"sid": 215625391285548
