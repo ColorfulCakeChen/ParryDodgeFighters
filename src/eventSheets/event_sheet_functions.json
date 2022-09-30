@@ -15,9 +15,9 @@
 				{
 					"id": "set-default-color",
 					"objectClass": "EnergyBar",
-					"sid": 723252437902437,
+					"sid": 837147810275380,
 					"parameters": {
-						"color": "Fighter(EnergyBar.IID).ColorValue"
+						"color": "Fighter( EnergyBar.IID ).ColorValue"
 					}
 				},
 				{
@@ -45,9 +45,9 @@
 				{
 					"id": "clear-canvas",
 					"objectClass": "DrawingCanvas",
-					"sid": 389518436786117,
+					"sid": 951333781264637,
 					"parameters": {
-						"color": "rgba255(0, 0, 0, 255)"
+						"color": "rgba255( 0, 0, 0, 255 )"
 					}
 				},
 				{
