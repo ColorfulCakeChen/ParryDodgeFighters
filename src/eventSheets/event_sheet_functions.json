@@ -45,27 +45,9 @@
 				{
 					"id": "clear-canvas",
 					"objectClass": "DrawingCanvas",
-					"sid": 951333781264637,
+					"sid": 385201169129731,
 					"parameters": {
 						"color": "rgba255( 0, 0, 0, 255 )"
-					}
-				},
-				{
-					"id": "paste-object",
-					"objectClass": "DrawingCanvas",
-					"sid": 970976060232000,
-					"parameters": {
-						"object": "EnergyBar",
-						"effects": "without-effects"
-					}
-				},
-				{
-					"id": "paste-object",
-					"objectClass": "DrawingCanvas",
-					"sid": 578510046348133,
-					"parameters": {
-						"object": "EnergyBarBackground",
-						"effects": "without-effects"
 					}
 				}
 			],
@@ -77,21 +59,46 @@
 						{
 							"id": "is-visible",
 							"objectClass": "Fighter",
-							"sid": 952461748142251
+							"sid": 940486853235796
 						}
 					],
 					"actions": [
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
-							"sid": 554534180108151,
+							"sid": 287342857723435,
 							"parameters": {
 								"object": "Fighter",
 								"effects": "without-effects"
 							}
 						}
 					],
-					"sid": 321330123939222
+					"sid": 358295451626339
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 293777428221209,
+							"parameters": {
+								"object": "EnergyBar",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 856300446589980,
+							"parameters": {
+								"object": "EnergyBarBackground",
+								"effects": "without-effects"
+							}
+						}
+					],
+					"sid": 775860740615889
 				}
 			]
 		}
