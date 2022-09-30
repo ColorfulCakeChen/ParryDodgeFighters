@@ -51,72 +51,41 @@
 			],
 			"actions": [
 				{
-					"id": "clear-canvas",
-					"objectClass": "DrawingCanvas",
-					"sid": 640141416532161,
-					"parameters": {
-						"color": "rgba255(0, 0, 0, 255)"
-					}
-				},
-				{
-					"id": "paste-object",
-					"objectClass": "DrawingCanvas",
-					"sid": 929044604473526,
-					"parameters": {
-						"object": "EnergyBar",
-						"effects": "without-effects"
-					}
-				},
-				{
-					"id": "paste-object",
-					"objectClass": "DrawingCanvas",
-					"sid": 642128621094484,
-					"parameters": {
-						"object": "EnergyBarBackground",
-						"effects": "without-effects"
-					}
+					"callFunction": "DrawingCanvasPaint",
+					"sid": 670822637032521
 				}
 			],
-			"sid": 304644917695471,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-visible",
-							"objectClass": "Fighter",
-							"sid": 643069570680755
-						}
-					],
-					"actions": [
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 161938492712328,
-							"parameters": {
-								"object": "Fighter",
-								"effects": "without-effects"
-							}
-						}
-					],
-					"sid": 566971766621090
-				}
-			]
+			"sid": 304644917695471
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 471249150563254,
+					"id": "on-timer",
+					"objectClass": "Fighter",
+					"sid": 336073640520697,
+					"behaviorType": "Timer",
 					"parameters": {
-						"interval-seconds": "2.0"
+						"tag": "\"EnergyRestore\""
 					}
 				}
 			],
-			"actions": [],
-			"sid": 111786934995515
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 843087055475210,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "min( Self.EnergyCur + 1, Self.EnergyMax )"
+					}
+				},
+				{
+					"callFunction": "EnergyBarRefresh",
+					"sid": 968260814758429
+				}
+			],
+			"sid": 552822828889253
 		},
 		{
 			"eventType": "block",
@@ -139,36 +108,6 @@
 				}
 			],
 			"sid": 143835772368219
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-timer",
-					"objectClass": "Fighter",
-					"sid": 972864975304214,
-					"behaviorType": "Timer",
-					"parameters": {
-						"tag": "\"EnergyRestore\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 951313168458287,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "min( Self.EnergyCur + 1, Self.EnergyMax )"
-					}
-				},
-				{
-					"callFunction": "EnergyBarRefresh",
-					"sid": 660571852114822
-				}
-			],
-			"sid": 725034865763988
 		}
 	],
 	"sid": 215625391285548

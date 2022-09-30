@@ -30,6 +30,70 @@
 				}
 			],
 			"sid": 113711322765195
+		},
+		{
+			"functionName": "DrawingCanvasPaint",
+			"functionDescription": "Paint all objects to drawing canvas.",
+			"functionCategory": "DrawingCanvas",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "clear-canvas",
+					"objectClass": "DrawingCanvas",
+					"sid": 389518436786117,
+					"parameters": {
+						"color": "rgba255(0, 0, 0, 255)"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 970976060232000,
+					"parameters": {
+						"object": "EnergyBar",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 578510046348133,
+					"parameters": {
+						"object": "EnergyBarBackground",
+						"effects": "without-effects"
+					}
+				}
+			],
+			"sid": 728348637510731,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "Fighter",
+							"sid": 952461748142251
+						}
+					],
+					"actions": [
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 554534180108151,
+							"parameters": {
+								"object": "Fighter",
+								"effects": "without-effects"
+							}
+						}
+					],
+					"sid": 321330123939222
+				}
+			]
 		}
 	],
 	"sid": 744869350564622
