@@ -50,9 +50,9 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 2,
+								"fade-in-time": 15,
 								"wait-time": 1,
-								"fade-out-time": 2,
+								"fade-out-time": 0,
 								"destroy": false,
 								"enabled": false,
 								"live-preview": false

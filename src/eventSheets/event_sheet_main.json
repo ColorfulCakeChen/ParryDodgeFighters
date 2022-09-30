@@ -22,7 +22,7 @@
 				{
 					"id": "flash",
 					"objectClass": "Fighter",
-					"sid": 869311745356431,
+					"sid": 597153171344018,
 					"behaviorType": "Flash",
 					"parameters": {
 						"on-time": "1",
@@ -132,7 +132,14 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "start-fade",
+					"objectClass": "Fighter",
+					"sid": 965948070614734,
+					"behaviorType": "Fade"
+				}
+			],
 			"sid": 143835772368219
 		}
 	],
