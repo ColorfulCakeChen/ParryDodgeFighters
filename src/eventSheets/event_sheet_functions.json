@@ -23,9 +23,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "EnergyBar",
-					"sid": 234005322599237,
+					"sid": 874411542428136,
 					"parameters": {
-						"text": "mid( replace( zeropad(0,Fighter(EnergyBar.IID).EnergyMax), \"0\", ( EnergyBar.IID = 0 ? \"^\" : \" \" ) ) & replace( zeropad(0,Fighter(EnergyBar.IID).EnergyMax), \"0\", ( EnergyBar.IID = 0 ? \" \" : \"^\" ) ), ( EnergyBar.IID = 0 ? Fighter(EnergyBar.IID).EnergyMax - Fighter(EnergyBar.IID).EnergyCur : Fighter(EnergyBar.IID).EnergyCur ), Fighter(EnergyBar.IID).EnergyMax )"
+						"text": "mid( replace( zeropad( 0, Fighter( EnergyBar.IID ).EnergyMax ), \"0\", ( EnergyBar.IID = 0 ? \"^\" : \" \" ) ) & replace(  zeropad( 0, Fighter( EnergyBar.IID ).EnergyMax ), \"0\", ( EnergyBar.IID = 0 ? \" \" : \"^\" ) ), ( EnergyBar.IID = 0 ? Fighter( EnergyBar.IID ).EnergyMax - Fighter( EnergyBar.IID ).EnergyCur : Fighter( EnergyBar.IID ).EnergyCur ), Fighter( EnergyBar.IID ).EnergyMax )"
 					}
 				}
 			],
