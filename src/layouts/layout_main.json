@@ -143,7 +143,7 @@
 											],
 											[
 												"enable-collisions",
-												true
+												false
 											]
 										]
 									}
@@ -1502,6 +1502,51 @@
 						"height": 2,
 						"originX": 1,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "RemainedTimer",
+					"properties": {
+						"rate": 50,
+						"spray-cone": 60,
+						"type": "one-shot",
+						"object": -1,
+						"live-preview": false,
+						"speed": 200,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
+					},
+					"uid": 9,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 40,
+						"y": 40,
+						"width": 20,
+						"height": 20,
+						"originX": 0,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
