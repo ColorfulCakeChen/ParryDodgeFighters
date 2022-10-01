@@ -12,6 +12,14 @@
 			"eventType": "function-block",
 			"conditions": [
 				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 430298552356634,
+					"parameters": {
+						"object": "EnergyBar"
+					}
+				},
+				{
 					"id": "pick-by-comparison",
 					"objectClass": "System",
 					"sid": 464519337209284,

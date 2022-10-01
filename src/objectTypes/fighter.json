@@ -38,6 +38,16 @@
 			"behaviorId": "Timer",
 			"name": "Timer",
 			"sid": 834408189845961
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 124947127593422
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 495700070411087
 		}
 	],
 	"effectTypes": [],

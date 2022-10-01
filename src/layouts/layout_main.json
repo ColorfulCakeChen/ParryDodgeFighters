@@ -2,7 +2,7 @@
 	"name": "Layout_Main",
 	"layers": [
 		{
-			"name": "Layer_Content",
+			"name": "Layer_ScaleParallax0_Visible",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -51,9 +51,9 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 0,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
@@ -63,10 +63,602 @@
 			"global": false
 		},
 		{
-			"name": "Layer_UI",
+			"name": "Layer_ScaleParallax100_Invisible",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
+				{
+					"type": "Fighter",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 6,
+					"instanceVariables": {
+						"EnergyCur": 10,
+						"EnergyMax": 30,
+						"EnergyRestoreSecondsPerPoint": 2
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "FighterTemplate",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "EnergyCur",
+												"state": false
+											},
+											{
+												"iv": "EnergyMax",
+												"state": true
+											},
+											{
+												"iv": "EnergyRestoreSecondsPerPoint",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Fade",
+										"state": [
+											[
+												"fade-in-time",
+												true
+											],
+											[
+												"wait-time",
+												true
+											],
+											[
+												"fade-out-time",
+												true
+											],
+											[
+												"destroy",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Timer",
+										"state": []
+									},
+									{
+										"key": "8Direction",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"directions",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"allow-sliding",
+												true
+											],
+											[
+												"default-controls",
+												true
+											],
+											[
+												"enabled",
+												false
+											]
+										]
+									},
+									{
+										"key": "ScrollTo",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												false
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"world": {
+						"x": 80,
+						"y": 8,
+						"width": 25,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							0.0392156862745098,
+							0.5882352941176471,
+							0.0392156862745098,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Fighter",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 8,
+					"instanceVariables": {
+						"EnergyCur": 0,
+						"EnergyMax": 30,
+						"EnergyRestoreSecondsPerPoint": 2
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 15,
+								"wait-time": 1,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 50,
+								"deceleration": 50,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"template": {
+						"mode": "template",
+						"templateName": "FighterTemplate",
+						"sourceTemplateName": "",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "EnergyCur",
+												"state": true
+											},
+											{
+												"iv": "EnergyMax",
+												"state": true
+											},
+											{
+												"iv": "EnergyRestoreSecondsPerPoint",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Fade",
+										"state": [
+											[
+												"fade-in-time",
+												true
+											],
+											[
+												"wait-time",
+												true
+											],
+											[
+												"fade-out-time",
+												true
+											],
+											[
+												"destroy",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Timer",
+										"state": []
+									},
+									{
+										"key": "8Direction",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"directions",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"allow-sliding",
+												true
+											],
+											[
+												"default-controls",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "ScrollTo",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												false
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"world": {
+						"x": 40,
+						"y": 8,
+						"width": 25,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							0.5882352941176471,
+							0.3137254901960784,
+							0.0392156862745098,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
 				{
 					"type": "EnergyBarBackground",
 					"properties": {
@@ -74,9 +666,9 @@
 						"right-margin": 1,
 						"top-margin": 1,
 						"bottom-margin": 1,
-						"edges": "tile",
+						"edges": "stretch",
 						"fill": "transparent",
-						"initially-visible": false,
+						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "exact"
 					},
@@ -485,7 +1077,7 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "character",
-						"initially-visible": false,
+						"initially-visible": true,
 						"origin": "top-left"
 					},
 					"uid": 3,
@@ -511,7 +1103,7 @@
 				{
 					"type": "EnergyBar",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"origin": "top-left",
 						"wrap-horizontal": "repeat",
 						"wrap-vertical": "repeat",
@@ -909,472 +1501,6 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "Fighter",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 8,
-					"instanceVariables": {
-						"EnergyCur": 0,
-						"EnergyMax": 30,
-						"EnergyRestoreSecondsPerPoint": 2
-					},
-					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 15,
-								"wait-time": 1,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"template": {
-						"mode": "template",
-						"templateName": "FighterTemplate",
-						"sourceTemplateName": "",
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "EnergyCur",
-												"state": true
-											},
-											{
-												"iv": "EnergyMax",
-												"state": true
-											},
-											{
-												"iv": "EnergyRestoreSecondsPerPoint",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": [
-									{
-										"key": "Fade",
-										"state": [
-											[
-												"fade-in-time",
-												true
-											],
-											[
-												"wait-time",
-												true
-											],
-											[
-												"fade-out-time",
-												true
-											],
-											[
-												"destroy",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Flash",
-										"state": []
-									},
-									{
-										"key": "Timer",
-										"state": []
-									}
-								]
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												false
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						]
-					},
-					"world": {
-						"x": 40,
-						"y": 8,
-						"width": 25,
-						"height": 25,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							0.5882352941176471,
-							0.3137254901960784,
-							0.0392156862745098,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Fighter",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 6,
-					"instanceVariables": {
-						"EnergyCur": 0,
-						"EnergyMax": 30,
-						"EnergyRestoreSecondsPerPoint": 2
-					},
-					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0,
-								"wait-time": 0,
-								"fade-out-time": 1,
-								"destroy": true,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "FighterTemplate",
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "EnergyCur",
-												"state": false
-											},
-											{
-												"iv": "EnergyMax",
-												"state": true
-											},
-											{
-												"iv": "EnergyRestoreSecondsPerPoint",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": [
-									{
-										"key": "Fade",
-										"state": [
-											[
-												"fade-in-time",
-												true
-											],
-											[
-												"wait-time",
-												true
-											],
-											[
-												"fade-out-time",
-												true
-											],
-											[
-												"destroy",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Flash",
-										"state": []
-									},
-									{
-										"key": "Timer",
-										"state": []
-									}
-								]
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												false
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						]
-					},
-					"world": {
-						"x": 80,
-						"y": 8,
-						"width": 25,
-						"height": 25,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							0.0392156862745098,
-							0.5882352941176471,
-							0.0392156862745098,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
 			"sid": 499749095447558,
@@ -1394,9 +1520,9 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 0,
-			"parallaxY": 0,
-			"scaleRate": 0,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",

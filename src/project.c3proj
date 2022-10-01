@@ -69,6 +69,22 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wmfr7wu05w3",
