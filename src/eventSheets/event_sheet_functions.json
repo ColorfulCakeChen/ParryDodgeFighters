@@ -22,12 +22,12 @@
 				{
 					"id": "pick-by-comparison",
 					"objectClass": "System",
-					"sid": 464519337209284,
+					"sid": 532000407378329,
 					"parameters": {
 						"object": "Fighter",
-						"expression": "Fighter.UID",
+						"expression": "Fighter.VersusAlignmentId",
 						"comparison": 0,
-						"value": "EnergyBar.FighterUID"
+						"value": "EnergyBar.VersusAlignmentId"
 					}
 				}
 			],

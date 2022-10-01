@@ -21,6 +21,12 @@
 			"type": "number",
 			"desc": "How many seconds to increase one point energy.",
 			"sid": 433564257314143
+		},
+		{
+			"name": "VersusAlignmentId",
+			"type": "number",
+			"desc": "This Fighter's alignment in the versus.",
+			"sid": 222559997380293
 		}
 	],
 	"behaviorTypes": [

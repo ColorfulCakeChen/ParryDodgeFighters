@@ -80,7 +80,8 @@
 					"instanceVariables": {
 						"EnergyCur": 10,
 						"EnergyMax": 60,
-						"EnergyRestoreSecondsPerPoint": 1
+						"EnergyRestoreSecondsPerPoint": 1,
+						"VersusAlignmentId": 1
 					},
 					"behaviors": {
 						"Fade": {
@@ -165,6 +166,10 @@
 											{
 												"iv": "EnergyRestoreSecondsPerPoint",
 												"state": true
+											},
+											{
+												"iv": "VersusAlignmentId",
+												"state": false
 											}
 										]
 									}
@@ -376,7 +381,8 @@
 					"instanceVariables": {
 						"EnergyCur": 0,
 						"EnergyMax": 60,
-						"EnergyRestoreSecondsPerPoint": 1
+						"EnergyRestoreSecondsPerPoint": 1,
+						"VersusAlignmentId": 0
 					},
 					"behaviors": {
 						"Fade": {
@@ -460,6 +466,10 @@
 											},
 											{
 												"iv": "EnergyRestoreSecondsPerPoint",
+												"state": true
+											},
+											{
+												"iv": "VersusAlignmentId",
 												"state": true
 											}
 										]
@@ -1115,8 +1125,8 @@
 					},
 					"uid": 10,
 					"instanceVariables": {
-						"FighterUID": 8,
-						"EnergyToWidthRatio": 1
+						"EnergyToWidthRatio": 1,
+						"VersusAlignmentId": 0
 					},
 					"behaviors": {},
 					"template": {
@@ -1177,7 +1187,7 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "FighterUID",
+												"iv": "VersusAlignmentId",
 												"state": true
 											},
 											{
@@ -1316,8 +1326,8 @@
 					},
 					"uid": 4,
 					"instanceVariables": {
-						"FighterUID": 6,
-						"EnergyToWidthRatio": 1
+						"EnergyToWidthRatio": 1,
+						"VersusAlignmentId": 1
 					},
 					"behaviors": {},
 					"template": {
@@ -1378,7 +1388,7 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "FighterUID",
+												"iv": "VersusAlignmentId",
 												"state": false
 											},
 											{

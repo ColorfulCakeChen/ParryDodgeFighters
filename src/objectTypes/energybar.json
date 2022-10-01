@@ -5,16 +5,16 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "FighterUID",
-			"type": "number",
-			"desc": "The UID of Fighter to be displayed.",
-			"sid": 161405240693006
-		},
-		{
 			"name": "EnergyToWidthRatio",
 			"type": "number",
 			"desc": "The ratio for converting Fighter's energy to bar width.",
 			"sid": 455862443296846
+		},
+		{
+			"name": "VersusAlignmentId",
+			"type": "number",
+			"desc": "Display which alignment's Fighter's energy.",
+			"sid": 161405240693006
 		}
 	],
 	"behaviorTypes": [],
