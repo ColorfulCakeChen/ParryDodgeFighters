@@ -79,8 +79,8 @@
 					"uid": 6,
 					"instanceVariables": {
 						"EnergyCur": 10,
-						"EnergyMax": 30,
-						"EnergyRestoreSecondsPerPoint": 2
+						"EnergyMax": 60,
+						"EnergyRestoreSecondsPerPoint": 1
 					},
 					"behaviors": {
 						"Fade": {
@@ -375,8 +375,8 @@
 					"uid": 8,
 					"instanceVariables": {
 						"EnergyCur": 0,
-						"EnergyMax": 30,
-						"EnergyRestoreSecondsPerPoint": 2
+						"EnergyMax": 60,
+						"EnergyRestoreSecondsPerPoint": 1
 					},
 					"behaviors": {
 						"Fade": {
@@ -1116,7 +1116,7 @@
 					"uid": 10,
 					"instanceVariables": {
 						"FighterUID": 8,
-						"EnergyToWidthRatio": 2
+						"EnergyToWidthRatio": 1
 					},
 					"behaviors": {},
 					"template": {
@@ -1317,7 +1317,7 @@
 					"uid": 4,
 					"instanceVariables": {
 						"FighterUID": 6,
-						"EnergyToWidthRatio": 2
+						"EnergyToWidthRatio": 1
 					},
 					"behaviors": {},
 					"template": {
@@ -1383,7 +1383,7 @@
 											},
 											{
 												"iv": "EnergyToWidthRatio",
-												"state": true
+												"state": false
 											}
 										]
 									}
