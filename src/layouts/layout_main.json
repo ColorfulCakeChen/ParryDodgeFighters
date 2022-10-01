@@ -2,7 +2,7 @@
 	"name": "Layout_Main",
 	"layers": [
 		{
-			"name": "Layer_ScaleParallax0_Visible",
+			"name": "Layer_DrawingConvas_Visible_SP0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -63,7 +63,7 @@
 			"global": false
 		},
 		{
-			"name": "Layer_ScaleParallax100_Invisible",
+			"name": "Layer_Content_UI_Invisible_SP100",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
