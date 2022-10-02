@@ -112,8 +112,8 @@
 			"Fighter",
 			"EnergyBar",
 			"Particles",
-			"RemainedTimer",
-			"RTimer"
+			"RemainedTimerBar",
+			"RemainedTimer"
 		],
 		"subfolders": []
 	},

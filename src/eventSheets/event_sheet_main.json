@@ -32,13 +32,13 @@
 				},
 				{
 					"id": "start-timer",
-					"objectClass": "RemainedTimer",
-					"sid": 988954525723846,
+					"objectClass": "RemainedTimerBar",
+					"sid": 241699974177245,
 					"behaviorType": "Timer",
 					"parameters": {
 						"duration": "1",
 						"type": "regular",
-						"tag": "\"RemainedTimeCountDown\""
+						"tag": "\"RemainedTimerCountDown\""
 					}
 				},
 				{
@@ -129,11 +129,11 @@
 			"conditions": [
 				{
 					"id": "on-timer",
-					"objectClass": "RemainedTimer",
-					"sid": 697785465656228,
+					"objectClass": "RemainedTimerBar",
+					"sid": 701141910789603,
 					"behaviorType": "Timer",
 					"parameters": {
-						"tag": "\"RemainedTimeCountDown\""
+						"tag": "\"RemainedTimerCountDown\""
 					}
 				}
 			],
@@ -141,7 +141,7 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "RemainedTimer",
-					"sid": 152923296562041,
+					"sid": 613711825325761,
 					"parameters": {
 						"instance-variable": "secondsCur",
 						"value": "max( Self.secondsCur - 1, 0 )"
@@ -156,7 +156,7 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "RemainedTimer",
-							"sid": 401795994366400,
+							"sid": 984179219344843,
 							"parameters": {
 								"instance-variable": "secondsCur",
 								"comparison": 3,
@@ -168,7 +168,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
-							"sid": 959054812764207,
+							"sid": 701168072755505,
 							"parameters": {
 								"instance-variable": "secondsCur",
 								"value": "Self.secondsMax"

@@ -73,10 +73,18 @@
 			"actions": [
 				{
 					"id": "set-width",
-					"objectClass": "RemainedTimer",
-					"sid": 268990385054718,
+					"objectClass": "RemainedTimerBar",
+					"sid": 171188878717678,
 					"parameters": {
-						"width": "( Self.secondsCur * Self.WidthFull ) / Self.secondsMax"
+						"width": "( RemainedTimer.secondsCur * Self.WidthFull ) / RemainedTimer.secondsMax"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "RemainedTimer",
+					"sid": 410607375904851,
+					"parameters": {
+						"text": "zeropad( floor( Self.secondsCur / 60 ), 2 ) & \":\" & zeropad( ( Self.secondsCur % 60 ), 2 )"
 					}
 				}
 			],
@@ -162,7 +170,7 @@
 							"objectClass": "DrawingCanvas",
 							"sid": 863937703315393,
 							"parameters": {
-								"object": "RemainedTimer",
+								"object": "RemainedTimerBar",
 								"effects": "without-effects"
 							}
 						},
@@ -171,7 +179,7 @@
 							"objectClass": "DrawingCanvas",
 							"sid": 280323490699226,
 							"parameters": {
-								"object": "RTimer",
+								"object": "RemainedTimer",
 								"effects": "without-effects"
 							}
 						},

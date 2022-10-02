@@ -1735,7 +1735,7 @@
 					}
 				},
 				{
-					"type": "RemainedTimer",
+					"type": "RemainedTimerBar",
 					"properties": {
 						"initially-visible": true,
 						"origin": "center",
@@ -1760,9 +1760,9 @@
 					},
 					"world": {
 						"x": 64,
-						"y": -16,
+						"y": 2,
 						"width": 22,
-						"height": 2,
+						"height": 4,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1814,7 +1814,7 @@
 					}
 				},
 				{
-					"type": "RTimer",
+					"type": "RemainedTimer",
 					"properties": {
 						"text": "00:00",
 						"enable-bbcode": true,
@@ -1836,12 +1836,15 @@
 						"origin": "top-left"
 					},
 					"uid": 13,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"secondsCur": 300,
+						"secondsMax": 300
+					},
 					"behaviors": {},
 					"world": {
-						"x": 54,
+						"x": 53,
 						"y": 0,
-						"width": 20,
+						"width": 22,
 						"height": 4,
 						"originX": 0,
 						"originY": 0,
