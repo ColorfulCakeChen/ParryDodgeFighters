@@ -103,7 +103,8 @@
 			"EnergyBarBackground",
 			"Fighter",
 			"EnergyBar",
-			"Particles"
+			"Particles",
+			"RemainedTimer"
 		],
 		"subfolders": []
 	},

@@ -1,0 +1,39 @@
+{
+	"name": "RemainedTimer",
+	"plugin-id": "TiledBg",
+	"sid": 197649922472746,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "secondsCur",
+			"type": "number",
+			"desc": "Current versus' remained seconds .",
+			"sid": 276453425570426
+		},
+		{
+			"name": "secondsMax",
+			"type": "number",
+			"desc": "The maximum seconds of a versus.",
+			"sid": 492379867832156
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 166390044880093
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 1,
+		"height": 1,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 6006500,
+		"useCollisionPoly": true
+	}
+}

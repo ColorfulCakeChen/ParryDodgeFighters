@@ -16,6 +16,10 @@
 					"sid": 206385664877509
 				},
 				{
+					"callFunction": "RemainderTimerRefresh",
+					"sid": 199499819003141
+				},
+				{
 					"id": "start-timer",
 					"objectClass": "Fighter",
 					"sid": 438858777808147,
@@ -24,6 +28,17 @@
 						"duration": "Fighter.EnergyRestoreSecondsPerPoint",
 						"type": "regular",
 						"tag": "\"EnergyRestore\""
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "RemainedTimer",
+					"sid": 451109222330757,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.0",
+						"type": "regular",
+						"tag": "\"RemainedTimeCountDown\""
 					}
 				},
 				{
@@ -108,6 +123,72 @@
 				}
 			],
 			"sid": 143835772368219
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "RemainedTimer",
+					"sid": 697785465656228,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"RemainedTimeCountDown\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "RemainedTimer",
+					"sid": 152923296562041,
+					"parameters": {
+						"instance-variable": "secondsCur",
+						"value": "max( Self.secondsCur - 1, 0 )"
+					}
+				}
+			],
+			"sid": 765160705277927,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "RemainedTimer",
+							"sid": 401795994366400,
+							"parameters": {
+								"instance-variable": "secondsCur",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "RemainedTimer",
+							"sid": 959054812764207,
+							"parameters": {
+								"instance-variable": "secondsCur",
+								"value": "Self.secondsMax"
+							}
+						}
+					],
+					"sid": 578370834947955
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "RemainderTimerRefresh",
+							"sid": 571066643661991
+						}
+					],
+					"sid": 536798593339891
+				}
+			]
 		}
 	],
 	"sid": 215625391285548

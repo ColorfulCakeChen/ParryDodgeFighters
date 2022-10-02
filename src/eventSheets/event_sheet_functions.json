@@ -70,6 +70,28 @@
 			"sid": 113711322765195
 		},
 		{
+			"functionName": "RemainderTimerRefresh",
+			"functionDescription": "Display the current remained seconds of the versus.",
+			"functionCategory": "RemainderTimer",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "RemainedTimer",
+					"sid": 645922071776553,
+					"parameters": {
+						"width": "( Self.secondsCur * OriginalViewportWidth ) / Self.secondsMax"
+					}
+				}
+			],
+			"sid": 458946180661444
+		},
+		{
 			"functionName": "DrawingCanvasPaint",
 			"functionDescription": "Paint all objects to drawing canvas.",
 			"functionCategory": "DrawingCanvas",
@@ -120,6 +142,15 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
+							"sid": 418218136470744,
+							"parameters": {
+								"object": "Particles",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
 							"sid": 856300446589980,
 							"parameters": {
 								"object": "EnergyBarBackground",
@@ -132,6 +163,15 @@
 							"sid": 285504036222598,
 							"parameters": {
 								"object": "EnergyBar",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 373154249855401,
+							"parameters": {
+								"object": "RemainedTimer",
 								"effects": "without-effects"
 							}
 						},

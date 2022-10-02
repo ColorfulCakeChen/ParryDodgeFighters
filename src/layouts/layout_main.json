@@ -1515,9 +1515,9 @@
 				{
 					"type": "Particles",
 					"properties": {
-						"rate": 0.5,
+						"rate": 0.1,
 						"spray-cone": 0,
-						"type": "continuous-spray",
+						"type": "one-shot",
 						"object": -1,
 						"live-preview": false,
 						"speed": 10,
@@ -1541,8 +1541,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 0,
-						"y": -24,
+						"x": 8,
+						"y": 56,
 						"width": 10,
 						"height": 10,
 						"originX": 0,
@@ -1556,6 +1556,46 @@
 						"angle": 0,
 						"zElevation": 0,
 						"blendMode": "additive"
+					}
+				},
+				{
+					"type": "RemainedTimer",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 11,
+					"instanceVariables": {
+						"secondsCur": 300,
+						"secondsMax": 300
+					},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 128,
+						"height": 1,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.5882352941176471,
+							0.5882352941176471,
+							0.5882352941176471,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
