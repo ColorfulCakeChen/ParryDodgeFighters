@@ -1187,11 +1187,11 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "VersusAlignmentId",
+												"iv": "EnergyToWidthRatio",
 												"state": true
 											},
 											{
-												"iv": "EnergyToWidthRatio",
+												"iv": "VersusAlignmentId",
 												"state": true
 											}
 										]
@@ -1388,11 +1388,11 @@
 										"key": "instance-variable",
 										"state": [
 											{
-												"iv": "VersusAlignmentId",
+												"iv": "EnergyToWidthRatio",
 												"state": false
 											},
 											{
-												"iv": "EnergyToWidthRatio",
+												"iv": "VersusAlignmentId",
 												"state": false
 											}
 										]
@@ -1513,38 +1513,38 @@
 					}
 				},
 				{
-					"type": "RemainedTimer",
+					"type": "Particles",
 					"properties": {
-						"rate": 50,
-						"spray-cone": 60,
-						"type": "one-shot",
+						"rate": 0.5,
+						"spray-cone": 0,
+						"type": "continuous-spray",
 						"object": -1,
 						"live-preview": false,
-						"speed": 200,
-						"size": 32,
+						"speed": 10,
+						"size": 1,
 						"opacity": 100,
-						"grow-rate": 0,
+						"grow-rate": 2,
 						"x-randomiser": 0,
 						"y-randomiser": 0,
 						"initial-speed-randomiser": 0,
 						"size-randomiser": 0,
 						"grow-rate-randomiser": 0,
-						"acceleration": -150,
+						"acceleration": 0,
 						"gravity": 0,
 						"angle-randomiser": 0,
-						"life-speed-randomiser": 800,
+						"life-speed-randomiser": 0,
 						"opacity-randomiser": 0,
 						"destroy-mode": "fade-to-invisible",
-						"timeout": 1
+						"timeout": 10
 					},
 					"uid": 9,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 40,
-						"y": 40,
-						"width": 20,
-						"height": 20,
+						"x": 0,
+						"y": -24,
+						"width": 10,
+						"height": 10,
 						"originX": 0,
 						"originY": 0.5,
 						"color": [
@@ -1554,7 +1554,8 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				}
 			],
