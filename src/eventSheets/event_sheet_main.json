@@ -59,6 +59,102 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-timer",
+					"objectClass": "Fighter",
+					"sid": 382228728249544,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"EnergyRestore\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 825356572833215,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "min( Self.EnergyCur + 1, Self.EnergyMax )"
+					}
+				},
+				{
+					"callFunction": "EnergyBarRefresh",
+					"sid": 283216050811053
+				}
+			],
+			"sid": 748620023965383
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "RemainedTimer",
+					"sid": 300578667839672,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"RemainedTimerCountDown\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "RemainedTimer",
+					"sid": 297847831445095,
+					"parameters": {
+						"instance-variable": "secondsCur",
+						"value": "max( Self.secondsCur - 1, 0 )"
+					}
+				}
+			],
+			"sid": 462523923919873,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "RemainedTimer",
+							"sid": 773550606661877,
+							"parameters": {
+								"instance-variable": "secondsCur",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "RemainedTimer",
+							"sid": 461883975039036,
+							"parameters": {
+								"instance-variable": "secondsCur",
+								"value": "Self.secondsMax"
+							}
+						}
+					],
+					"sid": 183450392434763
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "RemainderTimerRefresh",
+							"sid": 318941882169303
+						}
+					],
+					"sid": 303356447359501
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 566307689640938
@@ -76,39 +172,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-timer",
-					"objectClass": "Fighter",
-					"sid": 336073640520697,
-					"behaviorType": "Timer",
-					"parameters": {
-						"tag": "\"EnergyRestore\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 843087055475210,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "min( Self.EnergyCur + 1, Self.EnergyMax )"
-					}
-				},
-				{
-					"callFunction": "EnergyBarRefresh",
-					"sid": 968260814758429
-				}
-			],
-			"sid": 552822828889253
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 237370169707746,
+					"sid": 651313721718936,
 					"parameters": {
 						"interval-seconds": "5"
 					}
@@ -118,77 +184,11 @@
 				{
 					"id": "start-fade",
 					"objectClass": "Fighter",
-					"sid": 965948070614734,
+					"sid": 554049699245539,
 					"behaviorType": "Fade"
 				}
 			],
-			"sid": 143835772368219
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-timer",
-					"objectClass": "RemainedTimer",
-					"sid": 158703390228648,
-					"behaviorType": "Timer",
-					"parameters": {
-						"tag": "\"RemainedTimerCountDown\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "RemainedTimer",
-					"sid": 613711825325761,
-					"parameters": {
-						"instance-variable": "secondsCur",
-						"value": "max( Self.secondsCur - 1, 0 )"
-					}
-				}
-			],
-			"sid": 765160705277927,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "RemainedTimer",
-							"sid": 984179219344843,
-							"parameters": {
-								"instance-variable": "secondsCur",
-								"comparison": 3,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "RemainedTimer",
-							"sid": 701168072755505,
-							"parameters": {
-								"instance-variable": "secondsCur",
-								"value": "Self.secondsMax"
-							}
-						}
-					],
-					"sid": 578370834947955
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"callFunction": "RemainderTimerRefresh",
-							"sid": 571066643661991
-						}
-					],
-					"sid": 536798593339891
-				}
-			]
+			"sid": 721773586186371
 		}
 	],
 	"sid": 215625391285548
