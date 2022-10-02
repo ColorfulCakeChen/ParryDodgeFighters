@@ -79,7 +79,7 @@
 					"uid": 6,
 					"instanceVariables": {
 						"EnergyCur": 10,
-						"EnergyMax": 60,
+						"EnergyMax": 100,
 						"EnergyRestoreSecondsPerPoint": 1,
 						"VersusAlignmentId": 1
 					},
@@ -161,7 +161,7 @@
 											},
 											{
 												"iv": "EnergyMax",
-												"state": true
+												"state": false
 											},
 											{
 												"iv": "EnergyRestoreSecondsPerPoint",
@@ -380,7 +380,7 @@
 					"uid": 8,
 					"instanceVariables": {
 						"EnergyCur": 0,
-						"EnergyMax": 60,
+						"EnergyMax": 100,
 						"EnergyRestoreSecondsPerPoint": 1,
 						"VersusAlignmentId": 0
 					},
