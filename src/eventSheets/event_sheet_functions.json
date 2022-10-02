@@ -81,11 +81,11 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-width",
+					"id": "set-height",
 					"objectClass": "RemainedTimer",
-					"sid": 645922071776553,
+					"sid": 617789621216063,
 					"parameters": {
-						"width": "( Self.secondsCur * OriginalViewportWidth ) / Self.secondsMax"
+						"height": "( Self.secondsCur * EnergyBarBackground.Height ) / Self.secondsMax"
 					}
 				}
 			],
@@ -151,6 +151,15 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
+							"sid": 463949754690434,
+							"parameters": {
+								"object": "RemainedTimer",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
 							"sid": 856300446589980,
 							"parameters": {
 								"object": "EnergyBarBackground",
@@ -163,15 +172,6 @@
 							"sid": 285504036222598,
 							"parameters": {
 								"object": "EnergyBar",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 373154249855401,
-							"parameters": {
-								"object": "RemainedTimer",
 								"effects": "without-effects"
 							}
 						},
