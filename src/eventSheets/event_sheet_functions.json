@@ -72,14 +72,6 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-width",
-					"objectClass": "RemainedTimerBar",
-					"sid": 171188878717678,
-					"parameters": {
-						"width": "( RemainedTimer.secondsCur * Self.WidthFull ) / RemainedTimer.secondsMax"
-					}
-				},
-				{
 					"id": "set-text",
 					"objectClass": "RemainedTimer",
 					"sid": 410607375904851,
@@ -162,15 +154,6 @@
 							"sid": 285504036222598,
 							"parameters": {
 								"object": "EnergyBar",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 863937703315393,
-							"parameters": {
-								"object": "RemainedTimerBar",
 								"effects": "without-effects"
 							}
 						},

@@ -32,11 +32,11 @@
 				},
 				{
 					"id": "start-timer",
-					"objectClass": "RemainedTimerBar",
-					"sid": 241699974177245,
+					"objectClass": "RemainedTimer",
+					"sid": 578785865181774,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "1",
+						"duration": "1.0",
 						"type": "regular",
 						"tag": "\"RemainedTimerCountDown\""
 					}
@@ -129,8 +129,8 @@
 			"conditions": [
 				{
 					"id": "on-timer",
-					"objectClass": "RemainedTimerBar",
-					"sid": 701141910789603,
+					"objectClass": "RemainedTimer",
+					"sid": 158703390228648,
 					"behaviorType": "Timer",
 					"parameters": {
 						"tag": "\"RemainedTimerCountDown\""
