@@ -33,10 +33,10 @@
 				{
 					"id": "start-timer",
 					"objectClass": "RemainedTimer",
-					"sid": 995697498352671,
+					"sid": 988954525723846,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "0.5",
+						"duration": "1",
 						"type": "regular",
 						"tag": "\"RemainedTimeCountDown\""
 					}

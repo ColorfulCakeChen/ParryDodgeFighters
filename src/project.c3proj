@@ -55,6 +55,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
@@ -104,7 +112,8 @@
 			"Fighter",
 			"EnergyBar",
 			"Particles",
-			"RemainedTimer"
+			"RemainedTimer",
+			"RTimer"
 		],
 		"subfolders": []
 	},

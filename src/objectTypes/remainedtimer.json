@@ -15,6 +15,12 @@
 			"type": "number",
 			"desc": "The maximum seconds of a versus.",
 			"sid": 492379867832156
+		},
+		{
+			"name": "WidthFull",
+			"type": "number",
+			"desc": "The width when this remained timer full.",
+			"sid": 560307372041815
 		}
 	],
 	"behaviorTypes": [
@@ -33,7 +39,7 @@
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 6006500,
+		"imageSpriteId": 3810004,
 		"useCollisionPoly": true
 	}
 }

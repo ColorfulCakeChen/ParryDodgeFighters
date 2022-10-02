@@ -5,16 +5,16 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "EnergyToWidthRatio",
-			"type": "number",
-			"desc": "The ratio for converting Fighter's energy to bar width.",
-			"sid": 455862443296846
-		},
-		{
 			"name": "VersusAlignmentId",
 			"type": "number",
 			"desc": "Display which alignment's Fighter's energy.",
 			"sid": 161405240693006
+		},
+		{
+			"name": "WidthFull",
+			"type": "number",
+			"desc": "The width when energy bar is full.",
+			"sid": 181980714766563
 		}
 	],
 	"behaviorTypes": [],
@@ -27,7 +27,7 @@
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 85897,
+		"imageSpriteId": 396471,
 		"useCollisionPoly": true
 	}
 }

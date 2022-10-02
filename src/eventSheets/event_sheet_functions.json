@@ -42,15 +42,6 @@
 					}
 				},
 				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 148570082252405,
-					"disabled": true,
-					"parameters": {
-						"text": "SpriteFont.Text & \",\" & ( Fighter.EnergyCur * EnergyBar.EnergyToWidthRatio )"
-					}
-				},
-				{
 					"id": "set-default-color",
 					"objectClass": "EnergyBar",
 					"sid": 781641613181165,
@@ -61,9 +52,9 @@
 				{
 					"id": "set-width",
 					"objectClass": "EnergyBar",
-					"sid": 840731695333272,
+					"sid": 614438272050308,
 					"parameters": {
-						"width": "Fighter.EnergyCur * EnergyBar.EnergyToWidthRatio"
+						"width": "Fighter.EnergyCur * EnergyBar.WidthFull / Fighter.EnergyMax"
 					}
 				}
 			],
@@ -81,11 +72,11 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-height",
+					"id": "set-width",
 					"objectClass": "RemainedTimer",
-					"sid": 617789621216063,
+					"sid": 268990385054718,
 					"parameters": {
-						"height": "( Self.secondsCur * EnergyBarBackground.Height ) / Self.secondsMax"
+						"width": "( Self.secondsCur * Self.WidthFull ) / Self.secondsMax"
 					}
 				}
 			],
@@ -151,15 +142,6 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
-							"sid": 463949754690434,
-							"parameters": {
-								"object": "RemainedTimer",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
 							"sid": 856300446589980,
 							"parameters": {
 								"object": "EnergyBarBackground",
@@ -172,6 +154,24 @@
 							"sid": 285504036222598,
 							"parameters": {
 								"object": "EnergyBar",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 863937703315393,
+							"parameters": {
+								"object": "RemainedTimer",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 280323490699226,
+							"parameters": {
+								"object": "RTimer",
 								"effects": "without-effects"
 							}
 						},
