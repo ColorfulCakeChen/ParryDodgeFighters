@@ -1,0 +1,26 @@
+{
+	"name": "FighterPhysics",
+	"plugin-id": "TiledBg",
+	"sid": 673969791719115,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 973273291029772
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 1,
+		"height": 1,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 479973,
+		"useCollisionPoly": true
+	}
+}
