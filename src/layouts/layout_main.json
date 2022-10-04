@@ -390,7 +390,7 @@
 						}
 					},
 					"world": {
-						"x": 16,
+						"x": 24,
 						"y": 32,
 						"width": 25,
 						"height": 25,
@@ -716,7 +716,7 @@
 						}
 					},
 					"world": {
-						"x": 16,
+						"x": 24,
 						"y": 32,
 						"width": 25,
 						"height": 25,
@@ -1368,7 +1368,7 @@
 					"world": {
 						"x": 1,
 						"y": 1,
-						"width": 50,
+						"width": 0,
 						"height": 2,
 						"originX": 0,
 						"originY": 0,

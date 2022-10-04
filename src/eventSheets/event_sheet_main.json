@@ -17,7 +17,8 @@
 				},
 				{
 					"callFunction": "EnergyBarRefresh",
-					"sid": 682956682144941
+					"sid": 682956682144941,
+					"disabled": true
 				},
 				{
 					"callFunction": "RemainderTimerRefresh",

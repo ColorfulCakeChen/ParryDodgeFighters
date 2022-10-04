@@ -198,7 +198,7 @@
 				},
 				{
 					"callFunction": "FighterPhysics_create",
-					"sid": 740482689394820,
+					"sid": 898763879607886,
 					"parameters": [
 						"Alignment0_Id",
 						"Alignment0_Fighter_X",
@@ -210,7 +210,7 @@
 				},
 				{
 					"callFunction": "FighterPhysics_create",
-					"sid": 577025488660957,
+					"sid": 880066543754506,
 					"parameters": [
 						"Alignment1_Id",
 						"Alignment1_Fighter_X",
@@ -219,10 +219,6 @@
 						"Alignment1_Fighter_Color_G",
 						"Alignment1_Fighter_Color_B"
 					]
-				},
-				{
-					"callFunction": "EnergyBarRefresh",
-					"sid": 991846269191173
 				}
 			],
 			"sid": 482811962513476
@@ -307,6 +303,14 @@
 					"id": "set-default-color",
 					"objectClass": "Fighter",
 					"sid": 705015595226419,
+					"parameters": {
+						"color": "rgbEx255(ColorR, ColorG, ColorB)"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Fighter",
+					"sid": 920912777004083,
 					"parameters": {
 						"color": "rgbEx255(ColorR, ColorG, ColorB)"
 					}
