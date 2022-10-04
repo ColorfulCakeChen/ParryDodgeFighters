@@ -439,18 +439,6 @@
 						"Timer": {
 							"properties": {}
 						},
-						"8Direction": {
-							"properties": {
-								"max-speed": 50,
-								"acceleration": 50,
-								"deceleration": 50,
-								"directions": "dir-8",
-								"set-angle": "smooth",
-								"allow-sliding": false,
-								"default-controls": true,
-								"enabled": false
-							}
-						},
 						"ScrollTo": {
 							"properties": {
 								"enabled": true
@@ -549,43 +537,6 @@
 									{
 										"key": "Timer",
 										"state": []
-									},
-									{
-										"key": "8Direction",
-										"state": [
-											[
-												"max-speed",
-												true
-											],
-											[
-												"acceleration",
-												true
-											],
-											[
-												"deceleration",
-												true
-											],
-											[
-												"directions",
-												true
-											],
-											[
-												"set-angle",
-												true
-											],
-											[
-												"allow-sliding",
-												true
-											],
-											[
-												"default-controls",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
 									},
 									{
 										"key": "ScrollTo",
