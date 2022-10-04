@@ -12,23 +12,16 @@
 			],
 			"actions": [
 				{
+					"callFunction": "FighterPhysics_RecreateAll",
+					"sid": 452673687465620
+				},
+				{
 					"callFunction": "EnergyBarRefresh",
-					"sid": 206385664877509
+					"sid": 682956682144941
 				},
 				{
 					"callFunction": "RemainderTimerRefresh",
 					"sid": 199499819003141
-				},
-				{
-					"id": "start-timer",
-					"objectClass": "Fighter",
-					"sid": 438858777808147,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "Fighter.EnergyRestoreSecondsPerPoint",
-						"type": "regular",
-						"tag": "\"EnergyRestore\""
-					}
 				},
 				{
 					"id": "start-timer",
@@ -50,6 +43,15 @@
 						"on-time": "1",
 						"off-time": "1",
 						"duration": "10"
+					}
+				},
+				{
+					"id": "set-world-gravity",
+					"objectClass": "FighterPhysics",
+					"sid": 815610079146952,
+					"behaviorType": "Physics",
+					"parameters": {
+						"gravity": "0"
 					}
 				}
 			],

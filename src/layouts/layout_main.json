@@ -94,6 +94,18 @@
 								"linear-damping": 0,
 								"angular-damping": 0.01,
 								"bullet": false,
+								"enabled": false
+							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 50,
+								"deceleration": 50,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
 								"enabled": true
 							}
 						}
@@ -198,6 +210,43 @@
 											],
 											[
 												"bullet",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "8Direction",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"directions",
+												true
+											],
+											[
+												"set-angle",
+												true
+											],
+											[
+												"allow-sliding",
+												true
+											],
+											[
+												"default-controls",
 												true
 											],
 											[
@@ -326,7 +375,7 @@
 							"h": true,
 							"a": true,
 							"d": true,
-							"sm": "normal"
+							"sm": "all"
 						},
 						"preview": {
 							"transformX": 0,
@@ -341,8 +390,8 @@
 						}
 					},
 					"world": {
-						"x": 41,
-						"y": 8,
+						"x": 16,
+						"y": 32,
 						"width": 25,
 						"height": 25,
 						"originX": 0.5,
@@ -360,7 +409,7 @@
 				{
 					"type": "Fighter",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": false,
@@ -399,7 +448,7 @@
 								"set-angle": "smooth",
 								"allow-sliding": false,
 								"default-controls": true,
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"ScrollTo": {
@@ -667,8 +716,8 @@
 						}
 					},
 					"world": {
-						"x": 41,
-						"y": 8,
+						"x": 16,
+						"y": 32,
 						"width": 25,
 						"height": 25,
 						"originX": 0.5,
@@ -676,307 +725,6 @@
 						"color": [
 							0.5882352941176471,
 							0.3137254901960784,
-							0.0392156862745098,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Fighter",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 6,
-					"instanceVariables": {
-						"EnergyCur": 10,
-						"EnergyMax": 100,
-						"EnergyRestoreSecondsPerPoint": 1,
-						"VersusAlignmentId": 1
-					},
-					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0,
-								"wait-time": 0,
-								"fade-out-time": 1,
-								"destroy": true,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Timer": {
-							"properties": {}
-						},
-						"8Direction": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-8",
-								"set-angle": "smooth",
-								"allow-sliding": false,
-								"default-controls": true,
-								"enabled": true
-							}
-						},
-						"ScrollTo": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "FighterTemplate",
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												false
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "EnergyCur",
-												"state": false
-											},
-											{
-												"iv": "EnergyMax",
-												"state": false
-											},
-											{
-												"iv": "EnergyRestoreSecondsPerPoint",
-												"state": true
-											},
-											{
-												"iv": "VersusAlignmentId",
-												"state": false
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": [
-									{
-										"key": "Fade",
-										"state": [
-											[
-												"fade-in-time",
-												true
-											],
-											[
-												"wait-time",
-												true
-											],
-											[
-												"fade-out-time",
-												true
-											],
-											[
-												"destroy",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Flash",
-										"state": []
-									},
-									{
-										"key": "Timer",
-										"state": []
-									},
-									{
-										"key": "8Direction",
-										"state": [
-											[
-												"max-speed",
-												true
-											],
-											[
-												"acceleration",
-												true
-											],
-											[
-												"deceleration",
-												true
-											],
-											[
-												"directions",
-												true
-											],
-											[
-												"set-angle",
-												true
-											],
-											[
-												"allow-sliding",
-												true
-											],
-											[
-												"default-controls",
-												true
-											],
-											[
-												"enabled",
-												false
-											]
-										]
-									},
-									{
-										"key": "ScrollTo",
-										"state": [
-											[
-												"enabled",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												false
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						]
-					},
-					"world": {
-						"x": 80,
-						"y": 8,
-						"width": 25,
-						"height": 25,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							0.0392156862745098,
-							0.5882352941176471,
 							0.0392156862745098,
 							1
 						],

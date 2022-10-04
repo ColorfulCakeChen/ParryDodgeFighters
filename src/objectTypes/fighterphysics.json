@@ -9,6 +9,11 @@
 			"behaviorId": "Physics",
 			"name": "Physics",
 			"sid": 973273291029772
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 132158349953293
 		}
 	],
 	"effectTypes": [],

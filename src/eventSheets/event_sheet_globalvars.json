@@ -1,0 +1,126 @@
+{
+	"name": "Event_Sheet_GlobalVars",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Alignment0_Id",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 871662666649941
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment0_Fighter_Color_R",
+			"type": "number",
+			"initialValue": "150",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 444829042071827
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment0_Fighter_Color_G",
+			"type": "number",
+			"initialValue": "80",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 759030681936141
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment0_Fighter_Color_B",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 649221620833484
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment0_Fighter_X",
+			"type": "number",
+			"initialValue": "40",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 305150074644983
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment0_Fighter_Y",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 903144676643773
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment1_Id",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 692588052087367
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment1_Fighter_Color_R",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 120444366810293
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment1_Fighter_Color_G",
+			"type": "number",
+			"initialValue": "150",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 659964025268399
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment1_Fighter_Color_B",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 680439568829422
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment1_Fighter_X",
+			"type": "number",
+			"initialValue": "80",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 306316164084726
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment1_Fighter_Y",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 715084994385030
+		}
+	],
+	"sid": 704237106821719
+}

@@ -179,6 +179,151 @@
 					"sid": 775860740615889
 				}
 			]
+		},
+		{
+			"functionName": "FighterPhysics_RecreateAll",
+			"functionDescription": "Recreate all FighterPhysics (hierarchy).",
+			"functionCategory": "FighterPhysics",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "FighterPhysics",
+					"sid": 737083557510805
+				},
+				{
+					"callFunction": "FighterPhysics_create",
+					"sid": 740482689394820,
+					"parameters": [
+						"Alignment0_Id",
+						"Alignment0_Fighter_X",
+						"Alignment0_Fighter_Y",
+						"Alignment0_Fighter_Color_R",
+						"Alignment0_Fighter_Color_G",
+						"Alignment0_Fighter_Color_B"
+					]
+				},
+				{
+					"callFunction": "FighterPhysics_create",
+					"sid": 577025488660957,
+					"parameters": [
+						"Alignment1_Id",
+						"Alignment1_Fighter_X",
+						"Alignment1_Fighter_Y",
+						"Alignment1_Fighter_Color_R",
+						"Alignment1_Fighter_Color_G",
+						"Alignment1_Fighter_Color_B"
+					]
+				},
+				{
+					"callFunction": "EnergyBarRefresh",
+					"sid": 991846269191173
+				}
+			],
+			"sid": 482811962513476
+		},
+		{
+			"functionName": "FighterPhysics_create",
+			"functionDescription": "Create one FighterPhysics (hierarchy)",
+			"functionCategory": "FighterPhysics",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "AlignmentId",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The the alignment numeric identifier of the created Fighter.",
+					"sid": 555641068065648
+				},
+				{
+					"name": "X",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 822837895721739
+				},
+				{
+					"name": "Y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 827261301022644
+				},
+				{
+					"name": "ColorR",
+					"type": "number",
+					"initialValue": "255",
+					"comment": "",
+					"sid": 888039430666060
+				},
+				{
+					"name": "ColorG",
+					"type": "number",
+					"initialValue": "255",
+					"comment": "",
+					"sid": 990883722353278
+				},
+				{
+					"name": "ColorB",
+					"type": "number",
+					"initialValue": "255",
+					"comment": "",
+					"sid": 578447322703112
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 811139501530567,
+					"parameters": {
+						"object-to-create": "FighterPhysics",
+						"layer": "1",
+						"x": "X",
+						"y": "Y",
+						"create-hierarchy": true,
+						"template-name": "\"FighterPhysicsTemplate\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 694968917598312,
+					"parameters": {
+						"instance-variable": "VersusAlignmentId",
+						"value": "AlignmentId"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Fighter",
+					"sid": 705015595226419,
+					"parameters": {
+						"color": "rgbEx255(ColorR, ColorG, ColorB)"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Fighter",
+					"sid": 159626439227153,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "Fighter.EnergyRestoreSecondsPerPoint",
+						"type": "regular",
+						"tag": "\"EnergyRestore\""
+					}
+				}
+			],
+			"sid": 381188756354974
 		}
 	],
 	"sid": 744869350564622
