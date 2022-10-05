@@ -9,12 +9,6 @@
 			"type": "number",
 			"desc": "",
 			"sid": 626262851733864
-		},
-		{
-			"name": "Deceleration",
-			"type": "number",
-			"desc": "",
-			"sid": 398590596165523
 		}
 	],
 	"behaviorTypes": [

@@ -213,6 +213,18 @@
 						"force-y": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationY",
 						"image-point": "0"
 					}
+				},
+				{
+					"id": "apply-impulse",
+					"objectClass": "FighterPhysics",
+					"sid": 734071811400137,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse-x": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationX",
+						"implulse-y": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationY",
+						"image-point": "0"
+					}
 				}
 			],
 			"sid": 861478868260186
@@ -227,7 +239,24 @@
 			"functionParameters": [],
 			"eventType": "function-block",
 			"conditions": [],
-			"actions": [],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "Anti the gravity totally."
+				},
+				{
+					"id": "apply-force",
+					"objectClass": "FighterPhysics",
+					"sid": 575867668977431,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "0",
+						"force-y": "-FighterPhysics.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
+						"image-point": "0"
+					}
+				}
+			],
 			"sid": 551444411169118,
 			"children": [
 				{

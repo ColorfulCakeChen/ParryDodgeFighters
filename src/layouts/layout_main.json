@@ -82,8 +82,7 @@
 					},
 					"uid": 11,
 					"instanceVariables": {
-						"Acceleration": 50,
-						"Deceleration": 50
+						"Acceleration": 3
 					},
 					"behaviors": {
 						"Physics": {
@@ -94,7 +93,7 @@
 								"density": 1,
 								"friction": 0.5,
 								"elasticity": 0.2,
-								"linear-damping": 10,
+								"linear-damping": 2,
 								"angular-damping": 0.01,
 								"bullet": false,
 								"enabled": true
@@ -172,10 +171,6 @@
 										"state": [
 											{
 												"iv": "Acceleration",
-												"state": true
-											},
-											{
-												"iv": "Deceleration",
 												"state": true
 											}
 										]

@@ -49,10 +49,10 @@
 				{
 					"id": "set-world-gravity",
 					"objectClass": "FighterPhysics",
-					"sid": 815610079146952,
+					"sid": 745437440189661,
 					"behaviorType": "Physics",
 					"parameters": {
-						"gravity": "0"
+						"gravity": "PhysicsGravity"
 					}
 				}
 			],

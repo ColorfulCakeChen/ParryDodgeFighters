@@ -150,6 +150,16 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 967904854977717
+		},
+		{
+			"eventType": "variable",
+			"name": "PhysicsGravity",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 802709989280004
 		}
 	],
 	"sid": 704237106821719
