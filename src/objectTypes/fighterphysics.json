@@ -7,7 +7,7 @@
 		{
 			"name": "Acceleration",
 			"type": "number",
-			"desc": "",
+			"desc": "The acceleration when applying force by keyboard.",
 			"sid": 626262851733864
 		}
 	],
