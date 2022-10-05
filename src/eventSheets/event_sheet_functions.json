@@ -198,11 +198,12 @@
 				},
 				{
 					"callFunction": "FighterPhysics_create",
-					"sid": 898763879607886,
+					"sid": 293196134570834,
 					"parameters": [
 						"Alignment0_Id",
 						"Alignment0_Fighter_X",
 						"Alignment0_Fighter_Y",
+						"Alignment0_Fighter_Angle",
 						"Alignment0_Fighter_Color_R",
 						"Alignment0_Fighter_Color_G",
 						"Alignment0_Fighter_Color_B"
@@ -210,11 +211,12 @@
 				},
 				{
 					"callFunction": "FighterPhysics_create",
-					"sid": 880066543754506,
+					"sid": 389649426146040,
 					"parameters": [
 						"Alignment1_Id",
 						"Alignment1_Fighter_X",
 						"Alignment1_Fighter_Y",
+						"Alignment1_Fighter_Angle",
 						"Alignment1_Fighter_Color_R",
 						"Alignment1_Fighter_Color_G",
 						"Alignment1_Fighter_Color_B"
@@ -251,6 +253,13 @@
 					"initialValue": "0",
 					"comment": "",
 					"sid": 827261301022644
+				},
+				{
+					"name": "FaceAngle",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 222786055098931
 				},
 				{
 					"name": "ColorR",
@@ -300,17 +309,17 @@
 					}
 				},
 				{
-					"id": "set-default-color",
-					"objectClass": "Fighter",
-					"sid": 705015595226419,
+					"id": "set-angle",
+					"objectClass": "FighterPhysics",
+					"sid": 279821089217471,
 					"parameters": {
-						"color": "rgbEx255(ColorR, ColorG, ColorB)"
+						"angle": "FaceAngle"
 					}
 				},
 				{
 					"id": "set-default-color",
 					"objectClass": "Fighter",
-					"sid": 920912777004083,
+					"sid": 705015595226419,
 					"parameters": {
 						"color": "rgbEx255(ColorR, ColorG, ColorB)"
 					}

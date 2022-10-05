@@ -63,6 +63,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Alignment0_Fighter_Angle",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 101209853189535
+		},
+		{
+			"eventType": "variable",
 			"name": "Alignment1_Id",
 			"type": "number",
 			"initialValue": "1",
@@ -120,6 +130,16 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 715084994385030
+		},
+		{
+			"eventType": "variable",
+			"name": "Alignment1_Fighter_Angle",
+			"type": "number",
+			"initialValue": "180",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 258895392651152
 		}
 	],
 	"sid": 704237106821719
