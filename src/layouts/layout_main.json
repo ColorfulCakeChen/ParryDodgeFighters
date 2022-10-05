@@ -81,7 +81,10 @@
 						"image-angle": 0
 					},
 					"uid": 11,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Acceleration": 50,
+						"Deceleration": 50
+					},
 					"behaviors": {
 						"Physics": {
 							"properties": {
@@ -91,10 +94,10 @@
 								"density": 1,
 								"friction": 0.5,
 								"elasticity": 0.2,
-								"linear-damping": 0,
+								"linear-damping": 10,
 								"angular-damping": 0.01,
 								"bullet": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"8Direction": {
@@ -106,7 +109,7 @@
 								"set-angle": "smooth",
 								"allow-sliding": false,
 								"default-controls": true,
-								"enabled": true
+								"enabled": false
 							}
 						}
 					},
@@ -166,7 +169,16 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "Acceleration",
+												"state": true
+											},
+											{
+												"iv": "Deceleration",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -1556,9 +1568,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 16,
+						"x": 8,
 						"y": 56,
-						"width": 60,
+						"width": 112,
 						"height": 10,
 						"originX": 0,
 						"originY": 0,

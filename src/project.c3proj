@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
@@ -121,7 +129,8 @@
 			"EnergyBar",
 			"Particles",
 			"RemainedTimer",
-			"FighterPhysics"
+			"FighterPhysics",
+			"Keyboard"
 		],
 		"subfolders": []
 	},
@@ -141,7 +150,8 @@
 		"items": [
 			"Event_Sheet_Main",
 			"Event_Sheet_Functions",
-			"Event_Sheet_GlobalVars"
+			"Event_Sheet_GlobalVars",
+			"Event_Sheet_FighterPhysics"
 		],
 		"subfolders": []
 	},

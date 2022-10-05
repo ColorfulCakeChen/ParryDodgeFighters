@@ -140,6 +140,16 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 258895392651152
+		},
+		{
+			"eventType": "variable",
+			"name": "GameToPhysicsRatio",
+			"type": "number",
+			"initialValue": "0.02",
+			"comment": "The ratio to scale game engine object to physics engine object.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 967904854977717
 		}
 	],
 	"sid": 704237106821719

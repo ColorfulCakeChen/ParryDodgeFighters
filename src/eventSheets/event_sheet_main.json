@@ -167,6 +167,10 @@
 				{
 					"callFunction": "DrawingCanvasPaint",
 					"sid": 670822637032521
+				},
+				{
+					"callFunction": "FighterPhysics_applyByKeyboard",
+					"sid": 460192146731835
 				}
 			],
 			"sid": 304644917695471
