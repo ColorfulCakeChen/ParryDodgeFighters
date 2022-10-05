@@ -1,38 +1,48 @@
 {
-	"name": "FighterPhysics",
-	"plugin-id": "TiledBg",
-	"sid": 673969791719115,
+	"name": "FighterSkin",
+	"plugin-id": "Sprite",
+	"sid": 963713917736068,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "Acceleration",
-			"type": "number",
-			"desc": "The acceleration when applying force by keyboard.",
-			"sid": 626262851733864
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Physics",
-			"name": "Physics",
-			"sid": 973273291029772
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 284627356803356
 		},
 		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 132158349953293
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 707069834552785
 		}
 	],
 	"effectTypes": [],
-	"image": {
-		"width": 1,
-		"height": 1,
-		"originX": 0.5,
-		"originY": 0.5,
-		"originalSource": "",
-		"exportFormat": "lossless",
-		"exportQuality": 0.8,
-		"imageSpriteId": 479973,
-		"useCollisionPoly": true
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 25,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8645676,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 600189210421129,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
 	}
 }

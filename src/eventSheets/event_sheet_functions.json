@@ -44,9 +44,9 @@
 				{
 					"id": "set-default-color",
 					"objectClass": "EnergyBar",
-					"sid": 781641613181165,
+					"sid": 171201449978296,
 					"parameters": {
-						"color": "Fighter.ColorValue"
+						"color": "FighterSkin.ColorValue"
 					}
 				},
 				{
@@ -109,17 +109,17 @@
 					"conditions": [
 						{
 							"id": "is-visible",
-							"objectClass": "Fighter",
-							"sid": 940486853235796
+							"objectClass": "FighterSkin",
+							"sid": 971466835850943
 						}
 					],
 					"actions": [
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
-							"sid": 287342857723435,
+							"sid": 651570233448997,
 							"parameters": {
-								"object": "Fighter",
+								"object": "FighterSkin",
 								"effects": "without-effects"
 							}
 						}

@@ -68,23 +68,44 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "FighterPhysics",
+					"type": "Fighter",
 					"properties": {
 						"initially-visible": false,
-						"origin": "center",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
 					},
-					"uid": 11,
+					"uid": 8,
 					"instanceVariables": {
+						"EnergyCur": 0,
+						"EnergyMax": 100,
+						"EnergyRestoreSecondsPerPoint": 1,
+						"VersusAlignmentId": 0,
 						"Acceleration": 3
 					},
 					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 15,
+								"wait-time": 1,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Physics": {
 							"properties": {
 								"immovable": false,
@@ -101,9 +122,9 @@
 						},
 						"8Direction": {
 							"properties": {
-								"max-speed": 50,
-								"acceleration": 50,
-								"deceleration": 50,
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
 								"allow-sliding": false,
@@ -114,7 +135,7 @@
 					},
 					"template": {
 						"mode": "template",
-						"templateName": "FighterPhysicsTemplate",
+						"templateName": "FighterTemplate",
 						"sourceTemplateName": "",
 						"components": [
 							{
@@ -128,35 +149,15 @@
 												true
 											],
 											[
-												"origin",
+												"initial-animation",
 												true
 											],
 											[
-												"wrap-horizontal",
+												"initial-frame",
 												true
 											],
 											[
-												"wrap-vertical",
-												true
-											],
-											[
-												"image-offset-x",
-												true
-											],
-											[
-												"image-offset-y",
-												true
-											],
-											[
-												"image-scale-x",
-												true
-											],
-											[
-												"image-scale-y",
-												true
-											],
-											[
-												"image-angle",
+												"enable-collisions",
 												true
 											]
 										]
@@ -170,6 +171,22 @@
 										"key": "instance-variable",
 										"state": [
 											{
+												"iv": "EnergyCur",
+												"state": true
+											},
+											{
+												"iv": "EnergyMax",
+												"state": true
+											},
+											{
+												"iv": "EnergyRestoreSecondsPerPoint",
+												"state": true
+											},
+											{
+												"iv": "VersusAlignmentId",
+												"state": true
+											},
+											{
 												"iv": "Acceleration",
 												"state": true
 											}
@@ -180,6 +197,48 @@
 							{
 								"id": "behavior",
 								"component": [
+									{
+										"key": "Fade",
+										"state": [
+											[
+												"fade-in-time",
+												true
+											],
+											[
+												"wait-time",
+												true
+											],
+											[
+												"fade-out-time",
+												true
+											],
+											[
+												"destroy",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Timer",
+										"state": []
+									},
+									{
+										"key": "ScrollTo",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									},
 									{
 										"key": "Physics",
 										"state": [
@@ -304,7 +363,7 @@
 											],
 											[
 												"c",
-												true
+												false
 											],
 											[
 												"sx",
@@ -358,10 +417,10 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": null,
-						"uid": 11,
+						"uid": 8,
 						"children": [
 							{
-								"uid": 8,
+								"uid": 12,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -397,293 +456,16 @@
 						}
 					},
 					"world": {
-						"x": 24,
+						"x": 88,
 						"y": 32,
 						"width": 25,
 						"height": 25,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							0.39215686274509803,
-							0.39215686274509803,
-							0.39215686274509803,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Fighter",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 8,
-					"instanceVariables": {
-						"EnergyCur": 0,
-						"EnergyMax": 100,
-						"EnergyRestoreSecondsPerPoint": 1,
-						"VersusAlignmentId": 0
-					},
-					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 15,
-								"wait-time": 1,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Timer": {
-							"properties": {}
-						},
-						"ScrollTo": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"template": {
-						"mode": "template",
-						"templateName": "FighterTemplate",
-						"sourceTemplateName": "",
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "EnergyCur",
-												"state": true
-											},
-											{
-												"iv": "EnergyMax",
-												"state": true
-											},
-											{
-												"iv": "EnergyRestoreSecondsPerPoint",
-												"state": true
-											},
-											{
-												"iv": "VersusAlignmentId",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": [
-									{
-										"key": "Fade",
-										"state": [
-											[
-												"fade-in-time",
-												true
-											],
-											[
-												"wait-time",
-												true
-											],
-											[
-												"fade-out-time",
-												true
-											],
-											[
-												"destroy",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Flash",
-										"state": []
-									},
-									{
-										"key": "Timer",
-										"state": []
-									},
-									{
-										"key": "ScrollTo",
-										"state": [
-											[
-												"enabled",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												false
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						]
-					},
-					"sceneGraphData": {
-						"parent-uid": 11,
-						"uid": 8,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"world": {
-						"x": 24,
-						"y": 32,
-						"width": 25,
-						"height": 25,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							0.5882352941176471,
-							0.3137254901960784,
-							0.0392156862745098,
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,
@@ -1618,6 +1400,74 @@
 						"height": 4,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FighterSkin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 15,
+								"wait-time": 1,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 8,
+						"uid": 12,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 88,
+						"y": 32,
+						"width": 25,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

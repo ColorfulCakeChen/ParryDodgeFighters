@@ -27,6 +27,12 @@
 			"type": "number",
 			"desc": "This Fighter's alignment in the versus.",
 			"sid": 222559997380293
+		},
+		{
+			"name": "Acceleration",
+			"type": "number",
+			"desc": "The acceleration when applying force by keyboard.",
+			"sid": 910499927195907
 		}
 	],
 	"behaviorTypes": [
@@ -49,6 +55,16 @@
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
 			"sid": 495700070411087
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 330839136189311
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 618076149668616
 		}
 	],
 	"effectTypes": [],
@@ -64,8 +80,15 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4812995,
+						"imageSpriteId": 997337,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "GunFire",
+								"x": 1.04,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -75,7 +98,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []

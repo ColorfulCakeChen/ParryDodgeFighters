@@ -1,10 +1,10 @@
 {
-	"name": "Event_Sheet_FighterPhysics",
+	"name": "Event_Sheet_Fighter",
 	"events": [
 		{
-			"functionName": "FighterPhysics_RecreateAll",
-			"functionDescription": "Recreate all FighterPhysics (hierarchy).",
-			"functionCategory": "FighterPhysics",
+			"functionName": "Fighter_recreateAll",
+			"functionDescription": "Recreate all Fighter (hierarchy).",
+			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
 			"functionIsAsync": false,
@@ -14,11 +14,11 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "FighterPhysics",
-					"sid": 737083557510805
+					"objectClass": "Fighter",
+					"sid": 846134909559484
 				},
 				{
-					"callFunction": "FighterPhysics_create",
+					"callFunction": "Fighter_create",
 					"sid": 293196134570834,
 					"parameters": [
 						"Alignment0_Id",
@@ -31,7 +31,7 @@
 					]
 				},
 				{
-					"callFunction": "FighterPhysics_create",
+					"callFunction": "Fighter_create",
 					"sid": 389649426146040,
 					"parameters": [
 						"Alignment1_Id",
@@ -47,9 +47,9 @@
 			"sid": 482811962513476
 		},
 		{
-			"functionName": "FighterPhysics_create",
-			"functionDescription": "Create one FighterPhysics (hierarchy)",
-			"functionCategory": "FighterPhysics",
+			"functionName": "Fighter_create",
+			"functionDescription": "Create one Fighter (hierarchy)",
+			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
 			"functionIsAsync": false,
@@ -110,14 +110,14 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 811139501530567,
+					"sid": 750448177561400,
 					"parameters": {
-						"object-to-create": "FighterPhysics",
+						"object-to-create": "Fighter",
 						"layer": "1",
 						"x": "X",
 						"y": "Y",
 						"create-hierarchy": true,
-						"template-name": "\"FighterPhysicsTemplate\""
+						"template-name": "\"FighterTemplate\""
 					}
 				},
 				{
@@ -131,16 +131,16 @@
 				},
 				{
 					"id": "set-angle",
-					"objectClass": "FighterPhysics",
-					"sid": 279821089217471,
+					"objectClass": "Fighter",
+					"sid": 781151700583098,
 					"parameters": {
 						"angle": "FaceAngle"
 					}
 				},
 				{
 					"id": "set-default-color",
-					"objectClass": "Fighter",
-					"sid": 705015595226419,
+					"objectClass": "FighterSkin",
+					"sid": 949374298968077,
 					"parameters": {
 						"color": "rgbEx255(ColorR, ColorG, ColorB)"
 					}
@@ -160,9 +160,9 @@
 			"sid": 381188756354974
 		},
 		{
-			"functionName": "FighterPhysics_applyAcceleration",
-			"functionDescription": "Let FighterPhysics go specified acceleration.",
-			"functionCategory": "FighterPhysics",
+			"functionName": "Fighter_applyAcceleration",
+			"functionDescription": "Let Fighter got specified acceleration.",
+			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": true,
 			"functionIsAsync": false,
@@ -188,41 +188,29 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpriteFont",
-					"sid": 683740423239533,
+					"sid": 874676504366084,
 					"disabled": true,
 					"parameters": {
-						"text": "SpriteFont.Text & \",Mass=\" & FighterPhysics.Physics.Mass"
+						"text": "SpriteFont.Text & \",Mass=\" & Fighter.Physics.Mass"
 					}
 				},
 				{
 					"id": "set-text",
 					"objectClass": "SpriteFont",
-					"sid": 875182678597825,
+					"sid": 889866941065199,
 					"disabled": true,
 					"parameters": {
-						"text": "SpriteFont.Text & \",ForceX=\" & FighterPhysics.Physics.Mass * GameToPhysicsRatio * AccelerationX & \",ForceY=\" & FighterPhysics.Physics.Mass * GameToPhysicsRatio * AccelerationY"
+						"text": "SpriteFont.Text & \",ForceX=\" & Fighter.Physics.Mass * GameToPhysicsRatio * AccelerationX & \",ForceY=\" & Fighter.Physics.Mass * GameToPhysicsRatio * AccelerationY"
 					}
 				},
 				{
 					"id": "apply-force",
-					"objectClass": "FighterPhysics",
-					"sid": 188770194418740,
+					"objectClass": "Fighter",
+					"sid": 429373885032525,
 					"behaviorType": "Physics",
 					"parameters": {
 						"force-x": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationX",
 						"force-y": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationY",
-						"image-point": "0"
-					}
-				},
-				{
-					"id": "apply-impulse",
-					"objectClass": "FighterPhysics",
-					"sid": 734071811400137,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"impulse-x": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationX",
-						"implulse-y": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationY",
 						"image-point": "0"
 					}
 				}
@@ -230,9 +218,9 @@
 			"sid": 861478868260186
 		},
 		{
-			"functionName": "FighterPhysics_applyByKeyboard",
+			"functionName": "Fighter_applyByKeyboard",
 			"functionDescription": "",
-			"functionCategory": "FighterPhysics",
+			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
 			"functionIsAsync": false,
@@ -246,13 +234,13 @@
 				},
 				{
 					"id": "apply-force",
-					"objectClass": "FighterPhysics",
-					"sid": 575867668977431,
+					"objectClass": "Fighter",
+					"sid": 735080081536116,
 					"disabled": true,
 					"behaviorType": "Physics",
 					"parameters": {
 						"force-x": "0",
-						"force-y": "-FighterPhysics.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
+						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
 						"image-point": "0"
 					}
 				}
@@ -282,11 +270,11 @@
 							}
 						},
 						{
-							"callFunction": "FighterPhysics_applyAcceleration",
-							"sid": 496086607528059,
+							"callFunction": "Fighter_applyAcceleration",
+							"sid": 740976541286566,
 							"parameters": [
 								"0",
-								"-FighterPhysics.Acceleration"
+								"-Fighter.Acceleration"
 							]
 						}
 					],
@@ -315,11 +303,11 @@
 							}
 						},
 						{
-							"callFunction": "FighterPhysics_applyAcceleration",
-							"sid": 460578549170999,
+							"callFunction": "Fighter_applyAcceleration",
+							"sid": 967995503555839,
 							"parameters": [
 								"0",
-								"FighterPhysics.Acceleration"
+								"Fighter.Acceleration"
 							]
 						}
 					],
@@ -339,10 +327,10 @@
 					],
 					"actions": [
 						{
-							"callFunction": "FighterPhysics_applyAcceleration",
-							"sid": 542745404028206,
+							"callFunction": "Fighter_applyAcceleration",
+							"sid": 509016609498552,
 							"parameters": [
-								"-FighterPhysics.Acceleration",
+								"-Fighter.Acceleration",
 								"0"
 							]
 						}
@@ -363,10 +351,10 @@
 					],
 					"actions": [
 						{
-							"callFunction": "FighterPhysics_applyAcceleration",
-							"sid": 627832270767808,
+							"callFunction": "Fighter_applyAcceleration",
+							"sid": 314029812541988,
 							"parameters": [
-								"FighterPhysics.Acceleration",
+								"Fighter.Acceleration",
 								"0"
 							]
 						}
