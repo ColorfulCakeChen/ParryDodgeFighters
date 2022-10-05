@@ -129,13 +129,21 @@
 			"EnergyBar",
 			"Particles",
 			"RemainedTimer",
-			"FighterPhysics",
-			"Keyboard"
+			"Keyboard",
+			"FighterSkin"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"Fighter",
+				"FighterSkin"
+			],
+			"selectMode": "normal"
+		}
+	],
 	"families": {
 		"items": [],
 		"subfolders": []
@@ -151,7 +159,7 @@
 			"Event_Sheet_Main",
 			"Event_Sheet_Functions",
 			"Event_Sheet_GlobalVars",
-			"Event_Sheet_FighterPhysics"
+			"Event_Sheet_Fighter"
 		],
 		"subfolders": []
 	},
