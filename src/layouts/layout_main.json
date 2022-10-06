@@ -85,7 +85,7 @@
 						"EnergyRestorePoints": 30,
 						"EnergyPointsThrust": 1,
 						"EnergyPointsShoot": 10,
-						"ShootReadySeconds": 0.5,
+						"ShootReadySeconds": 0.4,
 						"ShootReady": true,
 						"Acceleration": 3
 					},
