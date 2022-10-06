@@ -84,7 +84,7 @@
 						"useCollisionPoly": true,
 						"imagePoints": [
 							{
-								"name": "GunFire",
+								"name": "GunMuzzle",
 								"x": 1.04,
 								"y": 0.5
 							}

@@ -206,12 +206,12 @@
 				{
 					"id": "apply-force",
 					"objectClass": "Fighter",
-					"sid": 429373885032525,
+					"sid": 224447258890028,
 					"behaviorType": "Physics",
 					"parameters": {
 						"force-x": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationX",
 						"force-y": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationY",
-						"image-point": "0"
+						"image-point": "\"GunMuzzle\""
 					}
 				}
 			],

@@ -115,7 +115,7 @@
 								"friction": 0.5,
 								"elasticity": 0.2,
 								"linear-damping": 2,
-								"angular-damping": 0.01,
+								"angular-damping": 5,
 								"bullet": false,
 								"enabled": true
 							}
