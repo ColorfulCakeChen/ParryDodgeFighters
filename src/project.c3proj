@@ -176,7 +176,8 @@
 			"Event_Sheet_Main",
 			"Event_Sheet_Functions",
 			"Event_Sheet_GlobalVars",
-			"Event_Sheet_Fighter"
+			"Event_Sheet_Fighter",
+			"Event_Sheet _KeyCodes"
 		],
 		"subfolders": []
 	},

@@ -142,6 +142,10 @@
 			"sid": 258895392651152
 		},
 		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
 			"eventType": "variable",
 			"name": "GameToPhysicsRatio",
 			"type": "number",
@@ -160,6 +164,10 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 802709989280004
+		},
+		{
+			"eventType": "comment",
+			"text": ""
 		},
 		{
 			"eventType": "variable",

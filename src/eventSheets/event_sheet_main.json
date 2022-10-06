@@ -154,6 +154,10 @@
 			"sid": 304644917695471
 		},
 		{
+			"eventType": "comment",
+			"text": "Find out key codes."
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -172,8 +176,7 @@
 					}
 				}
 			],
-			"sid": 683172087657411,
-			"disabled": true
+			"sid": 683172087657411
 		},
 		{
 			"eventType": "block",

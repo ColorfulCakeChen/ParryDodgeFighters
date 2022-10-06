@@ -163,6 +163,10 @@
 										"key": "instance-variable",
 										"state": [
 											{
+												"iv": "VersusAlignmentId",
+												"state": true
+											},
+											{
 												"iv": "EnergyCur",
 												"state": true
 											},
@@ -172,14 +176,6 @@
 											},
 											{
 												"iv": "EnergyRestoreSeconds",
-												"state": true
-											},
-											{
-												"iv": "VersusAlignmentId",
-												"state": true
-											},
-											{
-												"iv": "Acceleration",
 												"state": true
 											},
 											{
@@ -200,6 +196,10 @@
 											},
 											{
 												"iv": "ShootReady",
+												"state": true
+											},
+											{
+												"iv": "Acceleration",
 												"state": true
 											}
 										]
@@ -1328,10 +1328,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 8,
+						"x": 0,
 						"y": 56,
-						"width": 112,
-						"height": 10,
+						"width": 128,
+						"height": 16,
 						"originX": 0,
 						"originY": 0,
 						"color": [

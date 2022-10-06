@@ -1,0 +1,346 @@
+{
+	"name": "Event_Sheet _KeyCodes",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Enter",
+			"type": "number",
+			"initialValue": "13",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 832949262586468
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Shift",
+			"type": "number",
+			"initialValue": "16",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 803166960334287
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Control",
+			"type": "number",
+			"initialValue": "17",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 344807594197139
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Alt",
+			"type": "number",
+			"initialValue": "18",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 790882799848959
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Escape",
+			"type": "number",
+			"initialValue": "27",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 378919711655838
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Space",
+			"type": "number",
+			"initialValue": "32",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 731340004949471
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_PageUp",
+			"type": "number",
+			"initialValue": "33",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 357567948150078
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_PageDown",
+			"type": "number",
+			"initialValue": "34",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 368333195722997
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_End",
+			"type": "number",
+			"initialValue": "35",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 676673241468912
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Home",
+			"type": "number",
+			"initialValue": "36",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 102074324570182
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_ArrowLeft",
+			"type": "number",
+			"initialValue": "37",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 594957154299200
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_ArrowUp",
+			"type": "number",
+			"initialValue": "38",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 622938501103561
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_ArrowRight",
+			"type": "number",
+			"initialValue": "39",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 583974652185365
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_ArrowDown",
+			"type": "number",
+			"initialValue": "40",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 717584055724557
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Insert",
+			"type": "number",
+			"initialValue": "45",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 191361560049938
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Delete",
+			"type": "number",
+			"initialValue": "46",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 926730799295647
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_0_Insert",
+			"type": "number",
+			"initialValue": "96",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 902405873489022
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_1_End",
+			"type": "number",
+			"initialValue": "97",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 183543487440945
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_2_ArrowDown",
+			"type": "number",
+			"initialValue": "98",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 621748084019442
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_3_PageDown",
+			"type": "number",
+			"initialValue": "99",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 412720546347316
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_4_ArrowLeft",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 923924164156613
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_5",
+			"type": "number",
+			"initialValue": "101",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 543105972859913
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_6_ArrowRight",
+			"type": "number",
+			"initialValue": "102",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 734976518487934
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_7_Home",
+			"type": "number",
+			"initialValue": "103",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 974628163033893
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_8_ArrowUp",
+			"type": "number",
+			"initialValue": "104",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 724289824964152
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_9_PageUp",
+			"type": "number",
+			"initialValue": "105",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 224655964964489
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_Star",
+			"type": "number",
+			"initialValue": "106",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 907976090005212
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_Plus",
+			"type": "number",
+			"initialValue": "107",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 658641777401984
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_Minus",
+			"type": "number",
+			"initialValue": "109",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 318515221077097
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_Dot_Delete",
+			"type": "number",
+			"initialValue": "110",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 194016558468818
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_Slash",
+			"type": "number",
+			"initialValue": "111",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 115005444761563
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_NumPad_NumLock",
+			"type": "number",
+			"initialValue": "144",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 365678364606985
+		}
+	],
+	"sid": 927853360201633
+}
