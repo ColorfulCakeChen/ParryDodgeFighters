@@ -170,6 +170,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 873519386245333
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerControllable",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "User whether could play game.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 163218808814598
 		}
 	],
 	"sid": 704237106821719

@@ -322,7 +322,7 @@
 			"sid": 861478868260186
 		},
 		{
-			"functionName": "Fighter_applyByKeyboard",
+			"functionName": "Fighter_applyForceByKeyboard",
 			"functionDescription": "",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
@@ -330,7 +330,16 @@
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
-			"conditions": [],
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 658773203942919,
+					"parameters": {
+						"variable": "PlayerControllable"
+					}
+				}
+			],
 			"actions": [
 				{
 					"type": "comment",
