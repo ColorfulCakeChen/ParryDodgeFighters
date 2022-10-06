@@ -160,6 +160,16 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 802709989280004
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerAlignmentId",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "User plays which alignment currently.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 873519386245333
 		}
 	],
 	"sid": 704237106821719

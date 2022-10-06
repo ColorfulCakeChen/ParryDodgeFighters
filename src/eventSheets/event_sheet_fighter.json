@@ -176,10 +176,52 @@
 			"functionReturnType": "none",
 			"functionCopyPicked": true,
 			"functionIsAsync": false,
-			"functionParameters": [],
+			"functionParameters": [
+				{
+					"name": "AlignmentId",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Specify which Fighter to shoot Projectile.",
+					"sid": 743241594594642
+				}
+			],
 			"eventType": "function-block",
-			"conditions": [],
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 202511763412473,
+					"parameters": {
+						"instance-variable": "VersusAlignmentId",
+						"comparison": 0,
+						"value": "AlignmentId"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 835031589117626,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
 			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 709581999811094,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "max( Self.EnergyCur - 1, 0 )"
+					}
+				},
+				{
+					"callFunction": "EnergyBarRefresh",
+					"sid": 641453225654584
+				},
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Fighter",

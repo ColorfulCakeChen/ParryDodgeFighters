@@ -82,7 +82,7 @@
 						"EnergyMax": 100,
 						"EnergyRestoreSecondsPerPoint": 1,
 						"VersusAlignmentId": 0,
-						"Acceleration": 3
+						"Acceleration": 2
 					},
 					"behaviors": {
 						"Timer": {

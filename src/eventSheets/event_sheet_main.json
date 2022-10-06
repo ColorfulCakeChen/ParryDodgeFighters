@@ -221,10 +221,60 @@
 				},
 				{
 					"callFunction": "Fighter_shootProjectile",
-					"sid": 532478828187895
+					"sid": 657101726273757,
+					"parameters": [
+						"PlayerAlignmentId"
+					]
 				}
 			],
 			"sid": 489805944339476
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 654434314218510
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 916318754263570,
+					"parameters": {
+						"text": "SpriteFont.Text & \",\" & Keyboard.TypedKey & \"(\" & Keyboard.LastKeyCode & \")\""
+					}
+				}
+			],
+			"sid": 683172087657411,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 217777984995713,
+					"parameters": {
+						"key": 16
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 746453049274492,
+					"parameters": {
+						"variable": "PlayerAlignmentId",
+						"value": "( PlayerAlignmentId + 1 ) % 2"
+					}
+				}
+			],
+			"sid": 378852674519604
 		}
 	],
 	"sid": 215625391285548
