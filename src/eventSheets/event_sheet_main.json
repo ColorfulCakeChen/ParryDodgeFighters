@@ -75,10 +75,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 825356572833215,
+					"sid": 297545507322523,
 					"parameters": {
 						"instance-variable": "EnergyCur",
-						"value": "min( Self.EnergyCur + 1, Self.EnergyMax )"
+						"value": "min( Self.EnergyCur + Self.EnergyRestorePoints, Self.EnergyMax )"
 					}
 				},
 				{
@@ -179,28 +179,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 651313721718936,
-					"parameters": {
-						"interval-seconds": "5"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "start-fade",
-					"objectClass": "FighterSkin",
-					"sid": 177708193524781,
-					"behaviorType": "Fade"
-				}
-			],
-			"sid": 721773586186371
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 779873460710255,
@@ -241,6 +219,39 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 937625078311508,
+					"parameters": {
+						"key": 16
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 952324768334084,
+					"parameters": {
+						"variable": "PlayerControllable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 256928044200706,
+					"parameters": {
+						"variable": "PlayerAlignmentId",
+						"value": "( PlayerAlignmentId + 1 ) % 2"
+					}
+				}
+			],
+			"sid": 501437588370322
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-any-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 654434314218510
@@ -263,34 +274,23 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 217777984995713,
-					"parameters": {
-						"key": 16
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
+					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 691555495175139,
+					"sid": 170038276368208,
 					"parameters": {
-						"variable": "PlayerControllable"
+						"interval-seconds": "5"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 746453049274492,
-					"parameters": {
-						"variable": "PlayerAlignmentId",
-						"value": "( PlayerAlignmentId + 1 ) % 2"
-					}
+					"id": "start-fade",
+					"objectClass": "FighterSkin",
+					"sid": 855295521890508,
+					"behaviorType": "Fade"
 				}
 			],
-			"sid": 378852674519604
+			"sid": 517746990193059
 		}
 	],
 	"sid": 215625391285548

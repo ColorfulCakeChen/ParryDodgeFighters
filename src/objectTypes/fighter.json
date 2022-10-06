@@ -17,10 +17,28 @@
 			"sid": 277341109312336
 		},
 		{
-			"name": "EnergyRestoreSecondsPerPoint",
+			"name": "EnergyRestoreSeconds",
 			"type": "number",
-			"desc": "How many seconds to increase one point energy.",
+			"desc": "How many seconds to increase point energy once.",
 			"sid": 433564257314143
+		},
+		{
+			"name": "EnergyRestorePoints",
+			"type": "number",
+			"desc": "How many Energy points will be increased every time.",
+			"sid": 208531946115419
+		},
+		{
+			"name": "EnergyPointsThrust",
+			"type": "number",
+			"desc": "How many energy points will be used for every thrusting.",
+			"sid": 586702183488248
+		},
+		{
+			"name": "EnergyPointsShoot",
+			"type": "number",
+			"desc": "How many energy points will be used for every shooting.",
+			"sid": 767883363560183
 		},
 		{
 			"name": "VersusAlignmentId",

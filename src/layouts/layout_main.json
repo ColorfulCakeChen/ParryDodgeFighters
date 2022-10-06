@@ -79,10 +79,13 @@
 					"uid": 8,
 					"instanceVariables": {
 						"EnergyCur": 0,
-						"EnergyMax": 100,
-						"EnergyRestoreSecondsPerPoint": 1,
+						"EnergyMax": 1000,
+						"EnergyRestoreSeconds": 1,
+						"EnergyRestorePoints": 30,
+						"EnergyPointsThrust": 1,
+						"EnergyPointsShoot": 10,
 						"VersusAlignmentId": 0,
-						"Acceleration": 2
+						"Acceleration": 3
 					},
 					"behaviors": {
 						"Timer": {
@@ -166,7 +169,7 @@
 												"state": true
 											},
 											{
-												"iv": "EnergyRestoreSecondsPerPoint",
+												"iv": "EnergyRestoreSeconds",
 												"state": true
 											},
 											{
@@ -175,6 +178,18 @@
 											},
 											{
 												"iv": "Acceleration",
+												"state": true
+											},
+											{
+												"iv": "EnergyRestorePoints",
+												"state": true
+											},
+											{
+												"iv": "EnergyPointsThrust",
+												"state": true
+											},
+											{
+												"iv": "EnergyPointsShoot",
 												"state": true
 											}
 										]

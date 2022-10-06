@@ -161,7 +161,7 @@
 					"sid": 159626439227153,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "Fighter.EnergyRestoreSecondsPerPoint",
+						"duration": "Fighter.EnergyRestoreSeconds",
 						"type": "regular",
 						"tag": "\"EnergyRestore\""
 					}
@@ -212,10 +212,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 709581999811094,
+					"sid": 472299006307758,
 					"parameters": {
 						"instance-variable": "EnergyCur",
-						"value": "max( Self.EnergyCur - 1, 0 )"
+						"value": "max( Self.EnergyCur - Self.EnergyPointsShoot, 0 )"
 					}
 				},
 				{
@@ -272,6 +272,13 @@
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
+					"name": "AlignmentId",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Specify which Fighter to be applied force.",
+					"sid": 984114611357793
+				},
+				{
 					"name": "AccelerationX",
 					"type": "number",
 					"initialValue": "0",
@@ -287,7 +294,28 @@
 				}
 			],
 			"eventType": "function-block",
-			"conditions": [],
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 554248176598770,
+					"parameters": {
+						"instance-variable": "VersusAlignmentId",
+						"comparison": 0,
+						"value": "AlignmentId"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 278219412522839,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
 			"actions": [
 				{
 					"id": "set-text",
@@ -306,6 +334,19 @@
 					"parameters": {
 						"text": "SpriteFont.Text & \",ForceX=\" & Fighter.Physics.Mass * GameToPhysicsRatio * AccelerationX & \",ForceY=\" & Fighter.Physics.Mass * GameToPhysicsRatio * AccelerationY"
 					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 552960550594776,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "max( Self.EnergyCur - Self.EnergyPointsThrust, 0 )"
+					}
+				},
+				{
+					"callFunction": "EnergyBarRefresh",
+					"sid": 624429156458684
 				},
 				{
 					"id": "apply-force",
@@ -384,8 +425,9 @@
 						},
 						{
 							"callFunction": "Fighter_applyAcceleration",
-							"sid": 740976541286566,
+							"sid": 224359262544233,
 							"parameters": [
+								"PlayerAlignmentId",
 								"0",
 								"-Fighter.Acceleration"
 							]
@@ -417,8 +459,9 @@
 						},
 						{
 							"callFunction": "Fighter_applyAcceleration",
-							"sid": 967995503555839,
+							"sid": 298905617938196,
 							"parameters": [
+								"PlayerAlignmentId",
 								"0",
 								"Fighter.Acceleration"
 							]
@@ -441,8 +484,9 @@
 					"actions": [
 						{
 							"callFunction": "Fighter_applyAcceleration",
-							"sid": 509016609498552,
+							"sid": 928883768665533,
 							"parameters": [
+								"PlayerAlignmentId",
 								"-Fighter.Acceleration",
 								"0"
 							]
@@ -465,8 +509,9 @@
 					"actions": [
 						{
 							"callFunction": "Fighter_applyAcceleration",
-							"sid": 314029812541988,
+							"sid": 577540421754479,
 							"parameters": [
+								"PlayerAlignmentId",
 								"Fighter.Acceleration",
 								"0"
 							]
