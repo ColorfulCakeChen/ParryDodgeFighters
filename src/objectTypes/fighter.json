@@ -31,21 +31,11 @@
 		{
 			"name": "Acceleration",
 			"type": "number",
-			"desc": "The acceleration when applying force by keyboard.",
+			"desc": "The acceleration when applying force for thrusting.",
 			"sid": 910499927195907
 		}
 	],
 	"behaviorTypes": [
-		{
-			"behaviorId": "Fade",
-			"name": "Fade",
-			"sid": 560810150319010
-		},
-		{
-			"behaviorId": "Flash",
-			"name": "Flash",
-			"sid": 848619390809918
-		},
 		{
 			"behaviorId": "Timer",
 			"name": "Timer",
@@ -73,19 +63,19 @@
 			{
 				"frames": [
 					{
-						"width": 25,
-						"height": 25,
+						"width": 21,
+						"height": 21,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 997337,
+						"imageSpriteId": 9763460,
 						"useCollisionPoly": true,
 						"imagePoints": [
 							{
 								"name": "GunMuzzle",
-								"x": 1.04,
+								"x": 1.0476190476190477,
 								"y": 0.5
 							}
 						],

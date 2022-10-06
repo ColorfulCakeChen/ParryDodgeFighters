@@ -85,19 +85,6 @@
 						"Acceleration": 3
 					},
 					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 15,
-								"wait-time": 1,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
 						"Timer": {
 							"properties": {}
 						},
@@ -197,35 +184,6 @@
 							{
 								"id": "behavior",
 								"component": [
-									{
-										"key": "Fade",
-										"state": [
-											[
-												"fade-in-time",
-												true
-											],
-											[
-												"wait-time",
-												true
-											],
-											[
-												"fade-out-time",
-												true
-											],
-											[
-												"destroy",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Flash",
-										"state": []
-									},
 									{
 										"key": "Timer",
 										"state": []
@@ -458,8 +416,8 @@
 					"world": {
 						"x": 88,
 						"y": 32,
-						"width": 25,
-						"height": 25,
+						"width": 21,
+						"height": 21,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1464,8 +1422,8 @@
 					"world": {
 						"x": 88,
 						"y": 32,
-						"width": 25,
-						"height": 25,
+						"width": 21,
+						"height": 21,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1488,7 +1446,9 @@
 						"live-preview": false
 					},
 					"uid": 11,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Acceleration": 6
+					},
 					"behaviors": {
 						"DestroyOutsideLayout": {
 							"properties": {}
@@ -1498,11 +1458,11 @@
 								"immovable": false,
 								"collision-mask": "circle",
 								"prevent-rotation": false,
-								"density": 100,
+								"density": 8,
 								"friction": 0.5,
 								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
+								"linear-damping": 0.01,
+								"angular-damping": 10,
 								"bullet": false,
 								"enabled": true
 							}
@@ -1544,7 +1504,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "Acceleration",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -1735,8 +1700,8 @@
 						}
 					},
 					"world": {
-						"x": 112,
-						"y": 16,
+						"x": 64,
+						"y": 48,
 						"width": 5,
 						"height": 5,
 						"originX": 0.5,
@@ -1789,8 +1754,8 @@
 						}
 					},
 					"world": {
-						"x": 112,
-						"y": 16,
+						"x": 64,
+						"y": 48,
 						"width": 5,
 						"height": 5,
 						"originX": 0.5,

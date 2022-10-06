@@ -22,21 +22,21 @@
 			{
 				"frames": [
 					{
-						"width": 25,
-						"height": 25,
+						"width": 21,
+						"height": 21,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8645676,
+						"imageSpriteId": 5578442,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
 				"sid": 600189210421129,
 				"name": "Animation 1",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,

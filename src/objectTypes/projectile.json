@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 259447859537100,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Acceleration",
+			"type": "number",
+			"desc": "The acceleration when applying impulse for fired by Fighter.",
+			"sid": 944895115600781
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "destroy",
@@ -31,6 +38,13 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 6040895,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "ThrustPoint",
+								"x": 0,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],

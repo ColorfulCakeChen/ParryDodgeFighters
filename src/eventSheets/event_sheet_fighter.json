@@ -18,6 +18,11 @@
 					"sid": 846134909559484
 				},
 				{
+					"id": "destroy",
+					"objectClass": "Projectile",
+					"sid": 290382056744667
+				},
+				{
 					"callFunction": "Fighter_create",
 					"sid": 293196134570834,
 					"parameters": [
@@ -121,6 +126,11 @@
 					}
 				},
 				{
+					"id": "stop-animation",
+					"objectClass": "Fighter",
+					"sid": 236154558499395
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
 					"sid": 694968917598312,
@@ -158,6 +168,58 @@
 				}
 			],
 			"sid": 381188756354974
+		},
+		{
+			"functionName": "Fighter_shootProjectile",
+			"functionDescription": "Create Projectile at Fighter's GunMuzzle",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Fighter",
+					"sid": 617366794989799,
+					"parameters": {
+						"object": "Projectile",
+						"layer": "1",
+						"image-point": "\"GunMuzzle\"",
+						"create-hierarchy": true
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Projectile",
+					"sid": 472344430563071
+				},
+				{
+					"id": "create-revolute-joint",
+					"objectClass": "Fighter",
+					"sid": 261971389045109,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"this-image-point": "0",
+						"object": "Projectile"
+					}
+				},
+				{
+					"id": "apply-impulse-at-angle",
+					"objectClass": "Projectile",
+					"sid": 736881203892636,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration",
+						"angle": "Self.Angle",
+						"image-point": "\"ThrustPoint\""
+					}
+				}
+			],
+			"sid": 672378711083100
 		},
 		{
 			"functionName": "Fighter_applyAcceleration",

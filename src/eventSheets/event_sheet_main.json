@@ -196,6 +196,35 @@
 				}
 			],
 			"sid": 721773586186371
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 779873460710255,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 327402957081042,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",Space\""
+					}
+				},
+				{
+					"callFunction": "Fighter_shootProjectile",
+					"sid": 532478828187895
+				}
+			],
+			"sid": 489805944339476
 		}
 	],
 	"sid": 215625391285548
