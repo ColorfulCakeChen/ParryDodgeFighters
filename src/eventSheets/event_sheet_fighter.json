@@ -2,6 +2,36 @@
 	"name": "Event_Sheet_Fighter",
 	"events": [
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Fighter",
+					"sid": 986118309095995,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"EnergyRestore\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 718780227153299,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "min( Self.EnergyCur + Self.EnergyRestorePoints, Self.EnergyMax )"
+					}
+				},
+				{
+					"callFunction": "EnergyBarRefresh",
+					"sid": 429894878575575
+				}
+			],
+			"sid": 231980933674926
+		},
+		{
 			"functionName": "Fighter_recreateAll",
 			"functionDescription": "Recreate all Fighter (hierarchy).",
 			"functionCategory": "Fighter",
@@ -174,7 +204,7 @@
 			"functionDescription": "Create Projectile at Fighter's GunMuzzle",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
-			"functionCopyPicked": true,
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -268,7 +298,7 @@
 			"functionDescription": "Let Fighter got specified acceleration.",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
-			"functionCopyPicked": true,
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -520,6 +550,79 @@
 					"sid": 713623141481600
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 779873460710255,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 173303758737947,
+					"parameters": {
+						"variable": "PlayerControllable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 327402957081042,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",Space\""
+					}
+				},
+				{
+					"callFunction": "Fighter_shootProjectile",
+					"sid": 657101726273757,
+					"parameters": [
+						"PlayerAlignmentId"
+					]
+				}
+			],
+			"sid": 489805944339476
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 937625078311508,
+					"parameters": {
+						"key": 16
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 952324768334084,
+					"parameters": {
+						"variable": "PlayerControllable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 256928044200706,
+					"parameters": {
+						"variable": "PlayerAlignmentId",
+						"value": "( PlayerAlignmentId + 1 ) % 2"
+					}
+				}
+			],
+			"sid": 501437588370322
 		}
 	],
 	"sid": 818138888685423
