@@ -1,0 +1,48 @@
+{
+	"name": "Projectile",
+	"plugin-id": "Sprite",
+	"sid": 259447859537100,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 575621443940722
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 993468486301083
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 5,
+						"height": 5,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6040895,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 993376569236122,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

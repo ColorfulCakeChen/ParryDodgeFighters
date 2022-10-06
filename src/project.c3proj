@@ -117,6 +117,14 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wmfr7wu05w3",
@@ -130,7 +138,9 @@
 			"Particles",
 			"RemainedTimer",
 			"Keyboard",
-			"FighterSkin"
+			"FighterSkin",
+			"Projectile",
+			"ProjectileSkin"
 		],
 		"subfolders": []
 	},
@@ -140,6 +150,13 @@
 			"members": [
 				"Fighter",
 				"FighterSkin"
+			],
+			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"Projectile",
+				"ProjectileSkin"
 			],
 			"selectMode": "normal"
 		}

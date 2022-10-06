@@ -133,6 +133,15 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
+							"sid": 661120024438381,
+							"parameters": {
+								"object": "ProjectileSkin",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
 							"sid": 418218136470744,
 							"parameters": {
 								"object": "Particles",
