@@ -62,16 +62,6 @@
 					"parameters": {
 						"gravity": "PhysicsGravity"
 					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "KeyDownArray",
-					"sid": 392982532885970,
-					"parameters": {
-						"width": "255",
-						"height": "1",
-						"depth": "1"
-					}
 				}
 			],
 			"sid": 834938499052826
