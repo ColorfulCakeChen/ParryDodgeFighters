@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Timer",
 			"name": "Timer",
@@ -140,7 +148,8 @@
 			"Keyboard",
 			"FighterSkin",
 			"Projectile",
-			"ProjectileSkin"
+			"ProjectileSkin",
+			"KeyDownArray"
 		],
 		"subfolders": []
 	},

@@ -1826,7 +1826,18 @@
 		}
 	],
 	"sid": 377024570139051,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "KeyDownArray",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 15,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 128,
 	"height": 72,

@@ -489,11 +489,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 737410397627107,
+							"id": "compare-at-x",
+							"objectClass": "KeyDownArray",
+							"sid": 958900423815119,
 							"parameters": {
-								"key": 38
+								"x": "KeyCode_ArrowUp",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -523,11 +525,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 286733803083657,
+							"id": "compare-at-x",
+							"objectClass": "KeyDownArray",
+							"sid": 734559886724826,
 							"parameters": {
-								"key": 40
+								"x": "KeyCode_ArrowDown",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -557,11 +561,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 296004630267460,
+							"id": "compare-at-x",
+							"objectClass": "KeyDownArray",
+							"sid": 180808307015850,
 							"parameters": {
-								"key": 37
+								"x": "KeyCode_ArrowLeft",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -582,11 +588,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 279745485501562,
+							"id": "compare-at-x",
+							"objectClass": "KeyDownArray",
+							"sid": 825746214101108,
 							"parameters": {
-								"key": 39
+								"x": "KeyCode_ArrowRight",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -607,11 +615,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 318031049790729,
+							"id": "compare-at-x",
+							"objectClass": "KeyDownArray",
+							"sid": 867304402552086,
 							"parameters": {
-								"key": 32
+								"x": "KeyCode_Space",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],

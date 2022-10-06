@@ -62,6 +62,16 @@
 					"parameters": {
 						"gravity": "PhysicsGravity"
 					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "KeyDownArray",
+					"sid": 392982532885970,
+					"parameters": {
+						"width": "255",
+						"height": "1",
+						"depth": "1"
+					}
 				}
 			],
 			"sid": 834938499052826
@@ -154,10 +164,6 @@
 			"sid": 304644917695471
 		},
 		{
-			"eventType": "comment",
-			"text": "Find out key codes."
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -171,12 +177,53 @@
 					"id": "set-text",
 					"objectClass": "SpriteFont",
 					"sid": 916318754263570,
+					"disabled": true,
 					"parameters": {
 						"text": "SpriteFont.Text & \",\" & Keyboard.TypedKey & \"(\" & Keyboard.LastKeyCode & \")\""
+					}
+				},
+				{
+					"id": "set-at-x",
+					"objectClass": "KeyDownArray",
+					"sid": 351776763413782,
+					"parameters": {
+						"x": "Keyboard.LastKeyCode",
+						"value": "1"
 					}
 				}
 			],
 			"sid": 683172087657411
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-released",
+					"objectClass": "Keyboard",
+					"sid": 460768446080213
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 327931139660854,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",\" & Keyboard.TypedKey & \"(\" & Keyboard.LastKeyCode & \")\""
+					}
+				},
+				{
+					"id": "set-at-x",
+					"objectClass": "KeyDownArray",
+					"sid": 526912348973221,
+					"parameters": {
+						"x": "Keyboard.LastKeyCode",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 510208931923954
 		},
 		{
 			"eventType": "block",
