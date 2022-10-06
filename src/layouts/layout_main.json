@@ -78,13 +78,15 @@
 					},
 					"uid": 8,
 					"instanceVariables": {
+						"VersusAlignmentId": 0,
 						"EnergyCur": 0,
 						"EnergyMax": 1000,
 						"EnergyRestoreSeconds": 1,
 						"EnergyRestorePoints": 30,
 						"EnergyPointsThrust": 1,
 						"EnergyPointsShoot": 10,
-						"VersusAlignmentId": 0,
+						"ShootReadySeconds": 0.5,
+						"ShootReady": true,
 						"Acceleration": 3
 					},
 					"behaviors": {
@@ -190,6 +192,14 @@
 											},
 											{
 												"iv": "EnergyPointsShoot",
+												"state": true
+											},
+											{
+												"iv": "ShootReadySeconds",
+												"state": true
+											},
+											{
+												"iv": "ShootReady",
 												"state": true
 											}
 										]

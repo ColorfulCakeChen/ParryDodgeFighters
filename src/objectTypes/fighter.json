@@ -5,6 +5,12 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
+			"name": "VersusAlignmentId",
+			"type": "number",
+			"desc": "This Fighter's alignment in the versus.",
+			"sid": 222559997380293
+		},
+		{
 			"name": "EnergyCur",
 			"type": "number",
 			"desc": "Current energy value.",
@@ -41,10 +47,16 @@
 			"sid": 767883363560183
 		},
 		{
-			"name": "VersusAlignmentId",
+			"name": "ShootReadySeconds",
 			"type": "number",
-			"desc": "This Fighter's alignment in the versus.",
-			"sid": 222559997380293
+			"desc": "How many seconds should be waited before shooting next Projectile.",
+			"sid": 909419945726480
+		},
+		{
+			"name": "ShootReady",
+			"type": "boolean",
+			"desc": "True if shooting is cool down complete.",
+			"sid": 716325056570224
 		},
 		{
 			"name": "Acceleration",

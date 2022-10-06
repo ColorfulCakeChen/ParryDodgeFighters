@@ -147,7 +147,7 @@
 					"sid": 670822637032521
 				},
 				{
-					"callFunction": "Fighter_applyForceByKeyboard",
+					"callFunction": "Fighter_thrust_shoot_byKeyboard",
 					"sid": 460192146731835
 				}
 			],

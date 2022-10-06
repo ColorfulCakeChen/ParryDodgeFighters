@@ -32,6 +32,32 @@
 			"sid": 231980933674926
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Fighter",
+					"sid": 764052896224703,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"ShootCoolDown\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fighter",
+					"sid": 821068854172783,
+					"parameters": {
+						"instance-variable": "ShootReady",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 144467237506523
+		},
+		{
 			"functionName": "Fighter_recreateAll",
 			"functionDescription": "Recreate all Fighter (hierarchy).",
 			"functionCategory": "Fighter",
@@ -228,6 +254,14 @@
 					}
 				},
 				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Fighter",
+					"sid": 887428488294451,
+					"parameters": {
+						"instance-variable": "ShootReady"
+					}
+				},
+				{
 					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
 					"sid": 835031589117626,
@@ -239,6 +273,26 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fighter",
+					"sid": 351661378859725,
+					"parameters": {
+						"instance-variable": "ShootReady",
+						"value": "false"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Fighter",
+					"sid": 360623339102788,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "Self.ShootReadySeconds",
+						"type": "once",
+						"tag": "\"ShootCoolDown\""
+					}
+				},
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
@@ -393,7 +447,7 @@
 			"sid": 861478868260186
 		},
 		{
-			"functionName": "Fighter_applyForceByKeyboard",
+			"functionName": "Fighter_thrust_shoot_byKeyboard",
 			"functionDescription": "",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
@@ -548,48 +602,31 @@
 						}
 					],
 					"sid": 713623141481600
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 318031049790729,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Fighter_shootProjectile",
+							"sid": 350591066336386,
+							"parameters": [
+								"PlayerAlignmentId"
+							]
+						}
+					],
+					"sid": 692220373341147
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 779873460710255,
-					"parameters": {
-						"key": 32
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 173303758737947,
-					"parameters": {
-						"variable": "PlayerControllable"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 327402957081042,
-					"disabled": true,
-					"parameters": {
-						"text": "SpriteFont.Text & \",Space\""
-					}
-				},
-				{
-					"callFunction": "Fighter_shootProjectile",
-					"sid": 657101726273757,
-					"parameters": [
-						"PlayerAlignmentId"
-					]
-				}
-			],
-			"sid": 489805944339476
 		},
 		{
 			"eventType": "block",
