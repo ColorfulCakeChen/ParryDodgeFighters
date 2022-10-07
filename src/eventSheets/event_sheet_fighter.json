@@ -212,15 +212,6 @@
 					}
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "FighterThrustParticles",
-					"sid": 158894726116971,
-					"parameters": {
-						"instance-variable": "VersusAlignmentId",
-						"value": "AlignmentId"
-					}
-				},
-				{
 					"id": "start-timer",
 					"objectClass": "Fighter",
 					"sid": 159626439227153,
@@ -442,32 +433,21 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "pick-children",
+							"objectClass": "FighterSkin",
+							"sid": 852610341304762,
+							"parameters": {
+								"child": "FighterThrustParticles",
+								"which": "own"
+							}
+						},
+						{
 							"id": "pick-by-evaluate",
 							"objectClass": "System",
 							"sid": 897617222089413,
-							"disabled": true,
 							"parameters": {
 								"object": "FighterThrustParticles",
 								"expression": "( FighterThrustParticles.for_ForceScaleX = ForceScaleX ) & ( FighterThrustParticles.for_ForceScaleY = ForceScaleY )"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "FighterThrustParticles",
-							"sid": 649080519535869,
-							"parameters": {
-								"instance-variable": "VersusAlignmentId",
-								"comparison": 0,
-								"value": "Fighter.VersusAlignmentId"
-							}
-						},
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 928624882933334,
-							"disabled": true,
-							"parameters": {
-								"object": "FighterThrustParticles"
 							}
 						},
 						{
@@ -498,6 +478,7 @@
 							"id": "set-text",
 							"objectClass": "SpriteFont",
 							"sid": 294787542797023,
+							"disabled": true,
 							"parameters": {
 								"text": "SpriteFont.Text & \",\" & FighterThrustParticles.UID"
 							}

@@ -151,7 +151,7 @@
 			"sid": 458946180661444
 		},
 		{
-			"functionName": "DrawingCanvasPaint",
+			"functionName": "DrawingCanvas_Paint",
 			"functionDescription": "Paint all objects to drawing canvas.",
 			"functionCategory": "DrawingCanvas",
 			"functionReturnType": "none",
@@ -185,6 +185,15 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
+							"sid": 642206017173502,
+							"parameters": {
+								"object": "FighterThrustParticles",
+								"effects": "without-effects"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
 							"sid": 651570233448997,
 							"parameters": {
 								"object": "FighterSkin",
@@ -204,15 +213,6 @@
 							"sid": 812703437809433,
 							"parameters": {
 								"object": "ProjectileSkin",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 418218136470744,
-							"parameters": {
-								"object": "FighterThrustParticles",
 								"effects": "without-effects"
 							}
 						},
@@ -246,7 +246,7 @@
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
-							"sid": 576192614515019,
+							"sid": 130544926064417,
 							"parameters": {
 								"object": "SpriteFont",
 								"effects": "without-effects"

@@ -456,6 +456,128 @@
 					}
 				},
 				{
+					"type": "FighterSkin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 15,
+								"wait-time": 1,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 8,
+						"uid": 12,
+						"children": [
+							{
+								"uid": 9,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 17,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 18,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 19,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 21,
+						"height": 21,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "EnergyBarBackground",
 					"properties": {
 						"left-margin": 1,
@@ -1348,128 +1470,6 @@
 					}
 				},
 				{
-					"type": "FighterSkin",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 12,
-					"instanceVariables": {},
-					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 15,
-								"wait-time": 1,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 8,
-						"uid": 12,
-						"children": [
-							{
-								"uid": 9,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 17,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 18,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 19,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 21,
-						"height": 21,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Projectile",
 					"properties": {
 						"initially-visible": false,
@@ -1806,15 +1806,15 @@
 				{
 					"type": "FighterThrustParticles",
 					"properties": {
-						"rate": 10,
+						"rate": 20,
 						"spray-cone": 30,
 						"type": "continuous-spray",
 						"object": -1,
 						"live-preview": false,
-						"speed": 100,
+						"speed": 25,
 						"size": 1,
 						"opacity": 100,
-						"grow-rate": 0.5,
+						"grow-rate": 50,
 						"x-randomiser": 0,
 						"y-randomiser": 0,
 						"initial-speed-randomiser": 0,
@@ -1826,11 +1826,10 @@
 						"life-speed-randomiser": 0,
 						"opacity-randomiser": 0,
 						"destroy-mode": "fade-to-invisible",
-						"timeout": 2
+						"timeout": 0.1
 					},
 					"uid": 9,
 					"instanceVariables": {
-						"VersusAlignmentId": 0,
 						"for_ForceScaleX": 1,
 						"for_ForceScaleY": 0
 					},
@@ -1942,10 +1941,6 @@
 											},
 											{
 												"iv": "for_ForceScaleY",
-												"state": true
-											},
-											{
-												"iv": "VersusAlignmentId",
 												"state": true
 											}
 										]
@@ -2074,7 +2069,7 @@
 						}
 					},
 					"world": {
-						"x": 0,
+						"x": -10,
 						"y": 0,
 						"width": 1,
 						"height": 1,
@@ -2118,7 +2113,6 @@
 					},
 					"uid": 17,
 					"instanceVariables": {
-						"VersusAlignmentId": 0,
 						"for_ForceScaleX": 0,
 						"for_ForceScaleY": 1
 					},
@@ -2231,10 +2225,6 @@
 											{
 												"iv": "for_ForceScaleY",
 												"state": false
-											},
-											{
-												"iv": "VersusAlignmentId",
-												"state": true
 											}
 										]
 									}
@@ -2363,7 +2353,7 @@
 					},
 					"world": {
 						"x": 0,
-						"y": 0,
+						"y": -10,
 						"width": 1,
 						"height": 1,
 						"originX": 0,
@@ -2406,7 +2396,6 @@
 					},
 					"uid": 18,
 					"instanceVariables": {
-						"VersusAlignmentId": 0,
 						"for_ForceScaleX": -1,
 						"for_ForceScaleY": 0
 					},
@@ -2518,10 +2507,6 @@
 											},
 											{
 												"iv": "for_ForceScaleY",
-												"state": true
-											},
-											{
-												"iv": "VersusAlignmentId",
 												"state": true
 											}
 										]
@@ -2650,7 +2635,7 @@
 						}
 					},
 					"world": {
-						"x": 0,
+						"x": 10,
 						"y": 0,
 						"width": 1,
 						"height": 1,
@@ -2694,7 +2679,6 @@
 					},
 					"uid": 19,
 					"instanceVariables": {
-						"VersusAlignmentId": 0,
 						"for_ForceScaleX": 0,
 						"for_ForceScaleY": -1
 					},
@@ -2807,10 +2791,6 @@
 											{
 												"iv": "for_ForceScaleY",
 												"state": false
-											},
-											{
-												"iv": "VersusAlignmentId",
-												"state": true
 											}
 										]
 									}
@@ -2832,11 +2812,11 @@
 										"state": [
 											[
 												"x",
-												true
+												false
 											],
 											[
 												"y",
-												true
+												false
 											],
 											[
 												"z",
@@ -2938,8 +2918,8 @@
 						}
 					},
 					"world": {
-						"x": -16,
-						"y": 8,
+						"x": 0,
+						"y": 10,
 						"width": 1,
 						"height": 1,
 						"originX": 0,

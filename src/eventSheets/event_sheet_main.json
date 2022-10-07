@@ -155,7 +155,7 @@
 					}
 				},
 				{
-					"callFunction": "DrawingCanvasPaint",
+					"callFunction": "DrawingCanvas_Paint",
 					"sid": 670822637032521
 				},
 				{
