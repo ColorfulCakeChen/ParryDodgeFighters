@@ -491,21 +491,21 @@
 				{
 					"id": "for",
 					"objectClass": "System",
-					"sid": 518715443871229,
+					"sid": 648181285667904,
 					"parameters": {
 						"name": "\"AlignmentId\"",
 						"start-index": "0",
-						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Width"
+						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Width - 1"
 					}
 				},
 				{
 					"id": "for",
 					"objectClass": "System",
-					"sid": 237589287140791,
+					"sid": 812989671817102,
 					"parameters": {
 						"name": "\"KeyCodeIndex\"",
 						"start-index": "0",
-						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Height"
+						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Height - 1"
 					}
 				},
 				{
