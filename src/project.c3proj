@@ -149,7 +149,8 @@
 			"FighterSkin",
 			"Projectile",
 			"ProjectileSkin",
-			"KeyDownArray"
+			"KeyDownArray",
+			"AlignmentId_Left_Up_Right_Down_Shoot_Array"
 		],
 		"subfolders": []
 	},
