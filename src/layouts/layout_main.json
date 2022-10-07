@@ -1830,7 +1830,8 @@
 					},
 					"uid": 9,
 					"instanceVariables": {
-						"for_ForceScaleX": -1,
+						"VersusAlignmentId": 0,
+						"for_ForceScaleX": 1,
 						"for_ForceScaleY": 0
 					},
 					"behaviors": {},
@@ -1941,6 +1942,10 @@
 											},
 											{
 												"iv": "for_ForceScaleY",
+												"state": true
+											},
+											{
+												"iv": "VersusAlignmentId",
 												"state": true
 											}
 										]
@@ -2113,8 +2118,9 @@
 					},
 					"uid": 17,
 					"instanceVariables": {
+						"VersusAlignmentId": 0,
 						"for_ForceScaleX": 0,
-						"for_ForceScaleY": -1
+						"for_ForceScaleY": 1
 					},
 					"behaviors": {},
 					"template": {
@@ -2225,6 +2231,10 @@
 											{
 												"iv": "for_ForceScaleY",
 												"state": false
+											},
+											{
+												"iv": "VersusAlignmentId",
+												"state": true
 											}
 										]
 									}
@@ -2396,7 +2406,8 @@
 					},
 					"uid": 18,
 					"instanceVariables": {
-						"for_ForceScaleX": 1,
+						"VersusAlignmentId": 0,
+						"for_ForceScaleX": -1,
 						"for_ForceScaleY": 0
 					},
 					"behaviors": {},
@@ -2507,6 +2518,10 @@
 											},
 											{
 												"iv": "for_ForceScaleY",
+												"state": true
+											},
+											{
+												"iv": "VersusAlignmentId",
 												"state": true
 											}
 										]
@@ -2679,8 +2694,9 @@
 					},
 					"uid": 19,
 					"instanceVariables": {
+						"VersusAlignmentId": 0,
 						"for_ForceScaleX": 0,
-						"for_ForceScaleY": 1
+						"for_ForceScaleY": -1
 					},
 					"behaviors": {},
 					"template": {
@@ -2791,6 +2807,10 @@
 											{
 												"iv": "for_ForceScaleY",
 												"state": false
+											},
+											{
+												"iv": "VersusAlignmentId",
+												"state": true
 											}
 										]
 									}
@@ -2812,11 +2832,11 @@
 										"state": [
 											[
 												"x",
-												false
+												true
 											],
 											[
 												"y",
-												false
+												true
 											],
 											[
 												"z",
@@ -2918,8 +2938,8 @@
 						}
 					},
 					"world": {
-						"x": 0,
-						"y": 0,
+						"x": -16,
+						"y": 8,
 						"width": 1,
 						"height": 1,
 						"originX": 0,

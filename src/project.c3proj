@@ -159,8 +159,7 @@
 		{
 			"members": [
 				"Fighter",
-				"FighterSkin",
-				"FighterThrustParticles"
+				"FighterSkin"
 			],
 			"selectMode": "normal"
 		},

@@ -5,6 +5,12 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
+			"name": "VersusAlignmentId",
+			"type": "number",
+			"desc": "Belong to which alignment's Fighter.",
+			"sid": 174997292495202
+		},
+		{
 			"name": "for_ForceScaleX",
 			"type": "number",
 			"desc": "For matching Fighter's applyAcceleration's ForceScaleX.",

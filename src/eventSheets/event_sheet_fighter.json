@@ -212,6 +212,15 @@
 					}
 				},
 				{
+					"id": "set-instvar-value",
+					"objectClass": "FighterThrustParticles",
+					"sid": 158894726116971,
+					"parameters": {
+						"instance-variable": "VersusAlignmentId",
+						"value": "AlignmentId"
+					}
+				},
+				{
 					"id": "start-timer",
 					"objectClass": "Fighter",
 					"sid": 159626439227153,
@@ -433,9 +442,30 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 897617222089413,
+							"disabled": true,
+							"parameters": {
+								"object": "FighterThrustParticles",
+								"expression": "( FighterThrustParticles.for_ForceScaleX = ForceScaleX ) & ( FighterThrustParticles.for_ForceScaleY = ForceScaleY )"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FighterThrustParticles",
+							"sid": 649080519535869,
+							"parameters": {
+								"instance-variable": "VersusAlignmentId",
+								"comparison": 0,
+								"value": "Fighter.VersusAlignmentId"
+							}
+						},
+						{
 							"id": "for-each",
 							"objectClass": "System",
-							"sid": 368527545738737,
+							"sid": 928624882933334,
+							"disabled": true,
 							"parameters": {
 								"object": "FighterThrustParticles"
 							}
@@ -443,7 +473,7 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "FighterThrustParticles",
-							"sid": 120041281927133,
+							"sid": 404771582465966,
 							"disabled": true,
 							"parameters": {
 								"instance-variable": "for_ForceScaleX",
@@ -454,7 +484,7 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "FighterThrustParticles",
-							"sid": 864416712770780,
+							"sid": 472578112317742,
 							"disabled": true,
 							"parameters": {
 								"instance-variable": "for_ForceScaleY",
@@ -467,7 +497,7 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpriteFont",
-							"sid": 494246717037537,
+							"sid": 294787542797023,
 							"parameters": {
 								"text": "SpriteFont.Text & \",\" & FighterThrustParticles.UID"
 							}
@@ -475,7 +505,7 @@
 						{
 							"id": "set-spraying",
 							"objectClass": "FighterThrustParticles",
-							"sid": 770914657126662,
+							"sid": 735094795427263,
 							"parameters": {
 								"state": "spraying"
 							}
