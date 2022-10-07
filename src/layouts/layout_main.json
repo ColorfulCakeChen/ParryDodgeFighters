@@ -1830,7 +1830,7 @@
 		{
 			"type": "KeyDownArray",
 			"properties": {
-				"width": 255,
+				"width": 150,
 				"height": 4,
 				"depth": 1
 			},

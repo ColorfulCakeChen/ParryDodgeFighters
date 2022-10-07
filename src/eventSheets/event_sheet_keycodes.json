@@ -466,7 +466,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "KeyDownArray\n[KeyCode][0]: If 1, the key is pressed down.\n[KeyCode][1]: ForceScaleX\n[KeyCode][2]: ForceScaleY\n[KeyCode][3]: If 1, shoot projectile."
+					"text": "KeyDownArray\n[KeyCode][0]: If 1, the key is down.\n[KeyCode][1]: ForceScaleX\n[KeyCode][2]: ForceScaleY\n[KeyCode][3]: If 1, shoot projectile."
 				},
 				{
 					"type": "comment",

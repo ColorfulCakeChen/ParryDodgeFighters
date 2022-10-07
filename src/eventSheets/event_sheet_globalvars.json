@@ -171,16 +171,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "PlayerAlignmentId_UnUsed",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "User plays which alignment currently.",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 873519386245333
-		},
-		{
-			"eventType": "variable",
 			"name": "PlayerControllable",
 			"type": "boolean",
 			"initialValue": "true",
