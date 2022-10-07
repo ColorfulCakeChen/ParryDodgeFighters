@@ -212,7 +212,7 @@
 							"objectClass": "DrawingCanvas",
 							"sid": 418218136470744,
 							"parameters": {
-								"object": "Particles",
+								"object": "FighterThrustParticles",
 								"effects": "without-effects"
 							}
 						},

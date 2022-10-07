@@ -439,8 +439,8 @@
 						}
 					},
 					"world": {
-						"x": 88,
-						"y": 32,
+						"x": 0,
+						"y": 0,
 						"width": 21,
 						"height": 21,
 						"originX": 0.5,
@@ -453,52 +453,6 @@
 						],
 						"angle": 0,
 						"zElevation": 0
-					}
-				},
-				{
-					"type": "Particles",
-					"properties": {
-						"rate": 0.1,
-						"spray-cone": 0,
-						"type": "one-shot",
-						"object": -1,
-						"live-preview": false,
-						"speed": 10,
-						"size": 1,
-						"opacity": 100,
-						"grow-rate": 2,
-						"x-randomiser": 0,
-						"y-randomiser": 0,
-						"initial-speed-randomiser": 0,
-						"size-randomiser": 0,
-						"grow-rate-randomiser": 0,
-						"acceleration": 0,
-						"gravity": 0,
-						"angle-randomiser": 0,
-						"life-speed-randomiser": 0,
-						"opacity-randomiser": 0,
-						"destroy-mode": "fade-to-invisible",
-						"timeout": 10
-					},
-					"uid": 9,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 8,
-						"y": 56,
-						"width": 10,
-						"height": 10,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0,
-						"blendMode": "additive"
 					}
 				},
 				{
@@ -1422,6 +1376,60 @@
 					"sceneGraphData": {
 						"parent-uid": 8,
 						"uid": 12,
+						"children": [
+							{
+								"uid": 9,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 17,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 18,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 19,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
 						"flags": {
 							"x": true,
 							"y": true,
@@ -1445,8 +1453,8 @@
 						}
 					},
 					"world": {
-						"x": 88,
-						"y": 32,
+						"x": 0,
+						"y": 0,
 						"width": 21,
 						"height": 21,
 						"originX": 0.5,
@@ -1793,6 +1801,1138 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "FighterThrustParticles",
+					"properties": {
+						"rate": 10,
+						"spray-cone": 30,
+						"type": "continuous-spray",
+						"object": -1,
+						"live-preview": false,
+						"speed": 100,
+						"size": 1,
+						"opacity": 100,
+						"grow-rate": 0.5,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": 0,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 2
+					},
+					"uid": 9,
+					"instanceVariables": {
+						"for_ForceScaleX": -1,
+						"for_ForceScaleY": 0
+					},
+					"behaviors": {},
+					"template": {
+						"mode": "template",
+						"templateName": "FighterTrustParticlesTemplate",
+						"sourceTemplateName": "",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"rate",
+												true
+											],
+											[
+												"spray-cone",
+												true
+											],
+											[
+												"type",
+												true
+											],
+											[
+												"object",
+												true
+											],
+											[
+												"speed",
+												true
+											],
+											[
+												"size",
+												true
+											],
+											[
+												"opacity",
+												true
+											],
+											[
+												"grow-rate",
+												true
+											],
+											[
+												"x-randomiser",
+												true
+											],
+											[
+												"y-randomiser",
+												true
+											],
+											[
+												"initial-speed-randomiser",
+												true
+											],
+											[
+												"size-randomiser",
+												true
+											],
+											[
+												"grow-rate-randomiser",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"angle-randomiser",
+												true
+											],
+											[
+												"life-speed-randomiser",
+												true
+											],
+											[
+												"opacity-randomiser",
+												true
+											],
+											[
+												"destroy-mode",
+												true
+											],
+											[
+												"timeout",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "for_ForceScaleX",
+												"state": true
+											},
+											{
+												"iv": "for_ForceScaleY",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"sceneGraphData": {
+						"parent-uid": 12,
+						"uid": 9,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1,
+						"height": 1,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.141592653589793,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				},
+				{
+					"type": "FighterThrustParticles",
+					"properties": {
+						"rate": 0.1,
+						"spray-cone": 60,
+						"type": "continuous-spray",
+						"object": -1,
+						"live-preview": false,
+						"speed": 10,
+						"size": 1,
+						"opacity": 100,
+						"grow-rate": 2,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": 0,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 10
+					},
+					"uid": 17,
+					"instanceVariables": {
+						"for_ForceScaleX": 0,
+						"for_ForceScaleY": -1
+					},
+					"behaviors": {},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "FighterTrustParticlesTemplate",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"rate",
+												true
+											],
+											[
+												"spray-cone",
+												true
+											],
+											[
+												"type",
+												true
+											],
+											[
+												"object",
+												true
+											],
+											[
+												"speed",
+												true
+											],
+											[
+												"size",
+												true
+											],
+											[
+												"opacity",
+												true
+											],
+											[
+												"grow-rate",
+												true
+											],
+											[
+												"x-randomiser",
+												true
+											],
+											[
+												"y-randomiser",
+												true
+											],
+											[
+												"initial-speed-randomiser",
+												true
+											],
+											[
+												"size-randomiser",
+												true
+											],
+											[
+												"grow-rate-randomiser",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"angle-randomiser",
+												true
+											],
+											[
+												"life-speed-randomiser",
+												true
+											],
+											[
+												"opacity-randomiser",
+												true
+											],
+											[
+												"destroy-mode",
+												true
+											],
+											[
+												"timeout",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "for_ForceScaleX",
+												"state": false
+											},
+											{
+												"iv": "for_ForceScaleY",
+												"state": false
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												false
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"sceneGraphData": {
+						"parent-uid": 12,
+						"uid": 17,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1,
+						"height": 1,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				},
+				{
+					"type": "FighterThrustParticles",
+					"properties": {
+						"rate": 0.1,
+						"spray-cone": 60,
+						"type": "continuous-spray",
+						"object": -1,
+						"live-preview": false,
+						"speed": 10,
+						"size": 1,
+						"opacity": 100,
+						"grow-rate": 2,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": 0,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 10
+					},
+					"uid": 18,
+					"instanceVariables": {
+						"for_ForceScaleX": 1,
+						"for_ForceScaleY": 0
+					},
+					"behaviors": {},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "FighterTrustParticlesTemplate",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"rate",
+												true
+											],
+											[
+												"spray-cone",
+												true
+											],
+											[
+												"type",
+												true
+											],
+											[
+												"object",
+												true
+											],
+											[
+												"speed",
+												true
+											],
+											[
+												"size",
+												true
+											],
+											[
+												"opacity",
+												true
+											],
+											[
+												"grow-rate",
+												true
+											],
+											[
+												"x-randomiser",
+												true
+											],
+											[
+												"y-randomiser",
+												true
+											],
+											[
+												"initial-speed-randomiser",
+												true
+											],
+											[
+												"size-randomiser",
+												true
+											],
+											[
+												"grow-rate-randomiser",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"angle-randomiser",
+												true
+											],
+											[
+												"life-speed-randomiser",
+												true
+											],
+											[
+												"opacity-randomiser",
+												true
+											],
+											[
+												"destroy-mode",
+												true
+											],
+											[
+												"timeout",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "for_ForceScaleX",
+												"state": false
+											},
+											{
+												"iv": "for_ForceScaleY",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												false
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"sceneGraphData": {
+						"parent-uid": 12,
+						"uid": 18,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1,
+						"height": 1,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				},
+				{
+					"type": "FighterThrustParticles",
+					"properties": {
+						"rate": 0.1,
+						"spray-cone": 60,
+						"type": "continuous-spray",
+						"object": -1,
+						"live-preview": false,
+						"speed": 10,
+						"size": 1,
+						"opacity": 100,
+						"grow-rate": 2,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": 0,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 10
+					},
+					"uid": 19,
+					"instanceVariables": {
+						"for_ForceScaleX": 0,
+						"for_ForceScaleY": 1
+					},
+					"behaviors": {},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "FighterTrustParticlesTemplate",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"rate",
+												true
+											],
+											[
+												"spray-cone",
+												true
+											],
+											[
+												"type",
+												true
+											],
+											[
+												"object",
+												true
+											],
+											[
+												"speed",
+												true
+											],
+											[
+												"size",
+												true
+											],
+											[
+												"opacity",
+												true
+											],
+											[
+												"grow-rate",
+												true
+											],
+											[
+												"x-randomiser",
+												true
+											],
+											[
+												"y-randomiser",
+												true
+											],
+											[
+												"initial-speed-randomiser",
+												true
+											],
+											[
+												"size-randomiser",
+												true
+											],
+											[
+												"grow-rate-randomiser",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"angle-randomiser",
+												true
+											],
+											[
+												"life-speed-randomiser",
+												true
+											],
+											[
+												"opacity-randomiser",
+												true
+											],
+											[
+												"destroy-mode",
+												true
+											],
+											[
+												"timeout",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "for_ForceScaleX",
+												"state": false
+											},
+											{
+												"iv": "for_ForceScaleY",
+												"state": false
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												false
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					"sceneGraphData": {
+						"parent-uid": 12,
+						"uid": 19,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1,
+						"height": 1,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				}
 			],

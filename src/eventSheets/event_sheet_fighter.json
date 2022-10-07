@@ -427,7 +427,63 @@
 					}
 				}
 			],
-			"sid": 861478868260186
+			"sid": 861478868260186,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 368527545738737,
+							"parameters": {
+								"object": "FighterThrustParticles"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FighterThrustParticles",
+							"sid": 120041281927133,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "for_ForceScaleX",
+								"comparison": 0,
+								"value": "ForceScaleX"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FighterThrustParticles",
+							"sid": 864416712770780,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "for_ForceScaleY",
+								"comparison": 0,
+								"value": "ForceScaleY"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 494246717037537,
+							"parameters": {
+								"text": "SpriteFont.Text & \",\" & FighterThrustParticles.UID"
+							}
+						},
+						{
+							"id": "set-spraying",
+							"objectClass": "FighterThrustParticles",
+							"sid": 770914657126662,
+							"parameters": {
+								"state": "spraying"
+							}
+						}
+					],
+					"sid": 679436291983753
+				}
+			]
 		},
 		{
 			"functionName": "Fighter_byKeyDownArray",

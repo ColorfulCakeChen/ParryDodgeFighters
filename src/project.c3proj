@@ -143,7 +143,7 @@
 			"EnergyBarBackground",
 			"Fighter",
 			"EnergyBar",
-			"Particles",
+			"FighterThrustParticles",
 			"RemainedTimer",
 			"Keyboard",
 			"FighterSkin",
@@ -159,7 +159,8 @@
 		{
 			"members": [
 				"Fighter",
-				"FighterSkin"
+				"FighterSkin",
+				"FighterThrustParticles"
 			],
 			"selectMode": "normal"
 		},

@@ -147,6 +147,14 @@
 			],
 			"actions": [
 				{
+					"id": "set-spraying",
+					"objectClass": "FighterThrustParticles",
+					"sid": 753034436906484,
+					"parameters": {
+						"state": "not-spraying"
+					}
+				},
+				{
 					"callFunction": "DrawingCanvasPaint",
 					"sid": 670822637032521
 				},

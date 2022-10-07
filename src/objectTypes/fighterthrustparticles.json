@@ -1,20 +1,33 @@
 {
-	"name": "Particles",
+	"name": "FighterThrustParticles",
 	"plugin-id": "Particles",
 	"sid": 413898625335071,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "for_ForceScaleX",
+			"type": "number",
+			"desc": "For matching Fighter's applyAcceleration's ForceScaleX.",
+			"sid": 421431633806362
+		},
+		{
+			"name": "for_ForceScaleY",
+			"type": "number",
+			"desc": "For matching Fighter's applyAcceleration's ForceScaleX.",
+			"sid": 328805146851199
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 10,
-		"height": 10,
+		"width": 9,
+		"height": 9,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 2370627,
+		"imageSpriteId": 1410108,
 		"useCollisionPoly": true
 	}
 }
