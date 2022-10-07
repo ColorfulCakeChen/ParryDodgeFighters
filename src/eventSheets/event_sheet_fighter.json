@@ -227,7 +227,7 @@
 		},
 		{
 			"functionName": "Fighter_shootProjectile_byPicked",
-			"functionDescription": "Create Projectile at Fighter's GunMuzzle",
+			"functionDescription": "Create Projectile at picked Fighter's GunMuzzle",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": true,
@@ -349,7 +349,7 @@
 		},
 		{
 			"functionName": "Fighter_applyAcceleration_byPicked",
-			"functionDescription": "Let Fighter got specified acceleration.",
+			"functionDescription": "Let picked Fighter got acceleration.",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": true,
