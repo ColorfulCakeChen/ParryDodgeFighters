@@ -2,32 +2,24 @@
 	"name": "Event_Sheet_Functions",
 	"events": [
 		{
-			"functionName": "EnergyBarRefresh",
-			"functionDescription": "Display Fighter's energy.",
+			"functionName": "EnergyBar_Refresh_byFighter_Picked",
+			"functionDescription": "Display current picked Fighter's energy.",
 			"functionCategory": "EnergyBar",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
+			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
 			"conditions": [
 				{
-					"id": "for-each",
-					"objectClass": "System",
-					"sid": 430298552356634,
-					"parameters": {
-						"object": "EnergyBar"
-					}
-				},
-				{
 					"id": "pick-by-comparison",
 					"objectClass": "System",
-					"sid": 532000407378329,
+					"sid": 808263728020302,
 					"parameters": {
-						"object": "Fighter",
-						"expression": "Fighter.VersusAlignmentId",
+						"object": "EnergyBar",
+						"expression": "EnergyBar.VersusAlignmentId",
 						"comparison": 0,
-						"value": "EnergyBar.VersusAlignmentId"
+						"value": "Fighter.VersusAlignmentId"
 					}
 				}
 			],
@@ -59,6 +51,82 @@
 				}
 			],
 			"sid": 113711322765195
+		},
+		{
+			"functionName": "EnergyBar_RefreshAll",
+			"functionDescription": "Display all Fighter's energy.",
+			"functionCategory": "EnergyBar",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 644452966376446,
+					"disabled": true,
+					"parameters": {
+						"object": "EnergyBar"
+					}
+				},
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 747293221744665,
+					"disabled": true,
+					"parameters": {
+						"object": "Fighter",
+						"expression": "Fighter.VersusAlignmentId",
+						"comparison": 0,
+						"value": "EnergyBar.VersusAlignmentId"
+					}
+				},
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 348479091862084,
+					"parameters": {
+						"object": "Fighter"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 370839405506301,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",\" & Fighter.UID"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "EnergyBar",
+					"sid": 977881405287566,
+					"disabled": true,
+					"parameters": {
+						"color": "FighterSkin.ColorValue"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "EnergyBar",
+					"sid": 145796553928036,
+					"disabled": true,
+					"parameters": {
+						"width": "Fighter.EnergyCur * EnergyBar.WidthFull / Fighter.EnergyMax"
+					}
+				},
+				{
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
+					"sid": 813959456691845
+				}
+			],
+			"sid": 808783429151254,
+			"disabled": true
 		},
 		{
 			"functionName": "RemainderTimerRefresh",

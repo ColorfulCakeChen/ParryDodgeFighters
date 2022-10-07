@@ -28,7 +28,7 @@
 					"sid": 452673687465620
 				},
 				{
-					"callFunction": "EnergyBarRefresh",
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
 					"sid": 682956682144941,
 					"disabled": true
 				},

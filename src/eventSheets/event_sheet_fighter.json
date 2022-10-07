@@ -25,7 +25,7 @@
 					}
 				},
 				{
-					"callFunction": "EnergyBarRefresh",
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
 					"sid": 429894878575575
 				}
 			],
@@ -320,7 +320,7 @@
 					}
 				},
 				{
-					"callFunction": "EnergyBarRefresh",
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
 					"sid": 641453225654584
 				},
 				{
@@ -446,7 +446,7 @@
 					}
 				},
 				{
-					"callFunction": "EnergyBarRefresh",
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
 					"sid": 624429156458684
 				},
 				{
@@ -462,53 +462,6 @@
 				}
 			],
 			"sid": 861478868260186
-		},
-		{
-			"functionName": "Fighter_thrust_shoot_byKeyboard",
-			"functionDescription": "",
-			"functionCategory": "Fighter",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 658773203942919,
-					"parameters": {
-						"variable": "PlayerControllable"
-					}
-				}
-			],
-			"actions": [
-				{
-					"type": "comment",
-					"text": "Anti the gravity completely."
-				},
-				{
-					"id": "apply-force",
-					"objectClass": "Fighter",
-					"sid": 735080081536116,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"force-x": "0",
-						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
-						"image-point": "0"
-					}
-				},
-				{
-					"callFunction": "Fighter_byKeyDownArray",
-					"sid": 977945156992282,
-					"parameters": [
-						"0",
-						"0"
-					]
-				}
-			],
-			"sid": 551444411169118
 		},
 		{
 			"functionName": "Fighter_byKeyDownArray",
@@ -614,6 +567,53 @@
 				}
 			],
 			"sid": 158680859806621
+		},
+		{
+			"functionName": "Fighter_thrust_shoot_byKeyboard",
+			"functionDescription": "",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 669643940846162,
+					"parameters": {
+						"variable": "PlayerControllable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "Anti the gravity completely."
+				},
+				{
+					"id": "apply-force",
+					"objectClass": "Fighter",
+					"sid": 546532641169047,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "0",
+						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
+						"image-point": "0"
+					}
+				},
+				{
+					"callFunction": "Fighter_byKeyDownArray",
+					"sid": 373115263782591,
+					"parameters": [
+						"0",
+						"0"
+					]
+				}
+			],
+			"sid": 721917763980207
 		}
 	],
 	"sid": 818138888685423
