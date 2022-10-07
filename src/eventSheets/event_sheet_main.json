@@ -20,6 +20,10 @@
 			],
 			"actions": [
 				{
+					"callFunction": "KeyDownArray_init_FighterControl",
+					"sid": 314394289555161
+				},
+				{
 					"callFunction": "Fighter_recreateAll",
 					"sid": 452673687465620
 				},

@@ -1,5 +1,5 @@
 {
-	"name": "Event_Sheet _KeyCodes",
+	"name": "Event_Sheet_KeyCodes",
 	"events": [
 		{
 			"eventType": "variable",
@@ -340,6 +340,244 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 365678364606985
+		},
+		{
+			"functionName": "KeyDownArray_init_FighterControl",
+			"functionDescription": "Initialize KeyDownArray for Fighter's [1]forceX [2]forceY [3]shoot",
+			"functionCategory": "KeyDownArray",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "AlignmentId_Left_Up_Right_Down_Shoot_Array\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code"
+				},
+				{
+					"type": "comment",
+					"text": "Alignment 0"
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 378420092141031,
+					"parameters": {
+						"x": "0",
+						"y": "0",
+						"value": "KeyCode_ArrowLeft"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 308093249580770,
+					"parameters": {
+						"x": "0",
+						"y": "1",
+						"value": "KeyCode_ArrowUp"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 447846372877409,
+					"parameters": {
+						"x": "0",
+						"y": "2",
+						"value": "KeyCode_ArrowRight"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 375974712737740,
+					"parameters": {
+						"x": "0",
+						"y": "3",
+						"value": "KeyCode_ArrowDown"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 382557184734825,
+					"parameters": {
+						"x": "0",
+						"y": "4",
+						"value": "KeyCode_Space"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Alignment 1"
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 756861455100141,
+					"parameters": {
+						"x": "1",
+						"y": "0",
+						"value": "KeyCode_NumPad_4_ArrowLeft"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 791452471638024,
+					"parameters": {
+						"x": "1",
+						"y": "1",
+						"value": "KeyCode_NumPad_8_ArrowUp"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 532882343876698,
+					"parameters": {
+						"x": "1",
+						"y": "2",
+						"value": "KeyCode_NumPad_6_ArrowRight"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 864474625099867,
+					"parameters": {
+						"x": "1",
+						"y": "3",
+						"value": "KeyCode_NumPad_2_ArrowDown"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+					"sid": 178920201377260,
+					"parameters": {
+						"x": "1",
+						"y": "4",
+						"value": "KeyCode_NumPad_0_Insert"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "KeyDownArray\n[KeyCode][0]: If 1, the key is pressed down.\n[KeyCode][1]: ForceScaleX\n[KeyCode][2]: ForceScaleY\n[KeyCode][3]: If 1, shoot projectile."
+				},
+				{
+					"type": "comment",
+					"text": "Alignment 0"
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 490915174264984,
+					"parameters": {
+						"x": "KeyCode_ArrowLeft",
+						"y": "1",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 546197370182837,
+					"parameters": {
+						"x": "KeyCode_ArrowUp",
+						"y": "2",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 757866478890575,
+					"parameters": {
+						"x": "KeyCode_ArrowRight",
+						"y": "1",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 779723903441634,
+					"parameters": {
+						"x": "KeyCode_ArrowDown",
+						"y": "2",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 246587826278650,
+					"parameters": {
+						"x": "KeyCode_Space",
+						"y": "3",
+						"value": "1"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Alignment 1"
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 402295285661644,
+					"parameters": {
+						"x": "KeyCode_NumPad_4_ArrowLeft",
+						"y": "1",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 346776734988555,
+					"parameters": {
+						"x": "KeyCode_NumPad_8_ArrowUp",
+						"y": "2",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 220872545315323,
+					"parameters": {
+						"x": "KeyCode_NumPad_6_ArrowRight",
+						"y": "1",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 799076409093849,
+					"parameters": {
+						"x": "KeyCode_NumPad_2_ArrowDown",
+						"y": "2",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 557702953040999,
+					"parameters": {
+						"x": "KeyCode_NumPad_0_Insert",
+						"y": "3",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 261009484536730
 		}
 	],
 	"sid": 927853360201633

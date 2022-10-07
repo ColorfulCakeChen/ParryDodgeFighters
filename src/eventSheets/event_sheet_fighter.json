@@ -239,10 +239,27 @@
 					"initialValue": "0",
 					"comment": "Specify which Fighter to shoot Projectile.",
 					"sid": 743241594594642
+				},
+				{
+					"name": "WhetherShoot",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "0: No shoot. 1: Shoot.",
+					"sid": 140871967245241
 				}
 			],
 			"eventType": "function-block",
 			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 266767440221292,
+					"parameters": {
+						"first-value": "WhetherShoot",
+						"comparison": 4,
+						"second-value": "0"
+					}
+				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
@@ -363,14 +380,14 @@
 					"sid": 984114611357793
 				},
 				{
-					"name": "AccelerationX",
+					"name": "ForceScaleX",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
 					"sid": 827888944328589
 				},
 				{
-					"name": "AccelerationY",
+					"name": "ForceScaleY",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -379,6 +396,24 @@
 			],
 			"eventType": "function-block",
 			"conditions": [
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 388372150456930,
+					"disabled": true,
+					"parameters": {
+						"value": "(AlignmentId >= 0 ) & ( ForceScaleX <> 0 ) & ( ForceScaleY <> 0 )"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 304583869612906,
+					"disabled": true,
+					"parameters": {
+						"value": "( ForceScaleX <> 0 ) & ( ForceScaleY <> 0 )"
+					}
+				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
@@ -413,10 +448,10 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpriteFont",
-					"sid": 889866941065199,
+					"sid": 902280635658129,
 					"disabled": true,
 					"parameters": {
-						"text": "SpriteFont.Text & \",ForceX=\" & Fighter.Physics.Mass * GameToPhysicsRatio * AccelerationX & \",ForceY=\" & Fighter.Physics.Mass * GameToPhysicsRatio * AccelerationY"
+						"text": "SpriteFont.Text & \",ForceScaleX=\" & ForceScaleX & \",ForceScaleY=\" & ForceScaleY"
 					}
 				},
 				{
@@ -435,11 +470,11 @@
 				{
 					"id": "apply-force",
 					"objectClass": "Fighter",
-					"sid": 224447258890028,
+					"sid": 404563629868098,
 					"behaviorType": "Physics",
 					"parameters": {
-						"force-x": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationX",
-						"force-y": "Self.Physics.Mass * GameToPhysicsRatio * AccelerationY",
+						"force-x": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration * ForceScaleX",
+						"force-y": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration * ForceScaleY",
 						"image-point": "\"GunMuzzle\""
 					}
 				}
@@ -481,6 +516,14 @@
 						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
 						"image-point": "0"
 					}
+				},
+				{
+					"callFunction": "Fighter_byKeyDownArray",
+					"sid": 977945156992282,
+					"parameters": [
+						"0",
+						"0"
+					]
 				}
 			],
 			"sid": 551444411169118,
@@ -513,13 +556,14 @@
 							"callFunction": "Fighter_applyAcceleration",
 							"sid": 224359262544233,
 							"parameters": [
-								"PlayerAlignmentId",
+								"PlayerAlignmentId_UnUsed",
 								"0",
 								"-Fighter.Acceleration"
 							]
 						}
 					],
-					"sid": 335114378750189
+					"sid": 335114378750189,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -549,13 +593,14 @@
 							"callFunction": "Fighter_applyAcceleration",
 							"sid": 298905617938196,
 							"parameters": [
-								"PlayerAlignmentId",
+								"PlayerAlignmentId_UnUsed",
 								"0",
 								"Fighter.Acceleration"
 							]
 						}
 					],
-					"sid": 632865424140316
+					"sid": 632865424140316,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -576,13 +621,14 @@
 							"callFunction": "Fighter_applyAcceleration",
 							"sid": 928883768665533,
 							"parameters": [
-								"PlayerAlignmentId",
+								"PlayerAlignmentId_UnUsed",
 								"-Fighter.Acceleration",
 								"0"
 							]
 						}
 					],
-					"sid": 654849004402937
+					"sid": 654849004402937,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -603,13 +649,14 @@
 							"callFunction": "Fighter_applyAcceleration",
 							"sid": 577540421754479,
 							"parameters": [
-								"PlayerAlignmentId",
+								"PlayerAlignmentId_UnUsed",
 								"Fighter.Acceleration",
 								"0"
 							]
 						}
 					],
-					"sid": 713623141481600
+					"sid": 713623141481600,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -630,11 +677,13 @@
 							"callFunction": "Fighter_shootProjectile",
 							"sid": 350591066336386,
 							"parameters": [
-								"PlayerAlignmentId"
+								"PlayerAlignmentId_UnUsed",
+								"0"
 							]
 						}
 					],
-					"sid": 692220373341147
+					"sid": 692220373341147,
+					"disabled": true
 				}
 			]
 		},
@@ -664,12 +713,118 @@
 					"objectClass": "System",
 					"sid": 256928044200706,
 					"parameters": {
-						"variable": "PlayerAlignmentId",
-						"value": "( PlayerAlignmentId + 1 ) % 2"
+						"variable": "PlayerAlignmentId_UnUsed",
+						"value": "( PlayerAlignmentId_UnUsed + 1 ) % 2"
 					}
 				}
 			],
-			"sid": 501437588370322
+			"sid": 501437588370322,
+			"disabled": true
+		},
+		{
+			"functionName": "Fighter_byKeyDownArray",
+			"functionDescription": "Control Fighter according KeyDownArray",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "local_alignmentId",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Local variable for alignment id.",
+					"sid": 446520172591031
+				},
+				{
+					"name": "local_keyCode",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Local variable for key code.",
+					"sid": 471949301656689
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 518715443871229,
+					"parameters": {
+						"name": "\"AlignmentId\"",
+						"start-index": "0",
+						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Width"
+					}
+				},
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 237589287140791,
+					"parameters": {
+						"name": "\"KeyCodeIndex\"",
+						"start-index": "0",
+						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Height"
+					}
+				},
+				{
+					"id": "compare-at-xy",
+					"objectClass": "KeyDownArray",
+					"sid": 798373474777337,
+					"parameters": {
+						"x": "AlignmentId_Left_Up_Right_Down_Shoot_Array.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"KeyCodeIndex\" ) )",
+						"y": "0",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 790343532133518,
+					"parameters": {
+						"variable": "local_alignmentId",
+						"value": "LoopIndex( \"AlignmentId\" )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 508424351046023,
+					"parameters": {
+						"variable": "local_keyCode",
+						"value": "AlignmentId_Left_Up_Right_Down_Shoot_Array.At( local_alignmentId, LoopIndex( \"KeyCodeIndex\" ) )"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 199240890471173,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \" ,\" & local_alignmentId & \",\" & local_keyCode & \",\" & KeyDownArray.At( local_keyCode, 1 ) & \",\" & KeyDownArray.At( local_keyCode, 2 )"
+					}
+				},
+				{
+					"callFunction": "Fighter_applyAcceleration",
+					"sid": 677594928943759,
+					"parameters": [
+						"local_alignmentId",
+						"KeyDownArray.At( local_keyCode, 1 )",
+						"KeyDownArray.At( local_keyCode, 2 )"
+					]
+				},
+				{
+					"callFunction": "Fighter_shootProjectile",
+					"sid": 700047858359668,
+					"parameters": [
+						"local_alignmentId",
+						"KeyDownArray.At( local_keyCode, 3 )"
+					]
+				}
+			],
+			"sid": 158680859806621
 		}
 	],
 	"sid": 818138888685423

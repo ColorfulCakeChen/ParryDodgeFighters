@@ -1831,10 +1831,20 @@
 			"type": "KeyDownArray",
 			"properties": {
 				"width": 255,
-				"height": 1,
+				"height": 4,
 				"depth": 1
 			},
 			"uid": 15,
+			"instanceVariables": {}
+		},
+		{
+			"type": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
+			"properties": {
+				"width": 2,
+				"height": 5,
+				"depth": 1
+			},
+			"uid": 16,
 			"instanceVariables": {}
 		}
 	],

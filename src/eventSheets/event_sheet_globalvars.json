@@ -171,7 +171,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "PlayerAlignmentId",
+			"name": "PlayerAlignmentId_UnUsed",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "User plays which alignment currently.",
