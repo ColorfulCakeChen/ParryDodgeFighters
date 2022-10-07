@@ -226,20 +226,13 @@
 			"sid": 381188756354974
 		},
 		{
-			"functionName": "Fighter_shootProjectile",
+			"functionName": "Fighter_shootProjectile_byPicked",
 			"functionDescription": "Create Projectile at Fighter's GunMuzzle",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
+			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [
-				{
-					"name": "AlignmentId",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "Specify which Fighter to shoot Projectile.",
-					"sid": 743241594594642
-				},
 				{
 					"name": "WhetherShoot",
 					"type": "number",
@@ -258,16 +251,6 @@
 						"first-value": "WhetherShoot",
 						"comparison": 4,
 						"second-value": "0"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Fighter",
-					"sid": 202511763412473,
-					"parameters": {
-						"instance-variable": "VersusAlignmentId",
-						"comparison": 0,
-						"value": "AlignmentId"
 					}
 				},
 				{
@@ -365,20 +348,13 @@
 			"sid": 672378711083100
 		},
 		{
-			"functionName": "Fighter_applyAcceleration",
+			"functionName": "Fighter_applyAcceleration_byPicked",
 			"functionDescription": "Let Fighter got specified acceleration.",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
+			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [
-				{
-					"name": "AlignmentId",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "Specify which Fighter to be applied force.",
-					"sid": 984114611357793
-				},
 				{
 					"name": "ForceScaleX",
 					"type": "number",
@@ -396,16 +372,6 @@
 			],
 			"eventType": "function-block",
 			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Fighter",
-					"sid": 554248176598770,
-					"parameters": {
-						"instance-variable": "VersusAlignmentId",
-						"comparison": 0,
-						"value": "AlignmentId"
-					}
-				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
@@ -499,6 +465,16 @@
 					}
 				},
 				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 297652602353165,
+					"parameters": {
+						"instance-variable": "VersusAlignmentId",
+						"comparison": 0,
+						"value": "LoopIndex( \"AlignmentId\" )"
+					}
+				},
+				{
 					"id": "for",
 					"objectClass": "System",
 					"sid": 812989671817102,
@@ -549,19 +525,17 @@
 					}
 				},
 				{
-					"callFunction": "Fighter_applyAcceleration",
+					"callFunction": "Fighter_applyAcceleration_byPicked",
 					"sid": 677594928943759,
 					"parameters": [
-						"local_alignmentId",
 						"KeyDownArray.At( local_keyCode, 1 )",
 						"KeyDownArray.At( local_keyCode, 2 )"
 					]
 				},
 				{
-					"callFunction": "Fighter_shootProjectile",
+					"callFunction": "Fighter_shootProjectile_byPicked",
 					"sid": 700047858359668,
 					"parameters": [
-						"local_alignmentId",
 						"KeyDownArray.At( local_keyCode, 3 )"
 					]
 				}
