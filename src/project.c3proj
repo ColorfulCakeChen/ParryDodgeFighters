@@ -151,7 +151,9 @@
 			"ProjectileSkin",
 			"Fighter_KeyDownArray",
 			"Fighter_Alignment_Action_KeyCodeArray",
-			"Browser"
+			"Browser",
+			"FighterShield",
+			"FighterShieldSkin"
 		],
 		"subfolders": []
 	},
@@ -168,6 +170,13 @@
 			"members": [
 				"Projectile",
 				"ProjectileSkin"
+			],
+			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"FighterShield",
+				"FighterShieldSkin"
 			],
 			"selectMode": "normal"
 		}

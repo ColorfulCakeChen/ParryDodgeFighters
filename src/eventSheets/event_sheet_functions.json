@@ -199,6 +199,15 @@
 								"object": "FighterSkin",
 								"effects": "without-effects"
 							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 600209326630828,
+							"parameters": {
+								"object": "FighterShieldSkin",
+								"effects": "without-effects"
+							}
 						}
 					],
 					"sid": 358295451626339
