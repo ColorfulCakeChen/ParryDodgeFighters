@@ -235,134 +235,6 @@
 			"sid": 381188756354974
 		},
 		{
-			"functionName": "Fighter_shootProjectile_byPicked",
-			"functionDescription": "Create Projectile at picked Fighter's GunMuzzle",
-			"functionCategory": "Fighter",
-			"functionReturnType": "none",
-			"functionCopyPicked": true,
-			"functionIsAsync": false,
-			"functionParameters": [
-				{
-					"name": "WhetherShoot",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "0: No shoot. 1: Shoot.",
-					"sid": 140871967245241
-				}
-			],
-			"eventType": "function-block",
-			"conditions": [
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 266767440221292,
-					"parameters": {
-						"first-value": "WhetherShoot",
-						"comparison": 4,
-						"second-value": "0"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Fighter",
-					"sid": 887428488294451,
-					"parameters": {
-						"instance-variable": "ShootReady"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Fighter",
-					"sid": 835031589117626,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"comparison": 4,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Fighter",
-					"sid": 351661378859725,
-					"parameters": {
-						"instance-variable": "ShootReady",
-						"value": "false"
-					}
-				},
-				{
-					"id": "start-timer",
-					"objectClass": "Fighter",
-					"sid": 360623339102788,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "Self.ShootReadySeconds",
-						"type": "once",
-						"tag": "\"ShootCoolDown\""
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 472299006307758,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "max( Self.EnergyCur - Self.EnergyPointsShoot, 0 )"
-					}
-				},
-				{
-					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 641453225654584
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Fighter",
-					"sid": 617366794989799,
-					"parameters": {
-						"object": "Projectile",
-						"layer": "1",
-						"image-point": "\"GunMuzzle\"",
-						"create-hierarchy": true
-					}
-				},
-				{
-					"id": "stop-animation",
-					"objectClass": "Projectile",
-					"sid": 472344430563071
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "ProjectileSkin",
-					"sid": 277087794715002,
-					"parameters": {
-						"color": "FighterSkin.ColorValue"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "ProjectileSkin",
-					"sid": 381935259204745,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "Projectile_FadeOut_Seconds"
-					}
-				},
-				{
-					"id": "apply-impulse-at-angle",
-					"objectClass": "Projectile",
-					"sid": 736881203892636,
-					"behaviorType": "Physics",
-					"parameters": {
-						"impulse": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration",
-						"angle": "Self.Angle",
-						"image-point": "\"ThrustPoint\""
-					}
-				}
-			],
-			"sid": 672378711083100
-		},
-		{
 			"functionName": "Fighter_applyAcceleration_byPicked",
 			"functionDescription": "Let picked Fighter got acceleration.",
 			"functionCategory": "Fighter",
@@ -506,6 +378,134 @@
 			]
 		},
 		{
+			"functionName": "Fighter_shootProjectile_byPicked",
+			"functionDescription": "Create Projectile at picked Fighter's GunMuzzle",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "bShoot",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "0: No shoot. 1: Shoot.",
+					"sid": 140871967245241
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 640290510107127,
+					"parameters": {
+						"first-value": "bShoot",
+						"comparison": 4,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Fighter",
+					"sid": 568133599956478,
+					"parameters": {
+						"instance-variable": "ShootReady"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 148864797386007,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fighter",
+					"sid": 733037844831310,
+					"parameters": {
+						"instance-variable": "ShootReady",
+						"value": "false"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Fighter",
+					"sid": 594714598373805,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "Self.ShootReadySeconds",
+						"type": "once",
+						"tag": "\"ShootCoolDown\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 380320334830322,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "max( Self.EnergyCur - Self.EnergyPointsShoot, 0 )"
+					}
+				},
+				{
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
+					"sid": 263429619726964
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Fighter",
+					"sid": 447039720621132,
+					"parameters": {
+						"object": "Projectile",
+						"layer": "1",
+						"image-point": "\"GunMuzzle\"",
+						"create-hierarchy": true
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Projectile",
+					"sid": 665947295193939
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "ProjectileSkin",
+					"sid": 414163587718309,
+					"parameters": {
+						"color": "FighterSkin.ColorValue"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "ProjectileSkin",
+					"sid": 757179844891252,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "Projectile_FadeOut_Seconds"
+					}
+				},
+				{
+					"id": "apply-impulse-at-angle",
+					"objectClass": "Projectile",
+					"sid": 616512468969735,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration",
+						"angle": "Self.Angle",
+						"image-point": "\"ThrustPoint\""
+					}
+				}
+			],
+			"sid": 748652751858314
+		},
+		{
 			"functionName": "Fighter_act_byKeyDownArray",
 			"functionDescription": "Control Fighter according to KeyDownArray",
 			"functionCategory": "Fighter",
@@ -526,6 +526,34 @@
 					"initialValue": "0",
 					"comment": "Local variable for key code.",
 					"sid": 471949301656689
+				},
+				{
+					"name": "local_dodge_ForceScaleX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 919816669752728
+				},
+				{
+					"name": "local_dodge_ForceScaleY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 954297179102043
+				},
+				{
+					"name": "local_bAttack",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 977789388167688
+				},
+				{
+					"name": "local_bParry",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 899944636930111
 				}
 			],
 			"eventType": "function-block",
@@ -563,10 +591,10 @@
 				{
 					"id": "compare-at-xy",
 					"objectClass": "Fighter_KeyDownArray",
-					"sid": 798373474777337,
+					"sid": 488699098204939,
 					"parameters": {
 						"x": "Fighter_Alignment_Action_KeyCodeArray.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"KeyCodeIndex\" ) )",
-						"y": "0",
+						"y": "KeyInfoIndex_bTriggered",
 						"comparison": 4,
 						"value": "0"
 					}
@@ -592,27 +620,54 @@
 					}
 				},
 				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 199240890471173,
-					"disabled": true,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 180679390463956,
 					"parameters": {
-						"text": "SpriteFont.Text & \" ,\" & local_alignmentId & \",\" & local_keyCode & \",\" & Fighter_KeyDownArray.At( local_keyCode, 1 ) & \",\" & Fighter_KeyDownArray.At( local_keyCode, 2 )"
+						"variable": "local_dodge_ForceScaleX",
+						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_Dodge_ForceScaleX )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 537117142625609,
+					"parameters": {
+						"variable": "local_dodge_ForceScaleY",
+						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_Dodge_ForceScaleY )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 915279839828618,
+					"parameters": {
+						"variable": "local_bAttack",
+						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bAttack )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 482298261018445,
+					"parameters": {
+						"variable": "local_bParry",
+						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bParry )"
 					}
 				},
 				{
 					"callFunction": "Fighter_applyAcceleration_byPicked",
-					"sid": 677594928943759,
+					"sid": 862157107837699,
 					"parameters": [
-						"Fighter_KeyDownArray.At( local_keyCode, 1 )",
-						"Fighter_KeyDownArray.At( local_keyCode, 2 )"
+						"local_dodge_ForceScaleX",
+						"local_dodge_ForceScaleY"
 					]
 				},
 				{
 					"callFunction": "Fighter_shootProjectile_byPicked",
-					"sid": 700047858359668,
+					"sid": 933571445248071,
 					"parameters": [
-						"Fighter_KeyDownArray.At( local_keyCode, 3 )"
+						"Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bAttack )"
 					]
 				}
 			],

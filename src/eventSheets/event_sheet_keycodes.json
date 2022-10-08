@@ -484,6 +484,60 @@
 			"text": ""
 		},
 		{
+			"eventType": "variable",
+			"name": "KeyInfoIndex_bTriggered",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 297626588433582
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyInfoIndex_Dodge_ForceScaleX",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 955230279797604
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyInfoIndex_Dodge_ForceScaleY",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 332357169482045
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyInfoIndex_bAttack",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 837654342547231
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyInfoIndex_bParry",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 332661515918673
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
 			"functionName": "Fighter_KeyDownArray_init",
 			"functionDescription": "Initialize KeyDownArray for Fighter's control.",
 			"functionCategory": "KeyDownArray",
@@ -546,7 +600,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "Fighter_Alignment_Action_KeyCodeArray\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code\n[AlignmentId][5]: enlarging key code"
+					"text": "Fighter_Alignment_Action_KeyCodeArray\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code\n[AlignmentId][5]: parry key code"
 				},
 				{
 					"type": "comment",
@@ -764,60 +818,60 @@
 						{
 							"id": "set-at-xy",
 							"objectClass": "Fighter_KeyDownArray",
-							"sid": 355968354507012,
+							"sid": 983911250234471,
 							"parameters": {
 								"x": "local_keyCode_DodgeLeft",
-								"y": "1",
+								"y": "KeyInfoIndex_Dodge_ForceScaleX",
 								"value": "-1"
 							}
 						},
 						{
 							"id": "set-at-xy",
 							"objectClass": "Fighter_KeyDownArray",
-							"sid": 363908892338097,
+							"sid": 231335159691328,
 							"parameters": {
 								"x": "local_keyCode_DodgeUp",
-								"y": "2",
+								"y": "KeyInfoIndex_Dodge_ForceScaleY",
 								"value": "-1"
 							}
 						},
 						{
 							"id": "set-at-xy",
 							"objectClass": "Fighter_KeyDownArray",
-							"sid": 251867341718688,
+							"sid": 384700136357339,
 							"parameters": {
 								"x": "local_keyCode_DodgeRight",
-								"y": "1",
+								"y": "KeyInfoIndex_Dodge_ForceScaleX",
 								"value": "1"
 							}
 						},
 						{
 							"id": "set-at-xy",
 							"objectClass": "Fighter_KeyDownArray",
-							"sid": 702674863320775,
+							"sid": 889543974347116,
 							"parameters": {
 								"x": "local_keyCode_DodgeDown",
-								"y": "2",
+								"y": "KeyInfoIndex_Dodge_ForceScaleY",
 								"value": "1"
 							}
 						},
 						{
 							"id": "set-at-xy",
 							"objectClass": "Fighter_KeyDownArray",
-							"sid": 620334606018522,
+							"sid": 108583457385563,
 							"parameters": {
 								"x": "local_keyCode_Attack",
-								"y": "3",
+								"y": "KeyInfoIndex_bAttack",
 								"value": "1"
 							}
 						},
 						{
 							"id": "set-at-xy",
 							"objectClass": "Fighter_KeyDownArray",
-							"sid": 721903349633519,
+							"sid": 262272018131365,
 							"parameters": {
 								"x": "local_keyCode_Parry",
-								"y": "4",
+								"y": "KeyInfoIndex_bParry",
 								"value": "1"
 							}
 						}
