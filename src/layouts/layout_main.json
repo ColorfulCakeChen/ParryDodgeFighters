@@ -87,7 +87,8 @@
 						"EnergyPointsShoot": 10,
 						"ShootReadySeconds": 0.4,
 						"ShootReady": true,
-						"Acceleration": 3
+						"Acceleration": 3,
+						"private_Force": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -110,18 +111,6 @@
 								"angular-damping": 5,
 								"bullet": false,
 								"enabled": true
-							}
-						},
-						"8Direction": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-8",
-								"set-angle": "smooth",
-								"allow-sliding": false,
-								"default-controls": true,
-								"enabled": false
 							}
 						}
 					},
@@ -201,6 +190,10 @@
 											{
 												"iv": "Acceleration",
 												"state": true
+											},
+											{
+												"iv": "private_Force",
+												"state": true
 											}
 										]
 									}
@@ -259,43 +252,6 @@
 											],
 											[
 												"bullet",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "8Direction",
-										"state": [
-											[
-												"max-speed",
-												true
-											],
-											[
-												"acceleration",
-												true
-											],
-											[
-												"deceleration",
-												true
-											],
-											[
-												"directions",
-												true
-											],
-											[
-												"set-angle",
-												true
-											],
-											[
-												"allow-sliding",
-												true
-											],
-											[
-												"default-controls",
 												true
 											],
 											[

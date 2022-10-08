@@ -104,14 +104,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
 			"author": "Scirra",

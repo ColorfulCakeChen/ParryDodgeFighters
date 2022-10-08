@@ -480,6 +480,10 @@
 			"sid": 343976306941192
 		},
 		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
 			"functionName": "KeyDownArray_init_FighterControl",
 			"functionDescription": "Initialize KeyDownArray for Fighter's [1]forceX [2]forceY [3]shoot",
 			"functionCategory": "KeyDownArray",

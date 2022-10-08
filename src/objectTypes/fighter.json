@@ -63,6 +63,12 @@
 			"type": "number",
 			"desc": "The acceleration when applying force for thrusting.",
 			"sid": 910499927195907
+		},
+		{
+			"name": "private_Force",
+			"type": "number",
+			"desc": "Mass * Acceleration ( * GameToPhysicsRatio ). Not changed even if Mass changed.",
+			"sid": 627068902546552
 		}
 	],
 	"behaviorTypes": [
@@ -80,11 +86,6 @@
 			"behaviorId": "Physics",
 			"name": "Physics",
 			"sid": 330839136189311
-		},
-		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 618076149668616
 		}
 	],
 	"effectTypes": [],

@@ -196,6 +196,15 @@
 					}
 				},
 				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 482426688325022,
+					"parameters": {
+						"instance-variable": "private_Force",
+						"value": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration"
+					}
+				},
+				{
 					"id": "set-angle",
 					"objectClass": "Fighter",
 					"sid": 781151700583098,
@@ -323,17 +332,6 @@
 					"sid": 472344430563071
 				},
 				{
-					"id": "create-revolute-joint",
-					"objectClass": "Fighter",
-					"sid": 261971389045109,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"this-image-point": "0",
-						"object": "Projectile"
-					}
-				},
-				{
 					"id": "apply-impulse-at-angle",
 					"objectClass": "Projectile",
 					"sid": 736881203892636,
@@ -419,10 +417,22 @@
 					"id": "apply-force",
 					"objectClass": "Fighter",
 					"sid": 404563629868098,
+					"disabled": true,
 					"behaviorType": "Physics",
 					"parameters": {
 						"force-x": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration * ForceScaleX",
 						"force-y": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration * ForceScaleY",
+						"image-point": "\"GunMuzzle\""
+					}
+				},
+				{
+					"id": "apply-force",
+					"objectClass": "Fighter",
+					"sid": 583468764453644,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "Self.private_Force * ForceScaleX",
+						"force-y": "Self.private_Force * ForceScaleY",
 						"image-point": "\"GunMuzzle\""
 					}
 				}
@@ -449,31 +459,13 @@
 								"object": "FighterThrustParticles",
 								"expression": "( FighterThrustParticles.for_ForceScaleX = ForceScaleX ) & ( FighterThrustParticles.for_ForceScaleY = ForceScaleY )"
 							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "FighterThrustParticles",
-							"sid": 404771582465966,
-							"disabled": true,
-							"parameters": {
-								"instance-variable": "for_ForceScaleX",
-								"comparison": 0,
-								"value": "ForceScaleX"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "FighterThrustParticles",
-							"sid": 472578112317742,
-							"disabled": true,
-							"parameters": {
-								"instance-variable": "for_ForceScaleY",
-								"comparison": 0,
-								"value": "ForceScaleY"
-							}
 						}
 					],
 					"actions": [
+						{
+							"type": "comment",
+							"text": "Fighter thrusting particles animation."
+						},
 						{
 							"id": "set-text",
 							"objectClass": "SpriteFont",
