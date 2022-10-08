@@ -2948,7 +2948,7 @@
 			"type": "Fighter_Alignment_Action_KeyCodeArray",
 			"properties": {
 				"width": 2,
-				"height": 5,
+				"height": 6,
 				"depth": 1
 			},
 			"uid": 16,

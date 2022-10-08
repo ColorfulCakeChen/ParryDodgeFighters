@@ -286,9 +286,25 @@
 					"parameters": {
 						"key": 70
 					}
+				},
+				{
+					"id": "is-fullscreen",
+					"objectClass": "Browser",
+					"sid": 162315791343053,
+					"isInverted": true
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 652552188786193,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
+					}
+				}
+			],
 			"sid": 199105531134504
 		},
 		{

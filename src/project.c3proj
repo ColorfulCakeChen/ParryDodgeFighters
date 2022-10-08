@@ -79,6 +79,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Timer",
 			"name": "Timer",
@@ -142,7 +150,8 @@
 			"Projectile",
 			"ProjectileSkin",
 			"Fighter_KeyDownArray",
-			"Fighter_Alignment_Action_KeyCodeArray"
+			"Fighter_Alignment_Action_KeyCodeArray",
+			"Browser"
 		],
 		"subfolders": []
 	},
