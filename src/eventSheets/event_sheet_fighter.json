@@ -332,6 +332,23 @@
 					"sid": 472344430563071
 				},
 				{
+					"id": "set-default-color",
+					"objectClass": "ProjectileSkin",
+					"sid": 277087794715002,
+					"parameters": {
+						"color": "FighterSkin.ColorValue"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "ProjectileSkin",
+					"sid": 381935259204745,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "Projectile_FadeOut_Seconds"
+					}
+				},
+				{
 					"id": "apply-impulse-at-angle",
 					"objectClass": "Projectile",
 					"sid": 736881203892636,

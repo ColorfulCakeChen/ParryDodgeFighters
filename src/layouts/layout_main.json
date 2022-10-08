@@ -104,7 +104,7 @@
 								"immovable": false,
 								"collision-mask": "use-collision-polygon",
 								"prevent-rotation": false,
-								"density": 1,
+								"density": 10,
 								"friction": 0.5,
 								"elasticity": 0.2,
 								"linear-damping": 2,
@@ -1716,7 +1716,18 @@
 					},
 					"uid": 14,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 11,
 						"uid": 14,
