@@ -183,13 +183,87 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "KeyCode_A",
+			"type": "number",
+			"initialValue": "65",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 902405873489022
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_D",
+			"type": "number",
+			"initialValue": "68",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 502953165823709
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_E",
+			"type": "number",
+			"initialValue": "69",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 375947273984282
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Q",
+			"type": "number",
+			"initialValue": "81",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 978726014418407
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_S",
+			"type": "number",
+			"initialValue": "83",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 266949437670246
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_W",
+			"type": "number",
+			"initialValue": "87",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 724866099272892
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyCode_Z",
+			"type": "number",
+			"initialValue": "90",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 126638392947621
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "KeyCode_NumPad_0_Insert",
 			"type": "number",
 			"initialValue": "96",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
-			"sid": 902405873489022
+			"sid": 763845291412092
 		},
 		{
 			"eventType": "variable",
@@ -342,19 +416,133 @@
 			"sid": 365678364606985
 		},
 		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyDefineSlotId_DodgeLeft",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 634948389983316
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyDefineSlotId_DodgeUp",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 759824241182975
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyDefineSlotId_DodgeRight",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 917930637349473
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyDefineSlotId_DodgeDown",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 698608909415296
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyDefineSlotId_Attack",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 266888980240627
+		},
+		{
+			"eventType": "variable",
+			"name": "KeyDefineSlotId_Parry",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 343976306941192
+		},
+		{
 			"functionName": "KeyDownArray_init_FighterControl",
 			"functionDescription": "Initialize KeyDownArray for Fighter's [1]forceX [2]forceY [3]shoot",
 			"functionCategory": "KeyDownArray",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
 			"functionIsAsync": false,
-			"functionParameters": [],
+			"functionParameters": [
+				{
+					"name": "local_alignmentId",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Local variable for alignment id.",
+					"sid": 737501569872134
+				},
+				{
+					"name": "local_keyCode_DodgeLeft",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 316359532650428
+				},
+				{
+					"name": "local_keyCode_DodgeUp",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 936661916609428
+				},
+				{
+					"name": "local_keyCode_DodgeRight",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 552956991146630
+				},
+				{
+					"name": "local_keyCode_DodgeDown",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 552629315898886
+				},
+				{
+					"name": "local_keyCode_Attack",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 235658228610784
+				},
+				{
+					"name": "local_keyCode_Parry",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 122916222018698
+				}
+			],
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [
 				{
 					"type": "comment",
-					"text": "AlignmentId_Left_Up_Right_Down_Shoot_Array\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code"
+					"text": "AlignmentId_KeyDefineSlotId_Array\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code\n[AlignmentId][5]: enlarging key code"
 				},
 				{
 					"type": "comment",
@@ -362,52 +550,62 @@
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 378420092141031,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 709348975502444,
 					"parameters": {
 						"x": "0",
-						"y": "0",
+						"y": "KeyDefineSlotId_DodgeLeft",
 						"value": "KeyCode_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 308093249580770,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 131721289637923,
 					"parameters": {
 						"x": "0",
-						"y": "1",
+						"y": "KeyDefineSlotId_DodgeUp",
 						"value": "KeyCode_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 447846372877409,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 665423934553031,
 					"parameters": {
 						"x": "0",
-						"y": "2",
+						"y": "KeyDefineSlotId_DodgeRight",
 						"value": "KeyCode_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 375974712737740,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 988229706237700,
 					"parameters": {
 						"x": "0",
-						"y": "3",
+						"y": "KeyDefineSlotId_DodgeDown",
 						"value": "KeyCode_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 382557184734825,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 577656513070729,
 					"parameters": {
 						"x": "0",
-						"y": "4",
+						"y": "KeyDefineSlotId_Attack",
 						"value": "KeyCode_Space"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 985758869812639,
+					"parameters": {
+						"x": "0",
+						"y": "KeyDefineSlotId_Parry",
+						"value": "KeyCode_Z"
 					}
 				},
 				{
@@ -416,168 +614,213 @@
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 756861455100141,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 900044465461607,
 					"parameters": {
 						"x": "1",
-						"y": "0",
+						"y": "KeyDefineSlotId_DodgeLeft",
 						"value": "KeyCode_NumPad_4_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 791452471638024,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 144102034962148,
 					"parameters": {
 						"x": "1",
-						"y": "1",
+						"y": "KeyDefineSlotId_DodgeUp",
 						"value": "KeyCode_NumPad_8_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 532882343876698,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 497828736604968,
 					"parameters": {
 						"x": "1",
-						"y": "2",
+						"y": "KeyDefineSlotId_DodgeRight",
 						"value": "KeyCode_NumPad_6_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 864474625099867,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 140779727197884,
 					"parameters": {
 						"x": "1",
-						"y": "3",
+						"y": "KeyDefineSlotId_DodgeDown",
 						"value": "KeyCode_NumPad_2_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_Left_Up_Right_Down_Shoot_Array",
-					"sid": 178920201377260,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 631681234517801,
 					"parameters": {
 						"x": "1",
-						"y": "4",
+						"y": "KeyDefineSlotId_Attack",
 						"value": "KeyCode_NumPad_0_Insert"
 					}
 				},
 				{
-					"type": "comment",
-					"text": "KeyDownArray\n[KeyCode][0]: If 1, the key is down.\n[KeyCode][1]: ForceScaleX\n[KeyCode][2]: ForceScaleY\n[KeyCode][3]: If 1, shoot projectile."
-				},
-				{
-					"type": "comment",
-					"text": "Alignment 0"
-				},
-				{
 					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 490915174264984,
+					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"sid": 198808873465783,
 					"parameters": {
-						"x": "KeyCode_ArrowLeft",
-						"y": "1",
-						"value": "-1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 546197370182837,
-					"parameters": {
-						"x": "KeyCode_ArrowUp",
-						"y": "2",
-						"value": "-1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 757866478890575,
-					"parameters": {
-						"x": "KeyCode_ArrowRight",
-						"y": "1",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 779723903441634,
-					"parameters": {
-						"x": "KeyCode_ArrowDown",
-						"y": "2",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 246587826278650,
-					"parameters": {
-						"x": "KeyCode_Space",
-						"y": "3",
-						"value": "1"
-					}
-				},
-				{
-					"type": "comment",
-					"text": "Alignment 1"
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 402295285661644,
-					"parameters": {
-						"x": "KeyCode_NumPad_4_ArrowLeft",
-						"y": "1",
-						"value": "-1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 346776734988555,
-					"parameters": {
-						"x": "KeyCode_NumPad_8_ArrowUp",
-						"y": "2",
-						"value": "-1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 220872545315323,
-					"parameters": {
-						"x": "KeyCode_NumPad_6_ArrowRight",
-						"y": "1",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 799076409093849,
-					"parameters": {
-						"x": "KeyCode_NumPad_2_ArrowDown",
-						"y": "2",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-at-xy",
-					"objectClass": "KeyDownArray",
-					"sid": 557702953040999,
-					"parameters": {
-						"x": "KeyCode_NumPad_0_Insert",
-						"y": "3",
-						"value": "1"
+						"x": "1",
+						"y": "KeyDefineSlotId_Parry",
+						"value": "KeyCode_NumPad_Dot_Delete"
 					}
 				}
 			],
-			"sid": 261009484536730
+			"sid": 261009484536730,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 530105116419212,
+							"parameters": {
+								"name": "\"AlignmentId\"",
+								"start-index": "0",
+								"end-index": "AlignmentId_KeyDefineSlot_Array.Width - 1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 894904115678235,
+							"parameters": {
+								"variable": "local_alignmentId",
+								"value": "LoopIndex( \"AlignmentId\" )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 381932820382960,
+							"parameters": {
+								"variable": "local_keyCode_DodgeLeft",
+								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeLeft )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 670872315846386,
+							"parameters": {
+								"variable": "local_keyCode_DodgeUp",
+								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeUp )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 510534701349513,
+							"parameters": {
+								"variable": "local_keyCode_DodgeRight",
+								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeRight )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 796121670946507,
+							"parameters": {
+								"variable": "local_keyCode_DodgeDown",
+								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeDown )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 162721159859949,
+							"parameters": {
+								"variable": "local_keyCode_Attack",
+								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_Attack )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 619487585302102,
+							"parameters": {
+								"variable": "local_keyCode_Parry",
+								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_Parry )"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "KeyDownArray\n[KeyCode][0]: If 1, the key is down.\n[KeyCode][1]: ForceScaleX\n[KeyCode][2]: ForceScaleY\n[KeyCode][3]: If 1, shoot projectile.\n[KeyCode][4]: If 1, enlarge Figher."
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "KeyDownArray",
+							"sid": 355968354507012,
+							"parameters": {
+								"x": "local_keyCode_DodgeLeft",
+								"y": "1",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "KeyDownArray",
+							"sid": 363908892338097,
+							"parameters": {
+								"x": "local_keyCode_DodgeUp",
+								"y": "2",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "KeyDownArray",
+							"sid": 251867341718688,
+							"parameters": {
+								"x": "local_keyCode_DodgeRight",
+								"y": "1",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "KeyDownArray",
+							"sid": 702674863320775,
+							"parameters": {
+								"x": "local_keyCode_DodgeDown",
+								"y": "2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "KeyDownArray",
+							"sid": 620334606018522,
+							"parameters": {
+								"x": "local_keyCode_Attack",
+								"y": "3",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "KeyDownArray",
+							"sid": 721903349633519,
+							"parameters": {
+								"x": "local_keyCode_Parry",
+								"y": "4",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 242199502557908
+				}
+			]
 		}
 	],
 	"sid": 927853360201633

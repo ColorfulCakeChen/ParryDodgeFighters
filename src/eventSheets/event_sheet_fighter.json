@@ -528,7 +528,7 @@
 					"parameters": {
 						"name": "\"AlignmentId\"",
 						"start-index": "0",
-						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Width - 1"
+						"end-index": "AlignmentId_KeyDefineSlot_Array.Width - 1"
 					}
 				},
 				{
@@ -548,7 +548,7 @@
 					"parameters": {
 						"name": "\"KeyCodeIndex\"",
 						"start-index": "0",
-						"end-index": "AlignmentId_Left_Up_Right_Down_Shoot_Array.Height - 1"
+						"end-index": "AlignmentId_KeyDefineSlot_Array.Height - 1"
 					}
 				},
 				{
@@ -556,7 +556,7 @@
 					"objectClass": "KeyDownArray",
 					"sid": 798373474777337,
 					"parameters": {
-						"x": "AlignmentId_Left_Up_Right_Down_Shoot_Array.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"KeyCodeIndex\" ) )",
+						"x": "AlignmentId_KeyDefineSlot_Array.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"KeyCodeIndex\" ) )",
 						"y": "0",
 						"comparison": 4,
 						"value": "0"
@@ -579,7 +579,7 @@
 					"sid": 508424351046023,
 					"parameters": {
 						"variable": "local_keyCode",
-						"value": "AlignmentId_Left_Up_Right_Down_Shoot_Array.At( local_alignmentId, LoopIndex( \"KeyCodeIndex\" ) )"
+						"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, LoopIndex( \"KeyCodeIndex\" ) )"
 					}
 				},
 				{
