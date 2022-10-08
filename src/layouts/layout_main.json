@@ -2935,7 +2935,7 @@
 	"sid": 377024570139051,
 	"nonworld-instances": [
 		{
-			"type": "KeyDownArray",
+			"type": "Fighter_KeyDownArray",
 			"properties": {
 				"width": 150,
 				"height": 5,
@@ -2945,7 +2945,7 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "AlignmentId_ActionKey_Array",
+			"type": "Fighter_Alignment_Action_KeyCodeArray",
 			"properties": {
 				"width": 2,
 				"height": 5,

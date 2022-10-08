@@ -185,10 +185,10 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "PlayerControllable",
+			"name": "Fighter_PlayerControllable",
 			"type": "boolean",
 			"initialValue": "true",
-			"comment": "User whether could play game.",
+			"comment": "Whether user could control Fighter.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 163218808814598

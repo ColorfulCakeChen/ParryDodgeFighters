@@ -506,8 +506,8 @@
 			]
 		},
 		{
-			"functionName": "Fighter_byKeyDownArray",
-			"functionDescription": "Control Fighter according KeyDownArray",
+			"functionName": "Fighter_act_byKeyDownArray",
+			"functionDescription": "Control Fighter according to KeyDownArray",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
@@ -537,7 +537,7 @@
 					"parameters": {
 						"name": "\"AlignmentId\"",
 						"start-index": "0",
-						"end-index": "AlignmentId_ActionKey_Array.Width - 1"
+						"end-index": "Fighter_Alignment_Action_KeyCodeArray.Width - 1"
 					}
 				},
 				{
@@ -557,15 +557,15 @@
 					"parameters": {
 						"name": "\"KeyCodeIndex\"",
 						"start-index": "0",
-						"end-index": "AlignmentId_ActionKey_Array.Height - 1"
+						"end-index": "Fighter_Alignment_Action_KeyCodeArray.Height - 1"
 					}
 				},
 				{
 					"id": "compare-at-xy",
-					"objectClass": "KeyDownArray",
+					"objectClass": "Fighter_KeyDownArray",
 					"sid": 798373474777337,
 					"parameters": {
-						"x": "AlignmentId_ActionKey_Array.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"KeyCodeIndex\" ) )",
+						"x": "Fighter_Alignment_Action_KeyCodeArray.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"KeyCodeIndex\" ) )",
 						"y": "0",
 						"comparison": 4,
 						"value": "0"
@@ -588,7 +588,7 @@
 					"sid": 508424351046023,
 					"parameters": {
 						"variable": "local_keyCode",
-						"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, LoopIndex( \"KeyCodeIndex\" ) )"
+						"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, LoopIndex( \"KeyCodeIndex\" ) )"
 					}
 				},
 				{
@@ -597,73 +597,26 @@
 					"sid": 199240890471173,
 					"disabled": true,
 					"parameters": {
-						"text": "SpriteFont.Text & \" ,\" & local_alignmentId & \",\" & local_keyCode & \",\" & KeyDownArray.At( local_keyCode, 1 ) & \",\" & KeyDownArray.At( local_keyCode, 2 )"
+						"text": "SpriteFont.Text & \" ,\" & local_alignmentId & \",\" & local_keyCode & \",\" & Fighter_KeyDownArray.At( local_keyCode, 1 ) & \",\" & Fighter_KeyDownArray.At( local_keyCode, 2 )"
 					}
 				},
 				{
 					"callFunction": "Fighter_applyAcceleration_byPicked",
 					"sid": 677594928943759,
 					"parameters": [
-						"KeyDownArray.At( local_keyCode, 1 )",
-						"KeyDownArray.At( local_keyCode, 2 )"
+						"Fighter_KeyDownArray.At( local_keyCode, 1 )",
+						"Fighter_KeyDownArray.At( local_keyCode, 2 )"
 					]
 				},
 				{
 					"callFunction": "Fighter_shootProjectile_byPicked",
 					"sid": 700047858359668,
 					"parameters": [
-						"KeyDownArray.At( local_keyCode, 3 )"
+						"Fighter_KeyDownArray.At( local_keyCode, 3 )"
 					]
 				}
 			],
 			"sid": 158680859806621
-		},
-		{
-			"functionName": "Fighter_thrust_shoot_byKeyboard",
-			"functionDescription": "",
-			"functionCategory": "Fighter",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 669643940846162,
-					"parameters": {
-						"variable": "PlayerControllable"
-					}
-				}
-			],
-			"actions": [
-				{
-					"type": "comment",
-					"text": "Anti the gravity completely."
-				},
-				{
-					"id": "apply-force",
-					"objectClass": "Fighter",
-					"sid": 546532641169047,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"force-x": "0",
-						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
-						"image-point": "0"
-					}
-				},
-				{
-					"callFunction": "Fighter_byKeyDownArray",
-					"sid": 373115263782591,
-					"parameters": [
-						"0",
-						"0"
-					]
-				}
-			],
-			"sid": 721917763980207
 		}
 	],
 	"sid": 818138888685423

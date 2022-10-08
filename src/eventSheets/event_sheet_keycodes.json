@@ -421,7 +421,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ActionKeyIndex_DodgeLeft",
+			"name": "Fighter_ActionId_DodgeLeft",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -431,7 +431,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ActionKeyIndex_DodgeUp",
+			"name": "Fighter_ActionId_DodgeUp",
 			"type": "number",
 			"initialValue": "1",
 			"comment": "",
@@ -441,7 +441,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ActionKeyIndex_DodgeRight",
+			"name": "Fighter_ActionId_DodgeRight",
 			"type": "number",
 			"initialValue": "2",
 			"comment": "",
@@ -451,7 +451,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ActionKeyIndex_DodgeDown",
+			"name": "Fighter_ActionId_DodgeDown",
 			"type": "number",
 			"initialValue": "3",
 			"comment": "",
@@ -461,7 +461,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ActionKeyIndex_Attack",
+			"name": "Fighter_ActionId_Attack",
 			"type": "number",
 			"initialValue": "4",
 			"comment": "",
@@ -471,7 +471,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ActionKeyIndex_Parry",
+			"name": "Fighter_ActionId_Parry",
 			"type": "number",
 			"initialValue": "5",
 			"comment": "",
@@ -484,8 +484,8 @@
 			"text": ""
 		},
 		{
-			"functionName": "KeyDownArray_init_FighterControl",
-			"functionDescription": "Initialize KeyDownArray for Fighter's [1]forceX [2]forceY [3]shoot",
+			"functionName": "Fighter_KeyDownArray_init",
+			"functionDescription": "Initialize KeyDownArray for Fighter's control.",
 			"functionCategory": "KeyDownArray",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
@@ -546,7 +546,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "AlignmentId_ActionKey_Array\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code\n[AlignmentId][5]: enlarging key code"
+					"text": "Fighter_Alignment_Action_KeyCodeArray\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code\n[AlignmentId][5]: enlarging key code"
 				},
 				{
 					"type": "comment",
@@ -554,61 +554,61 @@
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 709348975502444,
 					"parameters": {
 						"x": "0",
-						"y": "ActionKeyIndex_DodgeLeft",
+						"y": "Fighter_ActionId_DodgeLeft",
 						"value": "KeyCode_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 131721289637923,
 					"parameters": {
 						"x": "0",
-						"y": "ActionKeyIndex_DodgeUp",
+						"y": "Fighter_ActionId_DodgeUp",
 						"value": "KeyCode_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 665423934553031,
 					"parameters": {
 						"x": "0",
-						"y": "ActionKeyIndex_DodgeRight",
+						"y": "Fighter_ActionId_DodgeRight",
 						"value": "KeyCode_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 988229706237700,
 					"parameters": {
 						"x": "0",
-						"y": "ActionKeyIndex_DodgeDown",
+						"y": "Fighter_ActionId_DodgeDown",
 						"value": "KeyCode_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 577656513070729,
 					"parameters": {
 						"x": "0",
-						"y": "ActionKeyIndex_Attack",
+						"y": "Fighter_ActionId_Attack",
 						"value": "KeyCode_Space"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 985758869812639,
 					"parameters": {
 						"x": "0",
-						"y": "ActionKeyIndex_Parry",
+						"y": "Fighter_ActionId_Parry",
 						"value": "KeyCode_Z"
 					}
 				},
@@ -618,61 +618,61 @@
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 900044465461607,
 					"parameters": {
 						"x": "1",
-						"y": "ActionKeyIndex_DodgeLeft",
+						"y": "Fighter_ActionId_DodgeLeft",
 						"value": "KeyCode_NumPad_4_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 144102034962148,
 					"parameters": {
 						"x": "1",
-						"y": "ActionKeyIndex_DodgeUp",
+						"y": "Fighter_ActionId_DodgeUp",
 						"value": "KeyCode_NumPad_8_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 497828736604968,
 					"parameters": {
 						"x": "1",
-						"y": "ActionKeyIndex_DodgeRight",
+						"y": "Fighter_ActionId_DodgeRight",
 						"value": "KeyCode_NumPad_6_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 140779727197884,
 					"parameters": {
 						"x": "1",
-						"y": "ActionKeyIndex_DodgeDown",
+						"y": "Fighter_ActionId_DodgeDown",
 						"value": "KeyCode_NumPad_2_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 631681234517801,
 					"parameters": {
 						"x": "1",
-						"y": "ActionKeyIndex_Attack",
+						"y": "Fighter_ActionId_Attack",
 						"value": "KeyCode_NumPad_0_Insert"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_ActionKey_Array",
+					"objectClass": "Fighter_Alignment_Action_KeyCodeArray",
 					"sid": 198808873465783,
 					"parameters": {
 						"x": "1",
-						"y": "ActionKeyIndex_Parry",
+						"y": "Fighter_ActionId_Parry",
 						"value": "KeyCode_NumPad_Dot_Delete"
 					}
 				}
@@ -689,7 +689,7 @@
 							"parameters": {
 								"name": "\"AlignmentId\"",
 								"start-index": "0",
-								"end-index": "AlignmentId_ActionKey_Array.Width - 1"
+								"end-index": "Fighter_Alignment_Action_KeyCodeArray.Width - 1"
 							}
 						}
 					],
@@ -709,7 +709,7 @@
 							"sid": 381932820382960,
 							"parameters": {
 								"variable": "local_keyCode_DodgeLeft",
-								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeLeft )"
+								"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, Fighter_ActionId_DodgeLeft )"
 							}
 						},
 						{
@@ -718,7 +718,7 @@
 							"sid": 670872315846386,
 							"parameters": {
 								"variable": "local_keyCode_DodgeUp",
-								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeUp )"
+								"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, Fighter_ActionId_DodgeUp )"
 							}
 						},
 						{
@@ -727,7 +727,7 @@
 							"sid": 510534701349513,
 							"parameters": {
 								"variable": "local_keyCode_DodgeRight",
-								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeRight )"
+								"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, Fighter_ActionId_DodgeRight )"
 							}
 						},
 						{
@@ -736,7 +736,7 @@
 							"sid": 796121670946507,
 							"parameters": {
 								"variable": "local_keyCode_DodgeDown",
-								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeDown )"
+								"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, Fighter_ActionId_DodgeDown )"
 							}
 						},
 						{
@@ -745,7 +745,7 @@
 							"sid": 162721159859949,
 							"parameters": {
 								"variable": "local_keyCode_Attack",
-								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_Attack )"
+								"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, Fighter_ActionId_Attack )"
 							}
 						},
 						{
@@ -754,7 +754,7 @@
 							"sid": 619487585302102,
 							"parameters": {
 								"variable": "local_keyCode_Parry",
-								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_Parry )"
+								"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, Fighter_ActionId_Parry )"
 							}
 						},
 						{
@@ -763,7 +763,7 @@
 						},
 						{
 							"id": "set-at-xy",
-							"objectClass": "KeyDownArray",
+							"objectClass": "Fighter_KeyDownArray",
 							"sid": 355968354507012,
 							"parameters": {
 								"x": "local_keyCode_DodgeLeft",
@@ -773,7 +773,7 @@
 						},
 						{
 							"id": "set-at-xy",
-							"objectClass": "KeyDownArray",
+							"objectClass": "Fighter_KeyDownArray",
 							"sid": 363908892338097,
 							"parameters": {
 								"x": "local_keyCode_DodgeUp",
@@ -783,7 +783,7 @@
 						},
 						{
 							"id": "set-at-xy",
-							"objectClass": "KeyDownArray",
+							"objectClass": "Fighter_KeyDownArray",
 							"sid": 251867341718688,
 							"parameters": {
 								"x": "local_keyCode_DodgeRight",
@@ -793,7 +793,7 @@
 						},
 						{
 							"id": "set-at-xy",
-							"objectClass": "KeyDownArray",
+							"objectClass": "Fighter_KeyDownArray",
 							"sid": 702674863320775,
 							"parameters": {
 								"x": "local_keyCode_DodgeDown",
@@ -803,7 +803,7 @@
 						},
 						{
 							"id": "set-at-xy",
-							"objectClass": "KeyDownArray",
+							"objectClass": "Fighter_KeyDownArray",
 							"sid": 620334606018522,
 							"parameters": {
 								"x": "local_keyCode_Attack",
@@ -813,7 +813,7 @@
 						},
 						{
 							"id": "set-at-xy",
-							"objectClass": "KeyDownArray",
+							"objectClass": "Fighter_KeyDownArray",
 							"sid": 721903349633519,
 							"parameters": {
 								"x": "local_keyCode_Parry",

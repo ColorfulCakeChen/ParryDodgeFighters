@@ -141,8 +141,8 @@
 			"FighterSkin",
 			"Projectile",
 			"ProjectileSkin",
-			"KeyDownArray",
-			"AlignmentId_ActionKey_Array"
+			"Fighter_KeyDownArray",
+			"Fighter_Alignment_Action_KeyCodeArray"
 		],
 		"subfolders": []
 	},

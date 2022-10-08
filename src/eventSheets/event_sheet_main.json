@@ -20,7 +20,7 @@
 			],
 			"actions": [
 				{
-					"callFunction": "KeyDownArray_init_FighterControl",
+					"callFunction": "Fighter_KeyDownArray_init",
 					"sid": 314394289555161,
 					"parameters": [
 						"0",
@@ -168,8 +168,28 @@
 					"sid": 670822637032521
 				},
 				{
-					"callFunction": "Fighter_thrust_shoot_byKeyboard",
-					"sid": 460192146731835
+					"type": "comment",
+					"text": "Anti the gravity completely."
+				},
+				{
+					"id": "apply-force",
+					"objectClass": "Fighter",
+					"sid": 831872116640204,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "0",
+						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
+						"image-point": "0"
+					}
+				},
+				{
+					"callFunction": "Fighter_act_byKeyDownArray",
+					"sid": 396016117511502,
+					"parameters": [
+						"0",
+						"0"
+					]
 				}
 			],
 			"sid": 304644917695471
@@ -181,6 +201,14 @@
 					"id": "on-any-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 654434314218510
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 669643940846162,
+					"parameters": {
+						"variable": "Fighter_PlayerControllable"
+					}
 				}
 			],
 			"actions": [
@@ -195,7 +223,7 @@
 				},
 				{
 					"id": "set-at-x",
-					"objectClass": "KeyDownArray",
+					"objectClass": "Fighter_KeyDownArray",
 					"sid": 351776763413782,
 					"parameters": {
 						"x": "Keyboard.LastKeyCode",
@@ -212,6 +240,14 @@
 					"id": "on-any-key-released",
 					"objectClass": "Keyboard",
 					"sid": 460768446080213
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 669643940846162,
+					"parameters": {
+						"variable": "Fighter_PlayerControllable"
+					}
 				}
 			],
 			"actions": [
@@ -226,7 +262,7 @@
 				},
 				{
 					"id": "set-at-x",
-					"objectClass": "KeyDownArray",
+					"objectClass": "Fighter_KeyDownArray",
 					"sid": 526912348973221,
 					"parameters": {
 						"x": "Keyboard.LastKeyCode",
@@ -235,6 +271,21 @@
 				}
 			],
 			"sid": 510208931923954
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 523127364989883,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [],
+			"sid": 199105531134504
 		},
 		{
 			"eventType": "block",
