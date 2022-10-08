@@ -421,7 +421,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyDefineSlotId_DodgeLeft",
+			"name": "ActionKeyIndex_DodgeLeft",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -431,7 +431,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyDefineSlotId_DodgeUp",
+			"name": "ActionKeyIndex_DodgeUp",
 			"type": "number",
 			"initialValue": "1",
 			"comment": "",
@@ -441,7 +441,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyDefineSlotId_DodgeRight",
+			"name": "ActionKeyIndex_DodgeRight",
 			"type": "number",
 			"initialValue": "2",
 			"comment": "",
@@ -451,7 +451,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyDefineSlotId_DodgeDown",
+			"name": "ActionKeyIndex_DodgeDown",
 			"type": "number",
 			"initialValue": "3",
 			"comment": "",
@@ -461,7 +461,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyDefineSlotId_Attack",
+			"name": "ActionKeyIndex_Attack",
 			"type": "number",
 			"initialValue": "4",
 			"comment": "",
@@ -471,7 +471,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyDefineSlotId_Parry",
+			"name": "ActionKeyIndex_Parry",
 			"type": "number",
 			"initialValue": "5",
 			"comment": "",
@@ -542,7 +542,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "AlignmentId_KeyDefineSlotId_Array\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code\n[AlignmentId][5]: enlarging key code"
+					"text": "AlignmentId_ActionKey_Array\n[AlignmentId][0]: moving Left key code\n[AlignmentId][1]: moving Up key code\n[AlignmentId][2]: moving Right key code\n[AlignmentId][3]: moving Down key code\n[AlignmentId][4]: shooting key code\n[AlignmentId][5]: enlarging key code"
 				},
 				{
 					"type": "comment",
@@ -550,61 +550,61 @@
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 709348975502444,
 					"parameters": {
 						"x": "0",
-						"y": "KeyDefineSlotId_DodgeLeft",
+						"y": "ActionKeyIndex_DodgeLeft",
 						"value": "KeyCode_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 131721289637923,
 					"parameters": {
 						"x": "0",
-						"y": "KeyDefineSlotId_DodgeUp",
+						"y": "ActionKeyIndex_DodgeUp",
 						"value": "KeyCode_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 665423934553031,
 					"parameters": {
 						"x": "0",
-						"y": "KeyDefineSlotId_DodgeRight",
+						"y": "ActionKeyIndex_DodgeRight",
 						"value": "KeyCode_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 988229706237700,
 					"parameters": {
 						"x": "0",
-						"y": "KeyDefineSlotId_DodgeDown",
+						"y": "ActionKeyIndex_DodgeDown",
 						"value": "KeyCode_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 577656513070729,
 					"parameters": {
 						"x": "0",
-						"y": "KeyDefineSlotId_Attack",
+						"y": "ActionKeyIndex_Attack",
 						"value": "KeyCode_Space"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 985758869812639,
 					"parameters": {
 						"x": "0",
-						"y": "KeyDefineSlotId_Parry",
+						"y": "ActionKeyIndex_Parry",
 						"value": "KeyCode_Z"
 					}
 				},
@@ -614,61 +614,61 @@
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 900044465461607,
 					"parameters": {
 						"x": "1",
-						"y": "KeyDefineSlotId_DodgeLeft",
+						"y": "ActionKeyIndex_DodgeLeft",
 						"value": "KeyCode_NumPad_4_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 144102034962148,
 					"parameters": {
 						"x": "1",
-						"y": "KeyDefineSlotId_DodgeUp",
+						"y": "ActionKeyIndex_DodgeUp",
 						"value": "KeyCode_NumPad_8_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 497828736604968,
 					"parameters": {
 						"x": "1",
-						"y": "KeyDefineSlotId_DodgeRight",
+						"y": "ActionKeyIndex_DodgeRight",
 						"value": "KeyCode_NumPad_6_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 140779727197884,
 					"parameters": {
 						"x": "1",
-						"y": "KeyDefineSlotId_DodgeDown",
+						"y": "ActionKeyIndex_DodgeDown",
 						"value": "KeyCode_NumPad_2_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 631681234517801,
 					"parameters": {
 						"x": "1",
-						"y": "KeyDefineSlotId_Attack",
+						"y": "ActionKeyIndex_Attack",
 						"value": "KeyCode_NumPad_0_Insert"
 					}
 				},
 				{
 					"id": "set-at-xy",
-					"objectClass": "AlignmentId_KeyDefineSlot_Array",
+					"objectClass": "AlignmentId_ActionKey_Array",
 					"sid": 198808873465783,
 					"parameters": {
 						"x": "1",
-						"y": "KeyDefineSlotId_Parry",
+						"y": "ActionKeyIndex_Parry",
 						"value": "KeyCode_NumPad_Dot_Delete"
 					}
 				}
@@ -685,7 +685,7 @@
 							"parameters": {
 								"name": "\"AlignmentId\"",
 								"start-index": "0",
-								"end-index": "AlignmentId_KeyDefineSlot_Array.Width - 1"
+								"end-index": "AlignmentId_ActionKey_Array.Width - 1"
 							}
 						}
 					],
@@ -705,7 +705,7 @@
 							"sid": 381932820382960,
 							"parameters": {
 								"variable": "local_keyCode_DodgeLeft",
-								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeLeft )"
+								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeLeft )"
 							}
 						},
 						{
@@ -714,7 +714,7 @@
 							"sid": 670872315846386,
 							"parameters": {
 								"variable": "local_keyCode_DodgeUp",
-								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeUp )"
+								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeUp )"
 							}
 						},
 						{
@@ -723,7 +723,7 @@
 							"sid": 510534701349513,
 							"parameters": {
 								"variable": "local_keyCode_DodgeRight",
-								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeRight )"
+								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeRight )"
 							}
 						},
 						{
@@ -732,7 +732,7 @@
 							"sid": 796121670946507,
 							"parameters": {
 								"variable": "local_keyCode_DodgeDown",
-								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_DodgeDown )"
+								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_DodgeDown )"
 							}
 						},
 						{
@@ -741,7 +741,7 @@
 							"sid": 162721159859949,
 							"parameters": {
 								"variable": "local_keyCode_Attack",
-								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_Attack )"
+								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_Attack )"
 							}
 						},
 						{
@@ -750,7 +750,7 @@
 							"sid": 619487585302102,
 							"parameters": {
 								"variable": "local_keyCode_Parry",
-								"value": "AlignmentId_KeyDefineSlot_Array.At( local_alignmentId, KeyDefineSlotId_Parry )"
+								"value": "AlignmentId_ActionKey_Array.At( local_alignmentId, ActionKeyIndex_Parry )"
 							}
 						},
 						{

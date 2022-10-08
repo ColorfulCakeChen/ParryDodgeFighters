@@ -150,7 +150,7 @@
 			"Projectile",
 			"ProjectileSkin",
 			"KeyDownArray",
-			"AlignmentId_KeyDefineSlot_Array"
+			"AlignmentId_ActionKey_Array"
 		],
 		"subfolders": []
 	},

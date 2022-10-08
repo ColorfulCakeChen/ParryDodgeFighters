@@ -2978,7 +2978,7 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "AlignmentId_KeyDefineSlot_Array",
+			"type": "AlignmentId_ActionKey_Array",
 			"properties": {
 				"width": 2,
 				"height": 5,
