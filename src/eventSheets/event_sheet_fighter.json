@@ -511,15 +511,6 @@
 					}
 				},
 				{
-					"id": "set-fade-out-time",
-					"objectClass": "ProjectileSkin",
-					"sid": 757179844891252,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "Projectile_FadeOut_Seconds"
-					}
-				},
-				{
 					"id": "apply-impulse-at-angle",
 					"objectClass": "Projectile",
 					"sid": 616512468969735,
@@ -582,15 +573,6 @@
 					"sid": 648670211232559,
 					"parameters": {
 						"angle": "Fighter.Angle + ShieldAngle"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "ShieldSkin",
-					"sid": 674932708669766,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "Shield_FadeOut_Seconds"
 					}
 				},
 				{

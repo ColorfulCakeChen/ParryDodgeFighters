@@ -161,30 +161,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Projectile_FadeOut_Seconds",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 851134408673265
-		},
-		{
-			"eventType": "variable",
-			"name": "Shield_FadeOut_Seconds",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 487734303647833
-		},
-		{
-			"eventType": "comment",
-			"text": ""
-		},
-		{
-			"eventType": "variable",
 			"name": "GameToPhysicsRatio",
 			"type": "number",
 			"initialValue": "0.02",
