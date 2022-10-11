@@ -85,11 +85,6 @@
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 834408189845961
-		},
-		{
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
 			"sid": 495700070411087

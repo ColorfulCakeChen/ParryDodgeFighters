@@ -93,9 +93,6 @@
 						"private_Force": 0
 					},
 					"behaviors": {
-						"Timer": {
-							"properties": {}
-						},
 						"ScrollTo": {
 							"properties": {
 								"enabled": true
@@ -212,10 +209,6 @@
 							{
 								"id": "behavior",
 								"component": [
-									{
-										"key": "Timer",
-										"state": []
-									},
 									{
 										"key": "ScrollTo",
 										"state": [
