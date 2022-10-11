@@ -81,15 +81,14 @@
 						"VersusAlignmentId": 0,
 						"EnergyCur": 0,
 						"EnergyMax": 1000,
-						"EnergyRestoreSeconds": 1,
-						"EnergyRestorePoints": 30,
+						"EnergyRestorePoints": 8,
 						"EnergyPointsThrust": 1,
 						"EnergyPointsShoot": 20,
 						"EnergyPointsRaiseShield": 50,
-						"ShootReadySeconds": 0.4,
-						"ShootReady": true,
-						"RaiseShieldReadySeconds": 0.8,
-						"RaiseShieldReady": true,
+						"ShootQuarterSeconds": 2,
+						"ShootCountDown": 3,
+						"RaiseShieldQuarterSeconds": 3,
+						"RaiseShieldCountDown": 3,
 						"Acceleration": 3,
 						"private_Force": 0
 					},
@@ -167,10 +166,6 @@
 												"state": true
 											},
 											{
-												"iv": "EnergyRestoreSeconds",
-												"state": true
-											},
-											{
 												"iv": "EnergyRestorePoints",
 												"state": true
 											},
@@ -183,11 +178,7 @@
 												"state": true
 											},
 											{
-												"iv": "ShootReadySeconds",
-												"state": true
-											},
-											{
-												"iv": "ShootReady",
+												"iv": "ShootQuarterSeconds",
 												"state": true
 											},
 											{
@@ -199,15 +190,19 @@
 												"state": true
 											},
 											{
-												"iv": "RaiseShieldReadySeconds",
-												"state": true
-											},
-											{
-												"iv": "RaiseShieldReady",
+												"iv": "RaiseShieldQuarterSeconds",
 												"state": true
 											},
 											{
 												"iv": "EnergyPointsRaiseShield",
+												"state": true
+											},
+											{
+												"iv": "ShootCountDown",
+												"state": true
+											},
+											{
+												"iv": "RaiseShieldCountDown",
 												"state": true
 											}
 										]

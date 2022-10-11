@@ -66,9 +66,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "RemainedTimer",
-					"sid": 410607375904851,
+					"sid": 542820494502647,
 					"parameters": {
-						"text": "zeropad( floor( Self.secondsCur / 60 ), 2 ) & \":\" & zeropad( ( Self.secondsCur % 60 ), 2 )"
+						"text": "zeropad( floor( int( Self.secondsCur ) / 60 ), 2 ) & \":\" & zeropad( ( int( Self.secondsCur ) % 60 ), 2 )"
 					}
 				}
 			],

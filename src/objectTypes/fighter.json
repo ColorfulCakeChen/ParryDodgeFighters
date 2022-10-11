@@ -23,15 +23,9 @@
 			"sid": 277341109312336
 		},
 		{
-			"name": "EnergyRestoreSeconds",
-			"type": "number",
-			"desc": "How many seconds to increase point energy once.",
-			"sid": 433564257314143
-		},
-		{
 			"name": "EnergyRestorePoints",
 			"type": "number",
-			"desc": "How many Energy points will be increased every time.",
+			"desc": "How many Energy points will be increased every quarter of a second.",
 			"sid": 208531946115419
 		},
 		{
@@ -53,28 +47,28 @@
 			"sid": 601353115579974
 		},
 		{
-			"name": "ShootReadySeconds",
+			"name": "ShootQuarterSeconds",
 			"type": "number",
-			"desc": "How many seconds should be waited before shooting next Projectile.",
+			"desc": "How many quater of a second should be waited before shooting next Projectile.",
 			"sid": 909419945726480
 		},
 		{
-			"name": "ShootReady",
-			"type": "boolean",
-			"desc": "True if shooting is cool down complete.",
-			"sid": 716325056570224
+			"name": "ShootCountDown",
+			"type": "number",
+			"desc": "0 means shooting is cool down complete.",
+			"sid": 819256083921672
 		},
 		{
-			"name": "RaiseShieldReadySeconds",
+			"name": "RaiseShieldQuarterSeconds",
 			"type": "number",
-			"desc": "How many seconds should be waited before raising next Shield.",
+			"desc": "How many quarter of a second should be waited before raising next Shield.",
 			"sid": 233130173922753
 		},
 		{
-			"name": "RaiseShieldReady",
-			"type": "boolean",
-			"desc": "True if raising is cool down complete.",
-			"sid": 833887253251751
+			"name": "RaiseShieldCountDown",
+			"type": "number",
+			"desc": "0 means raising shield is cool down complete.",
+			"sid": 622523676631885
 		},
 		{
 			"name": "Acceleration",

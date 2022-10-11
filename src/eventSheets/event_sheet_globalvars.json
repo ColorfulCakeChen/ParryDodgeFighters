@@ -147,6 +147,20 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "QuarterSeconds",
+			"type": "number",
+			"initialValue": "0.25",
+			"comment": "quarter of a seconds.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 219773654203258
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "Projectile_FadeOut_Seconds",
 			"type": "number",
 			"initialValue": "1",

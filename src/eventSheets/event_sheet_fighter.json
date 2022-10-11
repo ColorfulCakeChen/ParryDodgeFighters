@@ -2,23 +2,20 @@
 	"name": "Event_Sheet_Fighter",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-timer",
-					"objectClass": "Fighter",
-					"sid": 986118309095995,
-					"behaviorType": "Timer",
-					"parameters": {
-						"tag": "\"EnergyRestore\""
-					}
-				}
-			],
+			"functionName": "Fighter_everyQuarterSeconds",
+			"functionDescription": "",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
 			"actions": [
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 718780227153299,
+					"sid": 663651758708358,
 					"parameters": {
 						"instance-variable": "EnergyCur",
 						"value": "min( Self.EnergyCur + Self.EnergyRestorePoints, Self.EnergyMax )"
@@ -26,62 +23,28 @@
 				},
 				{
 					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 429894878575575
-				}
-			],
-			"sid": 231980933674926
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+					"sid": 451132994615909
+				},
 				{
-					"id": "on-timer",
+					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 764052896224703,
-					"behaviorType": "Timer",
+					"sid": 432244231041583,
 					"parameters": {
-						"tag": "\"ShootCoolDown\""
+						"instance-variable": "ShootCountDown",
+						"value": "max( Self.ShootCountDown - 1, 0 )"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 553317047532754,
+					"parameters": {
+						"instance-variable": "RaiseShieldCountDown",
+						"value": "max( Self.RaiseShieldCountDown - 1, 0 )"
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Fighter",
-					"sid": 821068854172783,
-					"parameters": {
-						"instance-variable": "ShootReady",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 144467237506523
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-timer",
-					"objectClass": "Fighter",
-					"sid": 448786972842513,
-					"behaviorType": "Timer",
-					"parameters": {
-						"tag": "\"RaiseShieldCoolDown\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Fighter",
-					"sid": 220224418255187,
-					"parameters": {
-						"instance-variable": "RaiseShieldReady",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 876968769656975
+			"sid": 193428783145905
 		},
 		{
 			"functionName": "Fighter_recreateAll",
@@ -282,17 +245,6 @@
 					}
 				},
 				{
-					"id": "start-timer",
-					"objectClass": "Fighter",
-					"sid": 159626439227153,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "Fighter.EnergyRestoreSeconds",
-						"type": "regular",
-						"tag": "\"EnergyRestore\""
-					}
-				},
-				{
 					"id": "flash",
 					"objectClass": "FighterSkin",
 					"sid": 330669329595505,
@@ -465,11 +417,13 @@
 					}
 				},
 				{
-					"id": "is-boolean-instance-variable-set",
+					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
-					"sid": 568133599956478,
+					"sid": 705638673190632,
 					"parameters": {
-						"instance-variable": "ShootReady"
+						"instance-variable": "ShootCountDown",
+						"comparison": 3,
+						"value": "0"
 					}
 				},
 				{
@@ -494,23 +448,12 @@
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
+					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 733037844831310,
+					"sid": 776867683082602,
 					"parameters": {
-						"instance-variable": "ShootReady",
-						"value": "false"
-					}
-				},
-				{
-					"id": "start-timer",
-					"objectClass": "Fighter",
-					"sid": 594714598373805,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "Self.ShootReadySeconds",
-						"type": "once",
-						"tag": "\"ShootCoolDown\""
+						"instance-variable": "ShootCountDown",
+						"value": "Self.ShootQuarterSeconds"
 					}
 				},
 				{
@@ -676,11 +619,13 @@
 					}
 				},
 				{
-					"id": "is-boolean-instance-variable-set",
+					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
-					"sid": 847814309192124,
+					"sid": 713885527471928,
 					"parameters": {
-						"instance-variable": "RaiseShieldReady"
+						"instance-variable": "RaiseShieldCountDown",
+						"comparison": 3,
+						"value": "0"
 					}
 				},
 				{
@@ -705,23 +650,12 @@
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
+					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 365223830571515,
+					"sid": 910133732082319,
 					"parameters": {
-						"instance-variable": "RaiseShieldReady",
-						"value": "false"
-					}
-				},
-				{
-					"id": "start-timer",
-					"objectClass": "Fighter",
-					"sid": 379473503124952,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "Self.RaiseShieldReadySeconds",
-						"type": "once",
-						"tag": "\"RaiseShieldCoolDown\""
+						"instance-variable": "RaiseShieldCountDown",
+						"value": "Self.RaiseShieldQuarterSeconds"
 					}
 				},
 				{

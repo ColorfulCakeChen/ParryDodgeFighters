@@ -46,17 +46,6 @@
 					"sid": 199499819003141
 				},
 				{
-					"id": "start-timer",
-					"objectClass": "RemainedTimer",
-					"sid": 578785865181774,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "1.0",
-						"type": "regular",
-						"tag": "\"RemainedTimerCountDown\""
-					}
-				},
-				{
 					"id": "set-world-gravity",
 					"objectClass": "Fighter",
 					"sid": 730058667078155,
@@ -69,30 +58,46 @@
 			"sid": 834938499052826
 		},
 		{
+			"eventType": "comment",
+			"text": "Triggered every quarter of a sceond."
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-timer",
-					"objectClass": "RemainedTimer",
-					"sid": 300578667839672,
-					"behaviorType": "Timer",
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 409861219020120,
 					"parameters": {
-						"tag": "\"RemainedTimerCountDown\""
+						"interval-seconds": "QuarterSeconds"
 					}
 				}
 			],
 			"actions": [
 				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 975794173567831,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",\" & RemainedTimer.secondsCur"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "RemainedTimer",
-					"sid": 297847831445095,
+					"sid": 652111608592919,
 					"parameters": {
 						"instance-variable": "secondsCur",
-						"value": "max( Self.secondsCur - 1, 0 )"
+						"value": "max( Self.secondsCur - QuarterSeconds, 0 )"
 					}
+				},
+				{
+					"callFunction": "Fighter_everyQuarterSeconds",
+					"sid": 217166540371973
 				}
 			],
-			"sid": 462523923919873,
+			"sid": 749524624108426,
 			"children": [
 				{
 					"eventType": "block",
@@ -100,7 +105,7 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "RemainedTimer",
-							"sid": 773550606661877,
+							"sid": 570966666068084,
 							"parameters": {
 								"instance-variable": "secondsCur",
 								"comparison": 3,
@@ -112,14 +117,14 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
-							"sid": 461883975039036,
+							"sid": 821927245687338,
 							"parameters": {
 								"instance-variable": "secondsCur",
 								"value": "Self.secondsMax"
 							}
 						}
 					],
-					"sid": 183450392434763
+					"sid": 824967954467281
 				},
 				{
 					"eventType": "block",
@@ -127,10 +132,10 @@
 					"actions": [
 						{
 							"callFunction": "RemainderTimerRefresh",
-							"sid": 318941882169303
+							"sid": 604919674864041
 						}
 					],
-					"sid": 303356447359501
+					"sid": 468317547412487
 				}
 			]
 		},
