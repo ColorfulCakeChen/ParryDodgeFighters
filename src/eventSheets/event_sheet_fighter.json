@@ -525,72 +525,6 @@
 			"sid": 748652751858314
 		},
 		{
-			"functionName": "Fighter_raiseShield_one_byAngle",
-			"functionDescription": "Create one side Shield at picked Fighter's specified ShieldPoint.",
-			"functionCategory": "Fighter",
-			"functionReturnType": "none",
-			"functionCopyPicked": true,
-			"functionIsAsync": false,
-			"functionParameters": [
-				{
-					"name": "ShieldAngle",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "also determine Fighter's ShieldPoint. (0, 90, 180, 270)",
-					"sid": 977752486178701
-				}
-			],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Fighter",
-					"sid": 354055054223949,
-					"parameters": {
-						"object": "Shield",
-						"layer": "1",
-						"image-point": "\"ShieldPoint_\" & ShieldAngle",
-						"create-hierarchy": true
-					}
-				},
-				{
-					"id": "stop-animation",
-					"objectClass": "Shield",
-					"sid": 364360614037288
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "ShieldSkin",
-					"sid": 614350787850825,
-					"parameters": {
-						"color": "FighterSkin.ColorValue"
-					}
-				},
-				{
-					"id": "set-angle",
-					"objectClass": "ShieldSkin",
-					"sid": 648670211232559,
-					"parameters": {
-						"angle": "Fighter.Angle + ShieldAngle"
-					}
-				},
-				{
-					"id": "create-revolute-joint",
-					"objectClass": "Fighter",
-					"sid": 124319769273612,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"this-image-point": "0",
-						"object": "Shield"
-					}
-				}
-			],
-			"sid": 183646939205235,
-			"disabled": true
-		},
-		{
 			"functionName": "Fighter_raiseShield_byPicked",
 			"functionDescription": "Create Shield at picked Fighter's ShieldPoint.",
 			"functionCategory": "Fighter",
@@ -663,38 +597,6 @@
 					"sid": 428344334678109,
 					"parameters": [
 						"-Fighter.EnergyPointsRaiseShield"
-					]
-				},
-				{
-					"callFunction": "Fighter_raiseShield_one_byAngle",
-					"sid": 648264371057556,
-					"disabled": true,
-					"parameters": [
-						"0"
-					]
-				},
-				{
-					"callFunction": "Fighter_raiseShield_one_byAngle",
-					"sid": 709071894788022,
-					"disabled": true,
-					"parameters": [
-						"90"
-					]
-				},
-				{
-					"callFunction": "Fighter_raiseShield_one_byAngle",
-					"sid": 533435355869927,
-					"disabled": true,
-					"parameters": [
-						"180"
-					]
-				},
-				{
-					"callFunction": "Fighter_raiseShield_one_byAngle",
-					"sid": 791873623363498,
-					"disabled": true,
-					"parameters": [
-						"270"
 					]
 				},
 				{

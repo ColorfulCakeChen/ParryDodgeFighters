@@ -127,26 +127,6 @@
 								"name": "GunMuzzle",
 								"x": 0.8095238095238095,
 								"y": 0.5
-							},
-							{
-								"name": "ShieldPoint_0_UnUsed",
-								"x": 1.0952380952380953,
-								"y": 0.5
-							},
-							{
-								"name": "ShieldPoint_90_UnUsed",
-								"x": 0.5,
-								"y": 1.0952380952380953
-							},
-							{
-								"name": "ShieldPoint_180_UnUsed",
-								"x": -0.09523809523809523,
-								"y": 0.5
-							},
-							{
-								"name": "ShieldPoint_270_UnUsed",
-								"x": 0.5,
-								"y": -0.09523809523809523
 							}
 						],
 						"duration": 1
