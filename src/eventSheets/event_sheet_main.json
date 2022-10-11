@@ -42,7 +42,7 @@
 					"disabled": true
 				},
 				{
-					"callFunction": "RemainderTimerRefresh",
+					"callFunction": "RemainderTimer_Refresh",
 					"sid": 199499819003141
 				},
 				{
@@ -131,7 +131,7 @@
 					"conditions": [],
 					"actions": [
 						{
-							"callFunction": "RemainderTimerRefresh",
+							"callFunction": "RemainderTimer_Refresh",
 							"sid": 604919674864041
 						}
 					],

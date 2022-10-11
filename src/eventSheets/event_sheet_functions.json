@@ -53,7 +53,7 @@
 			"sid": 113711322765195
 		},
 		{
-			"functionName": "RemainderTimerRefresh",
+			"functionName": "RemainderTimer_Refresh",
 			"functionDescription": "Display the current remained seconds of the versus.",
 			"functionCategory": "RemainderTimer",
 			"functionReturnType": "none",
