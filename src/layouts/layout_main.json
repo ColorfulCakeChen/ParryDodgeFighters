@@ -175,7 +175,23 @@
 												"state": true
 											},
 											{
+												"iv": "EnergyPointsRaiseShield",
+												"state": true
+											},
+											{
 												"iv": "ShootQuarterSeconds",
+												"state": true
+											},
+											{
+												"iv": "ShootCountDown",
+												"state": true
+											},
+											{
+												"iv": "RaiseShieldQuarterSeconds",
+												"state": true
+											},
+											{
+												"iv": "RaiseShieldCountDown",
 												"state": true
 											},
 											{
@@ -184,22 +200,6 @@
 											},
 											{
 												"iv": "private_Force",
-												"state": true
-											},
-											{
-												"iv": "RaiseShieldQuarterSeconds",
-												"state": true
-											},
-											{
-												"iv": "EnergyPointsRaiseShield",
-												"state": true
-											},
-											{
-												"iv": "ShootCountDown",
-												"state": true
-											},
-											{
-												"iv": "RaiseShieldCountDown",
 												"state": true
 											}
 										]
@@ -2976,6 +2976,10 @@
 								"id": "behavior",
 								"component": [
 									{
+										"key": "DestroyOutsideLayout",
+										"state": []
+									},
+									{
 										"key": "Physics",
 										"state": [
 											[
@@ -3019,10 +3023,6 @@
 												true
 											]
 										]
-									},
-									{
-										"key": "DestroyOutsideLayout",
-										"state": []
 									}
 								]
 							},
@@ -3161,8 +3161,8 @@
 					"world": {
 						"x": 40,
 						"y": 40,
-						"width": 5,
-						"height": 27,
+						"width": 31,
+						"height": 31,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3226,8 +3226,8 @@
 					"world": {
 						"x": 40,
 						"y": 40,
-						"width": 5,
-						"height": 27,
+						"width": 31,
+						"height": 31,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

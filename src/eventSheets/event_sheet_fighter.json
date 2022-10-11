@@ -587,7 +587,8 @@
 					}
 				}
 			],
-			"sid": 183646939205235
+			"sid": 183646939205235,
+			"disabled": true
 		},
 		{
 			"functionName": "Fighter_raiseShield_byPicked",
@@ -667,6 +668,7 @@
 				{
 					"callFunction": "Fighter_raiseShield_one_byAngle",
 					"sid": 648264371057556,
+					"disabled": true,
 					"parameters": [
 						"0"
 					]
@@ -674,6 +676,7 @@
 				{
 					"callFunction": "Fighter_raiseShield_one_byAngle",
 					"sid": 709071894788022,
+					"disabled": true,
 					"parameters": [
 						"90"
 					]
@@ -681,6 +684,7 @@
 				{
 					"callFunction": "Fighter_raiseShield_one_byAngle",
 					"sid": 533435355869927,
+					"disabled": true,
 					"parameters": [
 						"180"
 					]
@@ -688,9 +692,34 @@
 				{
 					"callFunction": "Fighter_raiseShield_one_byAngle",
 					"sid": 791873623363498,
+					"disabled": true,
 					"parameters": [
 						"270"
 					]
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Fighter",
+					"sid": 216467299786777,
+					"parameters": {
+						"object": "Shield",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": true
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Shield",
+					"sid": 238396892908530
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "ShieldSkin",
+					"sid": 733284213227537,
+					"parameters": {
+						"color": "FighterSkin.ColorValue"
+					}
 				}
 			],
 			"sid": 482284824563259
