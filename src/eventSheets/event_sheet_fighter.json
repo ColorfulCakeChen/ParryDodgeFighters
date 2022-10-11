@@ -291,6 +291,17 @@
 						"type": "regular",
 						"tag": "\"EnergyRestore\""
 					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "FighterSkin",
+					"sid": 330669329595505,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.25",
+						"off-time": "0.25",
+						"duration": "1"
+					}
 				}
 			],
 			"sid": 381188756354974

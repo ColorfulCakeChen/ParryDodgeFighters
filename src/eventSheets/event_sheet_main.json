@@ -57,17 +57,6 @@
 					}
 				},
 				{
-					"id": "flash",
-					"objectClass": "FighterSkin",
-					"sid": 958623387929272,
-					"behaviorType": "Flash",
-					"parameters": {
-						"on-time": "1",
-						"off-time": "1",
-						"duration": "10"
-					}
-				},
-				{
 					"id": "set-world-gravity",
 					"objectClass": "Fighter",
 					"sid": 730058667078155,

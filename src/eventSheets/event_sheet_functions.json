@@ -53,82 +53,6 @@
 			"sid": 113711322765195
 		},
 		{
-			"functionName": "EnergyBar_RefreshAll",
-			"functionDescription": "Display all Fighter's energy.",
-			"functionCategory": "EnergyBar",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [
-				{
-					"id": "for-each",
-					"objectClass": "System",
-					"sid": 644452966376446,
-					"disabled": true,
-					"parameters": {
-						"object": "EnergyBar"
-					}
-				},
-				{
-					"id": "pick-by-comparison",
-					"objectClass": "System",
-					"sid": 747293221744665,
-					"disabled": true,
-					"parameters": {
-						"object": "Fighter",
-						"expression": "Fighter.VersusAlignmentId",
-						"comparison": 0,
-						"value": "EnergyBar.VersusAlignmentId"
-					}
-				},
-				{
-					"id": "for-each",
-					"objectClass": "System",
-					"sid": 348479091862084,
-					"parameters": {
-						"object": "Fighter"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 370839405506301,
-					"disabled": true,
-					"parameters": {
-						"text": "SpriteFont.Text & \",\" & Fighter.UID"
-					}
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "EnergyBar",
-					"sid": 977881405287566,
-					"disabled": true,
-					"parameters": {
-						"color": "FighterSkin.ColorValue"
-					}
-				},
-				{
-					"id": "set-width",
-					"objectClass": "EnergyBar",
-					"sid": 145796553928036,
-					"disabled": true,
-					"parameters": {
-						"width": "Fighter.EnergyCur * EnergyBar.WidthFull / Fighter.EnergyMax"
-					}
-				},
-				{
-					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 813959456691845
-				}
-			],
-			"sid": 808783429151254,
-			"disabled": true
-		},
-		{
 			"functionName": "RemainderTimerRefresh",
 			"functionDescription": "Display the current remained seconds of the versus.",
 			"functionCategory": "RemainderTimer",
@@ -199,15 +123,6 @@
 								"object": "FighterSkin",
 								"effects": "without-effects"
 							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 600209326630828,
-							"parameters": {
-								"object": "ShieldSkin",
-								"effects": "without-effects"
-							}
 						}
 					],
 					"sid": 358295451626339
@@ -216,6 +131,15 @@
 					"eventType": "block",
 					"conditions": [],
 					"actions": [
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 689081953091880,
+							"parameters": {
+								"object": "ShieldSkin",
+								"effects": "without-effects"
+							}
+						},
 						{
 							"id": "paste-object",
 							"objectClass": "DrawingCanvas",
