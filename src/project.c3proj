@@ -104,14 +104,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Timer",
-			"name": "Timer",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
 			"author": "Scirra",

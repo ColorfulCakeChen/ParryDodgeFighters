@@ -1407,11 +1407,7 @@
 						"secondsCur": 300,
 						"secondsMax": 300
 					},
-					"behaviors": {
-						"Timer": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
 						"x": 53,
 						"y": 0,
