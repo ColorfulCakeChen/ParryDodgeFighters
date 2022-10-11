@@ -152,8 +152,8 @@
 			"Fighter_KeyDownArray",
 			"Fighter_Alignment_Action_KeyCodeArray",
 			"Browser",
-			"FighterShield",
-			"FighterShieldSkin"
+			"Shield",
+			"ShieldSkin"
 		],
 		"subfolders": []
 	},
@@ -175,8 +175,8 @@
 		},
 		{
 			"members": [
-				"FighterShield",
-				"FighterShieldSkin"
+				"Shield",
+				"ShieldSkin"
 			],
 			"selectMode": "normal"
 		}

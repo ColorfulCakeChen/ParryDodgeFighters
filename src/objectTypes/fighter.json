@@ -47,6 +47,12 @@
 			"sid": 767883363560183
 		},
 		{
+			"name": "EnergyPointsRaiseShield",
+			"type": "number",
+			"desc": "How many energy points will be used for every shield rasing.",
+			"sid": 601353115579974
+		},
+		{
 			"name": "ShootReadySeconds",
 			"type": "number",
 			"desc": "How many seconds should be waited before shooting next Projectile.",
@@ -57,6 +63,18 @@
 			"type": "boolean",
 			"desc": "True if shooting is cool down complete.",
 			"sid": 716325056570224
+		},
+		{
+			"name": "RaiseShieldReadySeconds",
+			"type": "number",
+			"desc": "How many seconds should be waited before raising next Shield.",
+			"sid": 233130173922753
+		},
+		{
+			"name": "RaiseShieldReady",
+			"type": "boolean",
+			"desc": "True if raising is cool down complete.",
+			"sid": 833887253251751
 		},
 		{
 			"name": "Acceleration",
@@ -122,9 +140,24 @@
 								"y": 0.5
 							},
 							{
-								"name": "ShieldPoint",
-								"x": 1.3333333333333333,
+								"name": "ShieldPoint_0",
+								"x": 1.0952380952380953,
 								"y": 0.5
+							},
+							{
+								"name": "ShieldPoint_90",
+								"x": 0.5,
+								"y": 1.0952380952380953
+							},
+							{
+								"name": "ShieldPoint_180",
+								"x": -0.09523809523809523,
+								"y": 0.5
+							},
+							{
+								"name": "ShieldPoint_270",
+								"x": 0.5,
+								"y": -0.09523809523809523
 							}
 						],
 						"duration": 1

@@ -205,7 +205,7 @@
 							"objectClass": "DrawingCanvas",
 							"sid": 600209326630828,
 							"parameters": {
-								"object": "FighterShieldSkin",
+								"object": "ShieldSkin",
 								"effects": "without-effects"
 							}
 						}

@@ -58,6 +58,32 @@
 			"sid": 144467237506523
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Fighter",
+					"sid": 448786972842513,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"RaiseShieldCoolDown\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fighter",
+					"sid": 220224418255187,
+					"parameters": {
+						"instance-variable": "RaiseShieldReady",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 876968769656975
+		},
+		{
 			"functionName": "Fighter_recreateAll",
 			"functionDescription": "Recreate all Fighter (hierarchy).",
 			"functionCategory": "Fighter",
@@ -75,7 +101,7 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "FighterShield",
+					"objectClass": "Shield",
 					"sid": 133864932364351
 				},
 				{
@@ -235,39 +261,6 @@
 						"type": "regular",
 						"tag": "\"EnergyRestore\""
 					}
-				},
-				{
-					"type": "comment",
-					"text": "Test Fighter Shield"
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Fighter",
-					"sid": 543704645990221,
-					"parameters": {
-						"object": "FighterShield",
-						"layer": "1",
-						"image-point": "\"ShieldPoint\"",
-						"create-hierarchy": true
-					}
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "FighterShieldSkin",
-					"sid": 614350787850825,
-					"parameters": {
-						"color": "FighterSkin.ColorValue"
-					}
-				},
-				{
-					"id": "create-revolute-joint",
-					"objectClass": "Fighter",
-					"sid": 124319769273612,
-					"behaviorType": "Physics",
-					"parameters": {
-						"this-image-point": "0",
-						"object": "FighterShield"
-					}
 				}
 			],
 			"sid": 381188756354974
@@ -298,13 +291,21 @@
 			"eventType": "function-block",
 			"conditions": [
 				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 649810944934246,
+					"parameters": {
+						"value": "abs( ForceScaleX ) + abs( ForceScaleY )"
+					}
+				},
+				{
 					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
-					"sid": 278219412522839,
+					"sid": 397422389076535,
 					"parameters": {
 						"instance-variable": "EnergyCur",
-						"comparison": 4,
-						"value": "0"
+						"comparison": 5,
+						"value": "Self.EnergyPointsThrust"
 					}
 				}
 			],
@@ -312,7 +313,16 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpriteFont",
-					"sid": 874676504366084,
+					"sid": 155787292630950,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",Thrust\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 950739740697327,
 					"disabled": true,
 					"parameters": {
 						"text": "SpriteFont.Text & \",Mass=\" & Fighter.Physics.Mass"
@@ -454,15 +464,24 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
-					"sid": 148864797386007,
+					"sid": 668741903858956,
 					"parameters": {
 						"instance-variable": "EnergyCur",
-						"comparison": 4,
-						"value": "0"
+						"comparison": 5,
+						"value": "Self.EnergyPointsShoot"
 					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 693667964373363,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",Projectile\" "
+					}
+				},
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "Fighter",
@@ -542,6 +561,163 @@
 				}
 			],
 			"sid": 748652751858314
+		},
+		{
+			"functionName": "Fighter_raiseShield_byPicked",
+			"functionDescription": "Create FighterShield at picked Fighter's ShieldPoint.",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "bRaise",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "0: No raise. 1: Raise.",
+					"sid": 524317471699662
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 642253165595899,
+					"parameters": {
+						"first-value": "bRaise",
+						"comparison": 4,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Fighter",
+					"sid": 847814309192124,
+					"parameters": {
+						"instance-variable": "RaiseShieldReady"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 720379099789838,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"comparison": 5,
+						"value": "Self.EnergyPointsRaiseShield"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 757749901958622,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",Shield\" "
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fighter",
+					"sid": 365223830571515,
+					"parameters": {
+						"instance-variable": "RaiseShieldReady",
+						"value": "false"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Fighter",
+					"sid": 379473503124952,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "Self.RaiseShieldReadySeconds",
+						"type": "once",
+						"tag": "\"RaiseShieldCoolDown\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 797082359739392,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "max( Self.EnergyCur - Self.EnergyPointsRaiseShield, 0 )"
+					}
+				},
+				{
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
+					"sid": 216082750008104
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Fighter",
+					"sid": 851995603857163,
+					"parameters": {
+						"object": "Shield",
+						"layer": "1",
+						"image-point": "\"ShieldPoint_0\"",
+						"create-hierarchy": true
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Shield",
+					"sid": 364360614037288
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "ShieldSkin",
+					"sid": 614350787850825,
+					"parameters": {
+						"color": "FighterSkin.ColorValue"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "ShieldSkin",
+					"sid": 674932708669766,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "Shield_FadeOut_Seconds"
+					}
+				},
+				{
+					"id": "create-revolute-joint",
+					"objectClass": "Fighter",
+					"sid": 124319769273612,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"this-image-point": "0",
+						"object": "Shield"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "Shield",
+					"sid": 911412182925165,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Fighter",
+						"state": "disable"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "Shield",
+					"sid": 184356697372814,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Shield",
+						"state": "disable"
+					}
+				}
+			],
+			"sid": 482284824563259
 		},
 		{
 			"functionName": "Fighter_act_byKeyDownArray",
@@ -706,6 +882,13 @@
 					"sid": 933571445248071,
 					"parameters": [
 						"Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bAttack )"
+					]
+				},
+				{
+					"callFunction": "Fighter_raiseShield_byPicked",
+					"sid": 819393557694118,
+					"parameters": [
+						"Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bParry )"
 					]
 				}
 			],

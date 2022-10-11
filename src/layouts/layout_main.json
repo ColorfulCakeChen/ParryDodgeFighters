@@ -85,8 +85,11 @@
 						"EnergyRestorePoints": 30,
 						"EnergyPointsThrust": 1,
 						"EnergyPointsShoot": 10,
+						"EnergyPointsRaiseShield": 20,
 						"ShootReadySeconds": 0.4,
 						"ShootReady": true,
+						"RaiseShieldReadySeconds": 0.4,
+						"RaiseShieldReady": true,
 						"Acceleration": 3,
 						"private_Force": 0
 					},
@@ -193,6 +196,18 @@
 											},
 											{
 												"iv": "private_Force",
+												"state": true
+											},
+											{
+												"iv": "RaiseShieldReadySeconds",
+												"state": true
+											},
+											{
+												"iv": "RaiseShieldReady",
+												"state": true
+											},
+											{
+												"iv": "EnergyPointsRaiseShield",
 												"state": true
 											}
 										]
@@ -2903,7 +2918,7 @@
 					}
 				},
 				{
-					"type": "FighterShield",
+					"type": "Shield",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
@@ -2914,16 +2929,19 @@
 					"uid": 22,
 					"instanceVariables": {},
 					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
 						"Physics": {
 							"properties": {
 								"immovable": false,
 								"collision-mask": "use-collision-polygon",
 								"prevent-rotation": false,
-								"density": 0.5,
+								"density": 1000,
 								"friction": 0.5,
 								"elasticity": 0.2,
-								"linear-damping": 0.01,
-								"angular-damping": 0.01,
+								"linear-damping": 10,
+								"angular-damping": 10,
 								"bullet": false,
 								"enabled": true
 							}
@@ -3016,6 +3034,10 @@
 												true
 											]
 										]
+									},
+									{
+										"key": "DestroyOutsideLayout",
+										"state": []
 									}
 								]
 							},
@@ -3152,10 +3174,10 @@
 						}
 					},
 					"world": {
-						"x": 32,
-						"y": 32,
-						"width": 3,
-						"height": 3,
+						"x": 40,
+						"y": 40,
+						"width": 5,
+						"height": 27,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3169,7 +3191,7 @@
 					}
 				},
 				{
-					"type": "FighterShieldSkin",
+					"type": "ShieldSkin",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3179,7 +3201,18 @@
 					},
 					"uid": 23,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 22,
 						"uid": 23,
@@ -3206,10 +3239,10 @@
 						}
 					},
 					"world": {
-						"x": 32,
-						"y": 32,
-						"width": 3,
-						"height": 3,
+						"x": 40,
+						"y": 40,
+						"width": 5,
+						"height": 27,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3219,7 +3252,8 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				}
 			],

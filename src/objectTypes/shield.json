@@ -1,10 +1,15 @@
 {
-	"name": "FighterShield",
+	"name": "Shield",
 	"plugin-id": "Sprite",
 	"sid": 478808886201472,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 550408833606122
+		},
 		{
 			"behaviorId": "Physics",
 			"name": "Physics",
@@ -17,14 +22,14 @@
 			{
 				"frames": [
 					{
-						"width": 31,
-						"height": 31,
+						"width": 5,
+						"height": 27,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6869599,
+						"imageSpriteId": 1486602,
 						"collisionPoly": {
 							"points": [
 								0.03225806451612903,
