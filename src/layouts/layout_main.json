@@ -86,7 +86,7 @@
 						"EnergyPointsShoot": 20,
 						"EnergyPointsRaiseShield": 50,
 						"ShootQuarterSeconds": 2,
-						"ShootCountDown": 3,
+						"ShootCountDown": 2,
 						"RaiseShieldQuarterSeconds": 3,
 						"RaiseShieldCountDown": 3,
 						"Acceleration": 3,

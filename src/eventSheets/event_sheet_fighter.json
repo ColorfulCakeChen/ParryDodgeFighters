@@ -13,17 +13,11 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 663651758708358,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "min( Self.EnergyCur + Self.EnergyRestorePoints, Self.EnergyMax )"
-					}
-				},
-				{
-					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 451132994615909
+					"callFunction": "Fighter_EnergyCur_add",
+					"sid": 383429838296825,
+					"parameters": [
+						"Fighter.EnergyRestorePoints"
+					]
 				},
 				{
 					"id": "set-instvar-value",
@@ -45,6 +39,41 @@
 				}
 			],
 			"sid": 193428783145905
+		},
+		{
+			"functionName": "Fighter_EnergyCur_add",
+			"functionDescription": "Increase/Decrease Fighter's EnergyCur.",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "delta",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The changed valued of EnergyCur.",
+					"sid": 406067445908474
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 859835077075329,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "max( min( Self.EnergyCur + delta, Self.EnergyMax ), 0 )"
+					}
+				},
+				{
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
+					"sid": 552717051378048
+				}
+			],
+			"sid": 880103272566958
 		},
 		{
 			"functionName": "Fighter_recreateAll",
@@ -313,17 +342,11 @@
 					}
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 552960550594776,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "max( Self.EnergyCur - Self.EnergyPointsThrust, 0 )"
-					}
-				},
-				{
-					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 624429156458684
+					"callFunction": "Fighter_EnergyCur_add",
+					"sid": 905681901895316,
+					"parameters": [
+						"-Fighter.EnergyPointsThrust"
+					]
 				},
 				{
 					"id": "apply-force",
@@ -457,17 +480,11 @@
 					}
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 380320334830322,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "max( Self.EnergyCur - Self.EnergyPointsShoot, 0 )"
-					}
-				},
-				{
-					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 263429619726964
+					"callFunction": "Fighter_EnergyCur_add",
+					"sid": 789859058456961,
+					"parameters": [
+						"-Fighter.EnergyPointsShoot"
+					]
 				},
 				{
 					"id": "spawn-another-object",
@@ -659,17 +676,11 @@
 					}
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 797082359739392,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "max( Self.EnergyCur - Self.EnergyPointsRaiseShield, 0 )"
-					}
-				},
-				{
-					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 216082750008104
+					"callFunction": "Fighter_EnergyCur_add",
+					"sid": 428344334678109,
+					"parameters": [
+						"-Fighter.EnergyPointsRaiseShield"
+					]
 				},
 				{
 					"callFunction": "Fighter_raiseShield_one_byAngle",
