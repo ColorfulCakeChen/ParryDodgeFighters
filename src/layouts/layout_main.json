@@ -84,7 +84,7 @@
 						"EnergyRestorePoints": 8,
 						"EnergyPointsThrust": 1,
 						"EnergyPointsShoot": 20,
-						"EnergyPointsRaiseShield": 100,
+						"EnergyPointsRaiseShield": 120,
 						"ShootQuarterSeconds": 2,
 						"ShootCountDown": 2,
 						"RaiseShieldQuarterSeconds": 3,
