@@ -149,7 +149,7 @@
 			"eventType": "variable",
 			"name": "Projectile_FadeOut_Seconds",
 			"type": "number",
-			"initialValue": "2",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,

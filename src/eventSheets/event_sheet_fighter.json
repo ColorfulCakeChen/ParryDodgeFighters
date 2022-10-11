@@ -110,6 +110,36 @@
 					"sid": 290382056744667
 				},
 				{
+					"id": "enabledisable-collisions",
+					"objectClass": "Shield",
+					"sid": 911412182925165,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Fighter",
+						"state": "disable"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "Shield",
+					"sid": 184356697372814,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Shield",
+						"state": "disable"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "Fighter",
+					"sid": 157104394835873,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Fighter",
+						"state": "disable"
+					}
+				},
+				{
 					"callFunction": "Fighter_create",
 					"sid": 293196134570834,
 					"parameters": [
@@ -320,24 +350,6 @@
 					}
 				},
 				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 950739740697327,
-					"disabled": true,
-					"parameters": {
-						"text": "SpriteFont.Text & \",Mass=\" & Fighter.Physics.Mass"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 902280635658129,
-					"disabled": true,
-					"parameters": {
-						"text": "SpriteFont.Text & \",ForceScaleX=\" & ForceScaleX & \",ForceScaleY=\" & ForceScaleY"
-					}
-				},
-				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
 					"sid": 552960550594776,
@@ -349,18 +361,6 @@
 				{
 					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
 					"sid": 624429156458684
-				},
-				{
-					"id": "apply-force",
-					"objectClass": "Fighter",
-					"sid": 404563629868098,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"force-x": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration * ForceScaleX",
-						"force-y": "Self.Physics.Mass * GameToPhysicsRatio * Self.Acceleration * ForceScaleY",
-						"image-point": "\"GunMuzzle\""
-					}
 				},
 				{
 					"id": "apply-force",
@@ -563,8 +563,82 @@
 			"sid": 748652751858314
 		},
 		{
+			"functionName": "Fighter_raiseShield_one_byAngle",
+			"functionDescription": "Create one side Shield at picked Fighter's specified ShieldPoint.",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "ShieldAngle",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "also determine Fighter's ShieldPoint. (0, 90, 180, 270)",
+					"sid": 977752486178701
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Fighter",
+					"sid": 354055054223949,
+					"parameters": {
+						"object": "Shield",
+						"layer": "1",
+						"image-point": "\"ShieldPoint_\" & ShieldAngle",
+						"create-hierarchy": true
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Shield",
+					"sid": 364360614037288
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "ShieldSkin",
+					"sid": 614350787850825,
+					"parameters": {
+						"color": "FighterSkin.ColorValue"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "ShieldSkin",
+					"sid": 648670211232559,
+					"parameters": {
+						"angle": "Fighter.Angle + ShieldAngle"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "ShieldSkin",
+					"sid": 674932708669766,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "Shield_FadeOut_Seconds"
+					}
+				},
+				{
+					"id": "create-revolute-joint",
+					"objectClass": "Fighter",
+					"sid": 124319769273612,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"this-image-point": "0",
+						"object": "Shield"
+					}
+				}
+			],
+			"sid": 183646939205235
+		},
+		{
 			"functionName": "Fighter_raiseShield_byPicked",
-			"functionDescription": "Create FighterShield at picked Fighter's ShieldPoint.",
+			"functionDescription": "Create Shield at picked Fighter's ShieldPoint.",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": true,
@@ -653,68 +727,32 @@
 					"sid": 216082750008104
 				},
 				{
-					"id": "spawn-another-object",
-					"objectClass": "Fighter",
-					"sid": 851995603857163,
-					"parameters": {
-						"object": "Shield",
-						"layer": "1",
-						"image-point": "\"ShieldPoint_0\"",
-						"create-hierarchy": true
-					}
+					"callFunction": "Fighter_raiseShield_one_byAngle",
+					"sid": 648264371057556,
+					"parameters": [
+						"0"
+					]
 				},
 				{
-					"id": "stop-animation",
-					"objectClass": "Shield",
-					"sid": 364360614037288
+					"callFunction": "Fighter_raiseShield_one_byAngle",
+					"sid": 709071894788022,
+					"parameters": [
+						"90"
+					]
 				},
 				{
-					"id": "set-default-color",
-					"objectClass": "ShieldSkin",
-					"sid": 614350787850825,
-					"parameters": {
-						"color": "FighterSkin.ColorValue"
-					}
+					"callFunction": "Fighter_raiseShield_one_byAngle",
+					"sid": 533435355869927,
+					"parameters": [
+						"180"
+					]
 				},
 				{
-					"id": "set-fade-out-time",
-					"objectClass": "ShieldSkin",
-					"sid": 674932708669766,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "Shield_FadeOut_Seconds"
-					}
-				},
-				{
-					"id": "create-revolute-joint",
-					"objectClass": "Fighter",
-					"sid": 124319769273612,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"this-image-point": "0",
-						"object": "Shield"
-					}
-				},
-				{
-					"id": "enabledisable-collisions",
-					"objectClass": "Shield",
-					"sid": 911412182925165,
-					"behaviorType": "Physics",
-					"parameters": {
-						"object": "Fighter",
-						"state": "disable"
-					}
-				},
-				{
-					"id": "enabledisable-collisions",
-					"objectClass": "Shield",
-					"sid": 184356697372814,
-					"behaviorType": "Physics",
-					"parameters": {
-						"object": "Shield",
-						"state": "disable"
-					}
+					"callFunction": "Fighter_raiseShield_one_byAngle",
+					"sid": 791873623363498,
+					"parameters": [
+						"270"
+					]
 				}
 			],
 			"sid": 482284824563259

@@ -84,11 +84,11 @@
 						"EnergyRestoreSeconds": 1,
 						"EnergyRestorePoints": 30,
 						"EnergyPointsThrust": 1,
-						"EnergyPointsShoot": 10,
-						"EnergyPointsRaiseShield": 20,
+						"EnergyPointsShoot": 20,
+						"EnergyPointsRaiseShield": 50,
 						"ShootReadySeconds": 0.4,
 						"ShootReady": true,
-						"RaiseShieldReadySeconds": 0.4,
+						"RaiseShieldReadySeconds": 0.8,
 						"RaiseShieldReady": true,
 						"Acceleration": 3,
 						"private_Force": 0
@@ -545,7 +545,8 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				},
 				{
