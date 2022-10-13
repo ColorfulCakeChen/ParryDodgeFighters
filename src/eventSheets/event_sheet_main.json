@@ -53,6 +53,15 @@
 					"parameters": {
 						"gravity": "PhysicsGravity"
 					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo",
+					"sid": 517361610863792,
+					"parameters": {
+						"text": "Self.testText",
+						"duration": "30"
+					}
 				}
 			],
 			"sid": 834938499052826
@@ -322,6 +331,21 @@
 				}
 			],
 			"sid": 517746990193059
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 837127205370635,
+					"parameters": {
+						"interval-seconds": "0.1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 578233672619327
 		}
 	],
 	"sid": 215625391285548

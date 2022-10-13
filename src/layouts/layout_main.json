@@ -32,6 +32,65 @@
 						],
 						"angle": 0
 					}
+				},
+				{
+					"type": "VersusInfo",
+					"properties": {
+						"text": "",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 4,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 21,
+					"instanceVariables": {
+						"testText": "EntityId 012345\nParentGenerationNo (WinCount)\n012345678901234\nOffspringGenerationNo\n\nText"
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "value-only",
+								"wave": "reverse-sawtooth",
+								"period": 100,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 40,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 64,
+						"y": 36,
+						"width": 128,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 125016299568179,

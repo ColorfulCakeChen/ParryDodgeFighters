@@ -1,0 +1,22 @@
+{
+	"name": "VersusInfo",
+	"plugin-id": "Text",
+	"sid": 251722093424849,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "testText",
+			"type": "string",
+			"desc": "",
+			"sid": 862358953755358
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 449183524618255
+		}
+	],
+	"effectTypes": []
+}
