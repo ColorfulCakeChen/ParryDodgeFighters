@@ -1450,7 +1450,7 @@
 								"density": 8,
 								"friction": 0.5,
 								"elasticity": 0.2,
-								"linear-damping": 0.01,
+								"linear-damping": 0.02,
 								"angular-damping": 10,
 								"bullet": false,
 								"enabled": true
@@ -2922,11 +2922,11 @@
 								"immovable": false,
 								"collision-mask": "use-collision-polygon",
 								"prevent-rotation": false,
-								"density": 1000,
+								"density": 100,
 								"friction": 0.5,
 								"elasticity": 0.2,
-								"linear-damping": 10,
-								"angular-damping": 10,
+								"linear-damping": 100,
+								"angular-damping": 0.02,
 								"bullet": false,
 								"enabled": true
 							}
