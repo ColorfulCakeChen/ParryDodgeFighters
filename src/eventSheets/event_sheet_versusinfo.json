@@ -23,12 +23,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 517676763063195,
+					"sid": 473464367510216,
 					"parameters": {
 						"object-to-create": "VersusInfo",
 						"layer": "0",
-						"x": "32",
-						"y": "52",
+						"x": "64",
+						"y": "72",
 						"create-hierarchy": true,
 						"template-name": "\"VersusInfoTemplate\""
 					}
@@ -68,7 +68,7 @@
 					"sid": 264010144929123
 				},
 				{
-					"name": "WinCount",
+					"name": "ParentWinCount",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "ParentGeneration's win count.",
@@ -87,9 +87,9 @@
 			"actions": [
 				{
 					"callFunction": "VersusInfo_displayText",
-					"sid": 385441704750620,
+					"sid": 225638731935068,
 					"parameters": [
-						"\"EntityId \" & EntityNo & \", Generation\" & newline & ParentGenerationNo & \" ( Win \" & WinCount & \" )\" & newline & \"vs\" & newline & OffspringGenerationNo\n"
+						"\"Entity \" & EntityNo & newline& \" ( continuous win \" & ParentWinCount & \" times )\" & newline & ParentGenerationNo & \" vs \" & OffspringGenerationNo & newline & \"Lose / Lose\"\n"
 					]
 				}
 			],

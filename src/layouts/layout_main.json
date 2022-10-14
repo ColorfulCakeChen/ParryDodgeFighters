@@ -36,7 +36,7 @@
 				{
 					"type": "VersusInfo",
 					"properties": {
-						"text": "EntityId 012345 Generation\n012345678901234 (Win 31 times)\nvs\n012345678901234\n",
+						"text": "Entity 012345\n( continuous win 31 times )\n012345678901234 vs 012345678901234\nLose / Win\n\n",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 4,
@@ -53,20 +53,20 @@
 						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "left"
+						"origin": "bottom"
 					},
 					"uid": 21,
 					"instanceVariables": {},
 					"behaviors": {
 						"Sine": {
 							"properties": {
-								"movement": "horizontal",
+								"movement": "vertical",
 								"wave": "reverse-sawtooth",
 								"period": 10,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 64,
+								"magnitude": 36,
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
@@ -323,12 +323,12 @@
 						]
 					},
 					"world": {
-						"x": 32,
-						"y": 52,
-						"width": 96,
+						"x": 64,
+						"y": 72,
+						"width": 128,
 						"height": 40,
-						"originX": 0,
-						"originY": 0.5,
+						"originX": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
