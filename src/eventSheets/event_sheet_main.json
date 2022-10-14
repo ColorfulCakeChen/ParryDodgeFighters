@@ -55,13 +55,14 @@
 					}
 				},
 				{
-					"id": "typewriter-text",
-					"objectClass": "VersusInfo",
-					"sid": 517361610863792,
-					"parameters": {
-						"text": "Self.testText",
-						"duration": "30"
-					}
+					"callFunction": "VersusInfo_displayVersusBegin",
+					"sid": 461766407877226,
+					"parameters": [
+						"\"01234\"",
+						"\"012345678901234\"",
+						"31",
+						"\"012345678901234\""
+					]
 				}
 			],
 			"sid": 834938499052826

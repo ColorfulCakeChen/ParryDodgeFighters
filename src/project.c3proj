@@ -198,7 +198,8 @@
 			"Event_Sheet_Functions",
 			"Event_Sheet_GlobalVars",
 			"Event_Sheet_Fighter",
-			"Event_Sheet_KeyCodes"
+			"Event_Sheet_KeyCodes",
+			"Event_Sheet_VersusInfo"
 		],
 		"subfolders": []
 	},

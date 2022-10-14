@@ -1,0 +1,100 @@
+{
+	"name": "Event_Sheet_VersusInfo",
+	"events": [
+		{
+			"functionName": "VersusInfo_displayText",
+			"functionDescription": "Display the text.",
+			"functionCategory": "VersusInfo",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "theText",
+					"type": "string",
+					"initialValue": "",
+					"comment": "The text to be displayed.",
+					"sid": 846746353071885
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 517676763063195,
+					"parameters": {
+						"object-to-create": "VersusInfo",
+						"layer": "0",
+						"x": "32",
+						"y": "52",
+						"create-hierarchy": true,
+						"template-name": "\"VersusInfoTemplate\""
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo",
+					"sid": 362682701080678,
+					"parameters": {
+						"text": "theText",
+						"duration": "7"
+					}
+				}
+			],
+			"sid": 660875600639807
+		},
+		{
+			"functionName": "VersusInfo_displayVersusBegin",
+			"functionDescription": "Display EntityId, ParentGenerationNo, WinCount, OffspringGenerationNo",
+			"functionCategory": "VersusInfo",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "EntityNo",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 197724928633684
+				},
+				{
+					"name": "ParentGenerationNo",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 264010144929123
+				},
+				{
+					"name": "WinCount",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "ParentGeneration's win count.",
+					"sid": 691644134796218
+				},
+				{
+					"name": "OffspringGenerationNo",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 706994915018878
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"callFunction": "VersusInfo_displayText",
+					"sid": 385441704750620,
+					"parameters": [
+						"\"EntityId \" & EntityNo & \", Generation\" & newline & ParentGenerationNo & \" ( Win \" & WinCount & \" )\" & newline & \"vs\" & newline & OffspringGenerationNo\n"
+					]
+				}
+			],
+			"sid": 971280601216564
+		}
+	],
+	"sid": 446378347605818
+}

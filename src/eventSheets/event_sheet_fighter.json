@@ -102,6 +102,11 @@
 					"sid": 290382056744667
 				},
 				{
+					"id": "destroy",
+					"objectClass": "VersusInfo",
+					"sid": 229834716430298
+				},
+				{
 					"id": "enabledisable-collisions",
 					"objectClass": "Shield",
 					"sid": 911412182925165,
