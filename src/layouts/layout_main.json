@@ -58,7 +58,17 @@
 					"uid": 21,
 					"instanceVariables": {},
 					"behaviors": {
-						"Sine": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 10,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine_DownToUp": {
 							"properties": {
 								"movement": "vertical",
 								"wave": "reverse-sawtooth",
@@ -68,16 +78,6 @@
 								"period-offset-random": 0,
 								"magnitude": 36,
 								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0,
-								"wait-time": 0,
-								"fade-out-time": 10,
-								"destroy": true,
 								"enabled": true,
 								"live-preview": false
 							}
@@ -163,7 +163,7 @@
 								"id": "behavior",
 								"component": [
 									{
-										"key": "Sine",
+										"key": "Sine_DownToUp",
 										"state": [
 											[
 												"movement",
@@ -1756,7 +1756,7 @@
 								"density": 8,
 								"friction": 0.5,
 								"elasticity": 0.2,
-								"linear-damping": 0.02,
+								"linear-damping": 0.01,
 								"angular-damping": 10,
 								"bullet": false,
 								"enabled": true
