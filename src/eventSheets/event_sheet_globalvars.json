@@ -185,6 +185,20 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Versus_Parent_AlignmentId",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The numeric identifier of alignment played by parent (not offspring) (in a versus) now.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 890993919046831
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "Fighter_PlayerControllable",
 			"type": "boolean",
 			"initialValue": "true",

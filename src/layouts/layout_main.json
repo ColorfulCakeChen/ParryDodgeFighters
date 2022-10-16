@@ -163,6 +163,31 @@
 								"id": "behavior",
 								"component": [
 									{
+										"key": "Fade",
+										"state": [
+											[
+												"fade-in-time",
+												true
+											],
+											[
+												"wait-time",
+												true
+											],
+											[
+												"fade-out-time",
+												true
+											],
+											[
+												"destroy",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
 										"key": "Sine_DownToUp",
 										"state": [
 											[
@@ -195,31 +220,6 @@
 											],
 											[
 												"magnitude-random",
-												true
-											],
-											[
-												"enabled",
-												true
-											]
-										]
-									},
-									{
-										"key": "Fade",
-										"state": [
-											[
-												"fade-in-time",
-												true
-											],
-											[
-												"wait-time",
-												true
-											],
-											[
-												"fade-out-time",
-												true
-											],
-											[
-												"destroy",
 												true
 											],
 											[
