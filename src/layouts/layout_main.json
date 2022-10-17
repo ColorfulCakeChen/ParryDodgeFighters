@@ -1908,8 +1908,8 @@
 					},
 					"uid": 13,
 					"instanceVariables": {
-						"secondsCur": 300,
-						"secondsMax": 300
+						"secondsCur": 180,
+						"secondsMax": 180
 					},
 					"behaviors": {},
 					"world": {
