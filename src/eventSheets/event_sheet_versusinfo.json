@@ -27,7 +27,7 @@
 					"name": "alignment0_WinCount",
 					"type": "number",
 					"initialValue": "-1",
-					"comment": "-1 means Offspring (i.e. not Parent).",
+					"comment": "-1 means Offspring (i.e. not Parent) because offspring has no win count.",
 					"sid": 181272239057922
 				},
 				{
@@ -48,7 +48,7 @@
 					"name": "alignment1_WinCount",
 					"type": "number",
 					"initialValue": "-1",
-					"comment": "-1 means Offspring (i.e. not Parent).",
+					"comment": "-1 means Offspring (i.e. not Parent) because offspring has no win count.",
 					"sid": 598487202717835
 				},
 				{
@@ -57,6 +57,20 @@
 					"initialValue": "",
 					"comment": "e.g. \"Win\" or \"Lose\".",
 					"sid": 120998808030088
+				},
+				{
+					"name": "y_begin",
+					"type": "number",
+					"initialValue": "72",
+					"comment": "The beginning display position Y.",
+					"sid": 597028552807797
+				},
+				{
+					"name": "y_end",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The ending display position Y.",
+					"sid": 114460984756404
 				},
 				{
 					"name": "typewriterSeconds",
@@ -72,12 +86,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 473464367510216,
+					"sid": 168885580841288,
 					"parameters": {
 						"object-to-create": "VersusInfo",
 						"layer": "0",
 						"x": "64",
-						"y": "72",
+						"y": "y_begin",
 						"create-hierarchy": true,
 						"template-name": "\"VersusInfoTemplate\""
 					}
@@ -126,11 +140,11 @@
 				{
 					"id": "move-to-position",
 					"objectClass": "VersusInfo",
-					"sid": 739277906339056,
+					"sid": 308500337203171,
 					"behaviorType": "MoveTo_BottomToTop",
 					"parameters": {
 						"x": "64",
-						"y": "0",
+						"y": "y_end",
 						"mode": "direct"
 					}
 				}
