@@ -29,6 +29,13 @@
 					"initialValue": "",
 					"comment": "Text for alignment 1.",
 					"sid": 217602123851684
+				},
+				{
+					"name": "typewriterSeconds",
+					"type": "number",
+					"initialValue": "4",
+					"comment": "The time seconds to display text.",
+					"sid": 833378806395281
 				}
 			],
 			"eventType": "function-block",
@@ -48,30 +55,40 @@
 					}
 				},
 				{
-					"id": "typewriter-text",
+					"id": "set-text",
 					"objectClass": "VersusInfo",
-					"sid": 362682701080678,
+					"sid": 410252580040813,
 					"parameters": {
-						"text": "textMain",
-						"duration": "7"
+						"text": "textMain"
 					}
 				},
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 153087331325065,
+					"sid": 122214774643024,
 					"parameters": {
 						"text": "textAlignment0",
-						"duration": "7"
+						"duration": "typewriterSeconds"
 					}
 				},
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 716908164288256,
+					"sid": 559256734253319,
 					"parameters": {
 						"text": "textAlignment1",
-						"duration": "7"
+						"duration": "typewriterSeconds"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "VersusInfo",
+					"sid": 739277906339056,
+					"behaviorType": "MoveTo_BottomToTop",
+					"parameters": {
+						"x": "64",
+						"y": "0",
+						"mode": "direct"
 					}
 				}
 			],
@@ -123,7 +140,8 @@
 					"parameters": [
 						"\"Entity \" & EntityNo & newline & newline & \" vs \"\n",
 						"ParentGenerationNo & newline & \" ( win \" & ParentWinCount & \" times )\" & newline & \"Lose\"",
-						"OffspringGenerationNo & newline & newline & \"Lose\""
+						"OffspringGenerationNo & newline & newline & \"Lose\"",
+						"7"
 					]
 				}
 			],

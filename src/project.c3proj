@@ -128,8 +128,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false

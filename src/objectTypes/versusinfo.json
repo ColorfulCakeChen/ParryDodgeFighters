@@ -11,9 +11,9 @@
 			"sid": 978152027165916
 		},
 		{
-			"behaviorId": "Sin",
-			"name": "Sine_DownToUp",
-			"sid": 449183524618255
+			"behaviorId": "MoveTo",
+			"name": "MoveTo_BottomToTop",
+			"sid": 407810490359633
 		}
 	],
 	"effectTypes": []

@@ -68,18 +68,15 @@
 								"live-preview": false
 							}
 						},
-						"Sine_DownToUp": {
+						"MoveTo_BottomToTop": {
 							"properties": {
-								"movement": "vertical",
-								"wave": "reverse-sawtooth",
-								"period": 10,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 36,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
+								"max-speed": 4,
+								"acceleration": 0,
+								"deceleration": 0,
+								"rotate-speed": 0,
+								"set-angle": false,
+								"stop-on-solids": false,
+								"enabled": true
 							}
 						}
 					},
@@ -188,38 +185,30 @@
 										]
 									},
 									{
-										"key": "Sine_DownToUp",
+										"key": "MoveTo_BottomToTop",
 										"state": [
 											[
-												"movement",
+												"max-speed",
 												true
 											],
 											[
-												"wave",
+												"acceleration",
 												true
 											],
 											[
-												"period",
+												"deceleration",
 												true
 											],
 											[
-												"period-random",
+												"rotate-speed",
 												true
 											],
 											[
-												"period-offset",
+												"set-angle",
 												true
 											],
 											[
-												"period-offset-random",
-												true
-											],
-											[
-												"magnitude",
-												true
-											],
-											[
-												"magnitude-random",
+												"stop-on-solids",
 												true
 											],
 											[
@@ -361,7 +350,7 @@
 							"h": true,
 							"a": true,
 							"d": true,
-							"sm": "normal"
+							"sm": "all"
 						},
 						"preview": {
 							"transformX": 0,
@@ -377,7 +366,7 @@
 					},
 					"world": {
 						"x": 64,
-						"y": 53,
+						"y": 112,
 						"width": 128,
 						"height": 36,
 						"originX": 0.5,
@@ -1724,7 +1713,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 0,
-						"y": 80,
+						"y": 32,
 						"width": 128,
 						"height": 16,
 						"originX": 0,
@@ -3663,7 +3652,7 @@
 					},
 					"world": {
 						"x": 0,
-						"y": 36,
+						"y": 95,
 						"width": 64,
 						"height": 36,
 						"originX": 0,
@@ -3741,7 +3730,7 @@
 					},
 					"world": {
 						"x": 64,
-						"y": 36,
+						"y": 95,
 						"width": 64,
 						"height": 36,
 						"originX": 0,
