@@ -2,7 +2,7 @@
 	"name": "Event_Sheet_VersusInfo",
 	"events": [
 		{
-			"functionName": "VersusInfo_displayText",
+			"functionName": "VersusInfo_display",
 			"functionDescription": "Display the text.",
 			"functionCategory": "VersusInfo",
 			"functionReturnType": "none",
@@ -10,25 +10,53 @@
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
-					"name": "textMain",
+					"name": "EntityNo",
 					"type": "string",
 					"initialValue": "",
 					"comment": "Text for middle main info.",
 					"sid": 846746353071885
 				},
 				{
-					"name": "textAlignment0",
+					"name": "alignment0_GenerationNo",
 					"type": "string",
 					"initialValue": "",
-					"comment": "Text for alignment 0.",
-					"sid": 519971375267384
+					"comment": "Alignment0's generation number.",
+					"sid": 177329543390289
 				},
 				{
-					"name": "textAlignment1",
+					"name": "alignment0_WinCount",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "-1 means Offspring (i.e. not Parent).",
+					"sid": 181272239057922
+				},
+				{
+					"name": "alignment0_Result",
 					"type": "string",
 					"initialValue": "",
-					"comment": "Text for alignment 1.",
-					"sid": 217602123851684
+					"comment": "e.g. \"Win\" or \"Lose\".",
+					"sid": 955525845641826
+				},
+				{
+					"name": "alignment1_GenerationNo",
+					"type": "string",
+					"initialValue": "",
+					"comment": "Alignment1's generation number.",
+					"sid": 924977186660490
+				},
+				{
+					"name": "alignment1_WinCount",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "-1 means Offspring (i.e. not Parent).",
+					"sid": 598487202717835
+				},
+				{
+					"name": "alignment1_Result",
+					"type": "string",
+					"initialValue": "",
+					"comment": "e.g. \"Win\" or \"Lose\".",
+					"sid": 120998808030088
 				},
 				{
 					"name": "typewriterSeconds",
@@ -73,26 +101,26 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo",
-					"sid": 166949963710120,
+					"sid": 944978331014210,
 					"parameters": {
-						"text": "textMain",
+						"text": "\"Entity \" & EntityNo & newline & newline & \" vs \"",
 						"duration": "typewriterSeconds"
 					}
 				},
 				{
 					"id": "set-text",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 325838849920420,
+					"sid": 226822859481046,
 					"parameters": {
-						"text": "textAlignment0"
+						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win -1 times )\", \"\" ) & newline & alignment0_Result"
 					}
 				},
 				{
 					"id": "set-text",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 698012904246203,
+					"sid": 855579065414021,
 					"parameters": {
-						"text": "textAlignment1"
+						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win -1 times )\", \"\" ) & newline & alignment1_Result"
 					}
 				},
 				{
@@ -108,59 +136,6 @@
 				}
 			],
 			"sid": 660875600639807
-		},
-		{
-			"functionName": "VersusInfo_displayVersusBegin",
-			"functionDescription": "Display EntityId, ParentGenerationNo, WinCount, OffspringGenerationNo",
-			"functionCategory": "VersusInfo",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [
-				{
-					"name": "EntityNo",
-					"type": "string",
-					"initialValue": "",
-					"comment": "",
-					"sid": 197724928633684
-				},
-				{
-					"name": "ParentGenerationNo",
-					"type": "string",
-					"initialValue": "",
-					"comment": "",
-					"sid": 264010144929123
-				},
-				{
-					"name": "ParentWinCount",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "ParentGeneration's win count.",
-					"sid": 691644134796218
-				},
-				{
-					"name": "OffspringGenerationNo",
-					"type": "string",
-					"initialValue": "",
-					"comment": "",
-					"sid": 706994915018878
-				}
-			],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"callFunction": "VersusInfo_displayText",
-					"sid": 850702669556901,
-					"parameters": [
-						"\"Entity \" & EntityNo & newline & newline & \" vs \"",
-						"ParentGenerationNo & newline & \" ( win \" & ParentWinCount & \" times )\" & newline & \"Win\"",
-						"OffspringGenerationNo & newline & newline & \"Lose\"",
-						"7"
-					]
-				}
-			],
-			"sid": 971280601216564
 		}
 	],
 	"sid": 446378347605818

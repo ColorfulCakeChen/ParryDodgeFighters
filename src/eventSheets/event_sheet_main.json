@@ -55,13 +55,17 @@
 					}
 				},
 				{
-					"callFunction": "VersusInfo_displayVersusBegin",
-					"sid": 461766407877226,
+					"callFunction": "VersusInfo_display",
+					"sid": 470889125557800,
 					"parameters": [
 						"\"01234\"",
 						"\"012345678901234\"",
 						"31",
-						"\"012345678901234\""
+						"\"Win\"",
+						"\"012345678901234\"",
+						"-1",
+						"\"Lose\"",
+						"7"
 					]
 				}
 			],
