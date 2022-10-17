@@ -3,7 +3,20 @@
 	"plugin-id": "Text",
 	"sid": 251722093424849,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "mode",
+			"type": "string",
+			"desc": "\"versus_start\" or \"versus_finish\". The mode if this VersusInfo.",
+			"sid": 634247855760258
+		},
+		{
+			"name": "mode_detected",
+			"type": "boolean",
+			"desc": "true, if the VersusInfo.mode has been detected by script.",
+			"sid": 203334711671176
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Fade",
@@ -12,7 +25,7 @@
 		},
 		{
 			"behaviorId": "MoveTo",
-			"name": "MoveTo_BottomToTop",
+			"name": "MoveTo",
 			"sid": 407810490359633
 		}
 	],

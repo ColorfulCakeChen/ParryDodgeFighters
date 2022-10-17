@@ -59,6 +59,13 @@
 					"sid": 120998808030088
 				},
 				{
+					"name": "VersusInfo_mode",
+					"type": "string",
+					"initialValue": "",
+					"comment": "\"start\" or \"finish\". This will be set to VersusInfo.mode",
+					"sid": 879721431846643
+				},
+				{
 					"name": "y_begin",
 					"type": "number",
 					"initialValue": "72",
@@ -105,6 +112,15 @@
 					}
 				},
 				{
+					"id": "set-instvar-value",
+					"objectClass": "VersusInfo",
+					"sid": 650255061597010,
+					"parameters": {
+						"instance-variable": "mode",
+						"value": "VersusInfo_mode"
+					}
+				},
+				{
 					"id": "set-font-color",
 					"objectClass": "VersusInfo_Alignment1",
 					"sid": 402177401146884,
@@ -141,7 +157,7 @@
 					"id": "move-to-position",
 					"objectClass": "VersusInfo",
 					"sid": 308500337203171,
-					"behaviorType": "MoveTo_BottomToTop",
+					"behaviorType": "MoveTo",
 					"parameters": {
 						"x": "64",
 						"y": "y_end",

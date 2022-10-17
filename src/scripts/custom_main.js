@@ -22,4 +22,19 @@ async function OnBeforeProjectStart(runtime)
 function Tick(runtime)
 {
 	// Code to run every tick
+	let VersusInfo_instance = runtime.objects.VersusInfo.getFirstInstance();
+// 	let VersusInfo_Alignment0_instance
+// 	  = runtime.objects.VersusInfo_Alignment0.getFirstInstance();
+// 	let VersusInfo_Alignment1_instance
+// 	  = runtime.objects.VersusInfo_Alignment1.getFirstInstance();
+	if ( ( VersusInfo_instance ) && ( !VersusInfo_instance.instVars.mode_detected ) )
+		if ( VersusInfo_instance.instVars.mode == "start" ) {
+			console.log( "VersusInfo: start...");
+			VersusInfo_instance.instVars.mode_detected = true;
+			//VersusInfo_instance.addEventListener( "destroy", )
+		} else if ( VersusInfo_instance.instVars.mode == "finish" ) {
+			console.log( "VersusInfo: finish.");
+			VersusInfo_instance.instVars.mode_detected = true;
+		} 
+		
 }

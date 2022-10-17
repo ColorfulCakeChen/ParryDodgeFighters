@@ -56,7 +56,10 @@
 						"origin": "bottom"
 					},
 					"uid": 21,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"mode": "",
+						"mode_detected": false
+					},
 					"behaviors": {
 						"Fade": {
 							"properties": {
@@ -68,7 +71,7 @@
 								"live-preview": false
 							}
 						},
-						"MoveTo_BottomToTop": {
+						"MoveTo": {
 							"properties": {
 								"max-speed": 4,
 								"acceleration": 0,
@@ -152,7 +155,16 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "mode",
+												"state": true
+											},
+											{
+												"iv": "mode_detected",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -185,7 +197,7 @@
 										]
 									},
 									{
-										"key": "MoveTo_BottomToTop",
+										"key": "MoveTo",
 										"state": [
 											[
 												"max-speed",
