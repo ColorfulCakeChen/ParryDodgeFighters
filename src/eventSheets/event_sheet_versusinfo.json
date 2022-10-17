@@ -33,7 +33,7 @@
 				{
 					"name": "typewriterSeconds",
 					"type": "number",
-					"initialValue": "2",
+					"initialValue": "7",
 					"comment": "The time seconds to display text.",
 					"sid": 833378806395281
 				}
@@ -151,7 +151,7 @@
 			"actions": [
 				{
 					"callFunction": "VersusInfo_displayText",
-					"sid": 590503366191274,
+					"sid": 675141887791701,
 					"parameters": [
 						"\"Entity \" & EntityNo & newline & newline & \" vs \"\n",
 						"ParentGenerationNo & newline & \" ( win \" & ParentWinCount & \" times )\" & newline & \"Lose\"",
