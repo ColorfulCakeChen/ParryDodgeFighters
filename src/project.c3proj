@@ -154,7 +154,9 @@
 			"Browser",
 			"Shield",
 			"ShieldSkin",
-			"VersusInfo"
+			"VersusInfo",
+			"VersusInfo_Alignment0",
+			"VersusInfo_Alignment1"
 		],
 		"subfolders": []
 	},

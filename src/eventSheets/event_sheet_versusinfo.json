@@ -10,11 +10,25 @@
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
-					"name": "theText",
+					"name": "textMain",
 					"type": "string",
 					"initialValue": "",
-					"comment": "The text to be displayed.",
+					"comment": "Text for middle main info.",
 					"sid": 846746353071885
+				},
+				{
+					"name": "textAlignment0",
+					"type": "string",
+					"initialValue": "",
+					"comment": "Text for alignment 0.",
+					"sid": 519971375267384
+				},
+				{
+					"name": "textAlignment1",
+					"type": "string",
+					"initialValue": "",
+					"comment": "Text for alignment 1.",
+					"sid": 217602123851684
 				}
 			],
 			"eventType": "function-block",
@@ -38,7 +52,25 @@
 					"objectClass": "VersusInfo",
 					"sid": 362682701080678,
 					"parameters": {
-						"text": "theText",
+						"text": "textMain",
+						"duration": "7"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 153087331325065,
+					"parameters": {
+						"text": "textAlignment0",
+						"duration": "7"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 716908164288256,
+					"parameters": {
+						"text": "textAlignment1",
 						"duration": "7"
 					}
 				}
@@ -87,9 +119,11 @@
 			"actions": [
 				{
 					"callFunction": "VersusInfo_displayText",
-					"sid": 225638731935068,
+					"sid": 590503366191274,
 					"parameters": [
-						"\"Entity \" & EntityNo & newline& \" ( continuous win \" & ParentWinCount & \" times )\" & newline & ParentGenerationNo & \" vs \" & OffspringGenerationNo & newline & \"Lose / Lose\"\n"
+						"\"Entity \" & EntityNo & newline & newline & \" vs \"\n",
+						"ParentGenerationNo & newline & \" ( win \" & ParentWinCount & \" times )\" & newline & \"Lose\"",
+						"OffspringGenerationNo & newline & newline & \"Lose\""
 					]
 				}
 			],

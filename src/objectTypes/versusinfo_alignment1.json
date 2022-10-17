@@ -1,0 +1,15 @@
+{
+	"name": "VersusInfo_Alignment1",
+	"plugin-id": "Text",
+	"sid": 441362003310611,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 845636092043808
+		}
+	],
+	"effectTypes": []
+}
