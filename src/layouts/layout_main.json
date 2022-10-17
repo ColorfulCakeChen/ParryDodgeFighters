@@ -384,7 +384,7 @@
 				{
 					"type": "VersusInfo_Alignment0",
 					"properties": {
-						"text": "012345678901234\n( win 31 times )\nLose",
+						"text": "012345678901234\n( win 3100000000 times )\nWin",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 4,
@@ -444,9 +444,9 @@
 					},
 					"world": {
 						"x": 0,
-						"y": 95,
+						"y": 90,
 						"width": 64,
-						"height": 36,
+						"height": 45,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -462,7 +462,7 @@
 				{
 					"type": "VersusInfo_Alignment1",
 					"properties": {
-						"text": "012345678901234\n\nWin",
+						"text": "012345678901234\n\nLose",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 4,
@@ -522,9 +522,9 @@
 					},
 					"world": {
 						"x": 64,
-						"y": 95,
+						"y": 90,
 						"width": 64,
-						"height": 36,
+						"height": 45,
 						"originX": 0,
 						"originY": 0,
 						"color": [
