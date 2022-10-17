@@ -354,6 +354,19 @@
 				}
 			],
 			"sid": 517746990193059
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "VersusInfo",
+					"sid": 774604639672744,
+					"disabled": true
+				}
+			],
+			"actions": [],
+			"sid": 250003578958156
 		}
 	],
 	"sid": 215625391285548

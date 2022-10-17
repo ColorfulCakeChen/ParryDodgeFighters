@@ -34,7 +34,7 @@
 					"name": "alignment0_Result",
 					"type": "string",
 					"initialValue": "",
-					"comment": "e.g. \"Win\" or \"Lose\".",
+					"comment": "e.g. \" \" or \"Win\" or \"Lose\" or \"Draw\".",
 					"sid": 955525845641826
 				},
 				{
@@ -55,7 +55,7 @@
 					"name": "alignment1_Result",
 					"type": "string",
 					"initialValue": "",
-					"comment": "e.g. \"Win\" or \"Lose\".",
+					"comment": "e.g. \" \" or \"Win\" or \"Lose\" or \"Draw\".",
 					"sid": 120998808030088
 				},
 				{
