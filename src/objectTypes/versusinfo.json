@@ -7,7 +7,7 @@
 		{
 			"name": "mode",
 			"type": "string",
-			"desc": "\"versus_start\" or \"versus_finish\". The mode if this VersusInfo.",
+			"desc": "\"start\" or \"finish\". It means the versus is starting or finished.",
 			"sid": 634247855760258
 		},
 		{
