@@ -33,7 +33,7 @@
 				{
 					"name": "typewriterSeconds",
 					"type": "number",
-					"initialValue": "4",
+					"initialValue": "2",
 					"comment": "The time seconds to display text.",
 					"sid": 833378806395281
 				}
@@ -55,29 +55,44 @@
 					}
 				},
 				{
-					"id": "set-text",
-					"objectClass": "VersusInfo",
-					"sid": 410252580040813,
-					"parameters": {
-						"text": "textMain"
-					}
-				},
-				{
-					"id": "typewriter-text",
+					"id": "set-font-color",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 122214774643024,
+					"sid": 245491185927891,
 					"parameters": {
-						"text": "textAlignment0",
-						"duration": "typewriterSeconds"
+						"color": "rgbEx255( Alignment0_Fighter_Color_R, Alignment0_Fighter_Color_G, Alignment0_Fighter_Color_B )"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 402177401146884,
+					"parameters": {
+						"color": "rgbEx255( Alignment1_Fighter_Color_R, Alignment1_Fighter_Color_G, Alignment1_Fighter_Color_B )"
 					}
 				},
 				{
 					"id": "typewriter-text",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 559256734253319,
+					"objectClass": "VersusInfo",
+					"sid": 166949963710120,
 					"parameters": {
-						"text": "textAlignment1",
+						"text": "textMain",
 						"duration": "typewriterSeconds"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 325838849920420,
+					"parameters": {
+						"text": "textAlignment0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 698012904246203,
+					"parameters": {
+						"text": "textAlignment1"
 					}
 				},
 				{

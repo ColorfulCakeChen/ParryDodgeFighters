@@ -62,7 +62,7 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 0,
-								"fade-out-time": 10,
+								"fade-out-time": 15,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -3618,7 +3618,7 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 0,
-								"fade-out-time": 10,
+								"fade-out-time": 15,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -3696,7 +3696,7 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 0,
-								"fade-out-time": 10,
+								"fade-out-time": 15,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
