@@ -3793,18 +3793,18 @@
 			"type": "Fighter_KeyDownArray",
 			"properties": {
 				"width": 150,
-				"height": 5,
+				"height": 1,
 				"depth": 1
 			},
 			"uid": 15,
 			"instanceVariables": {}
 		},
 		{
-			"type": "Fighter_Alignment_Action_KeyCodeArray",
+			"type": "Fighter_Alignment_Action_KeyInfoArray",
 			"properties": {
 				"width": 2,
 				"height": 6,
-				"depth": 1
+				"depth": 5
 			},
 			"uid": 16,
 			"instanceVariables": {}
