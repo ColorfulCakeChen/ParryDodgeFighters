@@ -485,7 +485,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyInfoIndex_KeyCode",
+			"name": "ActionInfoIndex_KeyCode",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -495,7 +495,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyInfoIndex_Dodge_ForceScaleX",
+			"name": "ActionInfoIndex_Dodge_ForceScaleX",
 			"type": "number",
 			"initialValue": "1",
 			"comment": "",
@@ -505,7 +505,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyInfoIndex_Dodge_ForceScaleY",
+			"name": "ActionInfoIndex_Dodge_ForceScaleY",
 			"type": "number",
 			"initialValue": "2",
 			"comment": "",
@@ -515,7 +515,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyInfoIndex_bAttack",
+			"name": "ActionInfoIndex_bAttack",
 			"type": "number",
 			"initialValue": "3",
 			"comment": "",
@@ -525,7 +525,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "KeyInfoIndex_bParry",
+			"name": "ActionInfoIndex_bParry",
 			"type": "number",
 			"initialValue": "4",
 			"comment": "",
@@ -600,7 +600,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "Fighter_Alignment_Action_KeyInfoArray\n[AlignmentId][0][0]: moving Left key code\n[AlignmentId][1][0]: moving Up key code\n[AlignmentId][2][0]: moving Right key code\n[AlignmentId][3][0]: moving Down key code\n[AlignmentId][4][0]: attack key code\n[AlignmentId][5][0]: parry key code"
+					"text": "Fighter_Alignment_Action_InfoArray\n[AlignmentId][0][0]: moving Left key code\n[AlignmentId][1][0]: moving Up key code\n[AlignmentId][2][0]: moving Right key code\n[AlignmentId][3][0]: moving Down key code\n[AlignmentId][4][0]: attack key code\n[AlignmentId][5][0]: parry key code"
 				},
 				{
 					"type": "comment",
@@ -608,67 +608,67 @@
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 976104035373634,
 					"parameters": {
 						"x": "0",
 						"y": "Fighter_ActionId_DodgeLeft",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 189130456286288,
 					"parameters": {
 						"x": "0",
 						"y": "Fighter_ActionId_DodgeUp",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 995466648198690,
 					"parameters": {
 						"x": "0",
 						"y": "Fighter_ActionId_DodgeRight",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 465177990559907,
 					"parameters": {
 						"x": "0",
 						"y": "Fighter_ActionId_DodgeDown",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 550886527431853,
 					"parameters": {
 						"x": "0",
 						"y": "Fighter_ActionId_Attack",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_Space"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 167608467194565,
 					"parameters": {
 						"x": "0",
 						"y": "Fighter_ActionId_Parry",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_Z"
 					}
 				},
@@ -678,67 +678,67 @@
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 217220893262844,
 					"parameters": {
 						"x": "1",
 						"y": "Fighter_ActionId_DodgeLeft",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_NumPad_4_ArrowLeft"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 843648795436696,
 					"parameters": {
 						"x": "1",
 						"y": "Fighter_ActionId_DodgeUp",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_NumPad_8_ArrowUp"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 226655476956630,
 					"parameters": {
 						"x": "1",
 						"y": "Fighter_ActionId_DodgeRight",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_NumPad_6_ArrowRight"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 501167914566869,
 					"parameters": {
 						"x": "1",
 						"y": "Fighter_ActionId_DodgeDown",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_NumPad_2_ArrowDown"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 495815633379632,
 					"parameters": {
 						"x": "1",
 						"y": "Fighter_ActionId_Attack",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_NumPad_0_Insert"
 					}
 				},
 				{
 					"id": "set-at-xyz",
-					"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+					"objectClass": "Fighter_Alignment_Action_InfoArray",
 					"sid": 148062583700077,
 					"parameters": {
 						"x": "1",
 						"y": "Fighter_ActionId_Parry",
-						"z": "KeyInfoIndex_KeyCode",
+						"z": "ActionInfoIndex_KeyCode",
 						"value": "KeyCode_NumPad_Dot_Delete"
 					}
 				}
@@ -755,7 +755,7 @@
 							"parameters": {
 								"name": "\"AlignmentId\"",
 								"start-index": "0",
-								"end-index": "Fighter_Alignment_Action_KeyInfoArray.Width - 1"
+								"end-index": "Fighter_Alignment_Action_InfoArray.Width - 1"
 							}
 						}
 					],
@@ -777,7 +777,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "local_keyCode_DodgeLeft_UnUsed",
-								"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, Fighter_ActionId_DodgeLeft )"
+								"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, Fighter_ActionId_DodgeLeft )"
 							}
 						},
 						{
@@ -787,7 +787,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "local_keyCode_DodgeUp_UnUsed",
-								"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, Fighter_ActionId_DodgeUp )"
+								"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, Fighter_ActionId_DodgeUp )"
 							}
 						},
 						{
@@ -797,7 +797,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "local_keyCode_DodgeRight_UnUsed",
-								"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, Fighter_ActionId_DodgeRight )"
+								"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, Fighter_ActionId_DodgeRight )"
 							}
 						},
 						{
@@ -807,7 +807,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "local_keyCode_DodgeDown_UnUsed",
-								"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, Fighter_ActionId_DodgeDown )"
+								"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, Fighter_ActionId_DodgeDown )"
 							}
 						},
 						{
@@ -817,7 +817,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "local_keyCode_Attack_UnUsed",
-								"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, Fighter_ActionId_Attack )"
+								"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, Fighter_ActionId_Attack )"
 							}
 						},
 						{
@@ -827,7 +827,7 @@
 							"disabled": true,
 							"parameters": {
 								"variable": "local_keyCode_Parry_UnUsed",
-								"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, Fighter_ActionId_Parry )"
+								"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, Fighter_ActionId_Parry )"
 							}
 						},
 						{
@@ -841,7 +841,7 @@
 							"disabled": true,
 							"parameters": {
 								"x": "local_keyCode_DodgeLeft_UnUsed",
-								"y": "KeyInfoIndex_Dodge_ForceScaleX",
+								"y": "ActionInfoIndex_Dodge_ForceScaleX",
 								"value": "-1"
 							}
 						},
@@ -852,7 +852,7 @@
 							"disabled": true,
 							"parameters": {
 								"x": "local_keyCode_DodgeUp_UnUsed",
-								"y": "KeyInfoIndex_Dodge_ForceScaleY",
+								"y": "ActionInfoIndex_Dodge_ForceScaleY",
 								"value": "-1"
 							}
 						},
@@ -863,7 +863,7 @@
 							"disabled": true,
 							"parameters": {
 								"x": "local_keyCode_DodgeRight_UnUsed",
-								"y": "KeyInfoIndex_Dodge_ForceScaleX",
+								"y": "ActionInfoIndex_Dodge_ForceScaleX",
 								"value": "1"
 							}
 						},
@@ -874,7 +874,7 @@
 							"disabled": true,
 							"parameters": {
 								"x": "local_keyCode_DodgeDown_UnUsed",
-								"y": "KeyInfoIndex_Dodge_ForceScaleY",
+								"y": "ActionInfoIndex_Dodge_ForceScaleY",
 								"value": "1"
 							}
 						},
@@ -885,7 +885,7 @@
 							"disabled": true,
 							"parameters": {
 								"x": "local_keyCode_Attack_UnUsed",
-								"y": "KeyInfoIndex_bAttack",
+								"y": "ActionInfoIndex_bAttack",
 								"value": "1"
 							}
 						},
@@ -896,7 +896,7 @@
 							"disabled": true,
 							"parameters": {
 								"x": "local_keyCode_Parry_UnUsed",
-								"y": "KeyInfoIndex_bParry",
+								"y": "ActionInfoIndex_bParry",
 								"value": "1"
 							}
 						},
@@ -911,71 +911,71 @@
 						},
 						{
 							"type": "comment",
-							"text": "Fighter_Alignment_Action_KeyCodeArray\n[AlignmentId][ActionId][0]: KeyCode\n[AlignmentId][ActionId][1]: ForceScaleX\n[AlignmentId][ActionId][2]: ForceScaleY\n[AlignmentId][ActionId][3]: If 1, attack.\n[AlignmentId][ActionId][4]: If 1, parry."
+							"text": "Fighter_Alignment_Action_InfoArray\n[AlignmentId][ActionId][0]: KeyCode\n[AlignmentId][ActionId][1]: ForceScaleX\n[AlignmentId][ActionId][2]: ForceScaleY\n[AlignmentId][ActionId][3]: If 1, attack.\n[AlignmentId][ActionId][4]: If 1, parry."
 						},
 						{
 							"id": "set-at-xyz",
-							"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+							"objectClass": "Fighter_Alignment_Action_InfoArray",
 							"sid": 875058720194313,
 							"parameters": {
 								"x": "local_alignmentId",
 								"y": "Fighter_ActionId_DodgeLeft",
-								"z": "KeyInfoIndex_Dodge_ForceScaleX",
+								"z": "ActionInfoIndex_Dodge_ForceScaleX",
 								"value": "-1"
 							}
 						},
 						{
 							"id": "set-at-xyz",
-							"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+							"objectClass": "Fighter_Alignment_Action_InfoArray",
 							"sid": 651060497381956,
 							"parameters": {
 								"x": "local_alignmentId",
 								"y": "Fighter_ActionId_DodgeUp",
-								"z": "KeyInfoIndex_Dodge_ForceScaleY",
+								"z": "ActionInfoIndex_Dodge_ForceScaleY",
 								"value": "-1"
 							}
 						},
 						{
 							"id": "set-at-xyz",
-							"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+							"objectClass": "Fighter_Alignment_Action_InfoArray",
 							"sid": 418955361202622,
 							"parameters": {
 								"x": "local_alignmentId",
 								"y": "Fighter_ActionId_DodgeRight",
-								"z": "KeyInfoIndex_Dodge_ForceScaleX",
+								"z": "ActionInfoIndex_Dodge_ForceScaleX",
 								"value": "1"
 							}
 						},
 						{
 							"id": "set-at-xyz",
-							"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+							"objectClass": "Fighter_Alignment_Action_InfoArray",
 							"sid": 727886193924845,
 							"parameters": {
 								"x": "local_alignmentId",
 								"y": "Fighter_ActionId_DodgeDown",
-								"z": "KeyInfoIndex_Dodge_ForceScaleY",
+								"z": "ActionInfoIndex_Dodge_ForceScaleY",
 								"value": "1"
 							}
 						},
 						{
 							"id": "set-at-xyz",
-							"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+							"objectClass": "Fighter_Alignment_Action_InfoArray",
 							"sid": 660114357556556,
 							"parameters": {
 								"x": "local_alignmentId",
 								"y": "Fighter_ActionId_Attack",
-								"z": "KeyInfoIndex_bAttack",
+								"z": "ActionInfoIndex_bAttack",
 								"value": "1"
 							}
 						},
 						{
 							"id": "set-at-xyz",
-							"objectClass": "Fighter_Alignment_Action_KeyInfoArray",
+							"objectClass": "Fighter_Alignment_Action_InfoArray",
 							"sid": 871378086840282,
 							"parameters": {
 								"x": "local_alignmentId",
 								"y": "Fighter_ActionId_Parry",
-								"z": "KeyInfoIndex_bParry",
+								"z": "ActionInfoIndex_bParry",
 								"value": "1"
 							}
 						}

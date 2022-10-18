@@ -647,7 +647,7 @@
 					"sid": 446520172591031
 				},
 				{
-					"name": "local_FighterActionId",
+					"name": "local_actionId",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -698,7 +698,7 @@
 					"parameters": {
 						"name": "\"AlignmentId\"",
 						"start-index": "0",
-						"end-index": "Fighter_Alignment_Action_KeyInfoArray.Width - 1"
+						"end-index": "Fighter_Alignment_Action_InfoArray.Width - 1"
 					}
 				},
 				{
@@ -714,19 +714,19 @@
 				{
 					"id": "for",
 					"objectClass": "System",
-					"sid": 340362672438060,
+					"sid": 990394561827767,
 					"parameters": {
-						"name": "\"FighterActionId\"",
+						"name": "\"ActionId\"",
 						"start-index": "0",
-						"end-index": "Fighter_Alignment_Action_KeyInfoArray.Height - 1"
+						"end-index": "Fighter_Alignment_Action_InfoArray.Height - 1"
 					}
 				},
 				{
 					"id": "compare-at-x",
 					"objectClass": "Fighter_KeyDownArray",
-					"sid": 308734594290837,
+					"sid": 257435453956066,
 					"parameters": {
-						"x": "Fighter_Alignment_Action_KeyInfoArray.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"FighterActionId\" ), KeyInfoIndex_keyCode )",
+						"x": "Fighter_Alignment_Action_InfoArray.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"ActionId\" ), ActionInfoIndex_KeyCode )",
 						"comparison": 4,
 						"value": "0"
 					}
@@ -745,19 +745,19 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 688116183503840,
+					"sid": 723849083946313,
 					"parameters": {
-						"variable": "local_FighterActionId",
-						"value": "LoopIndex( \"FighterActionId\" )"
+						"variable": "local_actionId",
+						"value": "LoopIndex( \"ActionId\" )"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 249747082688063,
+					"sid": 343618066317236,
 					"parameters": {
 						"variable": "local_keyCode",
-						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId )"
+						"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, local_actionId, ActionInfoIndex_KeyCode )"
 					}
 				},
 				{
@@ -767,7 +767,7 @@
 					"disabled": true,
 					"parameters": {
 						"variable": "local_dodge_ForceScaleX",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_Dodge_ForceScaleX )"
+						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_Dodge_ForceScaleX )"
 					}
 				},
 				{
@@ -777,7 +777,7 @@
 					"disabled": true,
 					"parameters": {
 						"variable": "local_dodge_ForceScaleY",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_Dodge_ForceScaleY )"
+						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_Dodge_ForceScaleY )"
 					}
 				},
 				{
@@ -787,7 +787,7 @@
 					"disabled": true,
 					"parameters": {
 						"variable": "local_bAttack",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bAttack )"
+						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bAttack )"
 					}
 				},
 				{
@@ -797,7 +797,7 @@
 					"disabled": true,
 					"parameters": {
 						"variable": "local_bParry",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bParry )"
+						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bParry )"
 					}
 				},
 				{
@@ -806,7 +806,7 @@
 					"sid": 694551569336635,
 					"parameters": {
 						"variable": "local_dodge_ForceScaleX",
-						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_Dodge_ForceScaleX )"
+						"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, local_actionId, ActionInfoIndex_Dodge_ForceScaleX )"
 					}
 				},
 				{
@@ -815,7 +815,7 @@
 					"sid": 849795402020431,
 					"parameters": {
 						"variable": "local_dodge_ForceScaleY",
-						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_Dodge_ForceScaleY )"
+						"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, local_actionId, ActionInfoIndex_Dodge_ForceScaleY )"
 					}
 				},
 				{
@@ -824,7 +824,7 @@
 					"sid": 821719499853855,
 					"parameters": {
 						"variable": "local_bAttack",
-						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_bAttack )"
+						"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, local_actionId, ActionInfoIndex_bAttack )"
 					}
 				},
 				{
@@ -833,7 +833,7 @@
 					"sid": 544034492003449,
 					"parameters": {
 						"variable": "local_bParry",
-						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_bParry )"
+						"value": "Fighter_Alignment_Action_InfoArray.At( local_alignmentId, local_actionId, ActionInfoIndex_bParry )"
 					}
 				},
 				{
@@ -849,7 +849,7 @@
 					"sid": 933571445248071,
 					"disabled": true,
 					"parameters": [
-						"Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bAttack )"
+						"Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bAttack )"
 					]
 				},
 				{
@@ -857,7 +857,7 @@
 					"sid": 819393557694118,
 					"disabled": true,
 					"parameters": [
-						"Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bParry )"
+						"Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bParry )"
 					]
 				},
 				{

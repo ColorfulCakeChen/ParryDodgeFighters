@@ -3800,7 +3800,7 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "Fighter_Alignment_Action_KeyInfoArray",
+			"type": "Fighter_Alignment_Action_InfoArray",
 			"properties": {
 				"width": 2,
 				"height": 6,

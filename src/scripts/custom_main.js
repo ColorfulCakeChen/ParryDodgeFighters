@@ -6,7 +6,7 @@ runOnStartup(async runtime =>
 {
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
-
+/*
   const libVerion = "1ff6eeec78221c31f5ab6d8bd13266b8787ff802";
   const libURL = `https://cdn.jsdelivr.net/gh/colorfulcakechen/query-submit-canvas@${libVerion}/CNN/NeuralDEvolution/NeuralOrchestra.js`;
 
@@ -27,7 +27,7 @@ runOnStartup(async runtime =>
     input_height, input_width,
     vocabularyChannelCount, blockCountTotalRequested, output_channelCount
   );
-
+*/
   runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
 
