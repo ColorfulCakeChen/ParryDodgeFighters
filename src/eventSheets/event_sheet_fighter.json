@@ -763,46 +763,6 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 180679390463956,
-					"disabled": true,
-					"parameters": {
-						"variable": "local_dodge_ForceScaleX",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_Dodge_ForceScaleX )"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 537117142625609,
-					"disabled": true,
-					"parameters": {
-						"variable": "local_dodge_ForceScaleY",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_Dodge_ForceScaleY )"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 915279839828618,
-					"disabled": true,
-					"parameters": {
-						"variable": "local_bAttack",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bAttack )"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 482298261018445,
-					"disabled": true,
-					"parameters": {
-						"variable": "local_bParry",
-						"value": "Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bParry )"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
 					"sid": 694551569336635,
 					"parameters": {
 						"variable": "local_dodge_ForceScaleX",
@@ -842,22 +802,6 @@
 					"parameters": [
 						"local_dodge_ForceScaleX",
 						"local_dodge_ForceScaleY"
-					]
-				},
-				{
-					"callFunction": "Fighter_shootProjectile_byPicked",
-					"sid": 933571445248071,
-					"disabled": true,
-					"parameters": [
-						"Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bAttack )"
-					]
-				},
-				{
-					"callFunction": "Fighter_raiseShield_byPicked",
-					"sid": 819393557694118,
-					"disabled": true,
-					"parameters": [
-						"Fighter_KeyDownArray.At( local_keyCode, ActionInfoIndex_bParry )"
 					]
 				},
 				{
