@@ -6,7 +6,28 @@ runOnStartup(async runtime =>
 {
 	// Code to run on the loading screen.
 	// Note layouts, objects etc. are not yet available.
-	
+
+	const libVerion = "e1298976c0fe487a2466690e9c3286bd227b3c9a";
+	const libURL = `https://cdn.jsdelivr.net/gh/colorfulcakechen/query-submit-canvas@${libVerion}/CNN/NeuralDEvolution/NeuralOrchestra.js`;
+
+	globalThis.NeuralOrchestra = await import( libURL );
+	globalThis.gNeuralOrchestra = new NeuralOrchestra.Base();
+
+	const spreadsheetId = "18YyEoy-OfSkODfw8wqBRApSrRnBTZpjRpRiwIKy8a0M";
+
+    const input_height = 72;
+    const input_width = 128;
+
+    const vocabularyChannelCount = 8;
+    const blockCountTotalRequested = 100; //200, //50, //20, //10,
+    const output_channelCount = 16;
+
+	await gNeuralOrchestra.init(
+		spreadsheetId, null,
+		input_height, input_width,
+		vocabularyChannelCount, blockCountTotalRequested, output_channelCount
+	);
+
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
 
