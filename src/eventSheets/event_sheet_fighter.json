@@ -647,6 +647,13 @@
 					"sid": 446520172591031
 				},
 				{
+					"name": "local_FighterActionId",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 144907537259480
+				},
+				{
 					"name": "local_keyCode",
 					"type": "number",
 					"initialValue": "0",
@@ -691,7 +698,7 @@
 					"parameters": {
 						"name": "\"AlignmentId\"",
 						"start-index": "0",
-						"end-index": "Fighter_Alignment_Action_KeyCodeArray.Width - 1"
+						"end-index": "Fighter_Alignment_Action_KeyInfoArray.Width - 1"
 					}
 				},
 				{
@@ -707,20 +714,19 @@
 				{
 					"id": "for",
 					"objectClass": "System",
-					"sid": 812989671817102,
+					"sid": 340362672438060,
 					"parameters": {
-						"name": "\"KeyCodeIndex\"",
+						"name": "\"FighterActionId\"",
 						"start-index": "0",
-						"end-index": "Fighter_Alignment_Action_KeyCodeArray.Height - 1"
+						"end-index": "Fighter_Alignment_Action_KeyInfoArray.Height - 1"
 					}
 				},
 				{
-					"id": "compare-at-xy",
+					"id": "compare-at-x",
 					"objectClass": "Fighter_KeyDownArray",
-					"sid": 488699098204939,
+					"sid": 308734594290837,
 					"parameters": {
-						"x": "Fighter_Alignment_Action_KeyCodeArray.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"KeyCodeIndex\" ) )",
-						"y": "KeyInfoIndex_bTriggered",
+						"x": "Fighter_Alignment_Action_KeyInfoArray.At( LoopIndex( \"AlignmentId\" ), LoopIndex( \"FighterActionId\" ), KeyInfoIndex_keyCode )",
 						"comparison": 4,
 						"value": "0"
 					}
@@ -739,16 +745,26 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 508424351046023,
+					"sid": 688116183503840,
+					"parameters": {
+						"variable": "local_FighterActionId",
+						"value": "LoopIndex( \"FighterActionId\" )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 249747082688063,
 					"parameters": {
 						"variable": "local_keyCode",
-						"value": "Fighter_Alignment_Action_KeyCodeArray.At( local_alignmentId, LoopIndex( \"KeyCodeIndex\" ) )"
+						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId )"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 180679390463956,
+					"disabled": true,
 					"parameters": {
 						"variable": "local_dodge_ForceScaleX",
 						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_Dodge_ForceScaleX )"
@@ -758,6 +774,7 @@
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 537117142625609,
+					"disabled": true,
 					"parameters": {
 						"variable": "local_dodge_ForceScaleY",
 						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_Dodge_ForceScaleY )"
@@ -767,6 +784,7 @@
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 915279839828618,
+					"disabled": true,
 					"parameters": {
 						"variable": "local_bAttack",
 						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bAttack )"
@@ -776,14 +794,51 @@
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 482298261018445,
+					"disabled": true,
 					"parameters": {
 						"variable": "local_bParry",
 						"value": "Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bParry )"
 					}
 				},
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 694551569336635,
+					"parameters": {
+						"variable": "local_dodge_ForceScaleX",
+						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_Dodge_ForceScaleX )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 849795402020431,
+					"parameters": {
+						"variable": "local_dodge_ForceScaleY",
+						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_Dodge_ForceScaleY )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 821719499853855,
+					"parameters": {
+						"variable": "local_bAttack",
+						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_bAttack )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 544034492003449,
+					"parameters": {
+						"variable": "local_bParry",
+						"value": "Fighter_Alignment_Action_KeyInfoArray.At( local_alignmentId, local_FighterActionId, KeyInfoIndex_bParry )"
+					}
+				},
+				{
 					"callFunction": "Fighter_applyAcceleration_byPicked",
-					"sid": 862157107837699,
+					"sid": 211647644584109,
 					"parameters": [
 						"local_dodge_ForceScaleX",
 						"local_dodge_ForceScaleY"
@@ -792,6 +847,7 @@
 				{
 					"callFunction": "Fighter_shootProjectile_byPicked",
 					"sid": 933571445248071,
+					"disabled": true,
 					"parameters": [
 						"Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bAttack )"
 					]
@@ -799,8 +855,23 @@
 				{
 					"callFunction": "Fighter_raiseShield_byPicked",
 					"sid": 819393557694118,
+					"disabled": true,
 					"parameters": [
 						"Fighter_KeyDownArray.At( local_keyCode, KeyInfoIndex_bParry )"
+					]
+				},
+				{
+					"callFunction": "Fighter_shootProjectile_byPicked",
+					"sid": 447456466422093,
+					"parameters": [
+						"local_bAttack"
+					]
+				},
+				{
+					"callFunction": "Fighter_raiseShield_byPicked",
+					"sid": 340516893237578,
+					"parameters": [
+						"local_bParry"
 					]
 				}
 			],

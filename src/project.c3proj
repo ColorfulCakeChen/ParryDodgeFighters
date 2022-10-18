@@ -150,7 +150,7 @@
 			"Projectile",
 			"ProjectileSkin",
 			"Fighter_KeyDownArray",
-			"Fighter_Alignment_Action_KeyCodeArray",
+			"Fighter_Alignment_Action_KeyInfoArray",
 			"Browser",
 			"Shield",
 			"ShieldSkin",
