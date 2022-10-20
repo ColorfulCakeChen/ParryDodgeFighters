@@ -164,7 +164,7 @@
 			"name": "GameToPhysicsRatio",
 			"type": "number",
 			"initialValue": "0.02",
-			"comment": "The ratio to scale game engine object to physics engine object.",
+			"comment": "game to physics scale.",
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 967904854977717
@@ -188,7 +188,7 @@
 			"name": "Versus_Parent_AlignmentId_UnUsed",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "The numeric identifier of alignment played by parent (not offspring) (in a versus) now.",
+			"comment": "Parent's alignment now.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 890993919046831
@@ -290,7 +290,7 @@
 			"name": "Versus_Result_ParentAlignment0",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "parent plays alignment 0.",
+			"comment": "Parent plays alignment 0.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 565675517389986
@@ -300,7 +300,7 @@
 			"name": "Versus_Result_ParentAlignment1",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "parent plays alignment 1.",
+			"comment": "Parent plays alignment 1.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 921289473717844
@@ -314,7 +314,7 @@
 			"name": "Fighter_PlayerControllable",
 			"type": "boolean",
 			"initialValue": "true",
-			"comment": "Whether user could control Fighter.",
+			"comment": "Whether user control Fighter.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 163218808814598
