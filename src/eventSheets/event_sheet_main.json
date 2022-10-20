@@ -20,6 +20,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 878408751130921,
+					"parameters": {
+						"variable": "Versus_Step_Current",
+						"value": "Versus_Step_0_DownloadWeights"
+					}
+				},
+				{
 					"callFunction": "Fighter_KeyDownArray_init",
 					"sid": 314394289555161,
 					"parameters": [
@@ -329,41 +338,6 @@
 				}
 			],
 			"sid": 199105531134504
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 170038276368208,
-					"parameters": {
-						"interval-seconds": "5"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "start-fade",
-					"objectClass": "FighterSkin",
-					"sid": 855295521890508,
-					"behaviorType": "Fade"
-				}
-			],
-			"sid": 517746990193059
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-destroyed",
-					"objectClass": "VersusInfo",
-					"sid": 774604639672744,
-					"disabled": true
-				}
-			],
-			"actions": [],
-			"sid": 250003578958156
 		}
 	],
 	"sid": 215625391285548

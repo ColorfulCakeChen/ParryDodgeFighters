@@ -282,12 +282,19 @@
 					"id": "flash",
 					"objectClass": "FighterSkin",
 					"sid": 330669329595505,
+					"disabled": true,
 					"behaviorType": "Flash",
 					"parameters": {
 						"on-time": "0.25",
 						"off-time": "0.25",
 						"duration": "1"
 					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "FighterSkin",
+					"sid": 491745745646935,
+					"behaviorType": "Fade"
 				}
 			],
 			"sid": 381188756354974
