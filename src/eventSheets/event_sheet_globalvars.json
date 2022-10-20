@@ -185,13 +185,125 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Versus_Parent_AlignmentId",
+			"name": "Versus_Parent_AlignmentId_UnUsed",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "The numeric identifier of alignment played by parent (not offspring) (in a versus) now.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 890993919046831
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_Current",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Current versus step number.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 863410431940131
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_0_DownloadWeights",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 133421888053118
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_1_ParentAlignment0_Begin",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 616780161118382
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_2_ParentAlignment0_Fight",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 741715478794987
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_3_ParentAlignment0_End",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 256351647500361
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_4_ParentAlignment1_Begin",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 476103193345015
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_5_ParentAlignment1_Fight",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 979820740025234
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Step_6_ParentAlignment1_End",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 134690201163391
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "comment",
+			"text": "Versus result. (-1: Offspring win. 0: Parent and Offspring draw. +1: Parent win.)"
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Result_ParentAlignment0",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "parent plays alignment 0.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 565675517389986
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Result_ParentAlignment1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "parent plays alignment 1.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 921289473717844
 		},
 		{
 			"eventType": "comment",
