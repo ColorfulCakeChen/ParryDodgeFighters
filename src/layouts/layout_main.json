@@ -63,9 +63,9 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 5,
+								"fade-in-time": 3,
 								"wait-time": 1000,
-								"fade-out-time": 10,
+								"fade-out-time": 5,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -420,9 +420,9 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 5,
+								"fade-in-time": 3,
 								"wait-time": 1000,
-								"fade-out-time": 10,
+								"fade-out-time": 5,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -499,9 +499,9 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 5,
+								"fade-in-time": 3,
 								"wait-time": 1000,
-								"fade-out-time": 10,
+								"fade-out-time": 5,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -951,7 +951,7 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 15,
+								"fade-in-time": 8,
 								"wait-time": 0,
 								"fade-out-time": 0,
 								"destroy": false,

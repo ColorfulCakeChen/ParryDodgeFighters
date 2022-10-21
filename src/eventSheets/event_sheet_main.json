@@ -97,7 +97,8 @@
 				},
 				{
 					"callFunction": "Fighter_everyQuarterSeconds",
-					"sid": 911959887250274
+					"sid": 911959887250274,
+					"disabled": true
 				}
 			],
 			"sid": 749524624108426,
@@ -106,11 +107,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "evaluate-expression",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 688495798126652,
+							"sid": 748005203853191,
 							"parameters": {
-								"value": "( Versus_Step_Current = Versus_Step_0_DownloadWeights_Begin )"
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_0_DownloadWeights_Begin"
 							}
 						}
 					],
@@ -149,18 +152,20 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "evaluate-expression",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 499550724137210,
+							"sid": 463323331811047,
 							"parameters": {
-								"value": "( Versus_Step_Current = Versus_Step_2_DownloadWeights_End )"
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_2_DownloadWeights_End"
 							}
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 155609412785442,
+							"sid": 584552159103254,
 							"parameters": [
 								"\"01234\"",
 								"\"012345678901234\"",
@@ -169,7 +174,7 @@
 								"\"012345678901234\"",
 								"-1",
 								"\" \"",
-								"3"
+								"2"
 							]
 						},
 						{
@@ -208,8 +213,7 @@
 						},
 						{
 							"callFunction": "Fighter_everyQuarterSeconds",
-							"sid": 217166540371973,
-							"disabled": true
+							"sid": 217166540371973
 						},
 						{
 							"callFunction": "RemainderTimer_Refresh",
@@ -344,17 +348,9 @@
 						},
 						{
 							"callFunction": "Fighter_EnergyCur_add_byPicked",
-							"sid": 182521010055884,
-							"disabled": true,
+							"sid": 258514422285002,
 							"parameters": [
 								"Fighter.EnergyRestorePoints * Fighter.EnergyRestoreBoost"
-							]
-						},
-						{
-							"callFunction": "Fighter_EnergyCur_add_byPicked",
-							"sid": 974518709747139,
-							"parameters": [
-								"1"
 							]
 						}
 					],
@@ -480,26 +476,15 @@
 					"sid": 978013334992837
 				},
 				{
-					"id": "compare-eventvar",
+					"id": "evaluate-expression",
 					"objectClass": "System",
-					"sid": 669719243619183,
+					"sid": 800718886061787,
 					"parameters": {
-						"variable": "Versus_Step_Current",
-						"comparison": 0,
-						"value": "Versus_Step_3_ParentAlignment0_Begin"
+						"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
 					}
 				}
 			],
 			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 135292986669780,
-					"disabled": true,
-					"parameters": {
-						"text": "SpriteFont.Text & \",VersusInfo_destroyed\""
-					}
-				},
 				{
 					"type": "comment",
 					"text": "Full energy since fighting begins."
@@ -514,6 +499,10 @@
 					}
 				},
 				{
+					"type": "comment",
+					"text": "Flash to remind user fighting begins."
+				},
+				{
 					"id": "flash",
 					"objectClass": "FighterSkin",
 					"sid": 588932869384621,
@@ -525,12 +514,12 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
+					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 721807123061068,
+					"sid": 979025478934162,
 					"parameters": {
 						"variable": "Versus_Step_Current",
-						"value": "Versus_Step_4_ParentAlignment0_Fighting"
+						"value": "1"
 					}
 				}
 			],
@@ -555,7 +544,7 @@
 			"actions": [
 				{
 					"callFunction": "VersusInfo_set",
-					"sid": 133829141076594,
+					"sid": 398693860964193,
 					"parameters": [
 						"\"01234\"",
 						"\"012345678901234\"",
@@ -564,7 +553,7 @@
 						"\"012345678901234\"",
 						"-1",
 						"\" \"",
-						"3"
+						"2"
 					]
 				},
 				{

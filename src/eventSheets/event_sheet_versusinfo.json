@@ -61,7 +61,7 @@
 				{
 					"name": "typewriterSeconds",
 					"type": "number",
-					"initialValue": "3",
+					"initialValue": "2",
 					"comment": "The time seconds to display text.",
 					"sid": 833378806395281
 				}
