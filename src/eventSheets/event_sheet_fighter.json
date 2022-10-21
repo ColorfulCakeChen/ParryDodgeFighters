@@ -616,6 +616,17 @@
 					"sid": 238396892908530
 				},
 				{
+					"id": "set-velocity",
+					"objectClass": "Shield",
+					"sid": 752599844818636,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"x-component": "Fighter.Physics.VelocityX",
+						"y-component": "Fighter.Physics.VelocityY"
+					}
+				},
+				{
 					"id": "set-default-color",
 					"objectClass": "ShieldSkin",
 					"sid": 733284213227537,

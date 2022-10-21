@@ -502,7 +502,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "Full energy since fighting will begin. (And restore to normal restore rate.)"
+					"text": "Full energy since fighting begins."
 				},
 				{
 					"id": "set-instvar-value",
@@ -511,15 +511,6 @@
 					"parameters": {
 						"instance-variable": "EnergyCur",
 						"value": "Self.EnergyMax"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 410021709214542,
-					"parameters": {
-						"instance-variable": "EnergyRestoreBoost",
-						"value": "1"
 					}
 				},
 				{
