@@ -2,7 +2,7 @@
 	"name": "Event_Sheet_VersusInfo",
 	"events": [
 		{
-			"functionName": "VersusInfo_display",
+			"functionName": "VersusInfo_set",
 			"functionDescription": "Display the text.",
 			"functionCategory": "VersusInfo",
 			"functionReturnType": "none",
@@ -59,27 +59,6 @@
 					"sid": 120998808030088
 				},
 				{
-					"name": "VersusInfo_mode",
-					"type": "string",
-					"initialValue": "",
-					"comment": "\"start\" or \"finish\". This will be set to VersusInfo.mode",
-					"sid": 879721431846643
-				},
-				{
-					"name": "y_begin",
-					"type": "number",
-					"initialValue": "72",
-					"comment": "The beginning display position Y.",
-					"sid": 597028552807797
-				},
-				{
-					"name": "y_end",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "The ending display position Y.",
-					"sid": 114460984756404
-				},
-				{
 					"name": "typewriterSeconds",
 					"type": "number",
 					"initialValue": "7",
@@ -91,33 +70,11 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 168885580841288,
-					"parameters": {
-						"object-to-create": "VersusInfo",
-						"layer": "0",
-						"x": "64",
-						"y": "y_begin",
-						"create-hierarchy": true,
-						"template-name": "\"VersusInfoTemplate\""
-					}
-				},
-				{
 					"id": "set-font-color",
 					"objectClass": "VersusInfo_Alignment0",
 					"sid": 245491185927891,
 					"parameters": {
 						"color": "rgbEx255( Alignment0_Fighter_Color_R, Alignment0_Fighter_Color_G, Alignment0_Fighter_Color_B )"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "VersusInfo",
-					"sid": 650255061597010,
-					"parameters": {
-						"instance-variable": "mode",
-						"value": "VersusInfo_mode"
 					}
 				},
 				{
@@ -152,11 +109,176 @@
 					"parameters": {
 						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win -1 times )\", \"\" ) & newline & alignment1_Result"
 					}
+				}
+			],
+			"sid": 660875600639807
+		},
+		{
+			"functionName": "VersusInfo_create",
+			"functionDescription": "Display the text.",
+			"functionCategory": "VersusInfo",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "EntityNo",
+					"type": "string",
+					"initialValue": "",
+					"comment": "Text for middle main info.",
+					"sid": 698929020301264
+				},
+				{
+					"name": "alignment0_text",
+					"type": "string",
+					"initialValue": "Loading..........",
+					"comment": "",
+					"sid": 767461135916628
+				},
+				{
+					"name": "alignment1_text",
+					"type": "string",
+					"initialValue": "Loading..........",
+					"comment": "",
+					"sid": 775537674860255
+				},
+				{
+					"name": "y_begin",
+					"type": "number",
+					"initialValue": "72",
+					"comment": "The beginning display position Y.",
+					"sid": 569865436746760
+				},
+				{
+					"name": "y_end",
+					"type": "number",
+					"initialValue": "44",
+					"comment": "The ending display position Y.",
+					"sid": 100726287353267
+				},
+				{
+					"name": "typewriterSeconds",
+					"type": "number",
+					"initialValue": "7",
+					"comment": "The time seconds to display text.",
+					"sid": 242786650593105
+				},
+				{
+					"name": "fadeInSeconds",
+					"type": "number",
+					"initialValue": "15",
+					"comment": "The time (in seconds) to fade-in.",
+					"sid": 886179772729328
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 432367779326909,
+					"parameters": {
+						"object-to-create": "VersusInfo",
+						"layer": "0",
+						"x": "64",
+						"y": "y_begin",
+						"create-hierarchy": true,
+						"template-name": "\"VersusInfoTemplate\""
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 511617940510695,
+					"parameters": {
+						"color": "rgbEx255( Alignment0_Fighter_Color_R, Alignment0_Fighter_Color_G, Alignment0_Fighter_Color_B )"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 770620810370327,
+					"parameters": {
+						"color": "rgbEx255( Alignment1_Fighter_Color_R, Alignment1_Fighter_Color_G, Alignment1_Fighter_Color_B )"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "VersusInfo",
+					"sid": 523634036268715,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "fadeInSeconds"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 349593190975643,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "fadeInSeconds"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 293678743906286,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "fadeInSeconds"
+					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "VersusInfo",
+					"sid": 446576576194729,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 855762788444753,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 368391805993648,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo",
+					"sid": 774807300481141,
+					"parameters": {
+						"text": "\"Entity \" & EntityNo & newline & newline & \" vs \"",
+						"duration": "typewriterSeconds"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 283068508347983,
+					"parameters": {
+						"text": "alignment0_text",
+						"duration": "typewriterSeconds * 4"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 213493316963704,
+					"parameters": {
+						"text": "alignment1_text",
+						"duration": "typewriterSeconds * 4"
+					}
 				},
 				{
 					"id": "move-to-position",
 					"objectClass": "VersusInfo",
-					"sid": 308500337203171,
+					"sid": 554413176205431,
 					"behaviorType": "MoveTo",
 					"parameters": {
 						"x": "64",
@@ -165,7 +287,7 @@
 					}
 				}
 			],
-			"sid": 660875600639807
+			"sid": 313408213261579
 		}
 	],
 	"sid": 446378347605818

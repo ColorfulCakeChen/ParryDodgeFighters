@@ -50,7 +50,7 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
+						"vertical-alignment": "top",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "bottom"
@@ -65,9 +65,9 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 0,
-								"fade-out-time": 15,
+								"fade-out-time": 0,
 								"destroy": true,
-								"enabled": true,
+								"enabled": false,
 								"live-preview": false
 							}
 						},
@@ -410,7 +410,7 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
+						"vertical-alignment": "top",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left"
@@ -422,9 +422,9 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 0,
-								"fade-out-time": 15,
+								"fade-out-time": 0,
 								"destroy": true,
-								"enabled": true,
+								"enabled": false,
 								"live-preview": false
 							}
 						}
@@ -456,7 +456,7 @@
 					},
 					"world": {
 						"x": 0,
-						"y": 90,
+						"y": 95,
 						"width": 64,
 						"height": 45,
 						"originX": 0,
@@ -489,7 +489,7 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
+						"vertical-alignment": "top",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left"
@@ -501,9 +501,9 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 0,
-								"fade-out-time": 15,
+								"fade-out-time": 0,
 								"destroy": true,
-								"enabled": true,
+								"enabled": false,
 								"live-preview": false
 							}
 						}
@@ -535,7 +535,7 @@
 					},
 					"world": {
 						"x": 64,
-						"y": 90,
+						"y": 95,
 						"width": 64,
 						"height": 45,
 						"originX": 0,

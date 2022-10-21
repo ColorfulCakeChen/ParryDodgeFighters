@@ -25,7 +25,7 @@
 					"sid": 878408751130921,
 					"parameters": {
 						"variable": "Versus_Step_Current",
-						"value": "Versus_Step_0_DownloadWeights"
+						"value": "Versus_Step_0_DownloadWeights_Begin"
 					}
 				},
 				{
@@ -46,7 +46,16 @@
 				},
 				{
 					"callFunction": "RemainderTimer_Refresh",
-					"sid": 199499819003141
+					"sid": 199499819003141,
+					"disabled": true
+				},
+				{
+					"id": "set-text",
+					"objectClass": "RemainedTimer",
+					"sid": 166746119972597,
+					"parameters": {
+						"text": "\"\""
+					}
 				},
 				{
 					"id": "set-world-gravity",
@@ -56,23 +65,6 @@
 					"parameters": {
 						"gravity": "PhysicsGravity"
 					}
-				},
-				{
-					"callFunction": "VersusInfo_display",
-					"sid": 204140725703843,
-					"parameters": [
-						"\"01234\"",
-						"\"012345678901234\"",
-						"31",
-						"\" \"",
-						"\"012345678901234\"",
-						"-1",
-						"\" \"",
-						"\"start\"",
-						"72",
-						"0",
-						"7"
-					]
 				}
 			],
 			"sid": 834938499052826
@@ -102,23 +94,133 @@
 					"parameters": {
 						"text": "SpriteFont.Text & \",\" & RemainedTimer.secondsCur"
 					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "RemainedTimer",
-					"sid": 652111608592919,
-					"parameters": {
-						"instance-variable": "secondsCur",
-						"value": "max( Self.secondsCur - QuarterSeconds, 0 )"
-					}
-				},
-				{
-					"callFunction": "Fighter_everyQuarterSeconds",
-					"sid": 217166540371973
 				}
 			],
 			"sid": 749524624108426,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 688495798126652,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_0_DownloadWeights_Begin )"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "RemainedTimer",
+							"sid": 864778163234747,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"callFunction": "VersusInfo_set",
+							"sid": 251898638267121,
+							"parameters": [
+								"\"01234\"",
+								"\"012345678901234\"",
+								"31",
+								"\" \"",
+								"\"012345678901234\"",
+								"-1",
+								"\" \"",
+								"7"
+							]
+						},
+						{
+							"callFunction": "VersusInfo_create",
+							"sid": 590717862286524,
+							"parameters": [
+								"\"01234\"",
+								"\"Loading..........\"",
+								"\"Loading..........\"",
+								"72",
+								"44",
+								"7",
+								"15"
+							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 346817543319802,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "Versus_Step_1_DownloadWeights_Loading"
+							}
+						}
+					],
+					"sid": 859861743300847
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 499550724137210,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_2_DownloadWeights_End )"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "VersusInfo_set",
+							"sid": 433679853177490,
+							"parameters": [
+								"\"01234\"",
+								"\"012345678901234\"",
+								"31",
+								"\" \"",
+								"\"012345678901234\"",
+								"-1",
+								"\" \"",
+								"7"
+							]
+						}
+					],
+					"sid": 237412093855034
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 297850297638534,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) | ( Versus_Step_Current = Versus_Step_7_ParentAlignment1_Fighting )"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "RemainedTimer",
+							"sid": 652111608592919,
+							"parameters": {
+								"instance-variable": "secondsCur",
+								"value": "max( Self.secondsCur - QuarterSeconds, 0 )"
+							}
+						},
+						{
+							"callFunction": "Fighter_everyQuarterSeconds",
+							"sid": 217166540371973
+						},
+						{
+							"callFunction": "RemainderTimer_Refresh",
+							"sid": 124002064637575
+						}
+					],
+					"sid": 716711061859539
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -144,8 +246,8 @@
 							}
 						},
 						{
-							"callFunction": "VersusInfo_display",
-							"sid": 893200775264816,
+							"callFunction": "VersusInfo_set",
+							"sid": 466830326381277,
 							"parameters": [
 								"\"01234\"",
 								"\"012345678901234\"",
@@ -154,25 +256,11 @@
 								"\"012345678901234\"",
 								"-1",
 								"\"Lose\"",
-								"\"finish\"",
-								"36",
-								"45",
 								"7"
 							]
 						}
 					],
 					"sid": 824967954467281
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"callFunction": "RemainderTimer_Refresh",
-							"sid": 604919674864041
-						}
-					],
-					"sid": 468317547412487
 				}
 			]
 		},
