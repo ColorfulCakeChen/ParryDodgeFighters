@@ -80,6 +80,7 @@
 					"id": "set-opacity",
 					"objectClass": "VersusInfo",
 					"sid": 716781683920509,
+					"disabled": true,
 					"parameters": {
 						"opacity": "100"
 					}
@@ -88,6 +89,7 @@
 					"id": "set-opacity",
 					"objectClass": "VersusInfo_Alignment0",
 					"sid": 119335516262526,
+					"disabled": true,
 					"parameters": {
 						"opacity": "100"
 					}
@@ -96,6 +98,7 @@
 					"id": "set-opacity",
 					"objectClass": "VersusInfo_Alignment1",
 					"sid": 598355633487819,
+					"disabled": true,
 					"parameters": {
 						"opacity": "100"
 					}
@@ -103,28 +106,28 @@
 				{
 					"id": "set-fade-in-time",
 					"objectClass": "VersusInfo",
-					"sid": 120305438957819,
+					"sid": 109069136604370,
 					"behaviorType": "Fade",
 					"parameters": {
-						"fade-in-time": "0"
+						"fade-in-time": "1"
 					}
 				},
 				{
 					"id": "set-fade-in-time",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 226472365486689,
+					"sid": 177224861452852,
 					"behaviorType": "Fade",
 					"parameters": {
-						"fade-in-time": "0"
+						"fade-in-time": "1"
 					}
 				},
 				{
 					"id": "set-fade-in-time",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 950964745429050,
+					"sid": 276293243885615,
 					"behaviorType": "Fade",
 					"parameters": {
-						"fade-in-time": "0"
+						"fade-in-time": "1"
 					}
 				},
 				{
@@ -155,21 +158,21 @@
 					}
 				},
 				{
-					"id": "restart-fade",
+					"id": "start-fade",
 					"objectClass": "VersusInfo",
-					"sid": 858508330157567,
+					"sid": 883901996387437,
 					"behaviorType": "Fade"
 				},
 				{
-					"id": "restart-fade",
+					"id": "start-fade",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 698160020684472,
+					"sid": 422627051605921,
 					"behaviorType": "Fade"
 				},
 				{
-					"id": "restart-fade",
+					"id": "start-fade",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 366005270852963,
+					"sid": 838055896557122,
 					"behaviorType": "Fade"
 				},
 				{
@@ -185,6 +188,7 @@
 					"id": "set-text",
 					"objectClass": "VersusInfo_Alignment0",
 					"sid": 226822859481046,
+					"disabled": true,
 					"parameters": {
 						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win -1 times )\", \"\" ) & newline & alignment0_Result"
 					}
@@ -193,8 +197,27 @@
 					"id": "set-text",
 					"objectClass": "VersusInfo_Alignment1",
 					"sid": 855579065414021,
+					"disabled": true,
 					"parameters": {
 						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win -1 times )\", \"\" ) & newline & alignment1_Result"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 959648035729770,
+					"parameters": {
+						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win -1 times )\", \"\" ) & newline & alignment0_Result",
+						"duration": "typewriterSeconds"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 969237993877563,
+					"parameters": {
+						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win -1 times )\", \"\" ) & newline & alignment1_Result",
+						"duration": "typewriterSeconds"
 					}
 				}
 			],
@@ -318,21 +341,21 @@
 					}
 				},
 				{
-					"id": "restart-fade",
+					"id": "start-fade",
 					"objectClass": "VersusInfo",
-					"sid": 446576576194729,
+					"sid": 657590456534880,
 					"behaviorType": "Fade"
 				},
 				{
-					"id": "restart-fade",
+					"id": "start-fade",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 855762788444753,
+					"sid": 852094181568020,
 					"behaviorType": "Fade"
 				},
 				{
-					"id": "restart-fade",
+					"id": "start-fade",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 368391805993648,
+					"sid": 657840668737731,
 					"behaviorType": "Fade"
 				},
 				{
