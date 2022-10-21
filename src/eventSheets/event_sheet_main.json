@@ -40,16 +40,6 @@
 					"sid": 452673687465620
 				},
 				{
-					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
-					"sid": 682956682144941,
-					"disabled": true
-				},
-				{
-					"callFunction": "RemainderTimer_Refresh",
-					"sid": 199499819003141,
-					"disabled": true
-				},
-				{
 					"id": "set-text",
 					"objectClass": "RemainedTimer",
 					"sid": 166746119972597,
@@ -94,11 +84,6 @@
 					"parameters": {
 						"text": "SpriteFont.Text & \",\" & RemainedTimer.secondsCur"
 					}
-				},
-				{
-					"callFunction": "Fighter_everyQuarterSeconds",
-					"sid": 911959887250274,
-					"disabled": true
 				}
 			],
 			"sid": 749524624108426,
@@ -118,6 +103,10 @@
 						}
 					],
 					"actions": [
+						{
+							"type": "comment",
+							"text": "Wait for weights dowloading."
+						},
 						{
 							"id": "set-text",
 							"objectClass": "RemainedTimer",
@@ -193,15 +182,31 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "evaluate-expression",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 297850297638534,
+							"sid": 333781128702083,
 							"parameters": {
-								"value": "( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) | ( Versus_Step_Current = Versus_Step_7_ParentAlignment1_Fighting )"
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_4_ParentAlignment0_Fighting"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 273078630294887,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_7_ParentAlignment1_Fighting"
 							}
 						}
 					],
 					"actions": [
+						{
+							"type": "comment",
+							"text": "Fighting."
+						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
@@ -220,7 +225,67 @@
 							"sid": 124002064637575
 						}
 					],
-					"sid": 716711061859539
+					"sid": 716711061859539,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-outside-layout",
+									"objectClass": "Fighter",
+									"sid": 915068713618218
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RemainedTimer",
+									"sid": 834422478131122,
+									"parameters": {
+										"instance-variable": "secondsCur",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "VersusInfo_create",
+									"sid": 191956754574212,
+									"parameters": [
+										"\"\"",
+										"\"\"",
+										"36",
+										"44"
+									]
+								},
+								{
+									"callFunction": "VersusInfo_set",
+									"sid": 202324738112936,
+									"parameters": [
+										"\"01234\"",
+										"\"012345678901234\"",
+										"31",
+										"\"Win\"",
+										"\"012345678901234\"",
+										"-1",
+										"\"Lose\"",
+										"7"
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 855512054414137,
+									"parameters": {
+										"variable": "Versus_Step_Current",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 477270838320702,
+							"isOrBlock": true
+						}
+					],
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -241,6 +306,7 @@
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
 							"sid": 821927245687338,
+							"disabled": true,
 							"parameters": {
 								"instance-variable": "secondsCur",
 								"value": "Self.secondsMax"
@@ -271,7 +337,8 @@
 							]
 						}
 					],
-					"sid": 824967954467281
+					"sid": 824967954467281,
+					"disabled": true
 				}
 			]
 		},
@@ -296,35 +363,6 @@
 				{
 					"callFunction": "DrawingCanvas_Paint",
 					"sid": 670822637032521
-				},
-				{
-					"type": "comment",
-					"text": "Anti the gravity completely."
-				},
-				{
-					"id": "apply-force",
-					"objectClass": "Fighter",
-					"sid": 831872116640204,
-					"disabled": true,
-					"behaviorType": "Physics",
-					"parameters": {
-						"force-x": "0",
-						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
-						"image-point": "0"
-					}
-				},
-				{
-					"callFunction": "Fighter_act_byKeyDownArray",
-					"sid": 396016117511502,
-					"parameters": [
-						"0",
-						"0",
-						"0",
-						"0",
-						"0",
-						"0",
-						"0"
-					]
 				}
 			],
 			"sid": 304644917695471,
@@ -336,8 +374,29 @@
 							"id": "evaluate-expression",
 							"objectClass": "System",
 							"sid": 753068136565016,
+							"disabled": true,
 							"parameters": {
 								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 277704417039841,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_3_ParentAlignment0_Begin"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 661278438930147,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_6_ParentAlignment1_Begin"
 							}
 						}
 					],
@@ -354,7 +413,66 @@
 							]
 						}
 					],
-					"sid": 762323392034888
+					"sid": 762323392034888,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 693860944608004,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_4_ParentAlignment0_Fighting"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 171770542281659,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_7_ParentAlignment1_Fighting"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Anti the gravity completely."
+						},
+						{
+							"id": "apply-force",
+							"objectClass": "Fighter",
+							"sid": 614209133798029,
+							"disabled": true,
+							"behaviorType": "Physics",
+							"parameters": {
+								"force-x": "0",
+								"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
+								"image-point": "0"
+							}
+						},
+						{
+							"callFunction": "Fighter_act_byKeyDownArray",
+							"sid": 209335001198766,
+							"parameters": [
+								"0",
+								"0",
+								"0",
+								"0",
+								"0",
+								"0",
+								"0"
+							]
+						}
+					],
+					"sid": 796995777013480,
+					"isOrBlock": true
 				}
 			]
 		},
@@ -487,6 +605,19 @@
 			"actions": [
 				{
 					"type": "comment",
+					"text": "Fighting is about to begin."
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "RemainedTimer",
+					"sid": 481558644509193,
+					"parameters": {
+						"instance-variable": "secondsCur",
+						"value": "Self.secondsMax"
+					}
+				},
+				{
+					"type": "comment",
 					"text": "Full energy since fighting begins."
 				},
 				{
@@ -535,9 +666,19 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 965707816742042,
+					"sid": 261066947214651,
 					"parameters": {
-						"key": 84
+						"key": 50
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 721201209461614,
+					"parameters": {
+						"variable": "Versus_Step_Current",
+						"comparison": 0,
+						"value": "Versus_Step_1_DownloadWeights_Loading"
 					}
 				}
 			],
@@ -545,6 +686,7 @@
 				{
 					"callFunction": "VersusInfo_set",
 					"sid": 398693860964193,
+					"disabled": true,
 					"parameters": [
 						"\"01234\"",
 						"\"012345678901234\"",
@@ -559,10 +701,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 374153113795342,
+					"sid": 828659472112741,
 					"parameters": {
 						"variable": "Versus_Step_Current",
-						"value": "Versus_Step_3_ParentAlignment0_Begin"
+						"value": "Versus_Step_2_DownloadWeights_End"
 					}
 				}
 			],

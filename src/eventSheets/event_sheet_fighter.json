@@ -826,32 +826,6 @@
 				}
 			],
 			"sid": 158680859806621
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-fade-in-finished",
-					"objectClass": "FighterSkin",
-					"sid": 420266221140202,
-					"behaviorType": "Fade"
-				}
-			],
-			"actions": [
-				{
-					"id": "flash",
-					"objectClass": "FighterSkin",
-					"sid": 330669329595505,
-					"behaviorType": "Flash",
-					"parameters": {
-						"on-time": "0.25",
-						"off-time": "0.25",
-						"duration": "1"
-					}
-				}
-			],
-			"sid": 638433348375996,
-			"disabled": true
 		}
 	],
 	"sid": 818138888685423
