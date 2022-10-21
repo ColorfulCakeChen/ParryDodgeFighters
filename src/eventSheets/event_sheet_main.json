@@ -249,10 +249,10 @@
 							"actions": [
 								{
 									"callFunction": "VersusInfo_create",
-									"sid": 191956754574212,
+									"sid": 149695613335528,
 									"parameters": [
-										"\"\"",
-										"\"\"",
+										"\"End...\"",
+										"\"End...\"",
 										"36",
 										"44"
 									]
