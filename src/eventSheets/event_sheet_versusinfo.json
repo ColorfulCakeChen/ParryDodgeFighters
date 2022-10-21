@@ -260,19 +260,19 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 283068508347983,
+					"sid": 793514630185615,
 					"parameters": {
 						"text": "alignment0_text",
-						"duration": "typewriterSeconds * 4"
+						"duration": "len( alignment0_text )"
 					}
 				},
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 213493316963704,
+					"sid": 170069091995497,
 					"parameters": {
 						"text": "alignment1_text",
-						"duration": "typewriterSeconds * 4"
+						"duration": "len( alignment1_text )"
 					}
 				},
 				{
