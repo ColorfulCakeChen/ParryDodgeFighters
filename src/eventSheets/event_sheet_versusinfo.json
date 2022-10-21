@@ -67,7 +67,16 @@
 				}
 			],
 			"eventType": "function-block",
-			"conditions": [],
+			"conditions": [
+				{
+					"id": "pick-last-created",
+					"objectClass": "System",
+					"sid": 252289939495028,
+					"parameters": {
+						"object": "VersusInfo"
+					}
+				}
+			],
 			"actions": [
 				{
 					"id": "set-wait-time",

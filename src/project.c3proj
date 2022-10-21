@@ -182,6 +182,14 @@
 				"ShieldSkin"
 			],
 			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"VersusInfo",
+				"VersusInfo_Alignment0",
+				"VersusInfo_Alignment1"
+			],
+			"selectMode": "normal"
 		}
 	],
 	"families": {
