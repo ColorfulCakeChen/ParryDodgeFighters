@@ -248,6 +248,10 @@
 							],
 							"actions": [
 								{
+									"type": "comment",
+									"text": "Fighting ends if any Fighter is kicked out or time runs out."
+								},
+								{
 									"callFunction": "VersusInfo_create",
 									"sid": 149695613335528,
 									"parameters": [
@@ -259,7 +263,7 @@
 								},
 								{
 									"callFunction": "VersusInfo_set",
-									"sid": 202324738112936,
+									"sid": 516142074630459,
 									"parameters": [
 										"\"01234\"",
 										"\"012345678901234\"",
@@ -268,7 +272,7 @@
 										"\"012345678901234\"",
 										"-1",
 										"\"Lose\"",
-										"7"
+										"2"
 									]
 								},
 								{
@@ -282,6 +286,46 @@
 								}
 							],
 							"sid": 477270838320702,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-outside-layout",
+											"objectClass": "Fighter",
+											"sid": 283849565738577,
+											"disabled": true,
+											"isInverted": true
+										},
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 220556001777599,
+											"parameters": {
+												"object": "Fighter"
+											}
+										}
+									],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "Flash to remind user fighter in bounds."
+										},
+										{
+											"id": "flash",
+											"objectClass": "FighterSkin",
+											"sid": 586905900659069,
+											"behaviorType": "Flash",
+											"parameters": {
+												"on-time": "0.25",
+												"off-time": "0.25",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 782882391397388
+								}
+							],
 							"isOrBlock": true
 						}
 					],
@@ -370,15 +414,6 @@
 				{
 					"eventType": "block",
 					"conditions": [
-						{
-							"id": "evaluate-expression",
-							"objectClass": "System",
-							"sid": 753068136565016,
-							"disabled": true,
-							"parameters": {
-								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
-							}
-						},
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
@@ -473,6 +508,38 @@
 					],
 					"sid": 796995777013480,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 159631707182764,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_5_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_8_ParentAlignment1_End )"
+							}
+						},
+						{
+							"id": "is-outside-layout",
+							"objectClass": "Fighter",
+							"sid": 606361844834994
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Quickly reduce energy for loser fighter."
+						},
+						{
+							"callFunction": "Fighter_EnergyCur_add_byPicked",
+							"sid": 994245170615541,
+							"parameters": [
+								"- ( Fighter.EnergyRestorePoints * Fighter.EnergyRestoreBoost )"
+							]
+						}
+					],
+					"sid": 477124077866881
 				}
 			]
 		},

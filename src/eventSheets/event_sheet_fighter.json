@@ -62,10 +62,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 859835077075329,
+					"sid": 809833666592015,
 					"parameters": {
 						"instance-variable": "EnergyCur",
-						"value": "max( min( Self.EnergyCur + delta, Self.EnergyMax ), 0 )"
+						"value": "clamp( Self.EnergyCur + delta, 0, Self.EnergyMax )"
 					}
 				},
 				{

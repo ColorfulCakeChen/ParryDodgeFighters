@@ -686,6 +686,10 @@
 												"state": true
 											},
 											{
+												"iv": "EnergyRestoreBoost",
+												"state": true
+											},
+											{
 												"iv": "EnergyPointsThrust",
 												"state": true
 											},
@@ -719,10 +723,6 @@
 											},
 											{
 												"iv": "private_Force",
-												"state": true
-											},
-											{
-												"iv": "EnergyRestoreBoost",
 												"state": true
 											}
 										]
