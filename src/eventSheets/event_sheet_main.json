@@ -167,6 +167,15 @@
 								"\" \"",
 								"3"
 							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 142010917529747,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "Versus_Step_3_ParentAlignment0_Begin"
+							}
 						}
 					],
 					"sid": 237412093855034
@@ -421,6 +430,58 @@
 			"sid": 199105531134504
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "VersusInfo",
+					"sid": 978013334992837
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 669719243619183,
+					"parameters": {
+						"variable": "Versus_Step_Current",
+						"comparison": 0,
+						"value": "Versus_Step_3_ParentAlignment0_Begin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 135292986669780,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \",VersusInfo_destroyed\""
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "FighterSkin",
+					"sid": 588932869384621,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.25",
+						"off-time": "0.25",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 721807123061068,
+					"parameters": {
+						"variable": "Versus_Step_Current",
+						"value": "Versus_Step_4_ParentAlignment0_Fighting"
+					}
+				}
+			],
+			"sid": 638178211372008
+		},
+		{
 			"eventType": "comment",
 			"text": "For test VersusInfo_set()"
 		},
@@ -450,6 +511,15 @@
 						"\" \"",
 						"3"
 					]
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 374153113795342,
+					"parameters": {
+						"variable": "Versus_Step_Current",
+						"value": "Versus_Step_3_ParentAlignment0_Begin"
+					}
 				}
 			],
 			"sid": 126876042714282

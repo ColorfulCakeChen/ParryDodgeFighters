@@ -155,15 +155,15 @@
 				{
 					"name": "alignment0_text",
 					"type": "string",
-					"initialValue": "Loading..........",
-					"comment": "",
+					"initialValue": "Loading.....................",
+					"comment": "Text length will become typewriter seconds. (i.e. one character per second.)",
 					"sid": 767461135916628
 				},
 				{
 					"name": "alignment1_text",
 					"type": "string",
-					"initialValue": "Loading..........",
-					"comment": "",
+					"initialValue": "Loading.....................",
+					"comment": "Text length will become typewriter seconds. (i.e. one character per second.)",
 					"sid": 775537674860255
 				},
 				{
