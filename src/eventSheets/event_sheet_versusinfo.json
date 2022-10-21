@@ -61,119 +61,40 @@
 				{
 					"name": "typewriterSeconds",
 					"type": "number",
-					"initialValue": "7",
+					"initialValue": "3",
 					"comment": "The time seconds to display text.",
 					"sid": 833378806395281
-				},
-				{
-					"name": "fadeOutSeconds",
-					"type": "number",
-					"initialValue": "15",
-					"comment": "The time (in seconds) to fade-out (and destroy).",
-					"sid": 917386473481591
 				}
 			],
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-opacity",
+					"id": "set-wait-time",
 					"objectClass": "VersusInfo",
-					"sid": 716781683920509,
-					"disabled": true,
+					"sid": 925976702413829,
+					"behaviorType": "Fade",
 					"parameters": {
-						"opacity": "100"
+						"wait-time": "0"
 					}
 				},
 				{
-					"id": "set-opacity",
+					"id": "set-wait-time",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 119335516262526,
-					"disabled": true,
+					"sid": 583115075602790,
+					"behaviorType": "Fade",
 					"parameters": {
-						"opacity": "100"
+						"wait-time": "0"
 					}
 				},
 				{
-					"id": "set-opacity",
+					"id": "set-wait-time",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 598355633487819,
-					"disabled": true,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "VersusInfo",
-					"sid": 109069136604370,
+					"sid": 695496798201875,
 					"behaviorType": "Fade",
 					"parameters": {
-						"fade-in-time": "1"
+						"wait-time": "0"
 					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "VersusInfo_Alignment0",
-					"sid": 177224861452852,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "1"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 276293243885615,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "1"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "VersusInfo",
-					"sid": 331299511856277,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "fadeOutSeconds"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "VersusInfo_Alignment0",
-					"sid": 742874462485231,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "fadeOutSeconds"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 458980752656663,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "fadeOutSeconds"
-					}
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "VersusInfo",
-					"sid": 883901996387437,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "VersusInfo_Alignment0",
-					"sid": 422627051605921,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 838055896557122,
-					"behaviorType": "Fade"
 				},
 				{
 					"id": "typewriter-text",
@@ -232,13 +153,6 @@
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
-					"name": "EntityNo",
-					"type": "string",
-					"initialValue": "",
-					"comment": "Text for middle main info.",
-					"sid": 698929020301264
-				},
-				{
 					"name": "alignment0_text",
 					"type": "string",
 					"initialValue": "Loading..........",
@@ -265,20 +179,6 @@
 					"initialValue": "44",
 					"comment": "The ending display position Y.",
 					"sid": 100726287353267
-				},
-				{
-					"name": "typewriterSeconds",
-					"type": "number",
-					"initialValue": "7",
-					"comment": "The time seconds to display text.",
-					"sid": 242786650593105
-				},
-				{
-					"name": "fadeInSeconds",
-					"type": "number",
-					"initialValue": "15",
-					"comment": "The time (in seconds) to fade-in.",
-					"sid": 886179772729328
 				}
 			],
 			"eventType": "function-block",
@@ -314,57 +214,11 @@
 					}
 				},
 				{
-					"id": "set-fade-in-time",
+					"id": "set-text",
 					"objectClass": "VersusInfo",
-					"sid": 523634036268715,
-					"behaviorType": "Fade",
+					"sid": 868511596127439,
 					"parameters": {
-						"fade-in-time": "fadeInSeconds"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "VersusInfo_Alignment0",
-					"sid": 349593190975643,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "fadeInSeconds"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 293678743906286,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "fadeInSeconds"
-					}
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "VersusInfo",
-					"sid": 657590456534880,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "VersusInfo_Alignment0",
-					"sid": 852094181568020,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 657840668737731,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "VersusInfo",
-					"sid": 774807300481141,
-					"parameters": {
-						"text": "\"Entity \" & EntityNo & newline & newline & \" vs \"",
-						"duration": "typewriterSeconds"
+						"text": "\"\""
 					}
 				},
 				{
