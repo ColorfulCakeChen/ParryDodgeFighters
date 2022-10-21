@@ -94,6 +94,10 @@
 					"parameters": {
 						"text": "SpriteFont.Text & \",\" & RemainedTimer.secondsCur"
 					}
+				},
+				{
+					"callFunction": "Fighter_everyQuarterSeconds",
+					"sid": 911959887250274
 				}
 			],
 			"sid": 749524624108426,
@@ -204,7 +208,8 @@
 						},
 						{
 							"callFunction": "Fighter_everyQuarterSeconds",
-							"sid": 217166540371973
+							"sid": 217166540371973,
+							"disabled": true
 						},
 						{
 							"callFunction": "RemainderTimer_Refresh",
@@ -318,7 +323,44 @@
 					]
 				}
 			],
-			"sid": 304644917695471
+			"sid": 304644917695471,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 753068136565016,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Boost energy restoring for preparing fighting."
+						},
+						{
+							"callFunction": "Fighter_EnergyCur_add_byPicked",
+							"sid": 182521010055884,
+							"disabled": true,
+							"parameters": [
+								"Fighter.EnergyRestorePoints * Fighter.EnergyRestoreBoost"
+							]
+						},
+						{
+							"callFunction": "Fighter_EnergyCur_add_byPicked",
+							"sid": 974518709747139,
+							"parameters": [
+								"1"
+							]
+						}
+					],
+					"sid": 762323392034888
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -456,6 +498,28 @@
 					"disabled": true,
 					"parameters": {
 						"text": "SpriteFont.Text & \",VersusInfo_destroyed\""
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Full energy since fighting will begin. (And restore to normal restore rate.)"
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 834145390211173,
+					"parameters": {
+						"instance-variable": "EnergyCur",
+						"value": "Self.EnergyMax"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 410021709214542,
+					"parameters": {
+						"instance-variable": "EnergyRestoreBoost",
+						"value": "1"
 					}
 				},
 				{

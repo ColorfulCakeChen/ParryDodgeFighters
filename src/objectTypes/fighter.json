@@ -29,6 +29,12 @@
 			"sid": 208531946115419
 		},
 		{
+			"name": "EnergyRestoreBoost",
+			"type": "number",
+			"desc": "The scale when restore energy.",
+			"sid": 430237642120389
+		},
+		{
 			"name": "EnergyPointsThrust",
 			"type": "number",
 			"desc": "How many energy points will be used for every thrusting.",

@@ -600,6 +600,7 @@
 						"EnergyCur": 0,
 						"EnergyMax": 1000,
 						"EnergyRestorePoints": 8,
+						"EnergyRestoreBoost": 1,
 						"EnergyPointsThrust": 1,
 						"EnergyPointsShoot": 20,
 						"EnergyPointsRaiseShield": 120,
@@ -718,6 +719,10 @@
 											},
 											{
 												"iv": "private_Force",
+												"state": true
+											},
+											{
+												"iv": "EnergyRestoreBoost",
 												"state": true
 											}
 										]

@@ -14,9 +14,9 @@
 			"actions": [
 				{
 					"callFunction": "Fighter_EnergyCur_add_byPicked",
-					"sid": 383429838296825,
+					"sid": 847891798329399,
 					"parameters": [
-						"Fighter.EnergyRestorePoints"
+						"Fighter.EnergyRestorePoints * Fighter.EnergyRestoreBoost"
 					]
 				},
 				{
