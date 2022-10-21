@@ -291,13 +291,6 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-outside-layout",
-											"objectClass": "Fighter",
-											"sid": 283849565738577,
-											"disabled": true,
-											"isInverted": true
-										},
-										{
 											"id": "pick-all",
 											"objectClass": "System",
 											"sid": 220556001777599,
@@ -330,59 +323,6 @@
 						}
 					],
 					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "RemainedTimer",
-							"sid": 570966666068084,
-							"parameters": {
-								"instance-variable": "secondsCur",
-								"comparison": 3,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "RemainedTimer",
-							"sid": 821927245687338,
-							"disabled": true,
-							"parameters": {
-								"instance-variable": "secondsCur",
-								"value": "Self.secondsMax"
-							}
-						},
-						{
-							"callFunction": "VersusInfo_create",
-							"sid": 346281954358684,
-							"parameters": [
-								"\"\"",
-								"\"\"",
-								"36",
-								"44"
-							]
-						},
-						{
-							"callFunction": "VersusInfo_set",
-							"sid": 466830326381277,
-							"parameters": [
-								"\"01234\"",
-								"\"012345678901234\"",
-								"31",
-								"\"Win\"",
-								"\"012345678901234\"",
-								"-1",
-								"\"Lose\"",
-								"7"
-							]
-						}
-					],
-					"sid": 824967954467281,
-					"disabled": true
 				}
 			]
 		},
@@ -529,7 +469,7 @@
 					"actions": [
 						{
 							"type": "comment",
-							"text": "Quickly reduce energy for loser fighter."
+							"text": "Remind user which fighter is losed (i.e. kicked out) by reducing energy to zero  quickly."
 						},
 						{
 							"callFunction": "Fighter_EnergyCur_add_byPicked",
@@ -659,69 +599,192 @@
 					"id": "on-destroyed",
 					"objectClass": "VersusInfo",
 					"sid": 978013334992837
-				},
-				{
-					"id": "evaluate-expression",
-					"objectClass": "System",
-					"sid": 800718886061787,
-					"parameters": {
-						"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
-					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 638178211372008,
+			"children": [
 				{
-					"type": "comment",
-					"text": "Fighting is about to begin."
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 180661957578694,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Fighting is about to begin."
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "RemainedTimer",
+							"sid": 343527119359616,
+							"parameters": {
+								"instance-variable": "secondsCur",
+								"value": "Self.secondsMax"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Full energy since fighting begins."
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Fighter",
+							"sid": 166042511798280,
+							"parameters": {
+								"instance-variable": "EnergyCur",
+								"value": "Self.EnergyMax"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Flash to remind user fighting begins."
+						},
+						{
+							"id": "flash",
+							"objectClass": "FighterSkin",
+							"sid": 132136889867453,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.25",
+								"off-time": "0.25",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 340528663483064,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 304654058250143
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "RemainedTimer",
-					"sid": 481558644509193,
-					"parameters": {
-						"instance-variable": "secondsCur",
-						"value": "Self.secondsMax"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 582631744765729
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 918507274131851,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_5_ParentAlignment0_End"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "??? Exchange Fighters' alignment."
+						},
+						{
+							"callFunction": "Fighter_recreateAll",
+							"sid": 161261870102206
+						},
+						{
+							"id": "set-text",
+							"objectClass": "RemainedTimer",
+							"sid": 426652542271501,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"callFunction": "VersusInfo_create",
+							"sid": 404439473475760,
+							"parameters": [
+								"\"Loading.....................\"",
+								"\"Loading.....................\"",
+								"72",
+								"44"
+							]
+						},
+						{
+							"callFunction": "VersusInfo_set",
+							"sid": 557367740172407,
+							"parameters": [
+								"\"01234\"",
+								"\"012345678901234\"",
+								"31",
+								"\" \"",
+								"\"012345678901234\"",
+								"-1",
+								"\" \"",
+								"2"
+							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 100910388754314,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "Versus_Step_6_ParentAlignment1_Begin"
+							}
+						}
+					],
+					"sid": 790678400660388
 				},
 				{
-					"type": "comment",
-					"text": "Full energy since fighting begins."
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 834145390211173,
-					"parameters": {
-						"instance-variable": "EnergyCur",
-						"value": "Self.EnergyMax"
-					}
-				},
-				{
-					"type": "comment",
-					"text": "Flash to remind user fighting begins."
-				},
-				{
-					"id": "flash",
-					"objectClass": "FighterSkin",
-					"sid": 588932869384621,
-					"behaviorType": "Flash",
-					"parameters": {
-						"on-time": "0.25",
-						"off-time": "0.25",
-						"duration": "1"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 979025478934162,
-					"parameters": {
-						"variable": "Versus_Step_Current",
-						"value": "1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 416663439108638
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 794153777846244,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_8_ParentAlignment1_End"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "??? Another versus."
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 478573945802936,
+							"disabled": true,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "Versus_Step_0_DownloadWeights_Begin"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 993181863455677
+						}
+					],
+					"sid": 130451988170745
 				}
-			],
-			"sid": 638178211372008
+			]
 		},
 		{
 			"eventType": "comment",
@@ -750,21 +813,6 @@
 				}
 			],
 			"actions": [
-				{
-					"callFunction": "VersusInfo_set",
-					"sid": 398693860964193,
-					"disabled": true,
-					"parameters": [
-						"\"01234\"",
-						"\"012345678901234\"",
-						"31",
-						"\" \"",
-						"\"012345678901234\"",
-						"-1",
-						"\" \"",
-						"2"
-					]
-				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
