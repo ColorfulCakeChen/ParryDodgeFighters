@@ -64,26 +64,113 @@
 					"initialValue": "7",
 					"comment": "The time seconds to display text.",
 					"sid": 833378806395281
+				},
+				{
+					"name": "fadeOutSeconds",
+					"type": "number",
+					"initialValue": "15",
+					"comment": "The time (in seconds) to fade-out (and destroy).",
+					"sid": 917386473481591
 				}
 			],
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-font-color",
-					"objectClass": "VersusInfo_Alignment0",
-					"sid": 245491185927891,
+					"id": "set-opacity",
+					"objectClass": "VersusInfo",
+					"sid": 716781683920509,
 					"parameters": {
-						"color": "rgbEx255( Alignment0_Fighter_Color_R, Alignment0_Fighter_Color_G, Alignment0_Fighter_Color_B )"
+						"opacity": "100"
 					}
 				},
 				{
-					"id": "set-font-color",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 402177401146884,
+					"id": "set-opacity",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 119335516262526,
 					"parameters": {
-						"color": "rgbEx255( Alignment1_Fighter_Color_R, Alignment1_Fighter_Color_G, Alignment1_Fighter_Color_B )"
+						"opacity": "100"
 					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 598355633487819,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "VersusInfo",
+					"sid": 120305438957819,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 226472365486689,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 950964745429050,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "VersusInfo",
+					"sid": 331299511856277,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "fadeOutSeconds"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 742874462485231,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "fadeOutSeconds"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 458980752656663,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "fadeOutSeconds"
+					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "VersusInfo",
+					"sid": 858508330157567,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "VersusInfo_Alignment0",
+					"sid": 698160020684472,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "VersusInfo_Alignment1",
+					"sid": 366005270852963,
+					"behaviorType": "Fade"
 				},
 				{
 					"id": "typewriter-text",
