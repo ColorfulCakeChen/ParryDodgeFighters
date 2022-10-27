@@ -20,13 +20,9 @@
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 878408751130921,
-					"parameters": {
-						"variable": "Versus_Step_Current",
-						"value": "Versus_Step_0_DownloadWeights_Begin"
-					}
+					"id": "destroy",
+					"objectClass": "VersusInfo",
+					"sid": 484898767553043
 				},
 				{
 					"callFunction": "Fighter_KeyDownArray_init",
@@ -36,8 +32,8 @@
 					]
 				},
 				{
-					"callFunction": "Fighter_recreateAll",
-					"sid": 452673687465620
+					"callFunction": "Fighter_destroyAll",
+					"sid": 273142251291846
 				},
 				{
 					"id": "set-text",
@@ -54,6 +50,15 @@
 					"behaviorType": "Physics",
 					"parameters": {
 						"gravity": "PhysicsGravity"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 424631943334793,
+					"parameters": {
+						"variable": "Versus_Step_Current",
+						"value": "Versus_Step_0_DownloadWeights_Begin"
 					}
 				}
 			],
@@ -132,11 +137,23 @@
 					],
 					"actions": [
 						{
+							"callFunction": "Fighter_recreateAll",
+							"sid": 154601227087358
+						},
+						{
 							"id": "set-text",
 							"objectClass": "RemainedTimer",
 							"sid": 864778163234747,
 							"parameters": {
 								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "EnergyBar",
+							"sid": 989068452487371,
+							"parameters": {
+								"width": "0"
 							}
 						},
 						{
@@ -565,12 +582,18 @@
 					],
 					"actions": [
 						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 649927791807530,
+							"disabled": true
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 451588521225960,
+							"sid": 535219150709067,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_9_EmitVersusResult"
+								"value": "Versus_Step_0_DownloadWeights_Begin"
 							}
 						}
 					],
@@ -920,49 +943,6 @@
 				}
 			],
 			"sid": 126876042714282
-		},
-		{
-			"eventType": "comment",
-			"text": "For testing: Versus Step 9 into Step 1."
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 502168637060430,
-					"parameters": {
-						"key": 49
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 778387988999510,
-					"parameters": {
-						"variable": "Fighter_bDebugMode"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 328478576554800,
-					"parameters": {
-						"variable": "Versus_Step_Current",
-						"comparison": 0,
-						"value": "Versus_Step_9_EmitVersusResult"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 957775148096164
-				}
-			],
-			"sid": 845126373554647
 		}
 	],
 	"sid": 215625391285548

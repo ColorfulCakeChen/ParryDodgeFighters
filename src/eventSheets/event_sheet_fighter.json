@@ -76,8 +76,8 @@
 			"sid": 880103272566958
 		},
 		{
-			"functionName": "Fighter_recreateAll",
-			"functionDescription": "Recreate all Fighter (hierarchy).",
+			"functionName": "Fighter_destroyAll",
+			"functionDescription": "Destroy all Fighter (hierarchy).",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
@@ -89,27 +89,22 @@
 				{
 					"id": "destroy",
 					"objectClass": "Fighter",
-					"sid": 846134909559484
+					"sid": 483492542326635
 				},
 				{
 					"id": "destroy",
 					"objectClass": "Shield",
-					"sid": 133864932364351
+					"sid": 272663381445136
 				},
 				{
 					"id": "destroy",
 					"objectClass": "Projectile",
-					"sid": 290382056744667
-				},
-				{
-					"id": "destroy",
-					"objectClass": "VersusInfo",
-					"sid": 229834716430298
+					"sid": 969415475822055
 				},
 				{
 					"id": "enabledisable-collisions",
 					"objectClass": "Shield",
-					"sid": 911412182925165,
+					"sid": 550922940958869,
 					"behaviorType": "Physics",
 					"parameters": {
 						"object": "Fighter",
@@ -119,7 +114,7 @@
 				{
 					"id": "enabledisable-collisions",
 					"objectClass": "Shield",
-					"sid": 184356697372814,
+					"sid": 758044432700587,
 					"behaviorType": "Physics",
 					"parameters": {
 						"object": "Shield",
@@ -129,12 +124,30 @@
 				{
 					"id": "enabledisable-collisions",
 					"objectClass": "Fighter",
-					"sid": 157104394835873,
+					"sid": 751815992207452,
 					"behaviorType": "Physics",
 					"parameters": {
 						"object": "Fighter",
 						"state": "disable"
 					}
+				}
+			],
+			"sid": 747152914412397
+		},
+		{
+			"functionName": "Fighter_recreateAll",
+			"functionDescription": "Recreate all Fighter (hierarchy).",
+			"functionCategory": "Fighter",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"callFunction": "Fighter_destroyAll",
+					"sid": 269868059420987
 				},
 				{
 					"callFunction": "Fighter_create",

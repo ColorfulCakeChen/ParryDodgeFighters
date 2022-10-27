@@ -360,16 +360,6 @@
 			"sid": 134690201163391
 		},
 		{
-			"eventType": "variable",
-			"name": "Versus_Step_9_EmitVersusResult",
-			"type": "number",
-			"initialValue": "9",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 761966913698541
-		},
-		{
 			"eventType": "comment",
 			"text": ""
 		},
@@ -412,10 +402,6 @@
 		{
 			"eventType": "comment",
 			"text": "In Step 1: Press \"2\" to go to Step 2."
-		},
-		{
-			"eventType": "comment",
-			"text": "In Step 9: Press \"1\" to go to Step 1."
 		},
 		{
 			"eventType": "variable",
