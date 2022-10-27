@@ -175,25 +175,6 @@
 								"object": "RemainedTimer",
 								"effects": "without-effects"
 							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 720655094591278,
-							"disabled": true,
-							"parameters": {
-								"object": "VersusInfo",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 130544926064417,
-							"parameters": {
-								"object": "SpriteFont",
-								"effects": "without-effects"
-							}
 						}
 					],
 					"sid": 775860740615889

@@ -57,7 +57,31 @@
 					}
 				}
 			],
-			"sid": 834938499052826
+			"sid": 834938499052826,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 740848432979416,
+							"parameters": {
+								"variable": "Fighter_bDebugMode"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "SpriteFont",
+							"sid": 114421259082564
+						}
+					],
+					"sid": 266684709303019
+				}
+			]
 		},
 		{
 			"eventType": "comment",
@@ -541,23 +565,13 @@
 					],
 					"actions": [
 						{
-							"type": "comment",
-							"text": "??? Another versus."
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 421675470674159,
-							"disabled": true,
+							"sid": 451588521225960,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_0_DownloadWeights_Begin"
+								"value": "Versus_Step_9_EmitVersusResult"
 							}
-						},
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 429116548175942
 						}
 					],
 					"sid": 168845409622908
@@ -751,6 +765,41 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 351243258676620,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
+					"id": "is-fullscreen",
+					"objectClass": "Browser",
+					"sid": 627999100155458,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 660511424979512,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
+					}
+				}
+			],
+			"sid": 626268574019063
+		},
+		{
+			"eventType": "comment",
+			"text": "For testing: User control Fighter."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-any-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 654434314218510
@@ -758,9 +807,9 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 669643940846162,
+					"sid": 835376649180122,
 					"parameters": {
-						"variable": "Fighter_PlayerControllable"
+						"variable": "Fighter_bDebugMode"
 					}
 				}
 			],
@@ -797,9 +846,9 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 669643940846162,
+					"sid": 708240829256592,
 					"parameters": {
-						"variable": "Fighter_PlayerControllable"
+						"variable": "Fighter_bDebugMode"
 					}
 				}
 			],
@@ -826,39 +875,8 @@
 			"sid": 510208931923954
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 523127364989883,
-					"parameters": {
-						"key": 70
-					}
-				},
-				{
-					"id": "is-fullscreen",
-					"objectClass": "Browser",
-					"sid": 162315791343053,
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "request-fullscreen",
-					"objectClass": "Browser",
-					"sid": 652552188786193,
-					"parameters": {
-						"mode": "stretch-letterbox-scale",
-						"navigation-ui": "auto"
-					}
-				}
-			],
-			"sid": 199105531134504
-		},
-		{
 			"eventType": "comment",
-			"text": "For test VersusInfo_set()"
+			"text": "For testing: Versus Step 1 into Step 2."
 		},
 		{
 			"eventType": "block",
@@ -869,6 +887,14 @@
 					"sid": 261066947214651,
 					"parameters": {
 						"key": 50
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 415240353609982,
+					"parameters": {
+						"variable": "Fighter_bDebugMode"
 					}
 				},
 				{
@@ -894,6 +920,49 @@
 				}
 			],
 			"sid": 126876042714282
+		},
+		{
+			"eventType": "comment",
+			"text": "For testing: Versus Step 9 into Step 1."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 502168637060430,
+					"parameters": {
+						"key": 49
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 778387988999510,
+					"parameters": {
+						"variable": "Fighter_bDebugMode"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 328478576554800,
+					"parameters": {
+						"variable": "Versus_Step_Current",
+						"comparison": 0,
+						"value": "Versus_Step_9_EmitVersusResult"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 957775148096164
+				}
+			],
+			"sid": 845126373554647
 		}
 	],
 	"sid": 215625391285548

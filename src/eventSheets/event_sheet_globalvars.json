@@ -360,6 +360,16 @@
 			"sid": 134690201163391
 		},
 		{
+			"eventType": "variable",
+			"name": "Versus_Step_9_EmitVersusResult",
+			"type": "number",
+			"initialValue": "9",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 761966913698541
+		},
+		{
 			"eventType": "comment",
 			"text": ""
 		},
@@ -392,14 +402,30 @@
 			"text": ""
 		},
 		{
+			"eventType": "comment",
+			"text": "Debug Mode:"
+		},
+		{
+			"eventType": "comment",
+			"text": "In Step 4 or 7: User control Fighter."
+		},
+		{
+			"eventType": "comment",
+			"text": "In Step 1: Press \"2\" to go to Step 2."
+		},
+		{
+			"eventType": "comment",
+			"text": "In Step 9: Press \"1\" to go to Step 1."
+		},
+		{
 			"eventType": "variable",
-			"name": "Fighter_PlayerControllable",
+			"name": "Fighter_bDebugMode",
 			"type": "boolean",
 			"initialValue": "true",
-			"comment": "Whether user control Fighter.",
+			"comment": "Whether in debug.",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 163218808814598
+			"sid": 163904291396581
 		}
 	],
 	"sid": 704237106821719
