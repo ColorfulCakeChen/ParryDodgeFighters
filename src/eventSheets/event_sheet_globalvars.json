@@ -247,7 +247,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Versus_Info_bFinished",
+			"name": "VersusInfo_bFinished",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "true: VersusInfo destroyed. false: VersusInfo is displaying.",

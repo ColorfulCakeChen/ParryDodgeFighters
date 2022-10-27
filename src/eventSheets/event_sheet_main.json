@@ -243,7 +243,7 @@
 							"objectClass": "System",
 							"sid": 335182471414431,
 							"parameters": {
-								"variable": "Versus_Info_bFinished"
+								"variable": "VersusInfo_bFinished"
 							}
 						}
 					],
@@ -497,7 +497,7 @@
 							"objectClass": "System",
 							"sid": 194420349803351,
 							"parameters": {
-								"variable": "Versus_Info_bFinished"
+								"variable": "VersusInfo_bFinished"
 							}
 						}
 					],
@@ -576,17 +576,11 @@
 							"objectClass": "System",
 							"sid": 718895650794485,
 							"parameters": {
-								"variable": "Versus_Info_bFinished"
+								"variable": "VersusInfo_bFinished"
 							}
 						}
 					],
 					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 649927791807530,
-							"disabled": true
-						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
@@ -668,7 +662,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Fighting by Controller."
+					"text": "Fighting by Fighter_KeyDownArray."
 				},
 				{
 					"eventType": "block",
@@ -777,7 +771,7 @@
 					"objectClass": "System",
 					"sid": 789397732828780,
 					"parameters": {
-						"variable": "Versus_Info_bFinished",
+						"variable": "VersusInfo_bFinished",
 						"value": "true"
 					}
 				}

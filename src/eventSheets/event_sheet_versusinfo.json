@@ -264,7 +264,7 @@
 					"objectClass": "System",
 					"sid": 841709235578475,
 					"parameters": {
-						"variable": "Versus_Info_bFinished",
+						"variable": "VersusInfo_bFinished",
 						"value": "false"
 					}
 				}
