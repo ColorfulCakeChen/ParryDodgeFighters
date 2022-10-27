@@ -96,6 +96,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -128,8 +136,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "destroy",
-			"name": "Destroy outside layout",
+			"id": "Sin",
+			"name": "Sine",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false

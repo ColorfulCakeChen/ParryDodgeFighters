@@ -4,7 +4,13 @@
 	"sid": 230902177558417,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 351767180281083
+		}
+	],
 	"effectTypes": [],
 	"image": {
 		"width": 128,

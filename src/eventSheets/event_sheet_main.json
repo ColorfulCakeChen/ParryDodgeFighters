@@ -60,33 +60,21 @@
 						"variable": "Versus_Step_Current",
 						"value": "Versus_Step_0_DownloadWeights_Begin"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "Destroy Debug info, if not debug mode."
+				},
+				{
+					"id": "set-x",
+					"objectClass": "SpriteFont",
+					"sid": 130595982279914,
+					"parameters": {
+						"x": "( Fighter_bDebugMode ) ? SpriteFont.X : ( - SpriteFont.Width - 1 )"
+					}
 				}
 			],
-			"sid": 834938499052826,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 740848432979416,
-							"parameters": {
-								"variable": "Fighter_bDebugMode"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "SpriteFont",
-							"sid": 114421259082564
-						}
-					],
-					"sid": 266684709303019
-				}
-			]
+			"sid": 834938499052826
 		},
 		{
 			"eventType": "comment",
@@ -283,6 +271,26 @@
 								"on-time": "0.25",
 								"off-time": "0.25",
 								"duration": "1"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "FighterSkin",
+							"sid": 421163231647997,
+							"disabled": true,
+							"behaviorType": "Sine_Flash",
+							"parameters": {
+								"magnitude": "FighterSkin.Opacity"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "FighterSkin",
+							"sid": 812254550513498,
+							"disabled": true,
+							"behaviorType": "Sine_Flash",
+							"parameters": {
+								"state": "active"
 							}
 						},
 						{
@@ -616,6 +624,18 @@
 				{
 					"callFunction": "DrawingCanvas_Paint",
 					"sid": 670822637032521
+				},
+				{
+					"type": "comment",
+					"text": "Display FPS."
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 914275086635183,
+					"parameters": {
+						"text": "RegexReplace( SpriteFont.Text, \"^\\d*,?\", \"\", fps & \",\" )"
+					}
 				}
 			],
 			"sid": 304644917695471,

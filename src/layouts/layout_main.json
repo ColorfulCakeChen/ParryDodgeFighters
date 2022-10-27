@@ -559,7 +559,11 @@
 					},
 					"uid": 3,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 0,
 						"y": 32,
@@ -987,6 +991,20 @@
 						},
 						"Flash": {
 							"properties": {}
+						},
+						"Sine_Flash": {
+							"properties": {
+								"movement": "opacity",
+								"wave": "sine",
+								"period": 0.5,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 100,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
 						}
 					},
 					"sceneGraphData": {
