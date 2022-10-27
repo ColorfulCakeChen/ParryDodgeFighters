@@ -89,6 +89,10 @@
 			"sid": 749524624108426,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Wait for weights dowloading."
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -103,10 +107,6 @@
 						}
 					],
 					"actions": [
-						{
-							"type": "comment",
-							"text": "Wait for weights dowloading."
-						},
 						{
 							"id": "set-text",
 							"objectClass": "RemainedTimer",
@@ -138,6 +138,10 @@
 					"sid": 859861743300847
 				},
 				{
+					"eventType": "comment",
+					"text": "Display versus info for Parent as alignment 0. (Weights have dowloaded.)"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -154,13 +158,13 @@
 					"actions": [
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 584552159103254,
+							"sid": 543029118464152,
 							"parameters": [
-								"\"01234\"",
-								"\"012345678901234\"",
-								"31",
+								"Versus_EntityNo",
+								"Versus_Parent_GenerationNo",
+								"Versus_Parent_WinCount",
 								"\" \"",
-								"\"012345678901234\"",
+								"Versus_Offspring_GenerationNo",
 								"-1",
 								"\" \"",
 								"2"
@@ -177,6 +181,10 @@
 						}
 					],
 					"sid": 237412093855034
+				},
+				{
+					"eventType": "comment",
+					"text": "Count down timer, restore energy and cool down controller gradually during fighting."
 				},
 				{
 					"eventType": "block",
@@ -204,10 +212,6 @@
 					],
 					"actions": [
 						{
-							"type": "comment",
-							"text": "Fighting."
-						},
-						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
 							"sid": 652111608592919,
@@ -217,16 +221,20 @@
 							}
 						},
 						{
-							"callFunction": "Fighter_everyQuarterSeconds",
-							"sid": 217166540371973
-						},
-						{
 							"callFunction": "RemainderTimer_Refresh",
 							"sid": 124002064637575
+						},
+						{
+							"callFunction": "Fighter_everyQuarterSeconds",
+							"sid": 681109241784902
 						}
 					],
 					"sid": 716711061859539,
 					"children": [
+						{
+							"eventType": "comment",
+							"text": "Fighting ends if any Fighter is kicked out or time runs out."
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -248,10 +256,6 @@
 							],
 							"actions": [
 								{
-									"type": "comment",
-									"text": "Fighting ends if any Fighter is kicked out or time runs out."
-								},
-								{
 									"callFunction": "VersusInfo_create",
 									"sid": 149695613335528,
 									"parameters": [
@@ -262,14 +266,18 @@
 									]
 								},
 								{
+									"type": "comment",
+									"text": "!!! ...unfinished... who is alignment 0?"
+								},
+								{
 									"callFunction": "VersusInfo_set",
-									"sid": 516142074630459,
+									"sid": 236618131197999,
 									"parameters": [
-										"\"01234\"",
-										"\"012345678901234\"",
-										"31",
+										"Versus_EntityNo",
+										"Versus_Parent_GenerationNo",
+										"Versus_Parent_WinCount",
 										"\"Win\"",
-										"\"012345678901234\"",
+										"Versus_Offspring_GenerationNo",
 										"-1",
 										"\"Lose\"",
 										"2"
@@ -288,6 +296,10 @@
 							"sid": 477270838320702,
 							"children": [
 								{
+									"eventType": "comment",
+									"text": "Flash to remind user which fighter is still in bounds (i.e. which is winer)."
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -297,13 +309,15 @@
 											"parameters": {
 												"object": "Fighter"
 											}
+										},
+										{
+											"id": "is-outside-layout",
+											"objectClass": "Fighter",
+											"sid": 428635230142412,
+											"isInverted": true
 										}
 									],
 									"actions": [
-										{
-											"type": "comment",
-											"text": "Flash to remind user fighter in bounds."
-										},
 										{
 											"id": "flash",
 											"objectClass": "FighterSkin",
@@ -352,6 +366,10 @@
 			"sid": 304644917695471,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Energy restores boostly to remind user fighting begins."
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -377,10 +395,6 @@
 					],
 					"actions": [
 						{
-							"type": "comment",
-							"text": "Boost energy restoring for preparing fighting."
-						},
-						{
 							"callFunction": "Fighter_EnergyCur_add_byPicked",
 							"sid": 258514422285002,
 							"parameters": [
@@ -390,6 +404,10 @@
 					],
 					"sid": 762323392034888,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "Fighting by Controller."
 				},
 				{
 					"eventType": "block",
@@ -450,6 +468,10 @@
 					"isOrBlock": true
 				},
 				{
+					"eventType": "comment",
+					"text": "Energy drops down fast to remind user which fighter is loser (i.e. kicked out)."
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -467,10 +489,6 @@
 						}
 					],
 					"actions": [
-						{
-							"type": "comment",
-							"text": "Remind user which fighter is losed (i.e. kicked out) by reducing energy to zero  quickly."
-						},
 						{
 							"callFunction": "Fighter_EnergyCur_add_byPicked",
 							"sid": 994245170615541,
@@ -605,6 +623,10 @@
 			"sid": 638178211372008,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Fighting is about to begin."
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -617,10 +639,6 @@
 						}
 					],
 					"actions": [
-						{
-							"type": "comment",
-							"text": "Fighting is about to begin."
-						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
@@ -671,6 +689,10 @@
 					"sid": 304654058250143
 				},
 				{
+					"eventType": "comment",
+					"text": "Display versus info for Parent as alignment1. (Fighting has ended for Parent as alignment 0.)"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -718,14 +740,14 @@
 						},
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 557367740172407,
+							"sid": 480249112589473,
 							"parameters": [
-								"\"01234\"",
-								"\"012345678901234\"",
-								"31",
-								"\" \"",
-								"\"012345678901234\"",
+								"Versus_EntityNo",
+								"Versus_Offspring_GenerationNo",
 								"-1",
+								"\" \"",
+								"Versus_Parent_GenerationNo",
+								"Versus_Parent_WinCount",
 								"\" \"",
 								"2"
 							]
@@ -741,6 +763,10 @@
 						}
 					],
 					"sid": 790678400660388
+				},
+				{
+					"eventType": "comment",
+					"text": "Fighting ends for Parent is alignment 1."
 				},
 				{
 					"eventType": "block",

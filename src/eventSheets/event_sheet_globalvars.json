@@ -184,6 +184,54 @@
 			"text": ""
 		},
 		{
+			"eventType": "comment",
+			"text": "Current versus info."
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_EntityNo",
+			"type": "string",
+			"initialValue": "01234",
+			"comment": "Entity number of the versus.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 204288086013814
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Parent_GenerationNo",
+			"type": "string",
+			"initialValue": "012345678901234",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 472255933040640
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Offspring_GenerationNo",
+			"type": "string",
+			"initialValue": "012345678901234",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 963463581021535
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Parent_WinCount",
+			"type": "number",
+			"initialValue": "3100000000",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 610098857400323
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
 			"eventType": "variable",
 			"name": "Versus_Parent_AlignmentId_UnUsed",
 			"type": "number",
