@@ -349,15 +349,15 @@
 								},
 								{
 									"callFunction": "VersusInfo_set",
-									"sid": 651031991884575,
+									"sid": 431288985789845,
 									"parameters": [
 										"Versus_EntityNo",
-										"Versus_Parent_GenerationNo",
-										"Versus_Parent_WinCount",
-										"\"Win\"",
-										"Versus_Offspring_GenerationNo",
-										"-1",
-										"\"Lose\"",
+										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  Versus_Parent_GenerationNo : Versus_Offspring_GenerationNo",
+										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  Versus_Parent_WinCount : -1",
+										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
+										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ? Versus_Offspring_GenerationNo : Versus_Parent_GenerationNo",
+										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ? -1 : Versus_Parent_WinCount",
+										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
 										"2"
 									]
 								},
@@ -497,7 +497,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Fighting ends for Parent is alignment 1."
+					"text": "Fighting ends and VersusInfo ends for Parent is alignment 1."
 				},
 				{
 					"eventType": "block",
@@ -711,6 +711,28 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-destroyed",
+					"objectClass": "VersusInfo",
+					"sid": 786651745422246
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 789397732828780,
+					"parameters": {
+						"variable": "Versus_Info_bFinished",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 247909471311486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-any-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 654434314218510
@@ -815,28 +837,6 @@
 				}
 			],
 			"sid": 199105531134504
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-destroyed",
-					"objectClass": "VersusInfo",
-					"sid": 978013334992837
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 754022627442737,
-					"parameters": {
-						"variable": "Versus_Info_bFinished",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 638178211372008
 		},
 		{
 			"eventType": "comment",
