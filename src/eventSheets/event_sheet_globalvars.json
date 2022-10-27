@@ -247,6 +247,20 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Versus_Info_bFinished",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true: VersusInfo destroyed. false: VersusInfo is displaying.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 618411225976418
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "Versus_Step_Current",
 			"type": "number",
 			"initialValue": "0",

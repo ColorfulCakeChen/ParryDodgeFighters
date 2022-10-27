@@ -258,6 +258,15 @@
 						"y": "y_end",
 						"mode": "direct"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 841709235578475,
+					"parameters": {
+						"variable": "Versus_Info_bFinished",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 313408213261579

@@ -184,6 +184,80 @@
 				},
 				{
 					"eventType": "comment",
+					"text": "Fighting is about to begin."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 180661957578694,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 335182471414431,
+							"parameters": {
+								"variable": "Versus_Info_bFinished"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "RemainedTimer",
+							"sid": 343527119359616,
+							"parameters": {
+								"instance-variable": "secondsCur",
+								"value": "Self.secondsMax"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Full energy since fighting begins."
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Fighter",
+							"sid": 166042511798280,
+							"parameters": {
+								"instance-variable": "EnergyCur",
+								"value": "Self.EnergyMax"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Flash to remind user fighting begins."
+						},
+						{
+							"id": "flash",
+							"objectClass": "FighterSkin",
+							"sid": 132136889867453,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.25",
+								"off-time": "0.25",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 340528663483064,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 304654058250143
+				},
+				{
+					"eventType": "comment",
 					"text": "Count down timer, restore energy and cool down controller gradually during fighting."
 				},
 				{
@@ -192,7 +266,7 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 333781128702083,
+							"sid": 917340488420296,
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
@@ -202,7 +276,7 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 273078630294887,
+							"sid": 793542395495917,
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
@@ -214,7 +288,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
-							"sid": 652111608592919,
+							"sid": 418426449762427,
 							"parameters": {
 								"instance-variable": "secondsCur",
 								"value": "max( Self.secondsCur - QuarterSeconds, 0 )"
@@ -222,14 +296,14 @@
 						},
 						{
 							"callFunction": "RemainderTimer_Refresh",
-							"sid": 124002064637575
+							"sid": 600258768846686
 						},
 						{
 							"callFunction": "Fighter_everyQuarterSeconds",
-							"sid": 681109241784902
+							"sid": 812327467661100
 						}
 					],
-					"sid": 716711061859539,
+					"sid": 285908603979936,
 					"children": [
 						{
 							"eventType": "comment",
@@ -241,12 +315,12 @@
 								{
 									"id": "is-outside-layout",
 									"objectClass": "Fighter",
-									"sid": 915068713618218
+									"sid": 937813357427594
 								},
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "RemainedTimer",
-									"sid": 834422478131122,
+									"sid": 273162135988454,
 									"parameters": {
 										"instance-variable": "secondsCur",
 										"comparison": 3,
@@ -257,7 +331,7 @@
 							"actions": [
 								{
 									"callFunction": "VersusInfo_create",
-									"sid": 149695613335528,
+									"sid": 859888387555560,
 									"parameters": [
 										"\"End...\"",
 										"\"End...\"",
@@ -270,8 +344,12 @@
 									"text": "!!! ...unfinished... who is alignment 0?"
 								},
 								{
+									"type": "comment",
+									"text": "!!! ...unfinished... who win? who lose?"
+								},
+								{
 									"callFunction": "VersusInfo_set",
-									"sid": 236618131197999,
+									"sid": 651031991884575,
 									"parameters": [
 										"Versus_EntityNo",
 										"Versus_Parent_GenerationNo",
@@ -286,14 +364,14 @@
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 855512054414137,
+									"sid": 833644389638960,
 									"parameters": {
 										"variable": "Versus_Step_Current",
 										"value": "1"
 									}
 								}
 							],
-							"sid": 477270838320702,
+							"sid": 578497132374894,
 							"children": [
 								{
 									"eventType": "comment",
@@ -305,7 +383,7 @@
 										{
 											"id": "pick-all",
 											"objectClass": "System",
-											"sid": 220556001777599,
+											"sid": 273636179926754,
 											"parameters": {
 												"object": "Fighter"
 											}
@@ -313,7 +391,7 @@
 										{
 											"id": "is-outside-layout",
 											"objectClass": "Fighter",
-											"sid": 428635230142412,
+											"sid": 893577959402736,
 											"isInverted": true
 										}
 									],
@@ -321,7 +399,7 @@
 										{
 											"id": "flash",
 											"objectClass": "FighterSkin",
-											"sid": 586905900659069,
+											"sid": 368711570810502,
 											"behaviorType": "Flash",
 											"parameters": {
 												"on-time": "0.25",
@@ -330,13 +408,141 @@
 											}
 										}
 									],
-									"sid": 782882391397388
+									"sid": 448463172297376
 								}
 							],
 							"isOrBlock": true
 						}
 					],
 					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "Display versus info for Parent as alignment1. (Fighting has ended for Parent as alignment 0.)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 918507274131851,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_5_ParentAlignment0_End"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 194420349803351,
+							"parameters": {
+								"variable": "Versus_Info_bFinished"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "??? Exchange Fighters' alignment."
+						},
+						{
+							"callFunction": "Fighter_recreateAll",
+							"sid": 161261870102206
+						},
+						{
+							"id": "set-text",
+							"objectClass": "RemainedTimer",
+							"sid": 426652542271501,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"callFunction": "VersusInfo_create",
+							"sid": 619175258339983,
+							"parameters": [
+								"\"\"",
+								"\"\"",
+								"72",
+								"44"
+							]
+						},
+						{
+							"callFunction": "VersusInfo_set",
+							"sid": 480249112589473,
+							"parameters": [
+								"Versus_EntityNo",
+								"Versus_Offspring_GenerationNo",
+								"-1",
+								"\" \"",
+								"Versus_Parent_GenerationNo",
+								"Versus_Parent_WinCount",
+								"\" \"",
+								"2"
+							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 100910388754314,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "Versus_Step_6_ParentAlignment1_Begin"
+							}
+						}
+					],
+					"sid": 790678400660388
+				},
+				{
+					"eventType": "comment",
+					"text": "Fighting ends for Parent is alignment 1."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 188235003087129,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_8_ParentAlignment1_End"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 718895650794485,
+							"parameters": {
+								"variable": "Versus_Info_bFinished"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "??? Another versus."
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 421675470674159,
+							"disabled": true,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "Versus_Step_0_DownloadWeights_Begin"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 429116548175942
+						}
+					],
+					"sid": 168845409622908
 				}
 			]
 		},
@@ -619,198 +825,18 @@
 					"sid": 978013334992837
 				}
 			],
-			"actions": [],
-			"sid": 638178211372008,
-			"children": [
+			"actions": [
 				{
-					"eventType": "comment",
-					"text": "Fighting is about to begin."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "evaluate-expression",
-							"objectClass": "System",
-							"sid": 180661957578694,
-							"parameters": {
-								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "RemainedTimer",
-							"sid": 343527119359616,
-							"parameters": {
-								"instance-variable": "secondsCur",
-								"value": "Self.secondsMax"
-							}
-						},
-						{
-							"type": "comment",
-							"text": "Full energy since fighting begins."
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Fighter",
-							"sid": 166042511798280,
-							"parameters": {
-								"instance-variable": "EnergyCur",
-								"value": "Self.EnergyMax"
-							}
-						},
-						{
-							"type": "comment",
-							"text": "Flash to remind user fighting begins."
-						},
-						{
-							"id": "flash",
-							"objectClass": "FighterSkin",
-							"sid": 132136889867453,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.25",
-								"off-time": "0.25",
-								"duration": "1"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 340528663483064,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 304654058250143
-				},
-				{
-					"eventType": "comment",
-					"text": "Display versus info for Parent as alignment1. (Fighting has ended for Parent as alignment 0.)"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 582631744765729
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 918507274131851,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"comparison": 0,
-								"value": "Versus_Step_5_ParentAlignment0_End"
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "comment",
-							"text": "??? Exchange Fighters' alignment."
-						},
-						{
-							"callFunction": "Fighter_recreateAll",
-							"sid": 161261870102206
-						},
-						{
-							"id": "set-text",
-							"objectClass": "RemainedTimer",
-							"sid": 426652542271501,
-							"parameters": {
-								"text": "\"\""
-							}
-						},
-						{
-							"callFunction": "VersusInfo_create",
-							"sid": 404439473475760,
-							"parameters": [
-								"\"Loading.....................\"",
-								"\"Loading.....................\"",
-								"72",
-								"44"
-							]
-						},
-						{
-							"callFunction": "VersusInfo_set",
-							"sid": 480249112589473,
-							"parameters": [
-								"Versus_EntityNo",
-								"Versus_Offspring_GenerationNo",
-								"-1",
-								"\" \"",
-								"Versus_Parent_GenerationNo",
-								"Versus_Parent_WinCount",
-								"\" \"",
-								"2"
-							]
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 100910388754314,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_6_ParentAlignment1_Begin"
-							}
-						}
-					],
-					"sid": 790678400660388
-				},
-				{
-					"eventType": "comment",
-					"text": "Fighting ends for Parent is alignment 1."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 416663439108638
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 794153777846244,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"comparison": 0,
-								"value": "Versus_Step_8_ParentAlignment1_End"
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "comment",
-							"text": "??? Another versus."
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 478573945802936,
-							"disabled": true,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_0_DownloadWeights_Begin"
-							}
-						},
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 993181863455677
-						}
-					],
-					"sid": 130451988170745
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 754022627442737,
+					"parameters": {
+						"variable": "Versus_Info_bFinished",
+						"value": "true"
+					}
 				}
-			]
+			],
+			"sid": 638178211372008
 		},
 		{
 			"eventType": "comment",
