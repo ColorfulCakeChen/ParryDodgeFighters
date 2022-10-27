@@ -63,9 +63,9 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 3,
+								"fade-in-time": 1,
 								"wait-time": 1000,
-								"fade-out-time": 5,
+								"fade-out-time": 4,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -420,9 +420,9 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 3,
+								"fade-in-time": 1,
 								"wait-time": 1000,
-								"fade-out-time": 5,
+								"fade-out-time": 4,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -499,9 +499,9 @@
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 3,
+								"fade-in-time": 1,
 								"wait-time": 1000,
-								"fade-out-time": 5,
+								"fade-out-time": 4,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false

@@ -785,6 +785,10 @@
 			"sid": 247909471311486
 		},
 		{
+			"eventType": "comment",
+			"text": "To Fullscreen."
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -814,6 +818,34 @@
 				}
 			],
 			"sid": 626268574019063
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-double-tap",
+					"objectClass": "Touch",
+					"sid": 541847905068285
+				},
+				{
+					"id": "is-fullscreen",
+					"objectClass": "Browser",
+					"sid": 859845376563472,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 315474529578604,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
+					}
+				}
+			],
+			"sid": 982906661870106
 		},
 		{
 			"eventType": "comment",
