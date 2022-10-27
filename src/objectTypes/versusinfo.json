@@ -3,20 +3,7 @@
 	"plugin-id": "Text",
 	"sid": 251722093424849,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "mode",
-			"type": "string",
-			"desc": "\"start\" or \"finish\". It means the versus is starting or finished.",
-			"sid": 634247855760258
-		},
-		{
-			"name": "mode_detected",
-			"type": "boolean",
-			"desc": "true, if the VersusInfo.mode has been detected by script.",
-			"sid": 203334711671176
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Fade",

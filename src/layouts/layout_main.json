@@ -56,10 +56,7 @@
 						"origin": "bottom"
 					},
 					"uid": 21,
-					"instanceVariables": {
-						"mode": "",
-						"mode_detected": false
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
 							"properties": {
@@ -155,16 +152,7 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "mode",
-												"state": true
-											},
-											{
-												"iv": "mode_detected",
-												"state": true
-											}
-										]
+										"state": []
 									}
 								]
 							},
