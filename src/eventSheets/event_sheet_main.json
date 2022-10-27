@@ -330,22 +330,40 @@
 							],
 							"actions": [
 								{
+									"type": "comment",
+									"text": "Determine all alignments' win/draw/lose."
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 911052315255882,
+									"parameters": {
+										"variable": "Versus_Result_ParentAlignment0",
+										"value": "( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 0 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 259654199341661,
+									"parameters": {
+										"variable": "Versus_Result_ParentAlignment1",
+										"value": "( Versus_Step_Current = Versus_Step_7_ParentAlignment1_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 1 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment1"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Display all alignments' win/draw/lose."
+								},
+								{
 									"callFunction": "VersusInfo_create",
-									"sid": 859888387555560,
+									"sid": 480991659790682,
 									"parameters": [
 										"\"End...\"",
 										"\"End...\"",
 										"36",
 										"44"
 									]
-								},
-								{
-									"type": "comment",
-									"text": "!!! ...unfinished... who is alignment 0?"
-								},
-								{
-									"type": "comment",
-									"text": "!!! ...unfinished... who win? who lose?"
 								},
 								{
 									"callFunction": "VersusInfo_set",
