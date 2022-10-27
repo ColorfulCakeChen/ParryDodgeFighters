@@ -92,94 +92,72 @@
 					"parameters": {
 						"color": "rgba255( 0, 0, 0, 255 )"
 					}
-				}
-			],
-			"sid": 728348637510731,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-visible",
-							"objectClass": "FighterSkin",
-							"sid": 971466835850943
-						}
-					],
-					"actions": [
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 642206017173502,
-							"parameters": {
-								"object": "FighterThrustParticles",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 651570233448997,
-							"parameters": {
-								"object": "FighterSkin",
-								"effects": "without-effects"
-							}
-						}
-					],
-					"sid": 358295451626339
 				},
 				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 689081953091880,
-							"parameters": {
-								"object": "ShieldSkin",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 812703437809433,
-							"parameters": {
-								"object": "ProjectileSkin",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 856300446589980,
-							"parameters": {
-								"object": "EnergyBarBackground",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 285504036222598,
-							"parameters": {
-								"object": "EnergyBar",
-								"effects": "without-effects"
-							}
-						},
-						{
-							"id": "paste-object",
-							"objectClass": "DrawingCanvas",
-							"sid": 280323490699226,
-							"parameters": {
-								"object": "RemainedTimer",
-								"effects": "without-effects"
-							}
-						}
-					],
-					"sid": 775860740615889
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 157429320423933,
+					"parameters": {
+						"object": "FighterThrustParticles",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 683343754267379,
+					"parameters": {
+						"object": "FighterSkin",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 882607567862493,
+					"parameters": {
+						"object": "ShieldSkin",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 687585856724301,
+					"parameters": {
+						"object": "ProjectileSkin",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 814513688914572,
+					"parameters": {
+						"object": "EnergyBarBackground",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 285659255786938,
+					"parameters": {
+						"object": "EnergyBar",
+						"effects": "without-effects"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 650995334551105,
+					"parameters": {
+						"object": "RemainedTimer",
+						"effects": "without-effects"
+					}
 				}
-			]
+			],
+			"sid": 728348637510731
 		}
 	],
 	"sid": 744869350564622

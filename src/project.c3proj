@@ -128,22 +128,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Flash",
-			"name": "Flash",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "MoveTo",
 			"name": "Move To",
 			"author": "Scirra",

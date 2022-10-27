@@ -977,31 +977,16 @@
 						"live-preview": false
 					},
 					"uid": 12,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"FlashQuarterSeconds": 0
+					},
 					"behaviors": {
 						"Fade": {
 							"properties": {
-								"fade-in-time": 8,
+								"fade-in-time": 5,
 								"wait-time": 0,
 								"fade-out-time": 0,
 								"destroy": false,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Sine_Flash": {
-							"properties": {
-								"movement": "opacity",
-								"wave": "sine",
-								"period": 0.5,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 100,
-								"magnitude-random": 0,
 								"enabled": false,
 								"live-preview": false
 							}

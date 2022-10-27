@@ -63,7 +63,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "Destroy Debug info, if not debug mode."
+					"text": "Destroy Debug info (by move outside layout), if not debug mode."
 				},
 				{
 					"id": "set-x",
@@ -100,6 +100,27 @@
 					"disabled": true,
 					"parameters": {
 						"text": "SpriteFont.Text & \",\" & RemainedTimer.secondsCur"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Flash effect by opacity."
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "FighterSkin",
+					"sid": 410219451614743,
+					"parameters": {
+						"opacity": "( FighterSkin.FlashQuarterSeconds <=0 ) ? FighterSkin.Opacity : ( 100 * ( FighterSkin.FlashQuarterSeconds % 2 ) )"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "FighterSkin",
+					"sid": 132979567769007,
+					"parameters": {
+						"instance-variable": "FlashQuarterSeconds",
+						"value": "max( FighterSkin.FlashQuarterSeconds - 1, 0 )"
 					}
 				}
 			],
@@ -263,34 +284,12 @@
 							"text": "Flash to remind user fighting begins."
 						},
 						{
-							"id": "flash",
+							"id": "set-instvar-value",
 							"objectClass": "FighterSkin",
-							"sid": 132136889867453,
-							"behaviorType": "Flash",
+							"sid": 473597264516702,
 							"parameters": {
-								"on-time": "0.25",
-								"off-time": "0.25",
-								"duration": "1"
-							}
-						},
-						{
-							"id": "set-magnitude",
-							"objectClass": "FighterSkin",
-							"sid": 421163231647997,
-							"disabled": true,
-							"behaviorType": "Sine_Flash",
-							"parameters": {
-								"magnitude": "FighterSkin.Opacity"
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "FighterSkin",
-							"sid": 812254550513498,
-							"disabled": true,
-							"behaviorType": "Sine_Flash",
-							"parameters": {
-								"state": "active"
+								"instance-variable": "FlashQuarterSeconds",
+								"value": "4"
 							}
 						},
 						{
@@ -464,14 +463,12 @@
 									],
 									"actions": [
 										{
-											"id": "flash",
+											"id": "set-instvar-value",
 											"objectClass": "FighterSkin",
-											"sid": 368711570810502,
-											"behaviorType": "Flash",
+											"sid": 425818307301988,
 											"parameters": {
-												"on-time": "0.25",
-												"off-time": "0.25",
-												"duration": "1"
+												"instance-variable": "FlashQuarterSeconds",
+												"value": "4"
 											}
 										}
 									],
@@ -485,7 +482,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Display versus info for Parent as alignment1. (Fighting has ended for Parent as alignment 0.)"
+					"text": "Display versus info for Parent as alignment1. (Fighting has ended for Parent as alignment 0.) (Exchange Fighters' alignment.)"
 				},
 				{
 					"eventType": "block",
@@ -510,10 +507,6 @@
 						}
 					],
 					"actions": [
-						{
-							"type": "comment",
-							"text": "??? Exchange Fighters' alignment."
-						},
 						{
 							"callFunction": "Fighter_recreateAll",
 							"sid": 161261870102206

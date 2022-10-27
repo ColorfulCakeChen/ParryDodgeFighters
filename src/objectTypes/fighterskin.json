@@ -3,22 +3,19 @@
 	"plugin-id": "Sprite",
 	"sid": 963713917736068,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "FlashQuarterSeconds",
+			"type": "number",
+			"desc": "How many quarter seconds to flash by opacity.",
+			"sid": 570035088900281
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Fade",
 			"name": "Fade",
 			"sid": 284627356803356
-		},
-		{
-			"behaviorId": "Flash",
-			"name": "Flash",
-			"sid": 707069834552785
-		},
-		{
-			"behaviorId": "Sin",
-			"name": "Sine_Flash",
-			"sid": 453730953299480
 		}
 	],
 	"effectTypes": [],
