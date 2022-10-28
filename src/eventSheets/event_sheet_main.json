@@ -765,6 +765,10 @@
 			"sid": 304644917695471
 		},
 		{
+			"eventType": "comment",
+			"text": "VersusInfo finished. (DrawingCanvas still darken.)"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -805,6 +809,10 @@
 				}
 			],
 			"sid": 247909471311486
+		},
+		{
+			"eventType": "comment",
+			"text": "VersusInfo finished and DrawingCanvas lighten finished."
 		},
 		{
 			"eventType": "block",
