@@ -115,6 +115,26 @@
 						"variable": "VersusInfo_bFinished",
 						"value": "false"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "Darken DrawingCanvas"
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "DrawingCanvas",
+					"sid": 626225756394466,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Darken\"",
+						"property": "offsetColor",
+						"end-value": "rgba( 20, 20, 20, 20 )",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
 				}
 			],
 			"sid": 736336466078585

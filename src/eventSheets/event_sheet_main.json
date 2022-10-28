@@ -786,6 +786,26 @@
 						"variable": "VersusInfo_bFinished",
 						"value": "true"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "Cancel Darken DrawingCanvas"
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "DrawingCanvas",
+					"sid": 341136455185119,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Lighten\"",
+						"property": "offsetColor",
+						"end-value": "rgba( 100, 100, 100, 100 )",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
 				}
 			],
 			"sid": 247909471311486
