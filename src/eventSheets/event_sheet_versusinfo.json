@@ -130,6 +130,15 @@
 					"text": "Darken DrawingCanvas"
 				},
 				{
+					"id": "stop-tweens",
+					"objectClass": "DrawingCanvas",
+					"sid": 106852065589463,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Lighten\""
+					}
+				},
+				{
 					"id": "tween-one-property",
 					"objectClass": "DrawingCanvas",
 					"sid": 626225756394466,

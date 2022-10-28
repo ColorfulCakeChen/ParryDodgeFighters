@@ -789,18 +789,18 @@
 				},
 				{
 					"type": "comment",
-					"text": "Cancel Darken DrawingCanvas"
+					"text": "Cancel Darken DrawingCanvas\n\n- When Step5 (and Step8), use longer seconds to lighten so that Step5 (and Step2)'s darken will not cause obviously flashing."
 				},
 				{
 					"id": "tween-one-property",
 					"objectClass": "DrawingCanvas",
-					"sid": 341136455185119,
+					"sid": 803695365705601,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"Lighten\"",
 						"property": "offsetColor",
 						"end-value": "rgba( 100, 100, 100, 100 )",
-						"time": "1",
+						"time": "( ( Versus_Step_Current = Versus_Step_5_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_8_ParentAlignment1_End ) ) ? 10 : 1",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
