@@ -50,7 +50,7 @@
 					"sid": 424631943334793,
 					"parameters": {
 						"variable": "Versus_Step_Current",
-						"value": "Versus_Step_0_DownloadWeights_Begin"
+						"value": "Versus_Step_00_DownloadWeights_Begin"
 					}
 				},
 				{
@@ -99,6 +99,15 @@
 					"text": "Flash effect by opacity."
 				},
 				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 918205113768904,
+					"disabled": true,
+					"parameters": {
+						"text": "( FighterSkin.FlashQuarterSeconds <= 0 ) ? SpriteFont.Text : ( SpriteFont.Text & \",\" & FighterSkin.FlashQuarterSeconds )"
+					}
+				},
+				{
 					"id": "set-opacity",
 					"objectClass": "FighterSkin",
 					"sid": 410219451614743,
@@ -132,7 +141,7 @@
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
-								"value": "Versus_Step_0_DownloadWeights_Begin"
+								"value": "Versus_Step_00_DownloadWeights_Begin"
 							}
 						}
 					],
@@ -168,7 +177,7 @@
 							"sid": 346817543319802,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_1_DownloadWeights_Loading"
+								"value": "Versus_Step_01_DownloadWeights_Loading"
 							}
 						}
 					],
@@ -188,7 +197,7 @@
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
-								"value": "Versus_Step_2_DownloadWeights_End"
+								"value": "Versus_Step_02_DownloadWeights_End"
 							}
 						}
 					],
@@ -213,7 +222,7 @@
 							"sid": 604567626044967,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_3_ParentAlignment0_Begin"
+								"value": "Versus_Step_03_ParentAlignment0_WaitVersusInfo"
 							}
 						},
 						{
@@ -234,7 +243,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Fighting is about to begin."
+					"text": "Flash to remind user fighting begins. Flash starts at VersusInfo finished."
 				},
 				{
 					"eventType": "block",
@@ -244,7 +253,61 @@
 							"objectClass": "System",
 							"sid": 180661957578694,
 							"parameters": {
-								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
+								"value": "( Versus_Step_Current = Versus_Step_03_ParentAlignment0_WaitVersusInfo ) | ( Versus_Step_Current = Versus_Step_07_ParentAlignment1_WaitVersusInfo )"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 971913710957801,
+							"parameters": {
+								"variable": "VersusInfo_bFinished"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FighterSkin",
+							"sid": 813932280952217,
+							"parameters": {
+								"instance-variable": "FlashQuarterSeconds",
+								"value": "4"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 414646538288834,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 304654058250143
+				},
+				{
+					"eventType": "comment",
+					"text": "Go fighting when DrawingCanvas lighten finished."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 800947812807839,
+							"parameters": {
+								"value": "( Versus_Step_Current = Versus_Step_04_ParentAlignment0_WaitDrawingCanvas ) | ( Versus_Step_Current = Versus_Step_08_ParentAlignment1_WaitDrawingCanvas )"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 549292886931509,
+							"parameters": {
+								"variable": "VersusInfo_DrawingCanvas_Lighten_bFinished"
 							}
 						}
 					],
@@ -252,7 +315,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
-							"sid": 343527119359616,
+							"sid": 650315918560008,
 							"parameters": {
 								"instance-variable": "secondsCur",
 								"value": "Self.secondsMax"
@@ -260,54 +323,50 @@
 						},
 						{
 							"type": "comment",
-							"text": "Full energy if fighting begins."
+							"text": "Full energy since fighting begins."
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Fighter",
-							"sid": 533020180862020,
+							"sid": 161704947619557,
 							"parameters": {
 								"instance-variable": "EnergyCur",
-								"value": "VersusInfo_DrawingCanvas_Lighten_bFinished ? Self.EnergyMax : Self.EnergyCur"
+								"value": "Self.EnergyMax"
 							}
 						},
 						{
 							"type": "comment",
-							"text": "Flash to remind user fighting begins.\n- Flash starts at VersusInfo finished.\n- Flash stops at DrawingCanvas lighten finished (before going fighting so that neural network will not see flashed Fighter)."
+							"text": "Flash stops at DrawingCanvas lighten finished (before going fighting so that neural network will not see flashed Fighter)."
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "FighterSkin",
-							"sid": 185581761597595,
+							"sid": 567194445330286,
 							"parameters": {
 								"instance-variable": "FlashQuarterSeconds",
-								"value": "VersusInfo_bFinished ? ( VersusInfo_DrawingCanvas_Lighten_bFinished ? 0 : ( ( FighterSkin.FlashQuarterSeconds <= 0 ) ? 4 : FighterSkin.FlashQuarterSeconds ) ) : 0"
+								"value": "0"
 							}
-						},
-						{
-							"type": "comment",
-							"text": "Go fighting at DrawingCanvas lighten finished."
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Fighter",
-							"sid": 641071660601758,
+							"sid": 900256070216136,
 							"parameters": {
 								"instance-variable": "private_bFighting",
-								"value": "VersusInfo_DrawingCanvas_Lighten_bFinished ? 1 : 0"
+								"value": "1"
 							}
 						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 192886686413953,
+							"sid": 448730696990357,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "VersusInfo_DrawingCanvas_Lighten_bFinished ? 1 : 0"
+								"value": "1"
 							}
 						}
 					],
-					"sid": 304654058250143
+					"sid": 520759763904433
 				},
 				{
 					"eventType": "comment",
@@ -323,7 +382,7 @@
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
-								"value": "Versus_Step_4_ParentAlignment0_Fighting"
+								"value": "Versus_Step_05_ParentAlignment0_Fighting"
 							}
 						},
 						{
@@ -333,7 +392,7 @@
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
-								"value": "Versus_Step_7_ParentAlignment1_Fighting"
+								"value": "Versus_Step_09_ParentAlignment1_Fighting"
 							}
 						}
 					],
@@ -414,7 +473,7 @@
 									"sid": 911052315255882,
 									"parameters": {
 										"variable": "Versus_Result_ParentAlignment0",
-										"value": "( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 0 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment0"
+										"value": "( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 0 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment0"
 									}
 								},
 								{
@@ -423,7 +482,7 @@
 									"sid": 259654199341661,
 									"parameters": {
 										"variable": "Versus_Result_ParentAlignment1",
-										"value": "( Versus_Step_Current = Versus_Step_7_ParentAlignment1_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 1 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment1"
+										"value": "( Versus_Step_Current = Versus_Step_09_ParentAlignment1_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 1 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment1"
 									}
 								},
 								{
@@ -445,12 +504,12 @@
 									"sid": 431288985789845,
 									"parameters": [
 										"Versus_EntityNo",
-										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  Versus_Parent_GenerationNo : Versus_Offspring_GenerationNo",
-										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  Versus_Parent_WinCount : -1",
-										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
-										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ? Versus_Offspring_GenerationNo : Versus_Parent_GenerationNo",
-										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ? -1 : Versus_Parent_WinCount",
-										"( Versus_Step_Current = Versus_Step_4_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_GenerationNo : Versus_Offspring_GenerationNo",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_WinCount : -1",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? Versus_Offspring_GenerationNo : Versus_Parent_GenerationNo",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? -1 : Versus_Parent_WinCount",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
 										"2"
 									]
 								},
@@ -539,7 +598,7 @@
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
-								"value": "Versus_Step_5_ParentAlignment0_End"
+								"value": "Versus_Step_06_ParentAlignment0_End"
 							}
 						},
 						{
@@ -601,7 +660,7 @@
 							"sid": 100910388754314,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_6_ParentAlignment1_Begin"
+								"value": "Versus_Step_07_ParentAlignment1_WaitVersusInfo"
 							}
 						}
 					],
@@ -621,7 +680,7 @@
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"comparison": 0,
-								"value": "Versus_Step_8_ParentAlignment1_End"
+								"value": "Versus_Step_10_ParentAlignment1_End"
 							}
 						},
 						{
@@ -640,7 +699,7 @@
 							"sid": 535219150709067,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "Versus_Step_0_DownloadWeights_Begin"
+								"value": "Versus_Step_00_DownloadWeights_Begin"
 							}
 						}
 					],
@@ -800,7 +859,7 @@
 						"tags": "\"Lighten\"",
 						"property": "offsetColor",
 						"end-value": "rgba( 100, 100, 100, 100 )",
-						"time": "( ( Versus_Step_Current = Versus_Step_5_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_8_ParentAlignment1_End ) ) ? 10 : 1",
+						"time": "( ( Versus_Step_Current = Versus_Step_06_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_10_ParentAlignment1_End ) ) ? 10 : 1",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -1015,7 +1074,7 @@
 					"parameters": {
 						"variable": "Versus_Step_Current",
 						"comparison": 0,
-						"value": "Versus_Step_1_DownloadWeights_Loading"
+						"value": "Versus_Step_01_DownloadWeights_Loading"
 					}
 				}
 			],
@@ -1026,7 +1085,7 @@
 					"sid": 828659472112741,
 					"parameters": {
 						"variable": "Versus_Step_Current",
-						"value": "Versus_Step_2_DownloadWeights_End"
+						"value": "Versus_Step_02_DownloadWeights_End"
 					}
 				}
 			],
