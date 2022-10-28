@@ -260,15 +260,15 @@
 						},
 						{
 							"type": "comment",
-							"text": "Full energy since fighting begins."
+							"text": "Full energy if fighting begins."
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Fighter",
-							"sid": 166042511798280,
+							"sid": 533020180862020,
 							"parameters": {
 								"instance-variable": "EnergyCur",
-								"value": "Self.EnergyMax"
+								"value": "VersusInfo_DrawingCanvas_Lighten_bFinished ? Self.EnergyMax : Self.EnergyCur"
 							}
 						},
 						{
@@ -339,6 +339,10 @@
 					],
 					"actions": [
 						{
+							"callFunction": "RemainderTimer_Refresh",
+							"sid": 392924209293920
+						},
+						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
 							"sid": 418426449762427,
@@ -346,10 +350,6 @@
 								"instance-variable": "secondsCur",
 								"value": "max( Self.secondsCur - QuarterSeconds, 0 )"
 							}
-						},
-						{
-							"callFunction": "RemainderTimer_Refresh",
-							"sid": 600258768846686
 						},
 						{
 							"callFunction": "Fighter_everyQuarterSeconds",
