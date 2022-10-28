@@ -322,6 +322,10 @@
 					"objectClass": "FighterSkin",
 					"sid": 491745745646935,
 					"behaviorType": "Fade"
+				},
+				{
+					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
+					"sid": 183706967939311
 				}
 			],
 			"sid": 381188756354974

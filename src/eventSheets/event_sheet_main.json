@@ -55,7 +55,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "Destroy Debug info (by move outside layout), if not debug mode."
+					"text": "Destroy Debug info (by moving it outside layout), if not in debug mode."
 				},
 				{
 					"id": "set-x",
@@ -150,14 +150,6 @@
 							"sid": 864778163234747,
 							"parameters": {
 								"text": "\"\""
-							}
-						},
-						{
-							"id": "set-width",
-							"objectClass": "EnergyBar",
-							"sid": 989068452487371,
-							"parameters": {
-								"width": "0"
 							}
 						},
 						{
