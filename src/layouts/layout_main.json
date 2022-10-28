@@ -629,8 +629,8 @@
 						"VersusAlignmentId": 0,
 						"EnergyCur": 0,
 						"EnergyMax": 1000,
-						"EnergyRestorePoints": 8,
-						"EnergyRestoreBoost": 1,
+						"EnergyPointsPerQuarterSeconds": 8,
+						"EnergyBoostPerTick": 0,
 						"EnergyPointsThrust": 1,
 						"EnergyPointsShoot": 20,
 						"EnergyPointsRaiseShield": 120,
@@ -639,7 +639,8 @@
 						"RaiseShieldQuarterSeconds": 3,
 						"RaiseShieldCountDown": 3,
 						"Acceleration": 3,
-						"private_Force": 0
+						"private_Force": 0,
+						"private_Losed": 0
 					},
 					"behaviors": {
 						"ScrollTo": {
@@ -712,11 +713,11 @@
 												"state": true
 											},
 											{
-												"iv": "EnergyRestorePoints",
+												"iv": "EnergyPointsPerQuarterSeconds",
 												"state": true
 											},
 											{
-												"iv": "EnergyRestoreBoost",
+												"iv": "EnergyBoostPerTick",
 												"state": true
 											},
 											{
@@ -753,6 +754,10 @@
 											},
 											{
 												"iv": "private_Force",
+												"state": true
+											},
+											{
+												"iv": "private_Losed",
 												"state": true
 											}
 										]

@@ -7,7 +7,7 @@
 		{
 			"name": "FlashQuarterSeconds",
 			"type": "number",
-			"desc": "How many quarter seconds to flash by opacity.",
+			"desc": "How many quarter of a second to flash by opacity.",
 			"sid": 570035088900281
 		}
 	],

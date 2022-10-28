@@ -147,7 +147,10 @@
 					"actions": [
 						{
 							"callFunction": "Fighter_recreateAll",
-							"sid": 154601227087358
+							"sid": 154601227087358,
+							"parameters": [
+								"0"
+							]
 						},
 						{
 							"id": "set-text",
@@ -223,10 +226,23 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 142010917529747,
+							"sid": 604567626044967,
 							"parameters": {
 								"variable": "Versus_Step_Current",
 								"value": "Versus_Step_3_ParentAlignment0_Begin"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Energy restores boostly to remind user fighting begins."
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Fighter",
+							"sid": 687284230806878,
+							"parameters": {
+								"instance-variable": "EnergyBoostPerTick",
+								"value": "1"
 							}
 						}
 					],
@@ -361,22 +377,44 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-outside-layout",
-									"objectClass": "Fighter",
-									"sid": 937813357427594
-								},
-								{
 									"id": "compare-instance-variable",
 									"objectClass": "RemainedTimer",
-									"sid": 273162135988454,
+									"sid": 675175824936052,
 									"parameters": {
 										"instance-variable": "secondsCur",
 										"comparison": 3,
 										"value": "0"
 									}
+								},
+								{
+									"id": "is-outside-layout",
+									"objectClass": "Fighter",
+									"sid": 937813357427594
 								}
 							],
 							"actions": [
+								{
+									"type": "comment",
+									"text": "Energy drops down fast to remind user which fighter is loser (i.e. kicked out)."
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Fighter",
+									"sid": 497982717853251,
+									"parameters": {
+										"instance-variable": "EnergyBoostPerTick",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Fighter",
+									"sid": 910627130002438,
+									"parameters": {
+										"instance-variable": "private_Losed",
+										"value": "1"
+									}
+								},
 								{
 									"type": "comment",
 									"text": "Determine all alignments' win/draw/lose."
@@ -508,8 +546,15 @@
 					],
 					"actions": [
 						{
+							"type": "comment",
+							"text": "Also, Energy restores boostly to remind user fighting begins."
+						},
+						{
 							"callFunction": "Fighter_recreateAll",
-							"sid": 161261870102206
+							"sid": 209812521011476,
+							"parameters": [
+								"1"
+							]
 						},
 						{
 							"id": "set-text",
@@ -597,6 +642,35 @@
 			]
 		},
 		{
+			"eventType": "comment",
+			"text": "Energy restores/reduces boostly to remind user fighting begins/ends."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 858200924198275,
+					"parameters": {
+						"instance-variable": "EnergyBoostPerTick",
+						"comparison": 1,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Fighter_EnergyCur_add_byPicked",
+					"sid": 561144063363454,
+					"parameters": [
+						"Fighter.EnergyPointsPerQuarterSeconds * Fighter.EnergyBoostPerTick"
+					]
+				}
+			],
+			"sid": 737281405557879
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -625,54 +699,23 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpriteFont",
-					"sid": 914275086635183,
+					"sid": 438616834040345,
 					"parameters": {
 						"text": "RegexReplace( SpriteFont.Text, \"^\\d*,?\", \"\", fps & \",\" )"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 104364895810039,
+					"disabled": true,
+					"parameters": {
+						"text": "RegexReplace( SpriteFont.Text, \"^\\d*,?-?\\d*,?\", \"\", fps & \",\" & Fighter.EnergyBoostPerTick & \",\" )"
 					}
 				}
 			],
 			"sid": 304644917695471,
 			"children": [
-				{
-					"eventType": "comment",
-					"text": "Energy restores boostly to remind user fighting begins."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 277704417039841,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"comparison": 0,
-								"value": "Versus_Step_3_ParentAlignment0_Begin"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 661278438930147,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"comparison": 0,
-								"value": "Versus_Step_6_ParentAlignment1_Begin"
-							}
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "Fighter_EnergyCur_add_byPicked",
-							"sid": 258514422285002,
-							"parameters": [
-								"Fighter.EnergyRestorePoints * Fighter.EnergyRestoreBoost"
-							]
-						}
-					],
-					"sid": 762323392034888,
-					"isOrBlock": true
-				},
 				{
 					"eventType": "comment",
 					"text": "Fighting by Fighter_KeyDownArray."
@@ -704,6 +747,19 @@
 					"actions": [
 						{
 							"type": "comment",
+							"text": "Cancel energy boost animation."
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Fighter",
+							"sid": 209042832835395,
+							"parameters": {
+								"instance-variable": "EnergyBoostPerTick",
+								"value": "0"
+							}
+						},
+						{
+							"type": "comment",
 							"text": "Anti the gravity completely."
 						},
 						{
@@ -717,6 +773,10 @@
 								"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
 								"image-point": "0"
 							}
+						},
+						{
+							"type": "comment",
+							"text": "Control Fighters."
 						},
 						{
 							"callFunction": "Fighter_act_byKeyDownArray",
@@ -734,38 +794,6 @@
 					],
 					"sid": 796995777013480,
 					"isOrBlock": true
-				},
-				{
-					"eventType": "comment",
-					"text": "Energy drops down fast to remind user which fighter is loser (i.e. kicked out)."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "evaluate-expression",
-							"objectClass": "System",
-							"sid": 159631707182764,
-							"parameters": {
-								"value": "( Versus_Step_Current = Versus_Step_5_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_8_ParentAlignment1_End )"
-							}
-						},
-						{
-							"id": "is-outside-layout",
-							"objectClass": "Fighter",
-							"sid": 606361844834994
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "Fighter_EnergyCur_add_byPicked",
-							"sid": 994245170615541,
-							"parameters": [
-								"- ( Fighter.EnergyRestorePoints * Fighter.EnergyRestoreBoost )"
-							]
-						}
-					],
-					"sid": 477124077866881
 				}
 			]
 		},

@@ -23,15 +23,15 @@
 			"sid": 277341109312336
 		},
 		{
-			"name": "EnergyRestorePoints",
+			"name": "EnergyPointsPerQuarterSeconds",
 			"type": "number",
 			"desc": "How many Energy points will be increased every quarter of a second.",
 			"sid": 208531946115419
 		},
 		{
-			"name": "EnergyRestoreBoost",
+			"name": "EnergyBoostPerTick",
 			"type": "number",
-			"desc": "The scale when restore energy.",
+			"desc": "The scale ( -1, 0, 1) for changing energy per game tick (i.e. not per quarter of a second). Mainly for animation.",
 			"sid": 430237642120389
 		},
 		{
@@ -87,6 +87,12 @@
 			"type": "number",
 			"desc": "Mass * Acceleration ( * GameToPhysicsRatio ). Not changed even if Mass changed.",
 			"sid": 627068902546552
+		},
+		{
+			"name": "private_Losed",
+			"type": "number",
+			"desc": "0: This Fighter still alive. 1: This Fighter lose the game (e.g. outside layout).",
+			"sid": 500271869568012
 		}
 	],
 	"behaviorTypes": [

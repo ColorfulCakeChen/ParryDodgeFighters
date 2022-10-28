@@ -14,9 +14,9 @@
 			"actions": [
 				{
 					"callFunction": "Fighter_EnergyCur_add_byPicked",
-					"sid": 847891798329399,
+					"sid": 824958657272364,
 					"parameters": [
-						"Fighter.EnergyRestorePoints * Fighter.EnergyRestoreBoost"
+						"Fighter.EnergyPointsPerQuarterSeconds"
 					]
 				},
 				{
@@ -141,7 +141,15 @@
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
 			"functionIsAsync": false,
-			"functionParameters": [],
+			"functionParameters": [
+				{
+					"name": "aEnergyBoostPerTick",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The initial value of Fighter.EnergyBoostPerTick",
+					"sid": 288111583765400
+				}
+			],
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [
@@ -151,7 +159,7 @@
 				},
 				{
 					"callFunction": "Fighter_create",
-					"sid": 293196134570834,
+					"sid": 224431550774472,
 					"parameters": [
 						"Alignment0_Id",
 						"Alignment0_Fighter_X",
@@ -159,12 +167,13 @@
 						"Alignment0_Fighter_Angle",
 						"Alignment0_Fighter_Color_R",
 						"Alignment0_Fighter_Color_G",
-						"Alignment0_Fighter_Color_B"
+						"Alignment0_Fighter_Color_B",
+						"aEnergyBoostPerTick"
 					]
 				},
 				{
 					"callFunction": "Fighter_create",
-					"sid": 389649426146040,
+					"sid": 956098457780841,
 					"parameters": [
 						"Alignment1_Id",
 						"Alignment1_Fighter_X",
@@ -172,7 +181,8 @@
 						"Alignment1_Fighter_Angle",
 						"Alignment1_Fighter_Color_R",
 						"Alignment1_Fighter_Color_G",
-						"Alignment1_Fighter_Color_B"
+						"Alignment1_Fighter_Color_B",
+						"aEnergyBoostPerTick"
 					]
 				}
 			],
@@ -234,6 +244,13 @@
 					"initialValue": "255",
 					"comment": "",
 					"sid": 578447322703112
+				},
+				{
+					"name": "aEnergyBoostPerTick",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The initial value of Fighter.EnergyBoostPerTick",
+					"sid": 703650261684714
 				}
 			],
 			"eventType": "function-block",
@@ -264,6 +281,15 @@
 					"parameters": {
 						"instance-variable": "VersusAlignmentId",
 						"value": "AlignmentId"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 669259215877503,
+					"parameters": {
+						"instance-variable": "EnergyBoostPerTick",
+						"value": "aEnergyBoostPerTick"
 					}
 				},
 				{
