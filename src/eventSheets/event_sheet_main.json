@@ -243,7 +243,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Flash to remind user fighting begins. Flash starts at VersusInfo finished."
+					"text": "Flash to remind user fighting begins when VersusInfo finished."
 				},
 				{
 					"eventType": "block",
@@ -289,7 +289,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Go fighting when DrawingCanvas lighten finished."
+					"text": "Flash stops when DrawingCanvas lighten finished (before going fighting so that neural network will not see flashed Fighter). Go fighting."
 				},
 				{
 					"eventType": "block",
@@ -336,7 +336,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "Flash stops at DrawingCanvas lighten finished (before going fighting so that neural network will not see flashed Fighter)."
+							"text": ""
 						},
 						{
 							"id": "set-instvar-value",
@@ -848,18 +848,18 @@
 				},
 				{
 					"type": "comment",
-					"text": "Cancel Darken DrawingCanvas\n\n- When Step5 (and Step8), use longer seconds to lighten so that Step5 (and Step2)'s darken will not cause obviously flashing."
+					"text": "Lignten DrawingCanvas.\n\n- When Step_06 (and Step_10), use longer seconds to lighten so that Step_06 (and Step_02)'s DrawingCanvas darken will not cause obviously flashing."
 				},
 				{
 					"id": "tween-one-property",
 					"objectClass": "DrawingCanvas",
-					"sid": 803695365705601,
+					"sid": 834396608606905,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"Lighten\"",
 						"property": "offsetColor",
 						"end-value": "rgba( 100, 100, 100, 100 )",
-						"time": "( ( Versus_Step_Current = Versus_Step_06_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_10_ParentAlignment1_End ) ) ? 10 : 1",
+						"time": "( ( Versus_Step_Current = Versus_Step_06_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_10_ParentAlignment1_End ) ) ? 100 : 1",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
