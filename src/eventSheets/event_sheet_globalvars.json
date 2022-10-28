@@ -256,6 +256,16 @@
 			"sid": 618411225976418
 		},
 		{
+			"eventType": "variable",
+			"name": "VersusInfo_DrawingCanvas_Lighten_bFinished",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true: VersusInfo destroyed and DrawingCanvas lighten. false: VersusInfo is displaying or DrawingCanvas is darken.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 944058338721464
+		},
+		{
 			"eventType": "comment",
 			"text": ""
 		},

@@ -117,6 +117,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 846884497809422,
+					"parameters": {
+						"variable": "VersusInfo_DrawingCanvas_Lighten_bFinished",
+						"value": "false"
+					}
+				},
+				{
 					"type": "comment",
 					"text": "Darken DrawingCanvas"
 				},

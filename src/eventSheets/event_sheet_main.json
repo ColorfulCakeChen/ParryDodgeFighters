@@ -246,14 +246,6 @@
 							"parameters": {
 								"value": "( Versus_Step_Current = Versus_Step_3_ParentAlignment0_Begin ) | ( Versus_Step_Current = Versus_Step_6_ParentAlignment1_Begin )"
 							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 335182471414431,
-							"parameters": {
-								"variable": "VersusInfo_bFinished"
-							}
 						}
 					],
 					"actions": [
@@ -281,33 +273,37 @@
 						},
 						{
 							"type": "comment",
-							"text": "Flash to remind user fighting begins."
+							"text": "Flash to remind user fighting begins.\n- Flash starts at VersusInfo finished.\n- Flash stops at DrawingCanvas lighten finished (before going fighting so that neural network will not see flashed Fighter)."
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "FighterSkin",
-							"sid": 473597264516702,
+							"sid": 185581761597595,
 							"parameters": {
 								"instance-variable": "FlashQuarterSeconds",
-								"value": "4"
+								"value": "VersusInfo_bFinished ? ( VersusInfo_DrawingCanvas_Lighten_bFinished ? 0 : ( ( FighterSkin.FlashQuarterSeconds <= 0 ) ? 4 : FighterSkin.FlashQuarterSeconds ) ) : 0"
 							}
+						},
+						{
+							"type": "comment",
+							"text": "Go fighting at DrawingCanvas lighten finished."
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Fighter",
-							"sid": 815735360344936,
+							"sid": 641071660601758,
 							"parameters": {
 								"instance-variable": "private_bFighting",
-								"value": "1"
+								"value": "VersusInfo_DrawingCanvas_Lighten_bFinished ? 1 : 0"
 							}
 						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 340528663483064,
+							"sid": 192886686413953,
 							"parameters": {
 								"variable": "Versus_Step_Current",
-								"value": "1"
+								"value": "VersusInfo_DrawingCanvas_Lighten_bFinished ? 1 : 0"
 							}
 						}
 					],
@@ -549,7 +545,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 194420349803351,
+							"sid": 373969199368369,
 							"parameters": {
 								"variable": "VersusInfo_bFinished"
 							}
@@ -631,7 +627,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 718895650794485,
+							"sid": 849854790331691,
 							"parameters": {
 								"variable": "VersusInfo_bFinished"
 							}
@@ -809,6 +805,32 @@
 				}
 			],
 			"sid": 247909471311486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "DrawingCanvas",
+					"sid": 541951839276109,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Lighten\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 839936547472413,
+					"parameters": {
+						"variable": "VersusInfo_DrawingCanvas_Lighten_bFinished",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 116828348511431
 		},
 		{
 			"eventType": "comment",
