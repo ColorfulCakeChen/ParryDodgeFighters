@@ -737,6 +737,10 @@
 			"sid": 737281405557879
 		},
 		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
