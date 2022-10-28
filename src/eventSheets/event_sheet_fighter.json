@@ -749,7 +749,17 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "Fighter",
-					"sid": 297652602353165,
+					"sid": 579272538933073,
+					"parameters": {
+						"instance-variable": "private_bFighting",
+						"comparison": 1,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Fighter",
+					"sid": 410612030311933,
 					"parameters": {
 						"instance-variable": "VersusAlignmentId",
 						"comparison": 0,

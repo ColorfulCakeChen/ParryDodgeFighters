@@ -301,6 +301,15 @@
 							}
 						},
 						{
+							"id": "set-instvar-value",
+							"objectClass": "Fighter",
+							"sid": 815735360344936,
+							"parameters": {
+								"instance-variable": "private_bFighting",
+								"value": "1"
+							}
+						},
+						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 340528663483064,
@@ -369,6 +378,11 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "is-outside-layout",
+									"objectClass": "Fighter",
+									"sid": 108410099344331
+								},
+								{
 									"id": "compare-instance-variable",
 									"objectClass": "RemainedTimer",
 									"sid": 675175824936052,
@@ -377,11 +391,6 @@
 										"comparison": 3,
 										"value": "0"
 									}
-								},
-								{
-									"id": "is-outside-layout",
-									"objectClass": "Fighter",
-									"sid": 937813357427594
 								}
 							],
 							"actions": [
@@ -403,7 +412,7 @@
 									"objectClass": "Fighter",
 									"sid": 910627130002438,
 									"parameters": {
-										"instance-variable": "private_Losed",
+										"instance-variable": "private_Losed_UnUsed",
 										"value": "1"
 									}
 								},
@@ -458,6 +467,15 @@
 									]
 								},
 								{
+									"id": "set-instvar-value",
+									"objectClass": "Fighter",
+									"sid": 768632156475165,
+									"parameters": {
+										"instance-variable": "private_bFighting",
+										"value": "0"
+									}
+								},
+								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
 									"sid": 833644389638960,
@@ -499,6 +517,15 @@
 											"parameters": {
 												"instance-variable": "FlashQuarterSeconds",
 												"value": "4"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Fighter",
+											"sid": 544751929554329,
+											"parameters": {
+												"instance-variable": "private_bFighting",
+												"value": "0"
 											}
 										}
 									],
@@ -675,7 +702,7 @@
 				{
 					"id": "set-spraying",
 					"objectClass": "FighterThrustParticles",
-					"sid": 753034436906484,
+					"sid": 568034854106965,
 					"parameters": {
 						"state": "not-spraying"
 					}
@@ -697,97 +724,57 @@
 					}
 				},
 				{
-					"id": "set-text",
-					"objectClass": "SpriteFont",
-					"sid": 104364895810039,
-					"disabled": true,
-					"parameters": {
-						"text": "RegexReplace( SpriteFont.Text, \"^\\d*,?-?\\d*,?\", \"\", fps & \",\" & Fighter.EnergyBoostPerTick & \",\" )"
-					}
-				}
-			],
-			"sid": 304644917695471,
-			"children": [
-				{
-					"eventType": "comment",
-					"text": "Fighting by Fighter_KeyDownArray."
+					"type": "comment",
+					"text": "If under fighting."
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 693860944608004,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"comparison": 0,
-								"value": "Versus_Step_4_ParentAlignment0_Fighting"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 171770542281659,
-							"parameters": {
-								"variable": "Versus_Step_Current",
-								"comparison": 0,
-								"value": "Versus_Step_7_ParentAlignment1_Fighting"
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "comment",
-							"text": "Cancel energy boost animation."
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Fighter",
-							"sid": 209042832835395,
-							"parameters": {
-								"instance-variable": "EnergyBoostPerTick",
-								"value": "0"
-							}
-						},
-						{
-							"type": "comment",
-							"text": "Anti the gravity completely."
-						},
-						{
-							"id": "apply-force",
-							"objectClass": "Fighter",
-							"sid": 614209133798029,
-							"disabled": true,
-							"behaviorType": "Physics",
-							"parameters": {
-								"force-x": "0",
-								"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
-								"image-point": "0"
-							}
-						},
-						{
-							"type": "comment",
-							"text": "Control Fighters."
-						},
-						{
-							"callFunction": "Fighter_act_byKeyDownArray",
-							"sid": 209335001198766,
-							"parameters": [
-								"0",
-								"0",
-								"0",
-								"0",
-								"0",
-								"0",
-								"0"
-							]
-						}
-					],
-					"sid": 796995777013480,
-					"isOrBlock": true
+					"type": "comment",
+					"text": "Cancel energy boost animation if fighting."
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 566591603382317,
+					"parameters": {
+						"instance-variable": "EnergyBoostPerTick",
+						"value": "Self.EnergyBoostPerTick * ( ( Self.private_bFighting + 1 ) % 2 )"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Anti gravity completely."
+				},
+				{
+					"id": "apply-force",
+					"objectClass": "Fighter",
+					"sid": 786136990836816,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "0",
+						"force-y": "-Self.Physics.Mass * GameToPhysicsRatio * PhysicsGravity",
+						"image-point": "0"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Control Fighter by Fighter_KeyDownArray if fighting."
+				},
+				{
+					"callFunction": "Fighter_act_byKeyDownArray",
+					"sid": 632265964594418,
+					"parameters": [
+						"0",
+						"0",
+						"0",
+						"0",
+						"0",
+						"0",
+						"0"
+					]
 				}
-			]
+			],
+			"sid": 304644917695471
 		},
 		{
 			"eventType": "block",

@@ -640,7 +640,8 @@
 						"RaiseShieldCountDown": 3,
 						"Acceleration": 3,
 						"private_Force": 0,
-						"private_Losed": 0
+						"private_Losed_UnUsed": 0,
+						"private_bFighting": 0
 					},
 					"behaviors": {
 						"ScrollTo": {
@@ -757,7 +758,11 @@
 												"state": true
 											},
 											{
-												"iv": "private_Losed",
+												"iv": "private_Losed_UnUsed",
+												"state": true
+											},
+											{
+												"iv": "private_bFighting",
 												"state": true
 											}
 										]

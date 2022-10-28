@@ -89,10 +89,16 @@
 			"sid": 627068902546552
 		},
 		{
-			"name": "private_Losed",
+			"name": "private_Losed_UnUsed",
 			"type": "number",
 			"desc": "0: This Fighter still alive. 1: This Fighter lose the game (e.g. outside layout).",
 			"sid": 500271869568012
+		},
+		{
+			"name": "private_bFighting",
+			"type": "number",
+			"desc": "0: Not in fighting step. 1: In fighting step.",
+			"sid": 428466636965675
 		}
 	],
 	"behaviorTypes": [
