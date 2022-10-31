@@ -313,6 +313,23 @@
 					],
 					"actions": [
 						{
+							"type": "comment",
+							"text": "Flash stops because fighting will begin."
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FighterSkin",
+							"sid": 481533210896412,
+							"parameters": {
+								"instance-variable": "FlashQuarterSeconds",
+								"value": "0"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Remained timer starts counting down ."
+						},
+						{
 							"id": "set-instvar-value",
 							"objectClass": "RemainedTimer",
 							"sid": 650315918560008,
@@ -336,16 +353,7 @@
 						},
 						{
 							"type": "comment",
-							"text": ""
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "FighterSkin",
-							"sid": 567194445330286,
-							"parameters": {
-								"instance-variable": "FlashQuarterSeconds",
-								"value": "0"
-							}
+							"text": "Mark as fighting state."
 						},
 						{
 							"id": "set-instvar-value",
@@ -514,6 +522,10 @@
 									]
 								},
 								{
+									"type": "comment",
+									"text": "Mark as non-fighting state."
+								},
+								{
 									"id": "set-instvar-value",
 									"objectClass": "Fighter",
 									"sid": 768632156475165,
@@ -536,7 +548,7 @@
 							"children": [
 								{
 									"eventType": "comment",
-									"text": "Flash to remind user which fighter is still in bounds (i.e. which is winer)."
+									"text": "Flash to remind user which fighter is still in bounds (i.e. who is winer)."
 								},
 								{
 									"eventType": "block",
@@ -565,6 +577,10 @@
 												"instance-variable": "FlashQuarterSeconds",
 												"value": "4"
 											}
+										},
+										{
+											"type": "comment",
+											"text": "Mark as non-fighting state."
 										},
 										{
 											"id": "set-instvar-value",
@@ -611,10 +627,6 @@
 						}
 					],
 					"actions": [
-						{
-							"type": "comment",
-							"text": "Also, Energy restores boostly to remind user fighting begins."
-						},
 						{
 							"callFunction": "Fighter_recreateAll",
 							"sid": 209812521011476,
