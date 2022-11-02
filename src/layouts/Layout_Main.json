@@ -390,7 +390,7 @@
 				{
 					"type": "VersusInfo_Alignment0",
 					"properties": {
-						"text": "012345678901234\n( win 3100000000 times )\nWin",
+						"text": "012345678901234\n( win 123456789012345 times )\nWin",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 4,

@@ -8,96 +8,112 @@
 			"name": "VersusAlignmentId",
 			"type": "number",
 			"desc": "This Fighter's alignment in the versus.",
+			"show": true,
 			"sid": 222559997380293
 		},
 		{
 			"name": "EnergyCur",
 			"type": "number",
 			"desc": "Current energy value.",
+			"show": true,
 			"sid": 396316382445408
 		},
 		{
 			"name": "EnergyMax",
 			"type": "number",
 			"desc": "Maximum energy value.",
+			"show": true,
 			"sid": 277341109312336
 		},
 		{
 			"name": "EnergyPointsPerQuarterSeconds",
 			"type": "number",
 			"desc": "How many Energy points will be increased every quarter of a second.",
+			"show": true,
 			"sid": 208531946115419
 		},
 		{
 			"name": "EnergyBoostPerTick",
 			"type": "number",
 			"desc": "The scale ( -1, 0, 1) for changing energy per game tick (i.e. not per quarter of a second). Mainly for animation.",
+			"show": true,
 			"sid": 430237642120389
 		},
 		{
 			"name": "EnergyPointsThrust",
 			"type": "number",
 			"desc": "How many energy points will be used for every thrusting.",
+			"show": true,
 			"sid": 586702183488248
 		},
 		{
 			"name": "EnergyPointsShoot",
 			"type": "number",
 			"desc": "How many energy points will be used for every shooting.",
+			"show": true,
 			"sid": 767883363560183
 		},
 		{
 			"name": "EnergyPointsRaiseShield",
 			"type": "number",
 			"desc": "How many energy points will be used for every shield rasing.",
+			"show": true,
 			"sid": 601353115579974
 		},
 		{
 			"name": "ShootQuarterSeconds",
 			"type": "number",
 			"desc": "How many quater of a second should be waited before shooting next Projectile.",
+			"show": true,
 			"sid": 909419945726480
 		},
 		{
 			"name": "ShootCountDown",
 			"type": "number",
 			"desc": "0 means shooting is cool down complete.",
+			"show": true,
 			"sid": 819256083921672
 		},
 		{
 			"name": "RaiseShieldQuarterSeconds",
 			"type": "number",
 			"desc": "How many quarter of a second should be waited before raising next Shield.",
+			"show": true,
 			"sid": 233130173922753
 		},
 		{
 			"name": "RaiseShieldCountDown",
 			"type": "number",
 			"desc": "0 means raising shield is cool down complete.",
+			"show": true,
 			"sid": 622523676631885
 		},
 		{
 			"name": "Acceleration",
 			"type": "number",
 			"desc": "The acceleration when applying force for thrusting.",
+			"show": true,
 			"sid": 910499927195907
 		},
 		{
 			"name": "private_Force",
 			"type": "number",
 			"desc": "Mass * Acceleration ( * GameToPhysicsRatio ). Not changed even if Mass changed.",
+			"show": true,
 			"sid": 627068902546552
 		},
 		{
 			"name": "private_Losed_UnUsed",
 			"type": "number",
 			"desc": "0: This Fighter still alive. 1: This Fighter lose the game (e.g. outside layout).",
+			"show": true,
 			"sid": 500271869568012
 		},
 		{
 			"name": "private_bFighting",
 			"type": "number",
 			"desc": "0: Not in fighting step. 1: In fighting step.",
+			"show": true,
 			"sid": 428466636965675
 		}
 	],

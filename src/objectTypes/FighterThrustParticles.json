@@ -8,12 +8,14 @@
 			"name": "for_ForceScaleX",
 			"type": "number",
 			"desc": "For matching Fighter's applyAcceleration's ForceScaleX.",
+			"show": true,
 			"sid": 421431633806362
 		},
 		{
 			"name": "for_ForceScaleY",
 			"type": "number",
 			"desc": "For matching Fighter's applyAcceleration's ForceScaleX.",
+			"show": true,
 			"sid": 328805146851199
 		}
 	],

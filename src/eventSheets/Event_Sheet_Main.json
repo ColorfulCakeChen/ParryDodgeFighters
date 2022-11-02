@@ -204,14 +204,14 @@
 					"actions": [
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 543029118464152,
+							"sid": 689359412566964,
 							"parameters": [
 								"Versus_EntityNo",
 								"Versus_Parent_GenerationNo",
-								"Versus_Parent_WinCount",
+								"Versus_Parent_WinCountStr",
 								"\" \"",
 								"Versus_Offspring_GenerationNo",
-								"-1",
+								"\"\"",
 								"\" \"",
 								"2"
 							]
@@ -509,14 +509,14 @@
 								},
 								{
 									"callFunction": "VersusInfo_set",
-									"sid": 431288985789845,
+									"sid": 387053525135940,
 									"parameters": [
 										"Versus_EntityNo",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_GenerationNo : Versus_Offspring_GenerationNo",
-										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_WinCount : -1",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_WinCountStr : \"\"",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? Versus_Offspring_GenerationNo : Versus_Parent_GenerationNo",
-										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? -1 : Versus_Parent_WinCount",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? \"\" : Versus_Parent_WinCountStr",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
 										"2"
 									]
@@ -654,14 +654,14 @@
 						},
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 480249112589473,
+							"sid": 606496275169862,
 							"parameters": [
 								"Versus_EntityNo",
 								"Versus_Offspring_GenerationNo",
-								"-1",
+								"\"\"",
 								"\" \"",
 								"Versus_Parent_GenerationNo",
-								"Versus_Parent_WinCount",
+								"Versus_Parent_WinCountStr",
 								"\" \"",
 								"2"
 							]

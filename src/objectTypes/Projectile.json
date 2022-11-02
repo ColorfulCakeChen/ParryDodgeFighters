@@ -8,6 +8,7 @@
 			"name": "Acceleration",
 			"type": "number",
 			"desc": "The acceleration when applying impulse for fired by Fighter.",
+			"show": true,
 			"sid": 944895115600781
 		}
 	],

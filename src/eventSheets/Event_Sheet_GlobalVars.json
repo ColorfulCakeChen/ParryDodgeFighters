@@ -219,13 +219,13 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Versus_Parent_WinCount",
-			"type": "number",
-			"initialValue": "3100000000",
+			"name": "Versus_Parent_WinCountStr",
+			"type": "string",
+			"initialValue": "123456789012345",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 610098857400323
+			"sid": 840187305362567
 		},
 		{
 			"eventType": "comment",

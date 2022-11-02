@@ -8,12 +8,14 @@
 			"name": "VersusAlignmentId",
 			"type": "number",
 			"desc": "Display which alignment's Fighter's energy.",
+			"show": true,
 			"sid": 161405240693006
 		},
 		{
 			"name": "WidthFull",
 			"type": "number",
 			"desc": "The width when energy bar is full.",
+			"show": true,
 			"sid": 181980714766563
 		}
 	],

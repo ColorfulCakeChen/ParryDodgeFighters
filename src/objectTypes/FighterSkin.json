@@ -8,6 +8,7 @@
 			"name": "FlashQuarterSeconds",
 			"type": "number",
 			"desc": "How many quarter of a second to flash by opacity.",
+			"show": true,
 			"sid": 570035088900281
 		}
 	],

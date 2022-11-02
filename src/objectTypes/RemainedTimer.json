@@ -8,12 +8,14 @@
 			"name": "secondsCur",
 			"type": "number",
 			"desc": "The current remained seconds of the versus.",
+			"show": true,
 			"sid": 331201286205488
 		},
 		{
 			"name": "secondsMax",
 			"type": "number",
 			"desc": "The maximum seconds of a versus.",
+			"show": true,
 			"sid": 467308966674577
 		}
 	],
