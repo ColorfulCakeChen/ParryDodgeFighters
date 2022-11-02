@@ -219,7 +219,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Versus_Parent_WinCountStr",
+			"name": "Versus_Parent_WinCount",
 			"type": "string",
 			"initialValue": "123456789012345",
 			"comment": "",

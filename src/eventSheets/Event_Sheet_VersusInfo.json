@@ -180,7 +180,7 @@
 					"sid": 177329543390289
 				},
 				{
-					"name": "alignment0_WinCountStr",
+					"name": "alignment0_WinCount",
 					"type": "string",
 					"initialValue": "",
 					"comment": "\"\" (empty string) means Offspring (i.e. not Parent) because offspring has no win count.",
@@ -201,7 +201,7 @@
 					"sid": 924977186660490
 				},
 				{
-					"name": "alignment1_WinCountStr",
+					"name": "alignment1_WinCount",
 					"type": "string",
 					"initialValue": "",
 					"comment": "\"\" (empty string) means Offspring (i.e. not Parent) because offspring has no win count.",
@@ -275,7 +275,7 @@
 					"objectClass": "VersusInfo_Alignment0",
 					"sid": 664188686664906,
 					"parameters": {
-						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCountStr & \" times )\", \"( win  times )\", \"\" ) & newline & alignment0_Result",
+						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & alignment0_Result",
 						"duration": "typewriterSeconds"
 					}
 				},
@@ -284,7 +284,7 @@
 					"objectClass": "VersusInfo_Alignment1",
 					"sid": 567778286429055,
 					"parameters": {
-						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCountStr & \" times )\", \"( win  times )\", \"\" ) & newline & alignment1_Result",
+						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & alignment1_Result",
 						"duration": "typewriterSeconds"
 					}
 				}

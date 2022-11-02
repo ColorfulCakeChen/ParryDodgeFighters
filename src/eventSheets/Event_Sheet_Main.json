@@ -208,7 +208,7 @@
 							"parameters": [
 								"Versus_EntityNo",
 								"Versus_Parent_GenerationNo",
-								"Versus_Parent_WinCountStr",
+								"Versus_Parent_WinCount",
 								"\" \"",
 								"Versus_Offspring_GenerationNo",
 								"\"\"",
@@ -513,10 +513,10 @@
 									"parameters": [
 										"Versus_EntityNo",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_GenerationNo : Versus_Offspring_GenerationNo",
-										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_WinCountStr : \"\"",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_WinCount : \"\"",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? Versus_Offspring_GenerationNo : Versus_Parent_GenerationNo",
-										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? \"\" : Versus_Parent_WinCountStr",
+										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? \"\" : Versus_Parent_WinCount",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
 										"2"
 									]
@@ -661,7 +661,7 @@
 								"\"\"",
 								"\" \"",
 								"Versus_Parent_GenerationNo",
-								"Versus_Parent_WinCountStr",
+								"Versus_Parent_WinCount",
 								"\" \"",
 								"2"
 							]
