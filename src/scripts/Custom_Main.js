@@ -11,13 +11,13 @@ runOnStartup(async runtime =>
   const libURL = `https://cdn.jsdelivr.net/gh/colorfulcakechen/query-submit-canvas@${libVerion}/CNN/NeuralDEvolution/NeuralOrchestra.js`;
 
   globalThis.NeuralOrchestra = await import( libURL );
-  globalThis.gNeuralOrchestra = new NeuralOrchestra.Construct3();
+  globalThis.gNeuralOrchestra = NeuralOrchestra.Construct3.Pool.get_or_create_by();
 
-  const spreadsheetId = "18YyEoy-OfSkODfw8wqBRApSrRnBTZpjRpRiwIKy8a0M";
+  const downloader_spreadsheetId = "18YyEoy-OfSkODfw8wqBRApSrRnBTZpjRpRiwIKy8a0M";
 
-  const measurement_id = "G-8VC62N7VGB";
-  const api_secret = "sRcUgl6XSfOjX4qEES3Ttg";
-  const client_id = Date.now();
+  const submitter_measurement_id = "G-8VC62N7VGB";
+  const submitter_api_secret = "sRcUgl6XSfOjX4qEES3Ttg";
+  const submitter_client_id = Date.now();
 
   const input_height = 72;
   const input_width = 128;
@@ -27,8 +27,8 @@ runOnStartup(async runtime =>
   const output_channelCount = 12;
 
   await gNeuralOrchestra.init(
-    spreadsheetId, null,
-    measurement_id, api_secret, client_id,
+    downloader_spreadsheetId, null,
+    submitter_measurement_id, submitter_api_secret, submitter_client_id,
     input_height, input_width,
     vocabularyChannelCount, blockCountTotalRequested, output_channelCount
   );
