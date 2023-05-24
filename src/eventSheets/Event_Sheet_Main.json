@@ -184,6 +184,36 @@
 					"sid": 859861743300847
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 625338535236683,
+							"parameters": {
+								"variable": "Versus_Step_Current",
+								"comparison": 0,
+								"value": "Versus_Step_01_DownloadWeights_Loading"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Display loading percentage."
+						},
+						{
+							"callFunction": "DownloadProgress_Refresh",
+							"sid": 618192138223579
+						},
+						{
+							"type": "comment",
+							"text": "Wait script to download vesus weights."
+						}
+					],
+					"sid": 895322173769676
+				},
+				{
 					"eventType": "comment",
 					"text": "Display versus info for Parent as alignment 0. (Weights have dowloaded.)"
 				},
@@ -202,6 +232,18 @@
 						}
 					],
 					"actions": [
+						{
+							"type": "comment",
+							"text": "Display loading percentage. (100%)"
+						},
+						{
+							"callFunction": "DownloadProgress_Refresh",
+							"sid": 473011913886110
+						},
+						{
+							"type": "comment",
+							"text": "Display Versus info."
+						},
 						{
 							"callFunction": "VersusInfo_set",
 							"sid": 689359412566964,

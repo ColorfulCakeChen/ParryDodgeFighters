@@ -5,7 +5,7 @@
 			"functionName": "VersusInfo_create",
 			"functionCopyPicked": false,
 			"functionDescription": "Display the text.",
-			"functionCategory": "VersusInfo",
+			"functionCategory": "Versus Info",
 			"functionReturnType": "none",
 			"functionIsAsync": false,
 			"functionParameters": [
@@ -162,7 +162,7 @@
 			"functionName": "VersusInfo_set",
 			"functionCopyPicked": false,
 			"functionDescription": "Display the text.",
-			"functionCategory": "VersusInfo",
+			"functionCategory": "Versus Info",
 			"functionReturnType": "none",
 			"functionIsAsync": false,
 			"functionParameters": [

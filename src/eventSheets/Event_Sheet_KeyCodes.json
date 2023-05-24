@@ -541,7 +541,7 @@
 			"functionName": "Fighter_KeyDownArray_init",
 			"functionCopyPicked": false,
 			"functionDescription": "Initialize KeyDownArray for Fighter's control.",
-			"functionCategory": "KeyDownArray",
+			"functionCategory": "Key Down Array",
 			"functionReturnType": "none",
 			"functionIsAsync": false,
 			"functionParameters": [

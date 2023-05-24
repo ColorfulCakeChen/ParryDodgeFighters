@@ -5,7 +5,7 @@
 			"functionName": "EnergyBar_Refresh_byFighter_Picked",
 			"functionCopyPicked": true,
 			"functionDescription": "Display current picked Fighter's energy.",
-			"functionCategory": "EnergyBar",
+			"functionCategory": "Energy Bar",
 			"functionReturnType": "none",
 			"functionIsAsync": false,
 			"functionParameters": [],
@@ -56,7 +56,7 @@
 			"functionName": "RemainderTimer_Refresh",
 			"functionCopyPicked": false,
 			"functionDescription": "Display the current remained seconds of the versus.",
-			"functionCategory": "RemainderTimer",
+			"functionCategory": "Remainder Timer",
 			"functionReturnType": "none",
 			"functionIsAsync": false,
 			"functionParameters": [],
@@ -75,10 +75,48 @@
 			"sid": 458946180661444
 		},
 		{
+			"functionName": "DownloadProgress_Refresh",
+			"functionCopyPicked": false,
+			"functionDescription": "Display the versus downloading progress.",
+			"functionCategory": "Download Progress",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "RemainedTimer",
+					"sid": 197285610898472,
+					"parameters": {
+						"text": "str( int( Versus_DownloadWeights_Progress ) ) & \"%\""
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "EnergyBar",
+					"sid": 392489410465942,
+					"parameters": {
+						"color": "rgba255( 128, 128, 128, 255 )"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "EnergyBar",
+					"sid": 233299618072281,
+					"parameters": {
+						"width": "EnergyBar.WidthFull * ( ( 100 - Versus_DownloadWeights_Progress ) / 100 )"
+					}
+				}
+			],
+			"sid": 638757729051620
+		},
+		{
 			"functionName": "DrawingCanvas_Paint",
 			"functionCopyPicked": false,
 			"functionDescription": "Paint all objects to drawing canvas.",
-			"functionCategory": "DrawingCanvas",
+			"functionCategory": "Drawing Canvas",
 			"functionReturnType": "none",
 			"functionIsAsync": false,
 			"functionParameters": [],
