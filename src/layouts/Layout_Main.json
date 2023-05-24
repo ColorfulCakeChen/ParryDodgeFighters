@@ -1147,8 +1147,8 @@
 						"right-margin": 1,
 						"top-margin": 1,
 						"bottom-margin": 1,
-						"edges": "tile",
-						"fill": "tile",
+						"edges": "stretch",
+						"fill": "transparent",
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "exact"

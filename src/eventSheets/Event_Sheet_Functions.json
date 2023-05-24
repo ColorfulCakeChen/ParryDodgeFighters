@@ -94,6 +94,10 @@
 					}
 				},
 				{
+					"type": "comment",
+					"text": "Display download progress by energy bar with color grey."
+				},
+				{
 					"id": "set-default-color",
 					"objectClass": "EnergyBar",
 					"sid": 392489410465942,
@@ -104,9 +108,9 @@
 				{
 					"id": "set-width",
 					"objectClass": "EnergyBar",
-					"sid": 233299618072281,
+					"sid": 623172265719347,
 					"parameters": {
-						"width": "EnergyBar.WidthFull * ( ( 100 - Versus_DownloadWeights_Progress ) / 100 )"
+						"width": "EnergyBar.WidthFull * Versus_DownloadWeights_Progress / 100"
 					}
 				}
 			],
