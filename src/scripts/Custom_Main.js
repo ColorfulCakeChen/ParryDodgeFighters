@@ -1,4 +1,3 @@
-
 // Import any other script files here, e.g.:
 // import * as myModule from "./mymodule.js";
 
@@ -7,17 +6,16 @@ runOnStartup(async runtime =>
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
 
-  const libVerion = "c1c764a05643d7a273982428b15e77cbd46068e6";
+  const libVerion = "d0a5730d95a858b086190c258d6a78899c183eb4";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
   const libURLNeuralDEvolution = `${libURLRootCNN}/NeuralDEvolution`;
-  const libURLNeuralWorker = `${libURLNeuralDEvolution}/NeuralWorker`;
-  const libURLNeuralOrchestra = `${libURLNeuralDEvolution}/NeuralOrchestra`;
+  const libURLNeuralWorker = `${libURLNeuralDEvolution}/NeuralWorker.js`;
+  const libURLNeuralOrchestra = `${libURLNeuralDEvolution}/NeuralOrchestra.js`;
 
   globalThis.NeuralWorker = await import( libURLNeuralWorker );
   globalThis.NeuralOrchestra = await import( libURLNeuralOrchestra );
-  globalThis.gNeuralOrchestra = NeuralOrchestra.Construct3.Pool.get_or_create_by();
 
   const downloader_spreadsheetId = "18YyEoy-OfSkODfw8wqBRApSrRnBTZpjRpRiwIKy8a0M";
   
@@ -25,30 +23,27 @@ runOnStartup(async runtime =>
 
   const sender_clientId = Date.now();
 
+  // Note: input_shape will be [ 72, 142, 4 ].
   const explicit_input_height = 72;
   const explicit_input_width = 128;
   const explicit_input_channelCount = 4;
-  const nNeuralWorker_ImplicitInputModeId = NeuralWorker.ImplicitInputMode.Singletoon
+  const nNeuralWorker_ImplicitInputModeId = NeuralWorker.ImplicitInputMode.Singleton
     .Ids.IMPLICIT_INPUT__FILL_ALIGNMENT_MARK__FILL_PREVIOUS_OUTPUT; // (5)
 
   const vocabularyChannelCount = 4;
   const vocabularyCountPerInputChannel = 256;
   const blockCountTotalRequested = 39;
-  const output_channelCount = 64;
+  const output_channelCount = 128;
 
-  const b_return_versus_load_asyncGenerator_instead_of_asyncPromise = false;
-
-  await gNeuralOrchestra.init(
-    downloader_spreadsheetId, null, bLogFetcherEventToConsole,
+  globalThis.gNeuralOrchestra = NeuralOrchestra.Construct3.Pool.get_or_create_by();
+  await gNeuralOrchestra.init_for_Construct3_runOnStartup_async(
+    downloader_spreadsheetId, bLogFetcherEventToConsole,
     sender_clientId,
-	
     explicit_input_height, explicit_input_width, explicit_input_channelCount,
     nNeuralWorker_ImplicitInputModeId,
     vocabularyChannelCount, vocabularyCountPerInputChannel,
     blockCountTotalRequested,
-    output_channelCount,
-
-    b_return_versus_load_asyncGenerator_instead_of_asyncPromise
+    output_channelCount
   );
 
   runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
