@@ -6,33 +6,51 @@ runOnStartup(async runtime =>
 {
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
-/*
-  const libVerion = "1ff6eeec78221c31f5ab6d8bd13266b8787ff802";
-  const libURL = `https://cdn.jsdelivr.net/gh/colorfulcakechen/query-submit-canvas@${libVerion}/CNN/NeuralDEvolution/NeuralOrchestra.js`;
 
-  globalThis.NeuralOrchestra = await import( libURL );
+  const libVerion = "c1c764a05643d7a273982428b15e77cbd46068e6";
+  const libProject = "colorfulcakechen/query-submit-canvas";
+  const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
+  const libURLRootCNN = `${libURLRoot}/CNN`;
+  const libURLNeuralDEvolution = `${libURLRootCNN}/NeuralDEvolution`;
+  const libURLNeuralWorker = `${libURLNeuralDEvolution}/NeuralWorker`;
+  const libURLNeuralOrchestra = `${libURLNeuralDEvolution}/NeuralOrchestra`;
+
+  globalThis.NeuralWorker = await import( libURLNeuralWorker );
+  globalThis.NeuralOrchestra = await import( libURLNeuralOrchestra );
   globalThis.gNeuralOrchestra = NeuralOrchestra.Construct3.Pool.get_or_create_by();
 
   const downloader_spreadsheetId = "18YyEoy-OfSkODfw8wqBRApSrRnBTZpjRpRiwIKy8a0M";
+  
+  const bLogFetcherEventToConsole = false;
 
-  const submitter_measurement_id = "G-8VC62N7VGB";
-  const submitter_api_secret = "sRcUgl6XSfOjX4qEES3Ttg";
-  const submitter_client_id = Date.now();
+  const sender_clientId = Date.now();
 
-  const input_height = 72;
-  const input_width = 128;
+  const explicit_input_height = 72;
+  const explicit_input_width = 128;
+  const explicit_input_channelCount = 4;
+  const nNeuralWorker_ImplicitInputModeId = NeuralWorker.ImplicitInputMode.Singletoon
+    .Ids.IMPLICIT_INPUT__FILL_ALIGNMENT_MARK__FILL_PREVIOUS_OUTPUT; // (5)
 
-  const vocabularyChannelCount = 8;
-  const blockCountTotalRequested = 100;
-  const output_channelCount = 12;
+  const vocabularyChannelCount = 4;
+  const vocabularyCountPerInputChannel = 256;
+  const blockCountTotalRequested = 39;
+  const output_channelCount = 64;
+
+  const b_return_versus_load_asyncGenerator_instead_of_asyncPromise = false;
 
   await gNeuralOrchestra.init(
-    downloader_spreadsheetId, null,
-    submitter_measurement_id, submitter_api_secret, submitter_client_id,
-    input_height, input_width,
-    vocabularyChannelCount, blockCountTotalRequested, output_channelCount
+    downloader_spreadsheetId, null, bLogFetcherEventToConsole,
+    sender_clientId,
+	
+    explicit_input_height, explicit_input_width, explicit_input_channelCount,
+    nNeuralWorker_ImplicitInputModeId,
+    vocabularyChannelCount, vocabularyCountPerInputChannel,
+    blockCountTotalRequested,
+    output_channelCount,
+
+    b_return_versus_load_asyncGenerator_instead_of_asyncPromise
   );
-*/
+
   runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
 
