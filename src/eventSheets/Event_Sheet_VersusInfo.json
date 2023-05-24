@@ -3,10 +3,10 @@
 	"events": [
 		{
 			"functionName": "VersusInfo_create",
+			"functionCopyPicked": false,
 			"functionDescription": "Display the text.",
 			"functionCategory": "VersusInfo",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -151,7 +151,8 @@
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				}
 			],
@@ -159,10 +160,10 @@
 		},
 		{
 			"functionName": "VersusInfo_set",
+			"functionCopyPicked": false,
 			"functionDescription": "Display the text.",
 			"functionCategory": "VersusInfo",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{

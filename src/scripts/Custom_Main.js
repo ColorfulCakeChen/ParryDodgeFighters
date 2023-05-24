@@ -6,7 +6,7 @@ runOnStartup(async runtime =>
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
 
-  const libVerion = "d0a5730d95a858b086190c258d6a78899c183eb4";
+  const libVerion = "a7e79bf01b2560e291cbd31ef20d53b79b3bf8ae";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
@@ -18,7 +18,7 @@ runOnStartup(async runtime =>
   globalThis.NeuralOrchestra = await import( libURLNeuralOrchestra );
 
   const downloader_spreadsheetId = "18YyEoy-OfSkODfw8wqBRApSrRnBTZpjRpRiwIKy8a0M";
-  
+
   const bLogFetcherEventToConsole = false;
 
   const sender_clientId = Date.now();
@@ -60,7 +60,5 @@ async function OnBeforeProjectStart(runtime)
 function Tick(runtime)
 {
   // Code to run every tick
-/*
   gNeuralOrchestra.tick( runtime );
-*/
 }

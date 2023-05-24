@@ -3,10 +3,10 @@
 	"events": [
 		{
 			"functionName": "EnergyBar_Refresh_byFighter_Picked",
+			"functionCopyPicked": true,
 			"functionDescription": "Display current picked Fighter's energy.",
 			"functionCategory": "EnergyBar",
 			"functionReturnType": "none",
-			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -54,10 +54,10 @@
 		},
 		{
 			"functionName": "RemainderTimer_Refresh",
+			"functionCopyPicked": false,
 			"functionDescription": "Display the current remained seconds of the versus.",
 			"functionCategory": "RemainderTimer",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -76,10 +76,10 @@
 		},
 		{
 			"functionName": "DrawingCanvas_Paint",
+			"functionCopyPicked": false,
 			"functionDescription": "Paint all objects to drawing canvas.",
 			"functionCategory": "DrawingCanvas",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",

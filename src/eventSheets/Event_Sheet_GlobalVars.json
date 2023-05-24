@@ -423,6 +423,24 @@
 		},
 		{
 			"eventType": "comment",
+			"text": "The progress of Versus_Step_01_DownloadWeights_Loading.  It is modifed by script."
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_DownloadWeights_Progress",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Between [ 0, 100 ]",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 736428809062850
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "comment",
 			"text": "Debug Mode:"
 		},
 		{
