@@ -24,6 +24,11 @@
 					]
 				},
 				{
+					"customAction": "init",
+					"objectClass": "ConfigJSON",
+					"sid": 853642268049041
+				},
+				{
 					"callFunction": "Fighter_destroyAll",
 					"sid": 273142251291846
 				},

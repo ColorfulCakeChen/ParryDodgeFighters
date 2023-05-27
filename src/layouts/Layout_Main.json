@@ -3989,6 +3989,12 @@
 			},
 			"uid": 16,
 			"instanceVariables": {}
+		},
+		{
+			"type": "ConfigJSON",
+			"properties": {},
+			"uid": 27,
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],

@@ -200,6 +200,125 @@
 				}
 			],
 			"sid": 728348637510731
+		},
+		{
+			"aceType": "action",
+			"aceName": "init",
+			"objectClass": "ConfigJSON",
+			"functionDescription": "Initialize the configuration.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-path",
+					"objectClass": "ConfigJSON",
+					"sid": 199238406064517,
+					"parameters": {
+						"path": "\"DrawingCanvas\""
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "ConfigJSON",
+					"sid": 790546214729277,
+					"parameters": {
+						"path": "\".ObjectTypeName\"",
+						"value": "DrawingCanvas.ObjectTypeName"
+					}
+				},
+				{
+					"id": "set-array",
+					"objectClass": "ConfigJSON",
+					"sid": 822002883040406,
+					"parameters": {
+						"path": "\".ObjectTypeNameArray\"",
+						"size": "0"
+					}
+				},
+				{
+					"id": "set-path",
+					"objectClass": "ConfigJSON",
+					"sid": 625091554989102,
+					"parameters": {
+						"path": "\".ObjectTypeNameArray\""
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 882482553582635,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "FighterThrustParticles.ObjectTypeName"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 323975850219535,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "FighterSkin.ObjectTypeName"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 695327047720226,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "ShieldSkin.ObjectTypeName"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 180925706062668,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "ProjectileSkin.ObjectTypeName"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 630036020027771,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "EnergyBarBackground.ObjectTypeName"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 195727863256251,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "EnergyBar.ObjectTypeName"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 477497067760395,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "RemainedTimer.ObjectTypeName"
+					}
+				}
+			],
+			"sid": 290996438472490
 		}
 	],
 	"sid": 744869350564622
