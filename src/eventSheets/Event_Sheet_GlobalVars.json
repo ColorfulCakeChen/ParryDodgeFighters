@@ -441,7 +441,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "Debug Mode:"
+			"text": "Manual Mode:"
 		},
 		{
 			"eventType": "comment",
@@ -453,10 +453,10 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Fighter_bDebugMode",
+			"name": "Fighter_bManualMode",
 			"type": "boolean",
 			"initialValue": "true",
-			"comment": "Whether in debug.",
+			"comment": "If true, user control Fighter (i.e. no AI).",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 163904291396581

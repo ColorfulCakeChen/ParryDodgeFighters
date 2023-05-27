@@ -62,7 +62,7 @@
 					"objectClass": "SpriteFont",
 					"sid": 130595982279914,
 					"parameters": {
-						"x": "( Fighter_bDebugMode ) ? SpriteFont.X : ( - SpriteFont.Width - 1 )"
+						"x": "( Fighter_bManualMode ) ? SpriteFont.X : ( - SpriteFont.Width - 1 )"
 					}
 				}
 			],
@@ -1038,7 +1038,7 @@
 					"objectClass": "System",
 					"sid": 835376649180122,
 					"parameters": {
-						"variable": "Fighter_bDebugMode"
+						"variable": "Fighter_bManualMode"
 					}
 				}
 			],
@@ -1077,7 +1077,7 @@
 					"objectClass": "System",
 					"sid": 708240829256592,
 					"parameters": {
-						"variable": "Fighter_bDebugMode"
+						"variable": "Fighter_bManualMode"
 					}
 				}
 			],
@@ -1123,7 +1123,7 @@
 					"objectClass": "System",
 					"sid": 415240353609982,
 					"parameters": {
-						"variable": "Fighter_bDebugMode"
+						"variable": "Fighter_bManualMode"
 					}
 				},
 				{

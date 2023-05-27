@@ -6,7 +6,7 @@ runOnStartup(async runtime =>
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
 
-  const libVerion = "d1af0999791d22b02c2d44d295c8ad832fb97c07";
+  const libVerion = "7ab51cb40077610704f44141c2bbdf2ff16beb9b";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
@@ -37,6 +37,7 @@ runOnStartup(async runtime =>
 
   globalThis.gNeuralOrchestra = NeuralOrchestra.Construct3.Pool.get_or_create_by();
   await gNeuralOrchestra.init_for_Construct3_runOnStartup_async(
+    runtime,
     downloader_spreadsheetId, bLogFetcherEventToConsole,
     sender_clientId,
     explicit_input_height, explicit_input_width, explicit_input_channelCount,
