@@ -55,7 +55,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "Destroy Debug info (by moving it outside layout), if not in debug mode."
+					"text": "Destroy Debug info (by moving it outside layout), if not in manual mode."
 				},
 				{
 					"id": "set-x",
@@ -818,14 +818,14 @@
 				},
 				{
 					"type": "comment",
-					"text": "Display FPS."
+					"text": "Display FPS and DrawingCanvas size."
 				},
 				{
 					"id": "set-text",
 					"objectClass": "SpriteFont",
-					"sid": 438616834040345,
+					"sid": 961481773264944,
 					"parameters": {
-						"text": "RegexReplace( SpriteFont.Text, \"^\\d*,?\", \"\", fps & \",\" )"
+						"text": "RegexReplace( SpriteFont.Text, \"^[^D]*\", \"\", fps & \", (H,W)=(\" & DrawingCanvas.SurfaceDeviceHeight & \",\" &  DrawingCanvas.SurfaceDeviceWidth & \"), \" )"
 					}
 				},
 				{
