@@ -214,6 +214,10 @@
 			"conditions": [],
 			"actions": [
 				{
+					"type": "comment",
+					"text": "DrawingCanvas related."
+				},
+				{
 					"id": "set-path",
 					"objectClass": "ConfigJSON",
 					"sid": 199238406064517,
@@ -315,6 +319,35 @@
 						"where": "back",
 						"path": "\".\"",
 						"value": "RemainedTimer.ObjectTypeName"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "KeyDownArray related"
+				},
+				{
+					"id": "set-object",
+					"objectClass": "ConfigJSON",
+					"sid": 239285632336530,
+					"parameters": {
+						"path": "\"KeyDownArray\""
+					}
+				},
+				{
+					"id": "set-path",
+					"objectClass": "ConfigJSON",
+					"sid": 223588037186888,
+					"parameters": {
+						"path": "\"KeyDownArray\""
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "ConfigJSON",
+					"sid": 608236411762388,
+					"parameters": {
+						"path": "\".ObjectTypeName\"",
+						"value": "Fighter_KeyDownArray.ObjectTypeName"
 					}
 				}
 			],
