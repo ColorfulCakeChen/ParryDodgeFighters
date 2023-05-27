@@ -823,7 +823,8 @@
 				},
 				{
 					"callFunction": "DrawingCanvas_Paint",
-					"sid": 670822637032521
+					"sid": 670822637032521,
+					"disabled": true
 				},
 				{
 					"type": "comment",
