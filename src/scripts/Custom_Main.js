@@ -56,10 +56,24 @@ async function OnBeforeProjectStart(runtime)
   // the first layout. Loading has finished and initial
   // instances are created and available to use here.
   runtime.addEventListener("tick", () => Tick(runtime));
+
+//!!! (2023/05/27 Temp Test)
+//   let imageDataPromise = runtime.objects.DrawingCanvas.getFirstInstance()
+//     .getImagePixelData();
+//
+//  let imageData = await imageDataPromise;
+
 }
 
 function Tick(runtime)
 {
+//!!! (2023/05/27 Temp Test)
+//   runtime.objects.DrawingCanvas.getFirstInstance()
+//     .getImagePixelData().then( imageData => {
+//     imageData.height;
+//     imageData.width;
+//   });
+
   // Code to run every tick
   gNeuralOrchestra.tick( runtime );
 }

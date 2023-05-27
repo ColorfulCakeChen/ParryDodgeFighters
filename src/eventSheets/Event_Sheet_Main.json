@@ -813,6 +813,10 @@
 					}
 				},
 				{
+					"type": "comment",
+					"text": "Note: DrawingCanvas.getImagePixelData() will never resolve if drawing on it every tick."
+				},
+				{
 					"callFunction": "DrawingCanvas_Paint",
 					"sid": 670822637032521
 				},
@@ -823,9 +827,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpriteFont",
-					"sid": 961481773264944,
+					"sid": 799336014878034,
 					"parameters": {
-						"text": "RegexReplace( SpriteFont.Text, \"^[^D]*\", \"\", fps & \", (H,W)=(\" & DrawingCanvas.SurfaceDeviceHeight & \",\" &  DrawingCanvas.SurfaceDeviceWidth & \"), \" )"
+						"text": "RegexReplace( SpriteFont.Text, \"^[^D]*\", \"\", fps & \", (H,W)=(\" & DrawingCanvas.SurfaceDeviceHeight & \",\" &  DrawingCanvas.SurfaceDeviceWidth & \"), \" & \"(\" & DrawingCanvas.Height & \",\" & DrawingCanvas.Width & \"), \" )"
 					}
 				},
 				{
