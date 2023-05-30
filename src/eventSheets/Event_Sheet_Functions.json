@@ -350,6 +350,133 @@
 						"path": "\".ObjectTypeName\"",
 						"value": "Fighter_KeyDownArray.ObjectTypeName"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "AlignmentMarkValueArrayArray"
+				},
+				{
+					"id": "set-array",
+					"objectClass": "ConfigJSON",
+					"sid": 352832912360595,
+					"parameters": {
+						"path": "\"alignmentMarkValueArrayArray\"",
+						"size": "2"
+					}
+				},
+				{
+					"id": "set-path",
+					"objectClass": "ConfigJSON",
+					"sid": 284708580075406,
+					"parameters": {
+						"path": "\"alignmentMarkValueArrayArray\""
+					}
+				},
+				{
+					"type": "comment",
+					"text": "AlignmentMarkValueArray[ 0 ]"
+				},
+				{
+					"id": "set-array",
+					"objectClass": "ConfigJSON",
+					"sid": 488448627629033,
+					"parameters": {
+						"path": "\".0\"",
+						"size": "0"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 907843538288254,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Alignment0_Fighter_Color_R"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 248643537296443,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Alignment0_Fighter_Color_G"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 275615501350670,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Alignment0_Fighter_Color_B"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 229096385635781,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "255"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "AlignmentMarkValueArray[ 1 ]"
+				},
+				{
+					"id": "set-array",
+					"objectClass": "ConfigJSON",
+					"sid": 445000111749089,
+					"parameters": {
+						"path": "\".1\"",
+						"size": "0"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 407035513987259,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Alignment1_Fighter_Color_R"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 570607316489125,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Alignment1_Fighter_Color_G"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 169220962385074,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Alignment1_Fighter_Color_B"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 588267053847108,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "255"
+					}
 				}
 			],
 			"sid": 290996438472490
