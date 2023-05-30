@@ -119,11 +119,6 @@
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 495700070411087
-		},
-		{
 			"behaviorId": "Physics",
 			"name": "Physics",
 			"sid": 330839136189311

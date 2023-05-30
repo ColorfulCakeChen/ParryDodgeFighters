@@ -668,11 +668,6 @@
 						"private_bFighting": 0
 					},
 					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": false
-							}
-						},
 						"Physics": {
 							"properties": {
 								"immovable": false,
@@ -796,15 +791,6 @@
 							{
 								"id": "behavior",
 								"component": [
-									{
-										"key": "ScrollTo",
-										"state": [
-											[
-												"enabled",
-												true
-											]
-										]
-									},
 									{
 										"key": "Physics",
 										"state": [

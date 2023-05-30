@@ -539,10 +539,10 @@
 		},
 		{
 			"functionName": "Fighter_KeyDownArray_init",
-			"functionCopyPicked": false,
 			"functionDescription": "Initialize KeyDownArray for Fighter's control.",
 			"functionCategory": "Key Down Array",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{

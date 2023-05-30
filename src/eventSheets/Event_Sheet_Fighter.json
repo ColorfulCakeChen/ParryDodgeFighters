@@ -3,10 +3,10 @@
 	"events": [
 		{
 			"functionName": "Fighter_everyQuarterSeconds",
-			"functionCopyPicked": false,
 			"functionDescription": "",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -42,10 +42,10 @@
 		},
 		{
 			"functionName": "Fighter_EnergyCur_add_byPicked",
-			"functionCopyPicked": true,
 			"functionDescription": "Increase/Decrease picked Fighter's EnergyCur.",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -77,10 +77,10 @@
 		},
 		{
 			"functionName": "Fighter_destroyAll",
-			"functionCopyPicked": false,
 			"functionDescription": "Destroy all Fighter (hierarchy).",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -136,10 +136,10 @@
 		},
 		{
 			"functionName": "Fighter_recreateAll",
-			"functionCopyPicked": false,
 			"functionDescription": "Recreate all Fighter (hierarchy).",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -190,10 +190,10 @@
 		},
 		{
 			"functionName": "Fighter_create",
-			"functionCopyPicked": false,
 			"functionDescription": "Create one Fighter (hierarchy)",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -332,10 +332,10 @@
 		},
 		{
 			"functionName": "Fighter_applyAcceleration_byPicked",
-			"functionCopyPicked": true,
 			"functionDescription": "Let picked Fighter got acceleration.",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -456,10 +456,10 @@
 		},
 		{
 			"functionName": "Fighter_shootProjectile_byPicked",
-			"functionCopyPicked": true,
 			"functionDescription": "Create Projectile at picked Fighter's GunMuzzle",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -569,10 +569,10 @@
 		},
 		{
 			"functionName": "Fighter_raiseShield_byPicked",
-			"functionCopyPicked": true,
 			"functionDescription": "Create Shield at picked Fighter's ShieldPoint.",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": true,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -682,10 +682,10 @@
 		},
 		{
 			"functionName": "Fighter_act_byKeyDownArray",
-			"functionCopyPicked": false,
 			"functionDescription": "Control Fighter according to KeyDownArray",
 			"functionCategory": "Fighter",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{

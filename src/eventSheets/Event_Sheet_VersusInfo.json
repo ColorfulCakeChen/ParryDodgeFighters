@@ -3,10 +3,10 @@
 	"events": [
 		{
 			"functionName": "VersusInfo_create",
-			"functionCopyPicked": false,
 			"functionDescription": "Display the text.",
 			"functionCategory": "Versus Info",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{
@@ -160,10 +160,10 @@
 		},
 		{
 			"functionName": "VersusInfo_set",
-			"functionCopyPicked": false,
 			"functionDescription": "Display the text.",
 			"functionCategory": "Versus Info",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [
 				{

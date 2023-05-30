@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 33600,
+	"savedWithRelease": 34400,
 	"name": "ParryDodgeFighters",
 	"runtime": "c3",
 	"useWorker": "worker",
@@ -122,13 +122,6 @@
 			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
 		}
