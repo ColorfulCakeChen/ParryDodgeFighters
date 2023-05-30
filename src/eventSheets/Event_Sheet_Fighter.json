@@ -257,6 +257,10 @@
 			"conditions": [],
 			"actions": [
 				{
+					"type": "comment",
+					"text": "(2023/05/30 Remarked) Strange: If create on Layer_Content_UI_Invible, the created instance's position will relative to DrawingCanvas (not Layout)."
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 750448177561400,
@@ -268,6 +272,33 @@
 						"create-hierarchy": true,
 						"template-name": "\"FighterTemplate\""
 					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 926796380442386,
+					"disabled": true,
+					"parameters": {
+						"object-to-create": "Fighter",
+						"layer": "0",
+						"x": "X",
+						"y": "Y",
+						"create-hierarchy": true,
+						"template-name": "\"FighterTemplate\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Fighter",
+					"sid": 892338238499600,
+					"disabled": true,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"type": "comment",
+					"text": ""
 				},
 				{
 					"id": "stop-animation",
@@ -326,6 +357,33 @@
 				{
 					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
 					"sid": 183706967939311
+				},
+				{
+					"type": "comment",
+					"text": "Temp Test (2023/05/30)"
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 754304928909595,
+					"disabled": true,
+					"parameters": {
+						"object-to-create": "EnergyBarBackground",
+						"layer": "0",
+						"x": "0",
+						"y": "10",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "EnergyBarBackground",
+					"sid": 548797990431264,
+					"disabled": true,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 381188756354974

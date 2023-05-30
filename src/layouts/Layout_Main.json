@@ -635,7 +635,7 @@
 			"global": false
 		},
 		{
-			"name": "Layer_Content_UI_Invisible_SP100",
+			"name": "Layer_Content_UI_Invisible_SP0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -945,7 +945,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -1032,7 +1032,7 @@
 									"h": true,
 									"a": false,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -1047,7 +1047,7 @@
 									"h": true,
 									"a": false,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -1062,7 +1062,7 @@
 									"h": true,
 									"a": false,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -1077,7 +1077,7 @@
 									"h": true,
 									"a": false,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -1091,7 +1091,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -2677,7 +2677,7 @@
 							"h": true,
 							"a": false,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -2965,7 +2965,7 @@
 							"h": true,
 							"a": false,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -3253,7 +3253,7 @@
 							"h": true,
 							"a": false,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -3541,7 +3541,7 @@
 							"h": true,
 							"a": false,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -3942,9 +3942,9 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 0,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
