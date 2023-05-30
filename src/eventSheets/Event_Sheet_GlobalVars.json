@@ -45,8 +45,8 @@
 			"eventType": "variable",
 			"name": "Alignment0_Fighter_X",
 			"type": "number",
-			"initialValue": "21",
-			"comment": "21 31",
+			"initialValue": "31",
+			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 305150074644983
@@ -116,7 +116,7 @@
 			"name": "Alignment1_Fighter_X",
 			"type": "number",
 			"initialValue": "95",
-			"comment": "85",
+			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 306316164084726
