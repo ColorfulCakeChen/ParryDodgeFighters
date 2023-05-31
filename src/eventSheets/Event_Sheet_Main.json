@@ -477,12 +477,25 @@
 							"text": "Fighting ends if any Fighter is kicked out or time runs out."
 						},
 						{
+							"eventType": "comment",
+							"text": "!!! ...unfinished... (2023/05/31) should consider implicit_input_width"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "is-outside-layout",
 									"objectClass": "Fighter",
-									"sid": 108410099344331
+									"sid": 108410099344331,
+									"disabled": true
+								},
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 968042794010501,
+									"parameters": {
+										"value": "( Fighter.BBoxLeft > LayoutWidth ) | ( Fighter.BBoxRight < DrawingCanvas_implicit_input_width ) | ( Fighter.BBoxTop > LayoutHeight ) | ( Fighter.BBoxBottom < 0 )"
+									}
 								},
 								{
 									"id": "compare-instance-variable",

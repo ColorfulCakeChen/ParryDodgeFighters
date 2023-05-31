@@ -147,6 +147,20 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "DrawingCanvas_implicit_input_width",
+			"type": "number",
+			"initialValue": "14",
+			"comment": "The implicit input width for filling alignment mark and feedback of neural network.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 982751970888496
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "QuarterSeconds",
 			"type": "number",
 			"initialValue": "0.25",

@@ -6,7 +6,7 @@ runOnStartup(async runtime =>
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
 
-  const libVerion = "e08c773366e16732480a793a94d67e1375e63fa7";
+  const libVerion = "f5e26113afc69c61093fd5242a1c6f827d31960c";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
@@ -23,9 +23,9 @@ runOnStartup(async runtime =>
 
   const sender_clientId = Date.now();
 
-  // Note: input_shape will be [ 72, 142, 4 ].
+  // Note: implicit_input_width will be 14. input_shape will be [ 72, 128, 4 ].
   const explicit_input_height = 72;
-  const explicit_input_width = 128;
+  const explicit_input_width = 114;
   const explicit_input_channelCount = 4;
   const nNeuralWorker_ImplicitInputModeId = NeuralWorker.ImplicitInputMode.Singleton
     .Ids.IMPLICIT_INPUT__FILL_ALIGNMENT_MARK__FILL_PREVIOUS_OUTPUT; // (5)
