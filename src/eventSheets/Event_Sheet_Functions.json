@@ -324,6 +324,16 @@
 					}
 				},
 				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 755147804904994,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "ImplicitInputAreaMAsk.ObjectTypeName"
+					}
+				},
+				{
 					"type": "comment",
 					"text": "KeyDownArray related"
 				},
