@@ -1888,6 +1888,30 @@
 											[
 												"image-angle",
 												true
+											],
+											[
+												"enable-tile-randomization",
+												true
+											],
+											[
+												"x-random",
+												true
+											],
+											[
+												"y-random",
+												true
+											],
+											[
+												"angle-random",
+												true
+											],
+											[
+												"blend-margin-x",
+												true
+											],
+											[
+												"blend-margin-y",
+												true
 											]
 										]
 									}
@@ -1967,7 +1991,7 @@
 											],
 											[
 												"bm",
-												false
+												true
 											],
 											[
 												"twpx",
