@@ -474,27 +474,18 @@
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Fighting ends if any Fighter is kicked out or time runs out."
-						},
-						{
-							"eventType": "comment",
-							"text": "!!! ...unfinished... (2023/05/31) should consider implicit_input_width"
+							"text": "Fighting ends if any Fighter is kicked out or time runs out. (Note: implicit_input_width is considered)"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-outside-layout",
-									"objectClass": "Fighter",
-									"sid": 108410099344331,
-									"disabled": true
-								},
-								{
-									"id": "evaluate-expression",
+									"id": "pick-by-evaluate",
 									"objectClass": "System",
-									"sid": 968042794010501,
+									"sid": 922042840405842,
 									"parameters": {
-										"value": "( Fighter.BBoxLeft > LayoutWidth ) | ( Fighter.BBoxRight < DrawingCanvas_implicit_input_width ) | ( Fighter.BBoxTop > LayoutHeight ) | ( Fighter.BBoxBottom < 0 )"
+										"object": "Fighter",
+										"expression": "( Fighter.BBoxLeft > LayoutWidth ) | ( Fighter.BBoxRight < DrawingCanvas_implicit_input_width ) | ( Fighter.BBoxTop > LayoutHeight ) | ( Fighter.BBoxBottom < 0 )"
 									}
 								},
 								{
@@ -580,28 +571,6 @@
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
 										"2"
 									]
-								},
-								{
-									"type": "comment",
-									"text": "Mark as non-fighting state."
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Fighter",
-									"sid": 768632156475165,
-									"parameters": {
-										"instance-variable": "private_bFighting",
-										"value": "0"
-									}
-								},
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 833644389638960,
-									"parameters": {
-										"variable": "Versus_Step_Current",
-										"value": "1"
-									}
 								}
 							],
 							"sid": 578497132374894,
@@ -620,12 +589,6 @@
 											"parameters": {
 												"object": "Fighter"
 											}
-										},
-										{
-											"id": "is-outside-layout",
-											"objectClass": "Fighter",
-											"sid": 893577959402736,
-											"isInverted": true
 										}
 									],
 									"actions": [
@@ -649,6 +612,15 @@
 											"parameters": {
 												"instance-variable": "private_bFighting",
 												"value": "0"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 963108161973096,
+											"parameters": {
+												"variable": "Versus_Step_Current",
+												"value": "1"
 											}
 										}
 									],
