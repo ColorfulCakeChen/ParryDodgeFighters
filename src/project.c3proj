@@ -149,8 +149,7 @@
 			"VersusInfo_Alignment0",
 			"VersusInfo_Alignment1",
 			"Touch",
-			"ConfigJSON",
-			"ImplicitInputAreaMask"
+			"ConfigJSON"
 		],
 		"subfolders": []
 	},

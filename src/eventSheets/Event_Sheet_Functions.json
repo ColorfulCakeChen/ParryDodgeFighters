@@ -237,6 +237,15 @@
 					}
 				},
 				{
+					"id": "set-value",
+					"objectClass": "ConfigJSON",
+					"sid": 459597117068943,
+					"parameters": {
+						"path": "\".implicit_input_width\"",
+						"value": "DrawingCanvas_implicit_input_width"
+					}
+				},
+				{
 					"id": "set-array",
 					"objectClass": "ConfigJSON",
 					"sid": 822002883040406,
@@ -321,16 +330,6 @@
 						"where": "back",
 						"path": "\".\"",
 						"value": "RemainedTimer.ObjectTypeName"
-					}
-				},
-				{
-					"id": "push-value",
-					"objectClass": "ConfigJSON",
-					"sid": 755147804904994,
-					"parameters": {
-						"where": "back",
-						"path": "\".\"",
-						"value": "ImplicitInputAreaMAsk.ObjectTypeName"
 					}
 				},
 				{
