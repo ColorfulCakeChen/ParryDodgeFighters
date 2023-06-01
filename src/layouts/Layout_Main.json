@@ -2,7 +2,7 @@
 	"name": "Layout_Main",
 	"layers": [
 		{
-			"name": "Layer_DrawingConvas_Visible_SP0",
+			"name": "Layer_DrawingConvas_Visible_SP100",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -403,7 +403,7 @@
 						"text": "012345678901234\n( win 123456789012345 times )\nWin",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 4,
+						"size": 3,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -486,7 +486,7 @@
 						"text": "012345678901234\n\nLose",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 4,
+						"size": 3,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -624,9 +624,9 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 0,
-			"parallaxY": 0,
-			"scaleRate": 0,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
@@ -636,7 +636,7 @@
 			"global": false
 		},
 		{
-			"name": "Layer_Content_UI_Invisible_SP0",
+			"name": "Layer_Content_UI_Invisible_SP100",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -3967,9 +3967,9 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 0,
-			"parallaxY": 0,
-			"scaleRate": 0,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
