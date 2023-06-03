@@ -69,6 +69,19 @@
 					"parameters": {
 						"x": "( Fighter_bManualMode ) ? SpriteFont.X : ( - SpriteFont.Width - 1 )"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "Adjust viewport."
+				},
+				{
+					"id": "scroll-to-x",
+					"objectClass": "System",
+					"sid": 995243395390662,
+					"disabled": true,
+					"parameters": {
+						"x": "ScrollX + DrawingCanvas_implicit_input_width"
+					}
 				}
 			],
 			"sid": 834938499052826

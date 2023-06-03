@@ -334,31 +334,198 @@
 				},
 				{
 					"type": "comment",
-					"text": "KeyDownArray related"
+					"text": "Keyboard and KeyDownArray related"
 				},
 				{
 					"id": "set-object",
 					"objectClass": "ConfigJSON",
-					"sid": 239285632336530,
+					"sid": 992914149051211,
 					"parameters": {
-						"path": "\"KeyDownArray\""
+						"path": "\"Keyboard\""
 					}
 				},
 				{
 					"id": "set-path",
 					"objectClass": "ConfigJSON",
-					"sid": 223588037186888,
+					"sid": 319084209971415,
 					"parameters": {
-						"path": "\"KeyDownArray\""
+						"path": "\"Keyboard\""
 					}
 				},
 				{
 					"id": "set-value",
 					"objectClass": "ConfigJSON",
-					"sid": 608236411762388,
+					"sid": 807966931655559,
 					"parameters": {
-						"path": "\".ObjectTypeName\"",
+						"path": "\".KeyDownArray_ObjectTypeName\"",
 						"value": "Fighter_KeyDownArray.ObjectTypeName"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Keyboard.KeyCodeArrayArray"
+				},
+				{
+					"id": "set-array",
+					"objectClass": "ConfigJSON",
+					"sid": 621023385664225,
+					"parameters": {
+						"path": "\".KeyCodeArrayArray\"",
+						"size": "2"
+					}
+				},
+				{
+					"id": "set-path",
+					"objectClass": "ConfigJSON",
+					"sid": 762121064103252,
+					"parameters": {
+						"path": "\".KeyCodeArrayArray\""
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Keyboard.KeyCodeArrayArray[ 0 ]"
+				},
+				{
+					"id": "set-array",
+					"objectClass": "ConfigJSON",
+					"sid": 763992068055096,
+					"parameters": {
+						"path": "\".0\"",
+						"size": "0"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 364358124433232,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 0, 0, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 173311579968767,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 0, 1, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 645551325645715,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 0, 2, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 709654443490227,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 0, 3, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 138816355086017,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 0, 4, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 529426802125346,
+					"parameters": {
+						"where": "back",
+						"path": "\".0\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 0, 5, 0 )"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Keyboard.KeyCodeArrayArray[ 1 ]"
+				},
+				{
+					"id": "set-array",
+					"objectClass": "ConfigJSON",
+					"sid": 557791112540341,
+					"parameters": {
+						"path": "\".1\"",
+						"size": "0"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 670620133878883,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 1, 0, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 734781305059379,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 1, 1, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 114861089921061,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 1, 2, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 204193204431209,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 1, 3, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 184397556079404,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 1, 4, 0 )"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 676887436529759,
+					"parameters": {
+						"where": "back",
+						"path": "\".1\"",
+						"value": "Fighter_Alignment_Action_InfoArray.At( 1, 5, 0 )"
 					}
 				},
 				{
@@ -384,7 +551,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "AlignmentMarkValueArray[ 0 ]"
+					"text": "AlignmentMarkValueArrayArray[ 0 ]"
 				},
 				{
 					"id": "set-array",
@@ -437,7 +604,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "AlignmentMarkValueArray[ 1 ]"
+					"text": "AlignmentMarkValueArrayArray[ 1 ]"
 				},
 				{
 					"id": "set-array",
