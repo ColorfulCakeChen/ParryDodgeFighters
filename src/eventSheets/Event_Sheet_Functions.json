@@ -87,7 +87,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "Display download progress (percentage number text)  by RemainderTimer."
+					"text": "Display download progress (percentage number text) by RemainderTimer."
 				},
 				{
 					"id": "set-text",
