@@ -430,7 +430,7 @@
 			"name": "Versus_Result_ParentAlignment0",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "Parent plays alignment 0.",
+			"comment": "Parent personates alignment 0.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 565675517389986
@@ -440,7 +440,7 @@
 			"name": "Versus_Result_ParentAlignment1",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "Parent plays alignment 1.",
+			"comment": "Parent personates alignment 1.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 921289473717844
