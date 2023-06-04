@@ -334,12 +334,41 @@
 				},
 				{
 					"type": "comment",
+					"text": "AI related"
+				},
+				{
+					"id": "set-object",
+					"objectClass": "ConfigJSON",
+					"sid": 727307547824628,
+					"parameters": {
+						"path": "\"AI\""
+					}
+				},
+				{
+					"id": "set-path",
+					"objectClass": "ConfigJSON",
+					"sid": 580962772563209,
+					"parameters": {
+						"path": "\"AI\""
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "ConfigJSON",
+					"sid": 337089819653019,
+					"parameters": {
+						"path": "\".intervalSeconds\"",
+						"value": "AI_intervalSeconds"
+					}
+				},
+				{
+					"type": "comment",
 					"text": "Keyboard and KeyDownArray related"
 				},
 				{
 					"id": "set-object",
 					"objectClass": "ConfigJSON",
-					"sid": 992914149051211,
+					"sid": 356079856266791,
 					"parameters": {
 						"path": "\"Keyboard\""
 					}
@@ -347,7 +376,7 @@
 				{
 					"id": "set-path",
 					"objectClass": "ConfigJSON",
-					"sid": 319084209971415,
+					"sid": 506624674515725,
 					"parameters": {
 						"path": "\"Keyboard\""
 					}
@@ -355,7 +384,7 @@
 				{
 					"id": "set-value",
 					"objectClass": "ConfigJSON",
-					"sid": 807966931655559,
+					"sid": 534734641896851,
 					"parameters": {
 						"path": "\".KeyDownArray_ObjectTypeName\"",
 						"value": "Fighter_KeyDownArray.ObjectTypeName"

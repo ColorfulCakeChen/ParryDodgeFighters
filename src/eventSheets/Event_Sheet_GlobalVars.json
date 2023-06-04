@@ -152,8 +152,22 @@
 			"initialValue": "14",
 			"comment": "The implicit input width for filling alignment mark and feedback of neural network.",
 			"isStatic": false,
-			"isConstant": false,
+			"isConstant": true,
 			"sid": 982751970888496
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "AI_intervalSeconds",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "How long (in seconds) trigger AI once.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 650771213819533
 		},
 		{
 			"eventType": "comment",

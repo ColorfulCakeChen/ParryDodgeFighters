@@ -6,7 +6,7 @@ runOnStartup(async runtime =>
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
 
-  const libVerion = "f8ccae68a2502e1a4c06a857f436abe3c9e1a307";
+  const libVerion = "5ce6729e1d326273cef667b54dddf1f4c9c379d2";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
@@ -61,7 +61,8 @@ async function OnBeforeProjectStart(runtime)
 async function OnAfterProjectStart(runtime)
 {
   // Note: ConfigJSON is initilized in "On start of layout".
-  gNeuralOrchestra.ConfigJSON_set( runtime.objects.ConfigJSON.getFirstInstance() );
+  const ConfigJSON = runtime.objects.ConfigJSON.getFirstInstance()
+  gNeuralOrchestra.ConfigJSON_set( ConfigJSON );
 
   runtime.addEventListener("tick", () => Tick(runtime));
 }
