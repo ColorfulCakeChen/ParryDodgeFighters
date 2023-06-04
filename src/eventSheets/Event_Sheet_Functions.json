@@ -86,6 +86,10 @@
 			"conditions": [],
 			"actions": [
 				{
+					"type": "comment",
+					"text": "Display download progress (percentage number text)  by RemainderTimer."
+				},
+				{
 					"id": "set-text",
 					"objectClass": "RemainedTimer",
 					"sid": 197285610898472,
