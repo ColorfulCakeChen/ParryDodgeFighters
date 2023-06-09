@@ -226,7 +226,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "Wait script to download vesus weights."
+							"text": "Wait for script to download vesus weights. Script will modify current step to next step when completed."
 						}
 					],
 					"sid": 895322173769676
