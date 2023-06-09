@@ -483,7 +483,7 @@
 			"eventType": "variable",
 			"name": "Fighter_bManualMode",
 			"type": "boolean",
-			"initialValue": "true",
+			"initialValue": "false",
 			"comment": "If true, user control Fighter (i.e. no AI).",
 			"isStatic": false,
 			"isConstant": false,
