@@ -6,7 +6,7 @@ runOnStartup(async runtime =>
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
 
-  const libVerion = "db03c0dcde6d5d98fdc6822f918d264064be53eb";
+  const libVerion = "9f9be6ccff46e4b9e9ea4b03af221dbc94fcd810";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
