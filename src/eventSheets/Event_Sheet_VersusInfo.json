@@ -40,7 +40,7 @@
 				{
 					"name": "typewriter_seconds_per_character",
 					"type": "number",
-					"initialValue": "5",
+					"initialValue": "2",
 					"comment": "Every character will use how many seconds to display.",
 					"sid": 909484768539945
 				}

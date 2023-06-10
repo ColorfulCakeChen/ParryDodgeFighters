@@ -501,7 +501,7 @@
 			"eventType": "variable",
 			"name": "DebugInfo_b",
 			"type": "boolean",
-			"initialValue": "true",
+			"initialValue": "false",
 			"comment": "If true, display debug information.",
 			"isStatic": false,
 			"isConstant": true,
