@@ -51,11 +51,11 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 832735800755699,
+					"sid": 303029569982515,
 					"parameters": {
 						"object-to-create": "VersusInfo",
 						"layer": "0",
-						"x": "64",
+						"x": "71",
 						"y": "y_begin",
 						"create-hierarchy": true,
 						"template-name": "\"VersusInfoTemplate\""
@@ -106,10 +106,10 @@
 				{
 					"id": "move-to-position",
 					"objectClass": "VersusInfo",
-					"sid": 690920053592224,
+					"sid": 838829980410344,
 					"behaviorType": "MoveTo",
 					"parameters": {
-						"x": "64",
+						"x": "71",
 						"y": "y_end",
 						"mode": "direct"
 					}
