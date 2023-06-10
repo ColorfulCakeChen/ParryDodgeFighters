@@ -488,6 +488,24 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 163904291396581
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "DebugInfo_b",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "If true, display debug information.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 649170688978573
 		}
 	],
 	"sid": 704237106821719

@@ -65,9 +65,9 @@
 				{
 					"id": "set-x",
 					"objectClass": "SpriteFont",
-					"sid": 130595982279914,
+					"sid": 261286231661676,
 					"parameters": {
-						"x": "( Fighter_bManualMode ) ? SpriteFont.X : ( - SpriteFont.Width - 1 )"
+						"x": "( DebugInfo_b ) ? SpriteFont.X : ( - SpriteFont.Width - 1 )"
 					}
 				},
 				{
