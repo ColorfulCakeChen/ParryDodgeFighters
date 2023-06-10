@@ -60,7 +60,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "Destroy Debug info (by moving it outside layout), if not in manual mode."
+					"text": "Destroy Debug info (by moving it outside layout because it has DestroyOutsideLayout behavior), if not in manual mode."
 				},
 				{
 					"id": "set-x",
@@ -181,12 +181,13 @@
 						},
 						{
 							"callFunction": "VersusInfo_create",
-							"sid": 261567665668592,
+							"sid": 707209618490314,
 							"parameters": [
 								"\"Loading.....................\"",
 								"\"Loading.....................\"",
 								"72",
-								"44"
+								"44",
+								"5"
 							]
 						},
 						{
@@ -563,12 +564,13 @@
 								},
 								{
 									"callFunction": "VersusInfo_create",
-									"sid": 480991659790682,
+									"sid": 369045227931896,
 									"parameters": [
 										"\"End...\"",
 										"\"End...\"",
 										"36",
-										"44"
+										"44",
+										"5"
 									]
 								},
 								{
@@ -694,7 +696,8 @@
 								"\"\"",
 								"\"\"",
 								"72",
-								"44"
+								"44",
+								"2"
 							]
 						},
 						{

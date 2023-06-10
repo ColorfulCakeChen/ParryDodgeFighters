@@ -2075,7 +2075,7 @@
 					"uid": 13,
 					"instanceVariables": {
 						"secondsCur": 180,
-						"secondsMax": 180
+						"secondsMax": 30
 					},
 					"behaviors": {},
 					"world": {

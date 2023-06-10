@@ -13,14 +13,14 @@
 					"name": "alignment0_text",
 					"type": "string",
 					"initialValue": "Loading.....................",
-					"comment": "Text length will become typewriter seconds. (i.e. one character per second.)",
+					"comment": "Text length (multiplying typewriter_seconds_per_character) will become typewriter seconds. (i.e. more characters display longer.)",
 					"sid": 767461135916628
 				},
 				{
 					"name": "alignment1_text",
 					"type": "string",
 					"initialValue": "Loading.....................",
-					"comment": "Text length will become typewriter seconds. (i.e. one character per second.)",
+					"comment": "Text length (multiplying typewriter_seconds_per_character) will become typewriter seconds. (i.e. more characters display longer.)",
 					"sid": 775537674860255
 				},
 				{
@@ -36,6 +36,13 @@
 					"initialValue": "44",
 					"comment": "The ending display position Y.",
 					"sid": 100726287353267
+				},
+				{
+					"name": "typewriter_seconds_per_character",
+					"type": "number",
+					"initialValue": "5",
+					"comment": "Every character will use how many seconds to display.",
+					"sid": 909484768539945
 				}
 			],
 			"eventType": "function-block",
@@ -81,19 +88,19 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 113364385649359,
+					"sid": 537498222790491,
 					"parameters": {
 						"text": "alignment0_text",
-						"duration": "len( alignment0_text )"
+						"duration": "len( alignment0_text ) * typewriter_seconds_per_character"
 					}
 				},
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 116607109316226,
+					"sid": 662315405533257,
 					"parameters": {
 						"text": "alignment1_text",
-						"duration": "len( alignment1_text )"
+						"duration": "len( alignment1_text ) * typewriter_seconds_per_character"
 					}
 				},
 				{
