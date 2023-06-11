@@ -44,10 +44,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
-					"sid": 375635164862336,
+					"sid": 585509680266570,
 					"parameters": {
 						"instance-variable": "private_totalDistance_Unused",
-						"value": "Fighter.private_totalDistance_Unused + sqrt( ( Fighter.X - Fighter.private_prevX_Unused ) * ( Fighter.X - Fighter.private_prevX_Unused ) + ( Fighter.Y - Fighter.private_prevY_Unused ) * ( Fighter.Y - Fighter.private_prevY_Unused ) )"
+						"value": "Fighter.private_totalDistance_Unused + distance( Fighter.X, Fighter.Y, Fighter.private_prevX_Unused, Fighter.private_prevY_Unused )"
 					}
 				},
 				{
