@@ -36,6 +36,37 @@
 						"instance-variable": "RaiseShieldCountDown",
 						"value": "max( Self.RaiseShieldCountDown - 1, 0 )"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "Accumulate total distance."
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 375635164862336,
+					"parameters": {
+						"instance-variable": "private_totalDistance_Unused",
+						"value": "Fighter.private_totalDistance_Unused + sqrt( ( Fighter.X - Fighter.private_prevX_Unused ) * ( Fighter.X - Fighter.private_prevX_Unused ) + ( Fighter.Y - Fighter.private_prevY_Unused ) * ( Fighter.Y - Fighter.private_prevY_Unused ) )"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 155114866330957,
+					"parameters": {
+						"instance-variable": "private_prevX_Unused",
+						"value": "Fighter.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 629241146339819,
+					"parameters": {
+						"instance-variable": "private_prevY_Unused",
+						"value": "Fighter.Y"
+					}
 				}
 			],
 			"sid": 193428783145905
@@ -294,6 +325,28 @@
 					"disabled": true,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "For accumulate total distance."
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 843637095842242,
+					"parameters": {
+						"instance-variable": "private_prevX_Unused",
+						"value": "Fighter.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 882529063787399,
+					"parameters": {
+						"instance-variable": "private_prevY_Unused",
+						"value": "Fighter.Y"
 					}
 				},
 				{

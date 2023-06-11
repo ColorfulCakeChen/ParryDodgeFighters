@@ -532,7 +532,7 @@
 									"objectClass": "Fighter",
 									"sid": 910627130002438,
 									"parameters": {
-										"instance-variable": "private_Losed_UnUsed",
+										"instance-variable": "private_Losed_Unused",
 										"value": "1"
 									}
 								},

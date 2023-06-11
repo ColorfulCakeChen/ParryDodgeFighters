@@ -665,8 +665,11 @@
 						"RaiseShieldCountDown": 3,
 						"Acceleration": 3,
 						"private_Force": 0,
-						"private_Losed_UnUsed": 0,
-						"private_bFighting": 0
+						"private_Losed_Unused": 0,
+						"private_bFighting": 0,
+						"private_prevX_Unused": 0,
+						"private_prevY_Unused": 0,
+						"private_totalDistance_Unused": 0
 					},
 					"behaviors": {
 						"Physics": {
@@ -778,11 +781,23 @@
 												"state": true
 											},
 											{
-												"iv": "private_Losed_UnUsed",
+												"iv": "private_Losed_Unused",
 												"state": true
 											},
 											{
 												"iv": "private_bFighting",
+												"state": true
+											},
+											{
+												"iv": "private_prevX_Unused",
+												"state": true
+											},
+											{
+												"iv": "private_prevY_Unused",
+												"state": true
+											},
+											{
+												"iv": "private_totalDistance_Unused",
 												"state": true
 											}
 										]
