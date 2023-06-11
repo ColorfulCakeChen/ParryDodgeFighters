@@ -117,25 +117,18 @@
 			"sid": 428466636965675
 		},
 		{
-			"name": "private_prevX_Unused",
+			"name": "private_prevX",
 			"type": "number",
 			"desc": "The position X in the previous tick.",
 			"show": true,
 			"sid": 944447713211625
 		},
 		{
-			"name": "private_prevY_Unused",
+			"name": "private_prevY",
 			"type": "number",
 			"desc": "The position Y in the previous tick.",
 			"show": true,
 			"sid": 332484770358809
-		},
-		{
-			"name": "private_totalDistance_Unused",
-			"type": "number",
-			"desc": "How long moved until now.",
-			"show": true,
-			"sid": 234338616007575
 		}
 	],
 	"behaviorTypes": [

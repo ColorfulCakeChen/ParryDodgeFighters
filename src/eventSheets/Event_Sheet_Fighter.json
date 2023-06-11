@@ -10,7 +10,16 @@
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
-			"conditions": [],
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 702114912244276,
+					"parameters": {
+						"object": "Fighter"
+					}
+				}
+			],
 			"actions": [
 				{
 					"callFunction": "Fighter_EnergyCur_add_byPicked",
@@ -39,15 +48,15 @@
 				},
 				{
 					"type": "comment",
-					"text": "Accumulate total distance."
+					"text": "Accumulate total distance.\nFighter_Alignment_TotalDistance[ AlignmentId ]: the total move distance of the alignmentId."
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 585509680266570,
+					"id": "set-at-x",
+					"objectClass": "Fighter_Alignment_TotalDistance",
+					"sid": 531499628755954,
 					"parameters": {
-						"instance-variable": "private_totalDistance_Unused",
-						"value": "Fighter.private_totalDistance_Unused + distance( Fighter.X, Fighter.Y, Fighter.private_prevX_Unused, Fighter.private_prevY_Unused )"
+						"x": "Fighter.VersusAlignmentId",
+						"value": "Fighter_Alignment_TotalDistance.At( Fighter.VersusAlignmentId ) + distance( Fighter.X, Fighter.Y, Fighter.private_prevX, Fighter.private_prevY )"
 					}
 				},
 				{
@@ -55,7 +64,7 @@
 					"objectClass": "Fighter",
 					"sid": 155114866330957,
 					"parameters": {
-						"instance-variable": "private_prevX_Unused",
+						"instance-variable": "private_prevX",
 						"value": "Fighter.X"
 					}
 				},
@@ -64,7 +73,7 @@
 					"objectClass": "Fighter",
 					"sid": 629241146339819,
 					"parameters": {
-						"instance-variable": "private_prevY_Unused",
+						"instance-variable": "private_prevY",
 						"value": "Fighter.Y"
 					}
 				}
@@ -329,14 +338,14 @@
 				},
 				{
 					"type": "comment",
-					"text": "For accumulate total distance."
+					"text": "For accumulate total move distance."
 				},
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Fighter",
 					"sid": 843637095842242,
 					"parameters": {
-						"instance-variable": "private_prevX_Unused",
+						"instance-variable": "private_prevX",
 						"value": "Fighter.X"
 					}
 				},
@@ -345,8 +354,17 @@
 					"objectClass": "Fighter",
 					"sid": 882529063787399,
 					"parameters": {
-						"instance-variable": "private_prevY_Unused",
+						"instance-variable": "private_prevY",
 						"value": "Fighter.Y"
+					}
+				},
+				{
+					"id": "set-at-x",
+					"objectClass": "Fighter_Alignment_TotalDistance",
+					"sid": 115765938710737,
+					"parameters": {
+						"x": "AlignmentId",
+						"value": "0"
 					}
 				},
 				{

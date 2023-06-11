@@ -149,7 +149,8 @@
 			"VersusInfo_Alignment0",
 			"VersusInfo_Alignment1",
 			"Touch",
-			"ConfigJSON"
+			"ConfigJSON",
+			"Fighter_Alignment_TotalDistance"
 		],
 		"subfolders": []
 	},

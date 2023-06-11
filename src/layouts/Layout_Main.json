@@ -667,9 +667,8 @@
 						"private_Force": 0,
 						"private_Losed_Unused": 0,
 						"private_bFighting": 0,
-						"private_prevX_Unused": 0,
-						"private_prevY_Unused": 0,
-						"private_totalDistance_Unused": 0
+						"private_prevX": 0,
+						"private_prevY": 0
 					},
 					"behaviors": {
 						"Physics": {
@@ -789,15 +788,11 @@
 												"state": true
 											},
 											{
-												"iv": "private_prevX_Unused",
+												"iv": "private_prevX",
 												"state": true
 											},
 											{
-												"iv": "private_prevY_Unused",
-												"state": true
-											},
-											{
-												"iv": "private_totalDistance_Unused",
+												"iv": "private_prevY",
 												"state": true
 											}
 										]
@@ -2090,7 +2085,7 @@
 					"uid": 13,
 					"instanceVariables": {
 						"secondsCur": 180,
-						"secondsMax": 30
+						"secondsMax": 180
 					},
 					"behaviors": {},
 					"world": {
@@ -4020,6 +4015,16 @@
 			"type": "ConfigJSON",
 			"properties": {},
 			"uid": 27,
+			"instanceVariables": {}
+		},
+		{
+			"type": "Fighter_Alignment_TotalDistance",
+			"properties": {
+				"width": 2,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 28,
 			"instanceVariables": {}
 		}
 	],
