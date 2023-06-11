@@ -563,19 +563,19 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 596654625964621,
+									"sid": 256728946304476,
 									"parameters": {
 										"variable": "local_Alignment0_to_Alignment1_DistanceDelta",
-										"value": "Fighter_Alignment_DistanceTotal.At( 0 ) - Fighter_Alignment_DistanceTotal.At( 1 )"
+										"value": "roundToDp( Fighter_Alignment_DistanceTotal.At( 0 ) - Fighter_Alignment_DistanceTotal.At( 1 ), 2 )"
 									}
 								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 876403290892462,
+									"sid": 885750710722867,
 									"parameters": {
 										"variable": "local_Alignment1_to_Alignment0_DistanceDelta",
-										"value": "Fighter_Alignment_DistanceTotal.At( 1 ) - Fighter_Alignment_DistanceTotal.At( 0 )"
+										"value": "roundToDp( Fighter_Alignment_DistanceTotal.At( 1 ) - Fighter_Alignment_DistanceTotal.At( 0 ), 2 )"
 									}
 								},
 								{
