@@ -483,8 +483,8 @@
 			"eventType": "variable",
 			"name": "Fighter_bManualMode",
 			"type": "boolean",
-			"initialValue": "true",
-			"comment": "If true, user control Fighter (i.e. no AI).",
+			"initialValue": "false",
+			"comment": "If true, user controls Fighter (i.e. no AI).",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 163904291396581

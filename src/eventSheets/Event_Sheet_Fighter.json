@@ -48,7 +48,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "Accumulate total distance.\nFighter_Alignment_TotalDistance[ AlignmentId ]: the total move distance of the alignmentId."
+					"text": "Accumulate total distance.\nFighter_Alignment_TotalDistance[ AlignmentId ]: the total movement distance of the alignmentId."
 				},
 				{
 					"id": "set-at-x",
@@ -400,7 +400,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "For total move distance accumulation."
+					"text": "For total movement distance accumulation."
 				},
 				{
 					"id": "set-instvar-value",

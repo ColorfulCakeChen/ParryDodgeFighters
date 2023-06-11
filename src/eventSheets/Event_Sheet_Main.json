@@ -558,7 +558,7 @@
 								},
 								{
 									"type": "comment",
-									"text": "Determine all alignments' distance delta."
+									"text": "All alignments' relative total movement distance."
 								},
 								{
 									"id": "set-eventvar-value",
@@ -580,7 +580,7 @@
 								},
 								{
 									"type": "comment",
-									"text": "Determine all alignments' versus result:  lose(-1)/draw(0)/win(+1)."
+									"text": "Determine all alignments' versus result:\nlose(-1)/draw(0)/win(+1).\n\nNote: When draw (i.e. no fighter kicked out), longer total movement distance wins."
 								},
 								{
 									"id": "set-eventvar-value",
