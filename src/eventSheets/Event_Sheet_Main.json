@@ -491,6 +491,26 @@
 							"text": "Fighting ends if any Fighter is kicked out or time runs out. (Note: implicit_input_width is considered)"
 						},
 						{
+							"eventType": "variable",
+							"name": "local_Alignment0_to_Alignment1_DistanceDelta",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "Alignment0_DistanceTotal - Alignment1_DistanceTotal",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 840369317462722
+						},
+						{
+							"eventType": "variable",
+							"name": "local_Alignment1_to_Alignment0_DistanceDelta",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "Alignment1_DistanceTotal - Alignment0_DistanceTotal",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 634298435658133
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -538,24 +558,46 @@
 								},
 								{
 									"type": "comment",
-									"text": "Determine all alignments' win/draw/lose."
+									"text": "Determine all alignments' distance delta."
 								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 911052315255882,
+									"sid": 596654625964621,
 									"parameters": {
-										"variable": "Versus_Result_ParentAlignment0",
-										"value": "( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 0 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment0"
+										"variable": "local_Alignment0_to_Alignment1_DistanceDelta",
+										"value": "Fighter_Alignment_DistanceTotal.At( 0 ) - Fighter_Alignment_DistanceTotal.At( 1 )"
 									}
 								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 259654199341661,
+									"sid": 876403290892462,
+									"parameters": {
+										"variable": "local_Alignment1_to_Alignment0_DistanceDelta",
+										"value": "Fighter_Alignment_DistanceTotal.At( 1 ) - Fighter_Alignment_DistanceTotal.At( 0 )"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Determine all alignments' versus result:  lose(-1)/draw(0)/win(+1)."
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 676648927859296,
+									"parameters": {
+										"variable": "Versus_Result_ParentAlignment0",
+										"value": "( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 0 ) ? -1 : 1 ) : sign( local_Alignment0_to_Alignment1_DistanceDelta ) ) : Versus_Result_ParentAlignment0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 357153708403456,
 									"parameters": {
 										"variable": "Versus_Result_ParentAlignment1",
-										"value": "( Versus_Step_Current = Versus_Step_09_ParentAlignment1_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 1 ) ? -1 : 1 ) : 0 ) : Versus_Result_ParentAlignment1"
+										"value": "( Versus_Step_Current = Versus_Step_09_ParentAlignment1_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 1 ) ? -1 : 1 ) : sign( local_Alignment1_to_Alignment0_DistanceDelta ) ) : Versus_Result_ParentAlignment1"
 									}
 								},
 								{

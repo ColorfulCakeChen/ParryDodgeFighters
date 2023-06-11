@@ -52,11 +52,11 @@
 				},
 				{
 					"id": "set-at-x",
-					"objectClass": "Fighter_Alignment_TotalDistance",
+					"objectClass": "Fighter_Alignment_DistanceTotal",
 					"sid": 531499628755954,
 					"parameters": {
 						"x": "Fighter.VersusAlignmentId",
-						"value": "Fighter_Alignment_TotalDistance.At( Fighter.VersusAlignmentId ) + distance( Fighter.X, Fighter.Y, Fighter.private_prevX, Fighter.private_prevY )"
+						"value": "Fighter_Alignment_DistanceTotal.At( Fighter.VersusAlignmentId ) + distance( Fighter.X, Fighter.Y, Fighter.private_prevX, Fighter.private_prevY )"
 					}
 				},
 				{
@@ -338,37 +338,6 @@
 				},
 				{
 					"type": "comment",
-					"text": "For accumulate total move distance."
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 843637095842242,
-					"parameters": {
-						"instance-variable": "private_prevX",
-						"value": "Fighter.X"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Fighter",
-					"sid": 882529063787399,
-					"parameters": {
-						"instance-variable": "private_prevY",
-						"value": "Fighter.Y"
-					}
-				},
-				{
-					"id": "set-at-x",
-					"objectClass": "Fighter_Alignment_TotalDistance",
-					"sid": 115765938710737,
-					"parameters": {
-						"x": "AlignmentId",
-						"value": "0"
-					}
-				},
-				{
-					"type": "comment",
 					"text": ""
 				},
 				{
@@ -428,6 +397,37 @@
 				{
 					"callFunction": "EnergyBar_Refresh_byFighter_Picked",
 					"sid": 183706967939311
+				},
+				{
+					"type": "comment",
+					"text": "For total move distance accumulation."
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 843637095842242,
+					"parameters": {
+						"instance-variable": "private_prevX",
+						"value": "Fighter.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Fighter",
+					"sid": 882529063787399,
+					"parameters": {
+						"instance-variable": "private_prevY",
+						"value": "Fighter.Y"
+					}
+				},
+				{
+					"id": "set-at-x",
+					"objectClass": "Fighter_Alignment_DistanceTotal",
+					"sid": 115765938710737,
+					"parameters": {
+						"x": "AlignmentId",
+						"value": "0"
+					}
 				},
 				{
 					"type": "comment",

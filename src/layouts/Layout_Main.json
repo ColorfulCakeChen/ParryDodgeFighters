@@ -2085,7 +2085,7 @@
 					"uid": 13,
 					"instanceVariables": {
 						"secondsCur": 180,
-						"secondsMax": 180
+						"secondsMax": 30
 					},
 					"behaviors": {},
 					"world": {
@@ -4018,7 +4018,7 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "Fighter_Alignment_TotalDistance",
+			"type": "Fighter_Alignment_DistanceTotal",
 			"properties": {
 				"width": 2,
 				"height": 1,
