@@ -145,9 +145,9 @@
 			"Browser",
 			"Shield",
 			"ShieldSkin",
-			"VersusInfo",
-			"VersusInfo_Alignment0",
-			"VersusInfo_Alignment1",
+			"VersusInfoUI",
+			"VersusInfoUI_Alignment0",
+			"VersusInfoUI_Alignment1",
 			"Touch",
 			"ConfigJSON",
 			"Fighter_Alignment_DistanceTotal"
@@ -176,9 +176,9 @@
 		},
 		{
 			"members": [
-				"VersusInfo",
-				"VersusInfo_Alignment0",
-				"VersusInfo_Alignment1"
+				"VersusInfoUI",
+				"VersusInfoUI_Alignment0",
+				"VersusInfoUI_Alignment1"
 			]
 		}
 	],
@@ -199,7 +199,7 @@
 			"Event_Sheet_GlobalVars",
 			"Event_Sheet_Fighter",
 			"Event_Sheet_KeyCodes",
-			"Event_Sheet_VersusInfo"
+			"Event_Sheet_VersusInfoUI"
 		],
 		"subfolders": []
 	},

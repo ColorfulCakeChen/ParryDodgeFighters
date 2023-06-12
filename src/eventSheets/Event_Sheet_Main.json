@@ -13,7 +13,7 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "VersusInfo",
+					"objectClass": "VersusInfoUI",
 					"sid": 484898767553043
 				},
 				{
@@ -265,7 +265,7 @@
 						},
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 533464808037539,
+							"sid": 756617532664481,
 							"parameters": [
 								"Versus_EntityNo",
 								"Versus_Parent_GenerationNo",
@@ -274,7 +274,7 @@
 								"Versus_Offspring_GenerationNo",
 								"\"\"",
 								"\" \"",
-								"1"
+								"VersusInfoUI_typewriterSeconds_before"
 							]
 						},
 						{
@@ -617,7 +617,7 @@
 								},
 								{
 									"callFunction": "VersusInfo_set",
-									"sid": 293553470741485,
+									"sid": 540406314068766,
 									"parameters": [
 										"Versus_EntityNo",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_GenerationNo : Versus_Offspring_GenerationNo",
@@ -626,7 +626,7 @@
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? Versus_Offspring_GenerationNo : Versus_Parent_GenerationNo",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? \"\" : Versus_Parent_WinCount",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
-										"0.5"
+										"VersusInfoUI_typewriterSeconds_after"
 									]
 								}
 							],
@@ -744,7 +744,7 @@
 						},
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 712502207188219,
+							"sid": 551446812568319,
 							"parameters": [
 								"Versus_EntityNo",
 								"Versus_Offspring_GenerationNo",
@@ -753,7 +753,7 @@
 								"Versus_Parent_GenerationNo",
 								"Versus_Parent_WinCount",
 								"\" \"",
-								"1"
+								"VersusInfoUI_typewriterSeconds_before"
 							]
 						},
 						{
@@ -943,7 +943,7 @@
 			"conditions": [
 				{
 					"id": "on-destroyed",
-					"objectClass": "VersusInfo",
+					"objectClass": "VersusInfoUI",
 					"sid": 786651745422246
 				}
 			],

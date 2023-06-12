@@ -1,5 +1,5 @@
 {
-	"name": "Event_Sheet_VersusInfo",
+	"name": "Event_Sheet_VersusInfoUI",
 	"events": [
 		{
 			"functionName": "VersusInfo_create",
@@ -53,7 +53,7 @@
 					"objectClass": "System",
 					"sid": 303029569982515,
 					"parameters": {
-						"object-to-create": "VersusInfo",
+						"object-to-create": "VersusInfoUI",
 						"layer": "0",
 						"x": "71",
 						"y": "y_begin",
@@ -63,7 +63,7 @@
 				},
 				{
 					"id": "set-font-color",
-					"objectClass": "VersusInfo_Alignment0",
+					"objectClass": "VersusInfoUI_Alignment0",
 					"sid": 558141406633310,
 					"parameters": {
 						"color": "rgbEx255( Alignment0_Fighter_Color_R, Alignment0_Fighter_Color_G, Alignment0_Fighter_Color_B )"
@@ -71,7 +71,7 @@
 				},
 				{
 					"id": "set-font-color",
-					"objectClass": "VersusInfo_Alignment1",
+					"objectClass": "VersusInfoUI_Alignment1",
 					"sid": 147828699367187,
 					"parameters": {
 						"color": "rgbEx255( Alignment1_Fighter_Color_R, Alignment1_Fighter_Color_G, Alignment1_Fighter_Color_B )"
@@ -79,7 +79,7 @@
 				},
 				{
 					"id": "set-text",
-					"objectClass": "VersusInfo",
+					"objectClass": "VersusInfoUI",
 					"sid": 213491472631169,
 					"parameters": {
 						"text": "\"\""
@@ -87,7 +87,7 @@
 				},
 				{
 					"id": "typewriter-text",
-					"objectClass": "VersusInfo_Alignment0",
+					"objectClass": "VersusInfoUI_Alignment0",
 					"sid": 537498222790491,
 					"parameters": {
 						"text": "alignment0_text",
@@ -96,7 +96,7 @@
 				},
 				{
 					"id": "typewriter-text",
-					"objectClass": "VersusInfo_Alignment1",
+					"objectClass": "VersusInfoUI_Alignment1",
 					"sid": 662315405533257,
 					"parameters": {
 						"text": "alignment1_text",
@@ -105,7 +105,7 @@
 				},
 				{
 					"id": "move-to-position",
-					"objectClass": "VersusInfo",
+					"objectClass": "VersusInfoUI",
 					"sid": 838829980410344,
 					"behaviorType": "MoveTo",
 					"parameters": {
@@ -237,14 +237,14 @@
 					"objectClass": "System",
 					"sid": 252289939495028,
 					"parameters": {
-						"object": "VersusInfo"
+						"object": "VersusInfoUI"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-wait-time",
-					"objectClass": "VersusInfo",
+					"objectClass": "VersusInfoUI",
 					"sid": 925976702413829,
 					"behaviorType": "Fade",
 					"parameters": {
@@ -253,7 +253,7 @@
 				},
 				{
 					"id": "set-wait-time",
-					"objectClass": "VersusInfo_Alignment0",
+					"objectClass": "VersusInfoUI_Alignment0",
 					"sid": 583115075602790,
 					"behaviorType": "Fade",
 					"parameters": {
@@ -262,7 +262,7 @@
 				},
 				{
 					"id": "set-wait-time",
-					"objectClass": "VersusInfo_Alignment1",
+					"objectClass": "VersusInfoUI_Alignment1",
 					"sid": 695496798201875,
 					"behaviorType": "Fade",
 					"parameters": {
@@ -271,7 +271,7 @@
 				},
 				{
 					"id": "typewriter-text",
-					"objectClass": "VersusInfo",
+					"objectClass": "VersusInfoUI",
 					"sid": 944978331014210,
 					"parameters": {
 						"text": "\"Entity \" & EntityNo & newline & newline & \" vs \"",
@@ -280,19 +280,19 @@
 				},
 				{
 					"id": "typewriter-text",
-					"objectClass": "VersusInfo_Alignment0",
-					"sid": 817370672350097,
+					"objectClass": "VersusInfoUI_Alignment0",
+					"sid": 502697025334207,
 					"parameters": {
-						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=5]\" & alignment0_Result & \"[/size]\"",
+						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=\" & VersusInfoUI_LoseDrawWin_fontSize & \"]\" & alignment0_Result & \"[/size]\"",
 						"duration": "typewriterSeconds"
 					}
 				},
 				{
 					"id": "typewriter-text",
-					"objectClass": "VersusInfo_Alignment1",
-					"sid": 762326307456628,
+					"objectClass": "VersusInfoUI_Alignment1",
+					"sid": 127011141466698,
 					"parameters": {
-						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=5]\" & alignment1_Result & \"[/size]\"",
+						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=\" & VersusInfoUI_LoseDrawWin_fontSize & \"]\" & alignment1_Result & \"[/size]\"",
 						"duration": "typewriterSeconds"
 					}
 				}

@@ -261,6 +261,48 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "VersusInfoUI_typewriterSeconds_before",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "The typewiter duration (in seconds) for display VersusInfoUI before fighting.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 867644832762190
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_typewriterSeconds_after",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "The typewiter duration (in seconds) for display VersusInfoUI after fighting. It should not be longer than VersusInfoUI_typewriterSeconds_before because it has more information (i.e. lose/draw/win) to be read by user.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 520653462661543
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_LoseDrawWin_fontSize",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "The font size of VersusInfoUI's \"Lose/Draw/Win\". Its should be larger so that user notices it easily.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 981631388742117
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "Versus_Parent_AlignmentId_UnUsed",
 			"type": "number",
 			"initialValue": "0",

@@ -41,7 +41,7 @@
 					}
 				},
 				{
-					"type": "VersusInfo",
+					"type": "VersusInfoUI",
 					"properties": {
 						"text": "Entity 012345\n\nvs",
 						"enable-bbcode": true,
@@ -398,7 +398,7 @@
 					}
 				},
 				{
-					"type": "VersusInfo_Alignment0",
+					"type": "VersusInfoUI_Alignment0",
 					"properties": {
 						"text": "012345678901234\n( win 123456789012345 times )\nWin",
 						"enable-bbcode": true,
@@ -481,7 +481,7 @@
 					}
 				},
 				{
-					"type": "VersusInfo_Alignment1",
+					"type": "VersusInfoUI_Alignment1",
 					"properties": {
 						"text": "012345678901234\n\nLose",
 						"enable-bbcode": true,
