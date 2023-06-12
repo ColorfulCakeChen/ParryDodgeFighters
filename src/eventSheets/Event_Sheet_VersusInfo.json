@@ -38,7 +38,7 @@
 					"sid": 100726287353267
 				},
 				{
-					"name": "typewriter_seconds_per_character",
+					"name": "typewriterSecondsPerCharacter",
 					"type": "number",
 					"initialValue": "2",
 					"comment": "Every character will use how many seconds to display.",
@@ -91,7 +91,7 @@
 					"sid": 537498222790491,
 					"parameters": {
 						"text": "alignment0_text",
-						"duration": "len( alignment0_text ) * typewriter_seconds_per_character"
+						"duration": "len( alignment0_text ) * typewriterSecondsPerCharacter"
 					}
 				},
 				{
@@ -100,7 +100,7 @@
 					"sid": 662315405533257,
 					"parameters": {
 						"text": "alignment1_text",
-						"duration": "len( alignment1_text ) * typewriter_seconds_per_character"
+						"duration": "len( alignment1_text ) * typewriterSecondsPerCharacter"
 					}
 				},
 				{
@@ -281,18 +281,18 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment0",
-					"sid": 664188686664906,
+					"sid": 817370672350097,
 					"parameters": {
-						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & alignment0_Result",
+						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=5]\" & alignment0_Result & \"[/size]\"",
 						"duration": "typewriterSeconds"
 					}
 				},
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfo_Alignment1",
-					"sid": 567778286429055,
+					"sid": 762326307456628,
 					"parameters": {
-						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & alignment1_Result",
+						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=5]\" & alignment1_Result & \"[/size]\"",
 						"duration": "typewriterSeconds"
 					}
 				}
