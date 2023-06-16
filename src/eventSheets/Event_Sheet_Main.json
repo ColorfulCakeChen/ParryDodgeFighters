@@ -181,10 +181,10 @@
 						},
 						{
 							"callFunction": "VersusInfo_create",
-							"sid": 298672991897646,
+							"sid": 311877496703215,
 							"parameters": [
-								"\"Loading.......................\"",
-								"\"Loading.......................\"",
+								"VersusInfoUI_loadingText_alignment0",
+								"VersusInfoUI_loadingText_alignment1",
 								"72",
 								"44",
 								"2"

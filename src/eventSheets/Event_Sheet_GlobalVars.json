@@ -261,6 +261,30 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "VersusInfoUI_loadingText_alignment0",
+			"type": "string",
+			"initialValue": ">>>>> ..... Loading ..... <<<<<",
+			"comment": "The alignment0's text to be displayed when loading.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 420387120621241
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_loadingText_alignment1",
+			"type": "string",
+			"initialValue": ">>>>> ..... Loading ..... <<<<<",
+			"comment": "The alignment1's text to be displayed when loading.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 912982176085450
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "VersusInfoUI_typewriterSeconds_before",
 			"type": "number",
 			"initialValue": "0.5",
