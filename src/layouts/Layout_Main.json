@@ -43,7 +43,7 @@
 				{
 					"type": "VersusInfoUI",
 					"properties": {
-						"text": "Entity 012345\n\nvs",
+						"text": "@012345\n\nvs",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 4,

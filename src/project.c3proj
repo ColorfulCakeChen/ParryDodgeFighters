@@ -312,7 +312,7 @@
 	},
 	"properties": {
 		"description": "Two fighters against with each other. Imagine that it is like a fish jar but with fighter (rather than fish).",
-		"version": "0.3.0.0",
+		"version": "0.4.0.0",
 		"author": "Cake",
 		"authorEmail": "",
 		"authorWebsite": "https://cakeliving.blogspot.com/2023/06/parry-dodge-fighters.html",

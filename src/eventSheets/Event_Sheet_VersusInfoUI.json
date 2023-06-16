@@ -272,9 +272,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfoUI",
-					"sid": 105964369504054,
+					"sid": 589377227585403,
 					"parameters": {
-						"text": "\"@\" & EntityNo & newline & newline & \" vs \"",
+						"text": "\"@\" & EntityNo & newline & newline & \"vs\"",
 						"duration": "typewriterSeconds"
 					}
 				},
