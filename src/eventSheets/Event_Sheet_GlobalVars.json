@@ -294,10 +294,6 @@
 			"sid": 867644832762190
 		},
 		{
-			"eventType": "comment",
-			"text": ""
-		},
-		{
 			"eventType": "variable",
 			"name": "VersusInfoUI_typewriterSeconds_after",
 			"type": "number",
@@ -327,13 +323,43 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Versus_Parent_AlignmentId_UnUsed",
+			"name": "VersusInfoUI_y_begin_Fighting_Begin_ParentAlignment0",
 			"type": "number",
-			"initialValue": "0",
-			"comment": "Parent's alignment now.",
+			"initialValue": "72",
+			"comment": "The beginning y position of VersusInfoUI for fighting beginning (parent as alignment 0).",
 			"isStatic": false,
-			"isConstant": false,
-			"sid": 890993919046831
+			"isConstant": true,
+			"sid": 653602193684469
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_y_begin_Fighting_Begin_ParentAlignment1",
+			"type": "number",
+			"initialValue": "44",
+			"comment": "The beginning y position of VersusInfoUI for fighting beginning (parent as alignment 1). Display swapped versus info at final position directly so that user sees them more clearly.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 978231682084059
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_y_begin_Fighting_End",
+			"type": "number",
+			"initialValue": "36",
+			"comment": "The beginning y position of VersusInfoUI for fighting ending (no matter parent as alignment 0 or 1).",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 955968256190146
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_y_end",
+			"type": "number",
+			"initialValue": "44",
+			"comment": "The final y position of VersusInfoUI.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 528631759099907
 		},
 		{
 			"eventType": "comment",
@@ -358,6 +384,20 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 944058338721464
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "Versus_Parent_AlignmentId_UnUsed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Parent's alignment now.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 741669719676410
 		},
 		{
 			"eventType": "comment",

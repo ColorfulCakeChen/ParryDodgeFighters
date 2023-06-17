@@ -181,12 +181,12 @@
 						},
 						{
 							"callFunction": "VersusInfo_create",
-							"sid": 311877496703215,
+							"sid": 712097110106881,
 							"parameters": [
 								"VersusInfoUI_loadingText_alignment0",
 								"VersusInfoUI_loadingText_alignment1",
-								"72",
-								"44",
+								"VersusInfoUI_y_begin_Fighting_Begin_ParentAlignment0",
+								"VersusInfoUI_y_end",
 								"2"
 							]
 						},
@@ -606,12 +606,12 @@
 								},
 								{
 									"callFunction": "VersusInfo_create",
-									"sid": 613404000769375,
+									"sid": 762801713879029,
 									"parameters": [
 										"\"End...\"",
 										"\"End...\"",
-										"36",
-										"44",
+										"VersusInfoUI_y_begin_Fighting_End",
+										"VersusInfoUI_y_end",
 										"2"
 									]
 								},
@@ -732,29 +732,13 @@
 							}
 						},
 						{
-							"type": "comment",
-							"text": "Display swapped versus info at final position directly so that user see them more clearly."
-						},
-						{
 							"callFunction": "VersusInfo_create",
-							"sid": 619175258339983,
-							"disabled": true,
+							"sid": 821090886434685,
 							"parameters": [
 								"\"\"",
 								"\"\"",
-								"72",
-								"44",
-								"2"
-							]
-						},
-						{
-							"callFunction": "VersusInfo_create",
-							"sid": 258141805111819,
-							"parameters": [
-								"\"\"",
-								"\"\"",
-								"44",
-								"44",
+								"VersusInfoUI_y_begin_Fighting_Begin_ParentAlignment1",
+								"VersusInfoUI_y_end",
 								"2"
 							]
 						},
@@ -975,7 +959,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "Lignten DrawingCanvas.\n\n- When Step_06 (and Step_10), use longer seconds to lighten so that Step_06 (and Step_02)'s DrawingCanvas darken will not cause obviously flashing."
+					"text": "Lignten DrawingCanvas.\n\n- For fighting ending (i.e. Step_06 and Step_10), use longer seconds to lighten so that DrawingCanvas darken of fighting beginning (i.e. Step_06 and Step_02) will not cause obviously flashing."
 				},
 				{
 					"id": "tween-one-property",

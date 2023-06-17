@@ -70,7 +70,7 @@
 							"properties": {
 								"fade-in-time": 1,
 								"wait-time": 10000,
-								"fade-out-time": 4,
+								"fade-out-time": 3,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -427,7 +427,7 @@
 							"properties": {
 								"fade-in-time": 1,
 								"wait-time": 10000,
-								"fade-out-time": 4,
+								"fade-out-time": 3,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -510,7 +510,7 @@
 							"properties": {
 								"fade-in-time": 1,
 								"wait-time": 10000,
-								"fade-out-time": 4,
+								"fade-out-time": 3,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
