@@ -219,7 +219,7 @@
 			"eventType": "variable",
 			"name": "Versus_EntityNo",
 			"type": "string",
-			"initialValue": "01234",
+			"initialValue": "012345",
 			"comment": "Entity number of the versus.",
 			"isStatic": false,
 			"isConstant": false,
@@ -592,7 +592,7 @@
 			"initialValue": "false",
 			"comment": "If true, user controls Fighter (i.e. no AI).",
 			"isStatic": false,
-			"isConstant": false,
+			"isConstant": true,
 			"sid": 163904291396581
 		},
 		{
