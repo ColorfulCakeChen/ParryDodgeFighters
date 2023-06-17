@@ -732,12 +732,28 @@
 							}
 						},
 						{
+							"type": "comment",
+							"text": "Display swapped versus info at final position directly so that user see them more clearly."
+						},
+						{
 							"callFunction": "VersusInfo_create",
 							"sid": 619175258339983,
+							"disabled": true,
 							"parameters": [
 								"\"\"",
 								"\"\"",
 								"72",
+								"44",
+								"2"
+							]
+						},
+						{
+							"callFunction": "VersusInfo_create",
+							"sid": 258141805111819,
+							"parameters": [
+								"\"\"",
+								"\"\"",
+								"44",
 								"44",
 								"2"
 							]
