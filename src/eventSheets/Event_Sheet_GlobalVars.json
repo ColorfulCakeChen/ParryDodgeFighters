@@ -367,6 +367,30 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "VersusInfoUI_winCountText_prefix",
+			"type": "string",
+			"initialValue": "( win ",
+			"comment": "The prefix of the win count of VersusInfoUI.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 922735536960026
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_winCountText_postfix",
+			"type": "string",
+			"initialValue": " times )",
+			"comment": "The postfix of the win count of VersusInfoUI.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 783104149876061
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "VersusInfo_bFinished",
 			"type": "boolean",
 			"initialValue": "false",

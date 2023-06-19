@@ -279,9 +279,14 @@
 					}
 				},
 				{
+					"type": "comment",
+					"text": "!!! (2023/06/19 Remarked) Use VersusInfoUI_winCountText_prefix and VersusInfoUI_winCountText_postfix instead."
+				},
+				{
 					"id": "typewriter-text",
 					"objectClass": "VersusInfoUI_Alignment0",
 					"sid": 502697025334207,
+					"disabled": true,
 					"parameters": {
 						"text": "alignment0_GenerationNo & newline & replace( \"( win \" & alignment0_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=\" & VersusInfoUI_LoseDrawWin_fontSize & \"]\" & alignment0_Result & \"[/size]\"",
 						"duration": "typewriterSeconds"
@@ -291,8 +296,27 @@
 					"id": "typewriter-text",
 					"objectClass": "VersusInfoUI_Alignment1",
 					"sid": 127011141466698,
+					"disabled": true,
 					"parameters": {
 						"text": "alignment1_GenerationNo & newline & replace( \"( win \" & alignment1_WinCount & \" times )\", \"( win  times )\", \"\" ) & newline & \"[size=\" & VersusInfoUI_LoseDrawWin_fontSize & \"]\" & alignment1_Result & \"[/size]\"",
+						"duration": "typewriterSeconds"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfoUI_Alignment0",
+					"sid": 385837502894857,
+					"parameters": {
+						"text": "alignment0_GenerationNo & newline & replace( VersusInfoUI_winCountText_prefix & alignment0_WinCount & VersusInfoUI_winCountText_postfix, VersusInfoUI_winCountText_prefix & VersusInfoUI_winCountText_postfix, \"\" ) & newline & \"[size=\" & VersusInfoUI_LoseDrawWin_fontSize & \"]\" & alignment0_Result & \"[/size]\"",
+						"duration": "typewriterSeconds"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "VersusInfoUI_Alignment1",
+					"sid": 639998111797418,
+					"parameters": {
+						"text": "alignment1_GenerationNo & newline & replace( VersusInfoUI_winCountText_prefix & alignment1_WinCount & VersusInfoUI_winCountText_postfix, VersusInfoUI_winCountText_prefix & VersusInfoUI_winCountText_postfix, \"\" ) & newline & \"[size=\" & VersusInfoUI_LoseDrawWin_fontSize & \"]\" & alignment1_Result & \"[/size]\"",
 						"duration": "typewriterSeconds"
 					}
 				}
