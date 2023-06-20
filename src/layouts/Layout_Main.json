@@ -400,7 +400,7 @@
 				{
 					"type": "VersusInfoUI_Alignment0",
 					"properties": {
-						"text": "012345678901234\n( win 123456789012345 times )\nWin",
+						"text": "012345678901234\n( 123456789012345 wins )\nWin",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 3,
