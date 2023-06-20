@@ -319,6 +319,19 @@
 						"text": "alignment1_GenerationNo & newline & replace( VersusInfoUI_winCountText_prefix & alignment1_WinCount & VersusInfoUI_winCountText_postfix, VersusInfoUI_winCountText_prefix & VersusInfoUI_winCountText_postfix, \"\" ) & newline & \"[size=\" & VersusInfoUI_LoseDrawWin_fontSize & \"]\" & alignment1_Result & \"[/size]\"",
 						"duration": "typewriterSeconds"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "Debug"
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 662542990410474,
+					"disabled": true,
+					"parameters": {
+						"text": "SpriteFont.Text & \", ( \" & VersusInfoUI_Alignment0.X & \", \" & VersusInfoUI_Alignment0.Y & \" )\""
+					}
 				}
 			],
 			"sid": 660875600639807
