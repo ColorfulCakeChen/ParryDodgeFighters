@@ -43,6 +43,13 @@
 					"initialValue": "2",
 					"comment": "Every character will use how many seconds to display.",
 					"sid": 909484768539945
+				},
+				{
+					"name": "fadeOutSeconds",
+					"type": "number",
+					"initialValue": "4",
+					"comment": "The time (in seconds) to fade out this VersusInfoUI.",
+					"sid": 175666001663459
 				}
 			],
 			"eventType": "function-block",
@@ -84,6 +91,41 @@
 					"parameters": {
 						"text": "\"\""
 					}
+				},
+				{
+					"type": "comment",
+					"text": ""
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "VersusInfoUI",
+					"sid": 695812577174393,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "fadeOutSeconds"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "VersusInfoUI_Alignment0",
+					"sid": 974908294057737,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "fadeOutSeconds"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "VersusInfoUI_Alignment1",
+					"sid": 320880965957124,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "fadeOutSeconds"
+					}
+				},
+				{
+					"type": "comment",
+					"text": ""
 				},
 				{
 					"id": "typewriter-text",
@@ -228,6 +270,13 @@
 					"initialValue": "2",
 					"comment": "The time seconds to display text.",
 					"sid": 833378806395281
+				},
+				{
+					"name": "waitSeconds",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The time (in seconds) to wait before the VersusInfoUI begins to fade out.",
+					"sid": 611838711747641
 				}
 			],
 			"eventType": "function-block",
@@ -245,29 +294,37 @@
 				{
 					"id": "set-wait-time",
 					"objectClass": "VersusInfoUI",
-					"sid": 925976702413829,
+					"sid": 502106351042922,
 					"behaviorType": "Fade",
 					"parameters": {
-						"wait-time": "0"
+						"wait-time": "waitSeconds"
 					}
 				},
 				{
 					"id": "set-wait-time",
 					"objectClass": "VersusInfoUI_Alignment0",
-					"sid": 583115075602790,
+					"sid": 690334278462655,
 					"behaviorType": "Fade",
 					"parameters": {
-						"wait-time": "0"
+						"wait-time": "waitSeconds"
 					}
 				},
 				{
 					"id": "set-wait-time",
 					"objectClass": "VersusInfoUI_Alignment1",
-					"sid": 695496798201875,
+					"sid": 267110839073464,
 					"behaviorType": "Fade",
 					"parameters": {
-						"wait-time": "0"
+						"wait-time": "waitSeconds"
 					}
+				},
+				{
+					"type": "comment",
+					"text": ""
+				},
+				{
+					"type": "comment",
+					"text": ""
 				},
 				{
 					"id": "typewriter-text",

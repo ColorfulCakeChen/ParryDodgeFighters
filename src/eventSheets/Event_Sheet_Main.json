@@ -181,13 +181,14 @@
 						},
 						{
 							"callFunction": "VersusInfo_create",
-							"sid": 712097110106881,
+							"sid": 553952867819671,
 							"parameters": [
 								"VersusInfoUI_loadingText_alignment0",
 								"VersusInfoUI_loadingText_alignment1",
 								"VersusInfoUI_y_begin_Fighting_Begin_ParentAlignment0",
 								"VersusInfoUI_y_end",
-								"2"
+								"2",
+								"VersusInfoUI_fadeOutSeconds_before"
 							]
 						},
 						{
@@ -265,7 +266,7 @@
 						},
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 756617532664481,
+							"sid": 506031506094668,
 							"parameters": [
 								"Versus_EntityNo",
 								"Versus_Parent_GenerationNo",
@@ -274,7 +275,8 @@
 								"Versus_Offspring_GenerationNo",
 								"\"\"",
 								"\" \"",
-								"VersusInfoUI_typewriterSeconds_before"
+								"VersusInfoUI_typewriterSeconds_before",
+								"VersusInfoUI_waitSeconds_before"
 							]
 						},
 						{
@@ -606,18 +608,19 @@
 								},
 								{
 									"callFunction": "VersusInfo_create",
-									"sid": 762801713879029,
+									"sid": 681463893620342,
 									"parameters": [
 										"\"End...\"",
 										"\"End...\"",
 										"VersusInfoUI_y_begin_Fighting_End",
 										"VersusInfoUI_y_end",
-										"2"
+										"2",
+										"VersusInfoUI_fadeOutSeconds_after"
 									]
 								},
 								{
 									"callFunction": "VersusInfo_set",
-									"sid": 540406314068766,
+									"sid": 487234957044925,
 									"parameters": [
 										"Versus_EntityNo",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  Versus_Parent_GenerationNo : Versus_Offspring_GenerationNo",
@@ -626,7 +629,8 @@
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? Versus_Offspring_GenerationNo : Versus_Parent_GenerationNo",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? \"\" : Versus_Parent_WinCount",
 										"( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ?  tokenat( \"Win|Draw|Lose\", Versus_Result_ParentAlignment0 +1, \"|\" ) : tokenat( \"Lose|Draw|Win\", Versus_Result_ParentAlignment1 + 1, \"|\" )",
-										"VersusInfoUI_typewriterSeconds_after"
+										"VersusInfoUI_typewriterSeconds_after",
+										"VersusInfoUI_waitSeconds_after"
 									]
 								}
 							],
@@ -733,18 +737,19 @@
 						},
 						{
 							"callFunction": "VersusInfo_create",
-							"sid": 821090886434685,
+							"sid": 267882166210188,
 							"parameters": [
 								"\"\"",
 								"\"\"",
 								"VersusInfoUI_y_begin_Fighting_Begin_ParentAlignment1",
 								"VersusInfoUI_y_end",
-								"2"
+								"2",
+								"VersusInfoUI_fadeOutSeconds_before"
 							]
 						},
 						{
 							"callFunction": "VersusInfo_set",
-							"sid": 551446812568319,
+							"sid": 531848867214235,
 							"parameters": [
 								"Versus_EntityNo",
 								"Versus_Offspring_GenerationNo",
@@ -753,7 +758,8 @@
 								"Versus_Parent_GenerationNo",
 								"Versus_Parent_WinCount",
 								"\" \"",
-								"VersusInfoUI_typewriterSeconds_before"
+								"VersusInfoUI_typewriterSeconds_before",
+								"VersusInfoUI_waitSeconds_before"
 							]
 						},
 						{

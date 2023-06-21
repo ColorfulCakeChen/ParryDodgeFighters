@@ -309,6 +309,54 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "VersusInfoUI_waitSeconds_before",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The wait duration (in seconds) for VersusInfoUI before fighting.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 522670825444343
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_waitSeconds_after",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The wait duration (in seconds) for VersusInfoUI after fighting.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 566309425754453
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_fadeOutSeconds_before",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "The fade out duration (in seconds) for VersusInfoUI before fighting.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 879582542896639
+		},
+		{
+			"eventType": "variable",
+			"name": "VersusInfoUI_fadeOutSeconds_after",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "The fade out duration (in seconds) for VersusInfoUI after fighting. It is recommended to be longer than VersusInfoUI_fadeOutSeconds_before because there are more infomation in the finghting ending VersusInfoUI.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 358477782422230
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "VersusInfoUI_LoseDrawWin_fontSize",
 			"type": "number",
 			"initialValue": "5",
@@ -325,7 +373,7 @@
 			"eventType": "variable",
 			"name": "VersusInfoUI_y_begin_Fighting_Begin_ParentAlignment0",
 			"type": "number",
-			"initialValue": "44",
+			"initialValue": "56",
 			"comment": "The beginning y position of VersusInfoUI for fighting beginning (parent as alignment 0).",
 			"isStatic": false,
 			"isConstant": true,
@@ -355,8 +403,8 @@
 			"eventType": "variable",
 			"name": "VersusInfoUI_y_begin_Fighting_End",
 			"type": "number",
-			"initialValue": "44",
-			"comment": "The beginning y position of VersusInfoUI for fighting ending (no matter parent as alignment 0 or 1). Using final position directly (i.e. non-moving) so that the jitter casued by downloading and decoding will not be seen obviously.",
+			"initialValue": "40",
+			"comment": "The beginning y position of VersusInfoUI for fighting ending (no matter parent as alignment 0 or 1). Use final position directly (i.e. non-moving) or smaller difference (i.e. shorter moving) so that the jitter casued by downloading and decoding will not be less obviously.",
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 955968256190146
