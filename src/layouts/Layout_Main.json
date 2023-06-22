@@ -69,7 +69,7 @@
 						"Fade": {
 							"properties": {
 								"fade-in-time": 1,
-								"wait-time": 1000000000,
+								"wait-time": 2000000000,
 								"fade-out-time": 4,
 								"destroy": true,
 								"enabled": true,
@@ -426,7 +426,7 @@
 						"Fade": {
 							"properties": {
 								"fade-in-time": 1,
-								"wait-time": 1000000000,
+								"wait-time": 2000000000,
 								"fade-out-time": 4,
 								"destroy": true,
 								"enabled": true,
@@ -509,7 +509,7 @@
 						"Fade": {
 							"properties": {
 								"fade-in-time": 1,
-								"wait-time": 1000000000,
+								"wait-time": 2000000000,
 								"fade-out-time": 4,
 								"destroy": true,
 								"enabled": true,
