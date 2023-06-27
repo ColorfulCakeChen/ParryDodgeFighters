@@ -480,7 +480,7 @@
 			"name": "VersusInfoUI_bFinished",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "true: VersusInfo destroyed. false: VersusInfo is displaying.",
+			"comment": "true: VersusInfoUI destroyed. false: VersusInfoUI is displaying.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 618411225976418
@@ -490,7 +490,7 @@
 			"name": "VersusInfoUI_DrawingCanvas_Lighten_bFinished",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "true: VersusInfo destroyed and DrawingCanvas lighten. false: VersusInfo is displaying or DrawingCanvas is darken.",
+			"comment": "true: VersusInfoUI destroyed and DrawingCanvas lighten. false: VersusInfoUI is displaying or DrawingCanvas is darken.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 944058338721464
