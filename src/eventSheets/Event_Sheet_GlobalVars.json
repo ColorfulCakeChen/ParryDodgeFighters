@@ -449,6 +449,34 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "DrawingCanvas_Lighten_longSeconds",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "The time (in seconds) for DrawingCanvas lignten slowly. It is used for fighting ending (i.e. Step_06 and Step_10). Use longer seconds to lighten so that DrawingCanvas darken of fighting beginning (i.e. Step_06 and Step_02) will not cause obviously flashing.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 104307576713720
+		},
+		{
+			"eventType": "variable",
+			"name": "DrawingCanvas_Lighten_shortSeconds",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "The time (in seconds) for DrawingCanvas lignten quickly. It is used for fighting beginning.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 670118947549778
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "comment",
+			"text": ""
+		},
+		{
+			"eventType": "variable",
 			"name": "VersusInfo_bFinished",
 			"type": "boolean",
 			"initialValue": "false",

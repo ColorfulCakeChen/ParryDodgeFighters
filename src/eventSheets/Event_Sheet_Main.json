@@ -970,13 +970,13 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "DrawingCanvas",
-					"sid": 834396608606905,
+					"sid": 238188679729307,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"Lighten\"",
 						"property": "offsetColor",
 						"end-value": "rgba( 100, 100, 100, 100 )",
-						"time": "( ( Versus_Step_Current = Versus_Step_06_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_10_ParentAlignment1_End ) ) ? 100 : 1",
+						"time": "( ( Versus_Step_Current = Versus_Step_06_ParentAlignment0_End ) | ( Versus_Step_Current = Versus_Step_10_ParentAlignment1_End ) ) ? DrawingCanvas_Lighten_longSeconds : DrawingCanvas_Lighten_shortSeconds",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
