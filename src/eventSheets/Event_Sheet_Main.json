@@ -324,7 +324,7 @@
 							"objectClass": "System",
 							"sid": 971913710957801,
 							"parameters": {
-								"variable": "VersusInfo_bFinished"
+								"variable": "VersusInfoUI_bFinished"
 							}
 						}
 					],
@@ -370,7 +370,7 @@
 							"objectClass": "System",
 							"sid": 549292886931509,
 							"parameters": {
-								"variable": "VersusInfo_DrawingCanvas_Lighten_bFinished"
+								"variable": "VersusInfoUI_DrawingCanvas_Lighten_bFinished"
 							}
 						}
 					],
@@ -715,7 +715,7 @@
 							"objectClass": "System",
 							"sid": 373969199368369,
 							"parameters": {
-								"variable": "VersusInfo_bFinished"
+								"variable": "VersusInfoUI_bFinished"
 							}
 						}
 					],
@@ -796,7 +796,7 @@
 							"objectClass": "System",
 							"sid": 849854790331691,
 							"parameters": {
-								"variable": "VersusInfo_bFinished"
+								"variable": "VersusInfoUI_bFinished"
 							}
 						}
 					],
@@ -959,7 +959,7 @@
 					"objectClass": "System",
 					"sid": 789397732828780,
 					"parameters": {
-						"variable": "VersusInfo_bFinished",
+						"variable": "VersusInfoUI_bFinished",
 						"value": "true"
 					}
 				},
@@ -1010,7 +1010,7 @@
 					"objectClass": "System",
 					"sid": 839936547472413,
 					"parameters": {
-						"variable": "VersusInfo_DrawingCanvas_Lighten_bFinished",
+						"variable": "VersusInfoUI_DrawingCanvas_Lighten_bFinished",
 						"value": "true"
 					}
 				}

@@ -161,7 +161,7 @@
 					"objectClass": "System",
 					"sid": 713910820521788,
 					"parameters": {
-						"variable": "VersusInfo_bFinished",
+						"variable": "VersusInfoUI_bFinished",
 						"value": "false"
 					}
 				},
@@ -170,7 +170,7 @@
 					"objectClass": "System",
 					"sid": 846884497809422,
 					"parameters": {
-						"variable": "VersusInfo_DrawingCanvas_Lighten_bFinished",
+						"variable": "VersusInfoUI_DrawingCanvas_Lighten_bFinished",
 						"value": "false"
 					}
 				},
