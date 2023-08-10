@@ -691,7 +691,7 @@
 			"eventType": "variable",
 			"name": "Fighter_Contrail_VelocityThreshold",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "15",
 			"comment": "If Fighter velocity equal to or greater than this threshold, spray FighterContrialParticles.",
 			"isStatic": false,
 			"isConstant": true,

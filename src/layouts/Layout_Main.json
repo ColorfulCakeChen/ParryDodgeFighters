@@ -880,7 +880,7 @@
 							"w": true,
 							"h": true,
 							"a": true,
-							"o": false,
+							"o": true,
 							"v": false,
 							"d": true,
 							"sm": "normal"
@@ -1378,7 +1378,7 @@
 									"w": true,
 									"h": true,
 									"a": true,
-									"o": false,
+									"o": true,
 									"v": false,
 									"d": true,
 									"sm": "normal"
@@ -1393,7 +1393,7 @@
 									"w": true,
 									"h": true,
 									"a": true,
-									"o": false,
+									"o": true,
 									"v": false,
 									"d": true,
 									"sm": "normal"
@@ -4517,7 +4517,7 @@
 							"w": true,
 							"h": true,
 							"a": true,
-							"o": false,
+							"o": true,
 							"v": false,
 							"d": true,
 							"sm": "normal"

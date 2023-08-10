@@ -841,7 +841,19 @@
 						{
 							"id": "pick-by-comparison",
 							"objectClass": "System",
-							"sid": 897958732493665,
+							"sid": 387253367277166,
+							"disabled": true,
+							"parameters": {
+								"object": "Fighter",
+								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY ) + abs( Fighter.Physics.AngularVelocity )",
+								"comparison": 2,
+								"value": "Fighter_Contrail_VelocityThreshold"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 467423264447304,
 							"parameters": {
 								"object": "Fighter",
 								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY )",
@@ -904,7 +916,19 @@
 						{
 							"id": "pick-by-comparison",
 							"objectClass": "System",
-							"sid": 607989011176698,
+							"sid": 552288377306512,
+							"disabled": true,
+							"parameters": {
+								"object": "Fighter",
+								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY ) + abs( Fighter.Physics.AngularVelocity )",
+								"comparison": 5,
+								"value": "Fighter_Contrail_VelocityThreshold"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 826179022580227,
 							"parameters": {
 								"object": "Fighter",
 								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY )",

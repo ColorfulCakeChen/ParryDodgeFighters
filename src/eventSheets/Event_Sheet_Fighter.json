@@ -455,6 +455,18 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/10)"
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "FighterContrailParticles",
+					"sid": 326735628026268,
+					"parameters": {
+						"color": "rgbEx255(ColorR, ColorG, ColorB)"
+					}
 				}
 			],
 			"sid": 381188756354974
