@@ -267,9 +267,23 @@
 					}
 				},
 				{
+					"type": "comment",
+					"text": "!!! ...unfinished... (2023/08/10)"
+				},
+				{
 					"id": "push-value",
 					"objectClass": "ConfigJSON",
-					"sid": 882482553582635,
+					"sid": 372813809587868,
+					"parameters": {
+						"where": "back",
+						"path": "\".\"",
+						"value": "FighterContrailParticles.ObjectTypeName"
+					}
+				},
+				{
+					"id": "push-value",
+					"objectClass": "ConfigJSON",
+					"sid": 333513781434266,
 					"parameters": {
 						"where": "back",
 						"path": "\".\"",

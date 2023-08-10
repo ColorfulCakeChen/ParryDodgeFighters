@@ -812,6 +812,119 @@
 						}
 					],
 					"sid": 168845409622908
+				},
+				{
+					"eventType": "comment",
+					"text": "Fighter contrail."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 694812728425684,
+							"disabled": true
+						},
+						{
+							"id": "compare-velocity",
+							"objectClass": "Fighter",
+							"sid": 321777792354705,
+							"disabled": true,
+							"behaviorType": "Physics",
+							"parameters": {
+								"which": "overall-velocity",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 998649669793074,
+							"parameters": {
+								"object": "Fighter",
+								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY )",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-spraying",
+							"objectClass": "FighterContrailParticles",
+							"sid": 173742588066159,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/10)"
+						},
+						{
+							"id": "set-spraying",
+							"objectClass": "FighterContrailParticles",
+							"sid": 546374843613312,
+							"parameters": {
+								"state": "spraying"
+							}
+						}
+					],
+					"sid": 962193047513309
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 678138695149422,
+							"disabled": true
+						},
+						{
+							"id": "compare-velocity",
+							"objectClass": "Fighter",
+							"sid": 725462142370576,
+							"disabled": true,
+							"behaviorType": "Physics",
+							"parameters": {
+								"which": "overall-velocity",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 445559879569881,
+							"parameters": {
+								"object": "Fighter",
+								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY )",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-spraying",
+							"objectClass": "FighterContrailParticles",
+							"sid": 590121687090558
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/10)"
+						},
+						{
+							"id": "set-spraying",
+							"objectClass": "FighterContrailParticles",
+							"sid": 319040767329574,
+							"parameters": {
+								"state": "not-spraying"
+							}
+						}
+					],
+					"sid": 761066047093605
 				}
 			]
 		},
@@ -862,6 +975,19 @@
 					"id": "set-spraying",
 					"objectClass": "FighterThrustParticles",
 					"sid": 568034854106965,
+					"parameters": {
+						"state": "not-spraying"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/10)"
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "FighterContrailParticles",
+					"sid": 352098269888338,
+					"disabled": true,
 					"parameters": {
 						"state": "not-spraying"
 					}

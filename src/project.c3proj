@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 34402,
+	"savedWithRelease": 35000,
 	"name": "ParryDodgeFighters",
 	"runtime": "c3",
 	"useWorker": "worker",
@@ -150,7 +150,8 @@
 			"VersusInfoUI_Alignment1",
 			"Touch",
 			"ConfigJSON",
-			"Fighter_Alignment_DistanceTotal"
+			"Fighter_Alignment_DistanceTotal",
+			"FighterContrailParticles"
 		],
 		"subfolders": []
 	},
@@ -361,7 +362,8 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"autoReloadScriptsOnPreview": false,
-		"exportFileStructure": "flat"
+		"exportFileStructure": "flat",
+		"uidAllocationMode": "increment"
 	},
 	"viewportWidth": 128,
 	"viewportHeight": 72,

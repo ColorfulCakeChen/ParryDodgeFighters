@@ -6,6 +6,9 @@ runOnStartup(async runtime =>
   // Code to run on the loading screen.
   // Note layouts, objects etc. are not yet available.
 
+//   if ( runtime.globalVars.Fighter_bManualMode )
+//   	return;
+
   const libVerion = "7a14a93d6a6fb3d37102b348f9c761548ee84d4e";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
