@@ -643,7 +643,7 @@
 				{
 					"type": "FighterContrailParticles",
 					"properties": {
-						"rate": 20,
+						"rate": 0,
 						"spray-cone": 10,
 						"type": "continuous-spray",
 						"object": -1,
@@ -652,7 +652,7 @@
 						"speed": 0,
 						"size": 2,
 						"opacity": 100,
-						"grow-rate": 0.9,
+						"grow-rate": 0,
 						"x-randomiser": 0,
 						"y-randomiser": 0,
 						"initial-speed-randomiser": 0,

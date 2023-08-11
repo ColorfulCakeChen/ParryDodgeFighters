@@ -815,158 +815,40 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Fighter contrail."
+					"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/11)"
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
+							"id": "for-each",
 							"objectClass": "System",
-							"sid": 776273272471005,
-							"disabled": true
-						},
-						{
-							"id": "compare-velocity",
-							"objectClass": "Fighter",
-							"sid": 897860034310471,
-							"disabled": true,
-							"behaviorType": "Physics",
+							"sid": 763517651675267,
 							"parameters": {
-								"which": "overall-velocity",
-								"comparison": 0,
-								"value": "0"
-							}
-						},
-						{
-							"id": "pick-by-comparison",
-							"objectClass": "System",
-							"sid": 387253367277166,
-							"disabled": true,
-							"parameters": {
-								"object": "Fighter",
-								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY ) + abs( Fighter.Physics.AngularVelocity )",
-								"comparison": 2,
-								"value": "Fighter_Contrail_VelocityThreshold"
-							}
-						},
-						{
-							"id": "pick-by-comparison",
-							"objectClass": "System",
-							"sid": 467423264447304,
-							"parameters": {
-								"object": "Fighter",
-								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY )",
-								"comparison": 2,
-								"value": "Fighter_Contrail_VelocityThreshold"
+								"object": "Fighter"
 							}
 						},
 						{
 							"id": "pick-children",
 							"objectClass": "FighterSkin",
-							"sid": 488536133990553,
+							"sid": 313565342141922,
 							"parameters": {
 								"child": "FighterContrailParticles",
 								"which": "own"
 							}
-						},
-						{
-							"id": "is-spraying",
-							"objectClass": "FighterContrailParticles",
-							"sid": 624711061485364
 						}
 					],
 					"actions": [
 						{
-							"type": "comment",
-							"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/10)"
-						},
-						{
-							"id": "set-spraying",
+							"id": "set-rate",
 							"objectClass": "FighterContrailParticles",
-							"sid": 230786922564520,
+							"sid": 815996938269790,
 							"parameters": {
-								"state": "not-spraying"
+								"rate": "max( 0, int( Fighter_Contrail_Velocity_To_SprayRate_ScaleFactor * sqrt( ( Fighter.Physics.VelocityX * Fighter.Physics.VelocityX ) + ( Fighter.Physics.VelocityY * Fighter.Physics.VelocityY ) ) + Fighter_Contrail_Velocity_To_SprayRate_BiasFactor ) )"
 							}
 						}
 					],
-					"sid": 766987088331724
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 694812728425684,
-							"disabled": true
-						},
-						{
-							"id": "compare-velocity",
-							"objectClass": "Fighter",
-							"sid": 321777792354705,
-							"disabled": true,
-							"behaviorType": "Physics",
-							"parameters": {
-								"which": "overall-velocity",
-								"comparison": 1,
-								"value": "0"
-							}
-						},
-						{
-							"id": "pick-by-comparison",
-							"objectClass": "System",
-							"sid": 552288377306512,
-							"disabled": true,
-							"parameters": {
-								"object": "Fighter",
-								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY ) + abs( Fighter.Physics.AngularVelocity )",
-								"comparison": 5,
-								"value": "Fighter_Contrail_VelocityThreshold"
-							}
-						},
-						{
-							"id": "pick-by-comparison",
-							"objectClass": "System",
-							"sid": 826179022580227,
-							"parameters": {
-								"object": "Fighter",
-								"expression": "abs( Fighter.Physics.VelocityX ) + abs( Fighter.Physics.VelocityY )",
-								"comparison": 5,
-								"value": "Fighter_Contrail_VelocityThreshold"
-							}
-						},
-						{
-							"id": "pick-children",
-							"objectClass": "FighterSkin",
-							"sid": 255368033031975,
-							"parameters": {
-								"child": "FighterContrailParticles",
-								"which": "own"
-							}
-						},
-						{
-							"id": "is-spraying",
-							"objectClass": "FighterContrailParticles",
-							"sid": 173742588066159,
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"type": "comment",
-							"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/10)"
-						},
-						{
-							"id": "set-spraying",
-							"objectClass": "FighterContrailParticles",
-							"sid": 546374843613312,
-							"parameters": {
-								"state": "spraying"
-							}
-						}
-					],
-					"sid": 962193047513309
+					"sid": 372075711042265
 				}
 			]
 		},

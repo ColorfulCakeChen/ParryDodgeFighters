@@ -467,6 +467,14 @@
 					"parameters": {
 						"color": "rgbEx255(ColorR, ColorG, ColorB)"
 					}
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "FighterContrailParticles",
+					"sid": 913988868626748,
+					"parameters": {
+						"state": "spraying"
+					}
 				}
 			],
 			"sid": 381188756354974

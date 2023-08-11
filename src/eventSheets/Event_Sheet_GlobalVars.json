@@ -685,17 +685,27 @@
 		},
 		{
 			"eventType": "comment",
-			"text": ""
+			"text": "Fighter Contrail."
 		},
 		{
 			"eventType": "variable",
-			"name": "Fighter_Contrail_VelocityThreshold",
+			"name": "Fighter_Contrail_Velocity_To_SprayRate_ScaleFactor",
 			"type": "number",
-			"initialValue": "15",
-			"comment": "If Fighter velocity equal to or greater than this threshold, spray FighterContrialParticles.",
+			"initialValue": "1",
+			"comment": "The scale for converting Fighter velocity to contrail particles spray rate.",
 			"isStatic": false,
 			"isConstant": true,
-			"sid": 782265915467393
+			"sid": 384768299684397
+		},
+		{
+			"eventType": "variable",
+			"name": "Fighter_Contrail_Velocity_To_SprayRate_BiasFactor",
+			"type": "number",
+			"initialValue": "-5",
+			"comment": "The bias for converting Fighter velocity to contrail particles spray rate.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 600211514169659
 		},
 		{
 			"eventType": "comment",
