@@ -267,10 +267,6 @@
 					}
 				},
 				{
-					"type": "comment",
-					"text": "!!! ...unfinished... (2023/08/10)"
-				},
-				{
 					"id": "push-value",
 					"objectClass": "ConfigJSON",
 					"sid": 372813809587868,
