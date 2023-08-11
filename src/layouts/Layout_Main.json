@@ -649,10 +649,10 @@
 						"object": -1,
 						"initially-visible": true,
 						"live-preview": false,
-						"speed": 0,
+						"speed": 0.1,
 						"size": 2,
 						"opacity": 100,
-						"grow-rate": 0,
+						"grow-rate": 0.1,
 						"x-randomiser": 0,
 						"y-randomiser": 0,
 						"initial-speed-randomiser": 0,
@@ -664,7 +664,7 @@
 						"life-speed-randomiser": 0,
 						"opacity-randomiser": 0,
 						"destroy-mode": "fade-to-invisible",
-						"timeout": 0.25
+						"timeout": 1
 					},
 					"uid": 29,
 					"instanceVariables": {},

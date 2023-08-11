@@ -431,6 +431,27 @@
 				},
 				{
 					"type": "comment",
+					"text": "Fighter contrail."
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "FighterContrailParticles",
+					"sid": 182909673321470,
+					"parameters": {
+						"color": "rgbEx255(ColorR, ColorG, ColorB)"
+					}
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "FighterContrailParticles",
+					"sid": 747437910326348,
+					"disabled": true,
+					"parameters": {
+						"state": "spraying"
+					}
+				},
+				{
+					"type": "comment",
 					"text": "Temp Test (2023/05/30)"
 				},
 				{
@@ -454,26 +475,6 @@
 					"disabled": true,
 					"parameters": {
 						"visibility": "invisible"
-					}
-				},
-				{
-					"type": "comment",
-					"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/10)"
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "FighterContrailParticles",
-					"sid": 326735628026268,
-					"parameters": {
-						"color": "rgbEx255(ColorR, ColorG, ColorB)"
-					}
-				},
-				{
-					"id": "set-spraying",
-					"objectClass": "FighterContrailParticles",
-					"sid": 913988868626748,
-					"parameters": {
-						"state": "spraying"
 					}
 				}
 			],

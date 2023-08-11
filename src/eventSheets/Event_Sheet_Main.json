@@ -815,7 +815,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Fighter contrail.\n!!! ...unfinished... (2023/08/11)"
+					"text": "Fighter contrail (particles spray rate adjusted by velocity)."
 				},
 				{
 					"eventType": "block",
