@@ -9,7 +9,7 @@ runOnStartup(async runtime =>
 //   if ( runtime.globalVars.Fighter_bManualMode )
 //   	return;
 
-  const libVerion = "7a14a93d6a6fb3d37102b348f9c761548ee84d4e";
+  const libVerion = "f31189fe48b949800033006683e2b3d317d1ec01";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
