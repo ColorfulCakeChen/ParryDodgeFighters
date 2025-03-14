@@ -3,6 +3,7 @@
 	"plugin-id": "Text",
 	"sid": 806946502097317,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "secondsCur",

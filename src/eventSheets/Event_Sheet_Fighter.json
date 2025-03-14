@@ -687,7 +687,8 @@
 						"object": "Projectile",
 						"layer": "1",
 						"image-point": "\"GunMuzzle\"",
-						"create-hierarchy": true
+						"create-hierarchy": true,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -800,7 +801,8 @@
 						"object": "Shield",
 						"layer": "1",
 						"image-point": "0",
-						"create-hierarchy": true
+						"create-hierarchy": true,
+						"template-name": "\"\""
 					}
 				},
 				{

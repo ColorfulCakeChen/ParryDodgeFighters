@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 317033747705470,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "VersusAlignmentId",
@@ -151,6 +152,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 4473607,
 						"collisionPoly": {
 							"points": [
@@ -172,7 +174,8 @@
 								"y": 0.5
 							}
 						],
-						"duration": 1
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 232480077855755,

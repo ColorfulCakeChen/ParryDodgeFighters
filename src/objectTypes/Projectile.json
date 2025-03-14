@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 259447859537100,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "Acceleration",
@@ -37,6 +38,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 7478887,
 						"collisionPoly": {
 							"points": [
@@ -58,7 +60,8 @@
 								"y": 0.5
 							}
 						],
-						"duration": 1
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 993376569236122,

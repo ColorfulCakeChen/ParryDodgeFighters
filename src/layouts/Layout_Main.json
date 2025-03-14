@@ -15,6 +15,8 @@
 						"antialiasing": "off"
 					},
 					"uid": 2,
+					"sid": 777138038546870,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -23,6 +25,8 @@
 							}
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 0,
 						"y": 0,
@@ -37,6 +41,7 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0,
 						"blendMode": "copy"
 					}
 				},
@@ -59,11 +64,15 @@
 						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
 						"origin": "bottom",
 						"read-aloud": false
 					},
 					"uid": 21,
+					"sid": 457116567173735,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -92,6 +101,9 @@
 						"mode": "template",
 						"templateName": "VersusInfoUITemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -380,6 +392,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 71,
 						"y": 112,
@@ -416,11 +430,15 @@
 						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"read-aloud": false
 					},
 					"uid": 24,
+					"sid": 731826835072083,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -462,6 +480,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 14,
 						"y": 95,
@@ -499,11 +519,15 @@
 						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"read-aloud": false
 					},
 					"uid": 25,
+					"sid": 910691524388591,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -545,6 +569,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 71,
 						"y": 95,
@@ -583,12 +609,16 @@
 						"read-aloud": false
 					},
 					"uid": 3,
+					"sid": 650326378719179,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"DestroyOutsideLayout": {
 							"properties": {}
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 0,
 						"y": 16,
@@ -611,6 +641,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": false,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,
@@ -667,12 +698,17 @@
 						"timeout": 1
 					},
 					"uid": 29,
+					"sid": 485941339349187,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"template": {
 						"mode": "template",
 						"templateName": "FighterContrailParticlesTemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -898,6 +934,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 39,
 						"y": -33,
@@ -926,6 +964,8 @@
 						"live-preview": false
 					},
 					"uid": 8,
+					"sid": 610848025878162,
+					"tags": "",
 					"instanceVariables": {
 						"VersusAlignmentId": 0,
 						"EnergyCur": 0,
@@ -966,6 +1006,9 @@
 						"mode": "template",
 						"templateName": "FighterTemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -1263,6 +1306,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 48,
 						"y": -24,
@@ -1290,6 +1335,8 @@
 						"live-preview": false
 					},
 					"uid": 12,
+					"sid": 800146594102461,
+					"tags": "",
 					"instanceVariables": {
 						"FlashQuarterSeconds": 0
 					},
@@ -1425,6 +1472,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 48,
 						"y": -24,
@@ -1457,6 +1506,8 @@
 						"seams": "exact"
 					},
 					"uid": 5,
+					"sid": 835529444560841,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -1474,6 +1525,9 @@
 						"mode": "template",
 						"templateName": "EnergyBarBackgroundTemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -1653,6 +1707,8 @@
 						],
 						"replicasUIDs": null
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 14,
 						"y": 0,
@@ -1684,6 +1740,8 @@
 						"seams": "exact"
 					},
 					"uid": 7,
+					"sid": 274039399312436,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -1701,6 +1759,9 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "EnergyBarBackgroundTemplate",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -1908,6 +1969,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 80,
 						"y": 0,
@@ -1945,6 +2008,8 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 10,
+					"sid": 121911053392227,
+					"tags": "",
 					"instanceVariables": {
 						"VersusAlignmentId": 0,
 						"WidthFull": 46
@@ -1954,6 +2019,9 @@
 						"mode": "template",
 						"templateName": "EnergyBarTemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -2116,6 +2184,8 @@
 						],
 						"replicasUIDs": null
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 15,
 						"y": 1,
@@ -2153,6 +2223,8 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 4,
+					"sid": 120857278495635,
+					"tags": "",
 					"instanceVariables": {
 						"VersusAlignmentId": 1,
 						"WidthFull": 46
@@ -2162,6 +2234,9 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "EnergyBarTemplate",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -2348,6 +2423,8 @@
 						],
 						"replicasUIDs": null
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 127,
 						"y": 1,
@@ -2384,16 +2461,22 @@
 						"horizontal-alignment": "center",
 						"vertical-alignment": "center",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"read-aloud": false
 					},
 					"uid": 13,
+					"sid": 807121821319002,
+					"tags": "",
 					"instanceVariables": {
 						"secondsCur": 180,
 						"secondsMax": 30
 					},
 					"behaviors": {},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 63,
 						"y": 0,
@@ -2421,6 +2504,8 @@
 						"live-preview": false
 					},
 					"uid": 11,
+					"sid": 359578503127275,
+					"tags": "",
 					"instanceVariables": {
 						"Acceleration": 6
 					},
@@ -2447,6 +2532,9 @@
 						"mode": "template",
 						"templateName": "ProjectileTemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -2680,6 +2768,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 112,
 						"y": -16,
@@ -2707,6 +2797,8 @@
 						"live-preview": false
 					},
 					"uid": 14,
+					"sid": 680806273227202,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -2748,6 +2840,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 112,
 						"y": -16,
@@ -2792,6 +2886,8 @@
 						"timeout": 0.1
 					},
 					"uid": 9,
+					"sid": 699920337816548,
+					"tags": "",
 					"instanceVariables": {
 						"for_ForceScaleX": 1,
 						"for_ForceScaleY": 0
@@ -2801,6 +2897,9 @@
 						"mode": "template",
 						"templateName": "FighterTrustParticlesTemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -3035,6 +3134,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 38,
 						"y": -24,
@@ -3080,6 +3181,8 @@
 						"timeout": 10
 					},
 					"uid": 17,
+					"sid": 703756473530990,
+					"tags": "",
 					"instanceVariables": {
 						"for_ForceScaleX": 0,
 						"for_ForceScaleY": 1
@@ -3089,6 +3192,9 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "FighterTrustParticlesTemplate",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -3323,6 +3429,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 48,
 						"y": -34,
@@ -3368,6 +3476,8 @@
 						"timeout": 10
 					},
 					"uid": 18,
+					"sid": 893505929801166,
+					"tags": "",
 					"instanceVariables": {
 						"for_ForceScaleX": -1,
 						"for_ForceScaleY": 0
@@ -3377,6 +3487,9 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "FighterTrustParticlesTemplate",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -3611,6 +3724,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 58,
 						"y": -24,
@@ -3656,6 +3771,8 @@
 						"timeout": 10
 					},
 					"uid": 19,
+					"sid": 168079031706664,
+					"tags": "",
 					"instanceVariables": {
 						"for_ForceScaleX": 0,
 						"for_ForceScaleY": -1
@@ -3665,6 +3782,9 @@
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "FighterTrustParticlesTemplate",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -3899,6 +4019,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 48,
 						"y": -14,
@@ -3927,6 +4049,8 @@
 						"live-preview": false
 					},
 					"uid": 22,
+					"sid": 525459755190825,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"DestroyOutsideLayout": {
@@ -3951,6 +4075,9 @@
 						"mode": "template",
 						"templateName": "FighterShieldTemplate",
 						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -4179,6 +4306,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 88,
 						"y": -24,
@@ -4206,6 +4335,8 @@
 						"live-preview": false
 					},
 					"uid": 23,
+					"sid": 196313410126469,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -4247,6 +4378,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 88,
 						"y": -24,
@@ -4292,12 +4425,17 @@
 						"timeout": 0.4
 					},
 					"uid": 30,
+					"sid": 513832194831137,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"template": {
 						"mode": "replica",
 						"templateName": "",
 						"sourceTemplateName": "FighterContrailParticlesTemplate",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": false,
+						"replicaIgnoreTemplateHierarchyChanges": false,
 						"components": [
 							{
 								"id": "plugin",
@@ -4535,6 +4673,8 @@
 							"previewSceneGraph": false
 						}
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
 						"x": 39,
 						"y": -15,
@@ -4558,6 +4698,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": false,
 			"isInitiallyInteractive": false,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,
@@ -4583,6 +4724,10 @@
 			"global": false
 		}
 	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
 	"sid": 377024570139051,
 	"nonworld-instances": [
 		{
@@ -4593,6 +4738,8 @@
 				"depth": 1
 			},
 			"uid": 15,
+			"sid": 578091549265159,
+			"tags": "",
 			"instanceVariables": {}
 		},
 		{
@@ -4603,12 +4750,16 @@
 				"depth": 5
 			},
 			"uid": 16,
+			"sid": 482222813159085,
+			"tags": "",
 			"instanceVariables": {}
 		},
 		{
 			"type": "ConfigJSON",
 			"properties": {},
 			"uid": 27,
+			"sid": 826467179172589,
+			"tags": "",
 			"instanceVariables": {}
 		},
 		{
@@ -4619,6 +4770,8 @@
 				"depth": 1
 			},
 			"uid": 28,
+			"sid": 672564809045188,
+			"tags": "",
 			"instanceVariables": {}
 		}
 	],

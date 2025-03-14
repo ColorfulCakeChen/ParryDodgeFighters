@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 963713917736068,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "FlashQuarterSeconds",
@@ -32,6 +33,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 3424882,
 						"collisionPoly": {
 							"points": [
@@ -46,7 +48,8 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 600189210421129,
