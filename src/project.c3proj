@@ -317,7 +317,7 @@
 	},
 	"properties": {
 		"description": "Two fighters against with each other. Imagine that it is like a fish jar but with fighter (rather than fish).",
-		"version": "0.6.8.0",
+		"version": "0.6.9.0",
 		"autoIncrementVersion": false,
 		"author": "Cake",
 		"authorEmail": "",

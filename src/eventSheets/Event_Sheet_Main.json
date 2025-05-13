@@ -513,6 +513,36 @@
 							"sid": 634298435658133
 						},
 						{
+							"eventType": "variable",
+							"name": "local_is_kickedOut",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "1 if some Fighter is kicked out.",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 351243213055377
+						},
+						{
+							"eventType": "variable",
+							"name": "local_is_kickedOut_Alignment0",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "1 if Alignment0 Fighter is kicked out.",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 235699255400200
+						},
+						{
+							"eventType": "variable",
+							"name": "local_is_kickedOut_Alignment1",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "1 if Alignment1 Fighter is kicked out.",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 254942735654672
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -582,12 +612,66 @@
 								},
 								{
 									"type": "comment",
-									"text": "Determine all alignments' versus result:\nlose(-1)/draw(0)/win(+1).\n\nNote: When draw (i.e. no fighter kicked out), longer total movement distance wins."
+									"text": "The picked Fighter is the Fighter which was kicked out."
 								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 676648927859296,
+									"sid": 487308220366451,
+									"parameters": {
+										"variable": "local_is_kickedOut",
+										"value": "( Fighter.PickedCount = 1 ) ? 1 : 0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998577543171723,
+									"parameters": {
+										"variable": "local_is_kickedOut_Alignment0",
+										"value": "( ( local_is_kickedOut = 1 ) & ( Fighter.VersusAlignmentId = 0 ) ) ? 1 : 0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 539469219935505,
+									"parameters": {
+										"variable": "local_is_kickedOut_Alignment1",
+										"value": "( ( local_is_kickedOut = 1 ) & ( Fighter.VersusAlignmentId = 1 ) ) ? 1 : 0"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Determine all alignments' versus result:\nlose(-1)/draw(0)/win(+1).\n\nNote1: The picked Fighter is the Fighter which is kicked out.\n\nNote2: When draw (i.e. no fighter kicked out), longer total movement distance wins."
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 863290973289471,
+									"parameters": {
+										"variable": "Versus_Result_ParentAlignment0",
+										"value": "( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? ( local_is_kickedOut ? ( local_is_kickedOut_Alignment0 ? -1 : 1 ) : sign( local_Alignment0_to_Alignment1_DistanceDelta ) ) : Versus_Result_ParentAlignment0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 134531076166735,
+									"parameters": {
+										"variable": "Versus_Result_ParentAlignment1",
+										"value": "( Versus_Step_Current = Versus_Step_09_ParentAlignment1_Fighting ) ? ( local_is_kickedOut ? ( local_is_kickedOut_Alignment1 ? -1 : 1 ) : sign( local_Alignment1_to_Alignment0_DistanceDelta ) ) : Versus_Result_ParentAlignment1"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "!!! (Old Codes) (2025/05/13)"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 369763990554595,
+									"disabled": true,
 									"parameters": {
 										"variable": "Versus_Result_ParentAlignment0",
 										"value": "( Versus_Step_Current = Versus_Step_05_ParentAlignment0_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 0 ) ? -1 : 1 ) : sign( local_Alignment0_to_Alignment1_DistanceDelta ) ) : Versus_Result_ParentAlignment0"
@@ -596,7 +680,8 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 357153708403456,
+									"sid": 732518395903814,
+									"disabled": true,
 									"parameters": {
 										"variable": "Versus_Result_ParentAlignment1",
 										"value": "( Versus_Step_Current = Versus_Step_09_ParentAlignment1_Fighting ) ? ( ( Fighter.PickedCount = 1 ) ? ( ( Fighter.VersusAlignmentId = 1 ) ? -1 : 1 ) : sign( local_Alignment1_to_Alignment0_DistanceDelta ) ) : Versus_Result_ParentAlignment1"
