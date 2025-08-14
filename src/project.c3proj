@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 43203,
+	"savedWithRelease": 44902,
 	"name": "ParryDodgeFighters",
 	"runtime": "c3",
 	"useWorker": "worker",
@@ -155,6 +155,7 @@
 		],
 		"subfolders": []
 	},
+	"functionsName": "Functions",
 	"autosaveData": null,
 	"containers": [
 		{
@@ -317,7 +318,7 @@
 	},
 	"properties": {
 		"description": "Two fighters against with each other. Imagine that it is like a fish jar but with fighter (rather than fish).",
-		"version": "0.6.9.0",
+		"version": "0.7.0.0",
 		"autoIncrementVersion": false,
 		"author": "Cake",
 		"authorEmail": "",

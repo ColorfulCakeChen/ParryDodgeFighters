@@ -9,7 +9,7 @@ runOnStartup(async runtime =>
 //   if ( runtime.globalVars.Fighter_bManualMode )
 //   	return;
 
-  const libVerion = "f31189fe48b949800033006683e2b3d317d1ec01";
+  const libVerion = "77ce6dffae37cddf34411705a2dba2cf61dcb8b6";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
@@ -26,17 +26,20 @@ runOnStartup(async runtime =>
 
   const sender_clientId = Date.now();
 
-  // Note: implicit_input_width will be 14. input_shape will be [ 72, 128, 4 ].
+  // Note:
+  //   - implicit_input_width will be 14.
+  //   - input_shape will be [ 72, 128, 4 ].
   const explicit_input_height = 72;
   const explicit_input_width = 114;
   const explicit_input_channelCount = 4;
-  const nNeuralWorker_ImplicitInputModeId = NeuralWorker.ImplicitInputMode.Singleton
-    .Ids.IMPLICIT_INPUT__FILL_ALIGNMENT_MARK__FILL_PREVIOUS_OUTPUT; // (5)
+  const nNeuralWorker_ImplicitInputModeId
+    = NeuralWorker.ImplicitInputMode.Singleton.Ids
+        .IMPLICIT_INPUT__FILL_ALIGNMENT_MARK__FILL_PREVIOUS_OUTPUT; // (5)
 
   const vocabularyChannelCount = 4;
   const vocabularyCountPerInputChannel = 256;
-  const blockCountTotalRequested = 39;
-  const output_channelCount = 128;
+  const blockCountTotalRequested = 32; //39;
+  const output_channelCount = 64; //128;
 
   globalThis.gNeuralOrchestra = NeuralOrchestra.Construct3.Pool.get_or_create_by();
   await gNeuralOrchestra.init_for_Construct3_runOnStartup_async(
@@ -50,8 +53,10 @@ runOnStartup(async runtime =>
     output_channelCount
   );
 
-  runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
-  runtime.addEventListener("afterprojectstart", () => OnAfterProjectStart(runtime));
+  runtime.addEventListener( "beforeprojectstart",
+    () => OnBeforeProjectStart( runtime ) );
+  runtime.addEventListener( "afterprojectstart",
+    () => OnAfterProjectStart( runtime ) );
 });
 
 async function OnBeforeProjectStart(runtime)
