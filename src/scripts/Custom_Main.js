@@ -9,7 +9,7 @@ runOnStartup(async runtime =>
 //   if ( runtime.globalVars.Fighter_bManualMode )
 //   	return;
 
-  const libVerion = "77ce6dffae37cddf34411705a2dba2cf61dcb8b6";
+  const libVerion = "52bea0e50ce052e1f4f3bb9a29f4a15f6f083e30";
   const libProject = "colorfulcakechen/query-submit-canvas";
   const libURLRoot = `https://cdn.jsdelivr.net/gh/${libProject}@${libVerion}`;
   const libURLRootCNN = `${libURLRoot}/CNN`;
@@ -27,10 +27,10 @@ runOnStartup(async runtime =>
   const sender_clientId = Date.now();
 
   // Note:
-  //   - implicit_input_width will be 14.
+  //   - implicit_input_width will be 10 (Old is 14).
   //   - input_shape will be [ 72, 128, 4 ].
   const explicit_input_height = 72;
-  const explicit_input_width = 114;
+  const explicit_input_width = 118; //114;
   const explicit_input_channelCount = 4;
   const nNeuralWorker_ImplicitInputModeId
     = NeuralWorker.ImplicitInputMode.Singleton.Ids
